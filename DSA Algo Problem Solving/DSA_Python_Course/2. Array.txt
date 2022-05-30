@@ -1,0 +1,9 @@
+* Array :
+  ---
+   - can store data of same type
+   - elements of array are located in contiguous (in memory)
+   - each element of array has unique index 
+   - The size of array is predefined & cannot be modified
+
+   Types :- 1 Dimensional (Vector)
+            Multi Dimensional (Matrix | Tensor)

@@ -1,0 +1,10 @@
+* Elvis Operator :
+     - `?:`   // used when to provide default val in case of null
+
+* If you want to do multiple things instead of single expression & syntax requires only a expression 
+  then you can use `run` block where after doing multiple things you can return your desire expr value
+
+
+* Reciever & Extension Function :
+  
+   - If you want nullable Reciever on left side than you can opt for Extension Function with Nullable Reciever

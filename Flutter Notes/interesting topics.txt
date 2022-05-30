@@ -1,0 +1,64 @@
+
+To Learn :
+
+  - Navigator 2.0
+  - RiverPod
+  - State Notifier
+  - SearchBar in Flutter (With Server Query)
+  - Push Notification Flutter
+  - Firebase
+  - MobX, GetX
+  - Flutter hooks
+  - Freezed (Data Class)
+
+  - Pagination
+  - BLOC - repository provider
+  - Internationalization / Localization 
+  - Dependency Injection (Locator Service)
+
+  - Theme manager DarKmode
+  - Search & Filter in ListView
+
+  - ScopedModel
+  - Inherited Widget
+
+ Dart ::
+  
+  - mixin
+  - RxDart 
+  - Isolates 
+  - Interface | Abstract Class
+  
+
+Core Concepts :
+-------
+ 1) Stateless/ful Widget
+     \
+      key, didChangeDepednecies, didUpdate, context
+ 
+ 2) Flutter Threading Module 
+     \
+      
+
+
+Q. Why Wrapping anything inside Future allows it to run while build function is running ??
+    or
+   How can we show a dialog while the build function is running?
+   
+   [Ans] (https://medium.com/flutter-community/flutter-threading-5c3a7b0c065f)
+
+   -> Future is queuing the method to be executed in the Dart event loop
+
+
+Q. override in dart vs c# ??
+  
+   -> in c# override will work evenif only header of method is there 
+
+      but in dart inorder to see effect of override the 
+
+
+Q. upcasts in dart :  (support till Non-Null safe versions only)
+  
+   B b = a (a is instance of A & B is child of A)
+
+   here a is automatically upcasted to B

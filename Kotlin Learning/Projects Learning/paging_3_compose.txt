@@ -1,0 +1,30 @@
+* Paging3 & COmpose & UnnSplashAPI
+--------
+
+ref :-
+unsplash.com -> applications
+
+
+DI : dependency injection 
+ \
+  - Inject Repository In View
+
+
+=> Paginating Lib means that When we request some api, we do not need to add 'page=2' like query param
+  that query will be automatically added & handled by Paging Library (with Retrofit as well as ROOM Db)
+
+  Remote Mediator :- is useful class from Paging 3 Library
+
+NOTE
+ - You will be able to achive pagination for your Room DB just by mentioning the PagingSource
+   as ROOM lib supports Paging lib under it.
+   So we do not need to do all boring stuff rather just mention the PagingSource<> & rest all
+   work will be taken care by ROOM library
+
+
+Steps :-
+
+1) Create Network Module for DI (of Network Classes & Services)
+2) Create Table for RemoteKeys (used by Remote Mediator to auto-inject 'page=2' query)
+3) Create necessary DAO's & Database
+4) Create Databse Module for DI

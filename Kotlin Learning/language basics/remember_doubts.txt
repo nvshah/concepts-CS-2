@@ -1,0 +1,5 @@
+
+* Why Constructor are allowed on Abstract Classes ??
+  -> as if any sub class can invoke those one
+
+Q) what if invoke() & abstract class constructor have same syntax then ??

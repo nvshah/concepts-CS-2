@@ -1,0 +1,55 @@
+[SOLID] -> https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898
+
+(Solid principle)
+https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898
+https://www.educative.io/blog/solid-principles-oop-c-sharp
+https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/
+
+https://medium.com/tunaiku-tech/s-o-l-i-d-principles-simplified-explanation-example-f7268ca75758
+
+https://blog.joshua-greenwood.com/the-solid-principles-and-kotlin/
+https://dev.to/elianmortega/vol-2-solid-rules-in-dart-2e6m
+
+https://medium.com/tunaiku-tech/s-o-l-i-d-principles-simplified-explanation-example-f7268ca75758
+
+* SOLID :
+  -----
+    -> https://www.educative.io/blog/solid-principles-oop-c-sharp
+
+   Open-Closed Principle :
+   -----
+    -> One Way Flow (Extend only & cannot modify)
+      
+      Through polymorphism, we can extend our parent entity to suit the needs of the child entity 
+      while leaving the parent intact.
+
+    -> Open-Closed in my terms :
+      --------
+       Let Say a math teacher has create a class for Some theorems he invented.
+       Then the disciples will use those theorems in exams .
+
+       Now after some years, math teacher discovered new rules on top of those theorems.
+       But He has to modify some of his prev theorems to utilise new foundings.
+       So he cannot change original(standard) one which is used by many of his students.
+
+       Indeed He can create new Journal/Publish new way So that New students can adapt it in new way
+       & old students can adapt if they want otherwise stick to that old theorems.
+
+       Eg2 - Consider Programming languages instead of theorem.
+
+   DI :
+   ----
+     DIP is that decoupled programs require less work to change
+
+     Contract - Way :-
+     " Classes that perform actions or functionality should not depend on the Classes doing the work, 
+     it SHOULD DEPEND on an abstraction of that class "
+
+    -> Data (low-level) & Business logic(High-level) both must depends on abstractions of model 
+       [Loose Coupling]
+
+
+* Inheritance vs Composition :
+  ------------------
+   Inheritance -> compile time  (classes)
+   Composition -> Run Time   (objects)

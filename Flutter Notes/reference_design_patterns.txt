@@ -1,0 +1,32 @@
+1) https://sourcemaking.com/design_patterns
+
+2) https://medium.com/flutter-community/flutter-design-patterns-0-introduction-5e88cfff6792
+
+book - gof : https://github.com/amilajack/reading/blob/master/Design/GOF%20Design%20Patterns.pdf
+      
+       algorithms : https://www.java67.com/2015/09/top-10-algorithm-books-every-programmer-read-learn.html
+
+       flutter ref : https://kodestat.gitbook.io/flutter/
+       
+
+====================================
+
+* Design Patterns :
+  -----
+   similar to architectural patterns
+
+   - solution to common coding problems
+
+
+Problem Solving : 
+  https://runestone.academy/runestone/books/published/pythonds/index.html
+
+
+DAA
+
+Problem Solving with Algorithms and Data Structures using python
+  -https://github.com/ivanmmarkovic/Problem-Solving-with-Algorithms-and-Data-Structures-using-Python
+ 
+
+BLOC vs MobX
+https://blog.flutterando.com.br/analyzing-bloc-and-mobx-7118053e913a

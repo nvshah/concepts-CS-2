@@ -1,0 +1,81 @@
+TIP -> Always first think for bruteforce approach
+
+1) Binary Search
+   
+   Quick Search
+
+2) Kadane's Algorithm  (For max SubArray Sum)
+
+3) 2 Pointers (Ramesh-Suresh)  (alike Quick Sort)
+
+4) Fast & Slow Pointer to find the middle index of List
+
+5) Top Down Memomization
+
+6) Bottom Up Memoization (DP)
+
+7) sliding Window (esp for Anagrams)
+
+8) Bucket Sort (for Counter Kinda Thing When size is bounded)
+   Heap sort   (for quick add & delete)
+
+9) slow & fast pointer (esp used with the linked list)
+
+10) BFS & Queue (Iteration)
+    DFS & Stack (Recursion)
+
+11) Boyer-Moore algorithm (Majority Element)
+
+12) LRU Cache  (Doubly Linked List + Hash-Map)
+
+13) Floyd Algorithm (Find Duplicate in range 1 -> n)
+     \
+      Rabit  & Tortoise (Fast & Slow Pointer)
+      => Cycle Detection Algo
+
+14) Monotonic Increasing Stack  <- ***IMP
+    Mono Decrasing Order Stack
+
+15) Detect Squares/Rectnagles in Grid
+
+16) Union & Find (Connected Components)
+
+17) Merge Half (ie Divide & Connquer)
+
+18) bellMan-ford cheapest path in graph (Given some Constraints)
+
+19) Reverse Thinking (Esp for BFS & DFS)
+
+20) Tarjan's Algo
+
+---
+EXPLORE
+
+Valley Peak Appraoch
+
+
+=> When you need to find something potential ans in a range (i.e start & stop)
+    - binary search can be useful
+
+* 2 Pointers :
+  ------
+   - Hoare & Lamuto (for sorting)
+   - Grow & Shrink (Sliding Window)
+
+* Merge Sort :
+  ----
+   - LinkedList 
+   - 
+
+* Insertion Sort + Binary Search Can be a Good Combination
+
+----------
+Top Imp Techniques Algo 
+
+1) Heap 
+2) Sliding Window (2 Pointers) 
+3) Binary Search
+4) DFS & BFS
+5) Recursion
+6) Hash Maps
+6) Queue  (Mine)

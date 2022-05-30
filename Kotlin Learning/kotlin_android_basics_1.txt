@@ -1,0 +1,88 @@
+=> Efficient Battery usage is imp to success of an app !!!
+
+* activity = scaffold
+
+* views = widgets
+
+  fragment = widgets (reusable ui components)
+
+* App Drawer navigation :- defaults to popping everything off the backstack except for the start destination
+
+  Menu Navigation :- Adds to the backstack from current pos.
+
+  DrawerLayout    :- Provides the foundation for sliding layout behaviour of the navigation Drawer
+
+  NavigationView  :- Material Design Container that provides looks, feels, & functionality of the Navigation Drawer
+
+* Bundle = SharedPreferences
+
+* Observer Patterns :
+  -----------
+   -> Observers watch the Subject
+      Event that cause state change - to -> Subject - to -> notifies Observer
+
+  Example - Observer Patterns is utilised by LifeCycleObserver Object 
+            to listen life state change for any activity/fragment
+
+            It can listen & perform action via Annotation Syntax
+
+& ADB :-
+  ---
+   Android Debug Bridge, it's a cli tools that can help to forcefully shut the app in background
+   
+  onSaveInstanceState() // help to save any state for activity before OS kill app
+  onRestoreInstanceState() // to get saved/cached data in Bundle (manually)
+
+* Configuration Changes :-
+  ---------
+   - When device language changed
+   - When physical keyboard is plugged/unplugged
+   - When orientation changes
+
+
+* Software Design Principles :
+  ---------
+   - Seperation of Concerns (seperate code & seperate onus)
+
+
+* Factory Patterns :
+  -----
+   - class that knows which class to return
+
+
+* LiveData :
+  -----
+   - equivalent to stream behaviour in Flutter
+
+* Adapter Patterns :
+  ------
+  -> allows object to work together with other apis nicely.
+  -> Eg RecyclerView - Adapt it to something (i.e UI)
+
+* Repository Patterns :
+  ------
+  -> Provide Unified view of data from several sources
+
+* Dependency Injection :
+  -----
+   -> taking db object as param in Constructor. [So dont required to keep track of context]
+
+   Dagger
+
+* Design Patterns :
+  -----
+   Making classes with well defined API's that makes you work/task easier.
+
+* google repositories : 
+  -------------
+    - (inside build.gradle)
+       - google() & jcenter()
+          -> These serves as a google libraries & jetpack libraries
+
+
+-------------------------------------
+
+
+* Facade :
+  -----
+   -> Eg RetroFit

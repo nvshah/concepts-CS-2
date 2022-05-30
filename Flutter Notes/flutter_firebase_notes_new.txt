@@ -1,0 +1,13 @@
+
+* Firestore pagination :- Johannas Milke
+
+flutterfire_ui :-
+---
+
+-> collection.withConverter<T>() 
+       \
+        => to serialize & deserialize the Documents while sending or fetching
+
+-> FirestoreListView
+   
+   FirestoreQueryBuilder

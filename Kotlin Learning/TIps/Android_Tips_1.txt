@@ -1,0 +1,14 @@
+* Custom Button :
+  ----------
+   -> xml- resource file having :-
+      
+        <shape> 
+            ....
+        </shape>
+
+* To get resource from android package : (image)
+
+  format for URi :- "android.resource://$packageName/$resrcName
+
+
+* string Resource :- helps to manage the translation of text in diff language easily

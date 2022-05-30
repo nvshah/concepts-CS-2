@@ -1,0 +1,38 @@
+* Android Bundle :
+
+* Parcelable :
+
+* Safe Args :
+
+* Data Binding : One Way & 2 way
+
+* Data Binding Expression :
+
+* Coroutine
+
+* ViewModel : 
+
+* UIController :- (Activity & Fragment)
+
+* Adapter 
+
+* navArgs   :- navigation arguments (safe arguments)
+
+* Singleton Objects :- object
+
+* Factory Pattern
+
+* Repository Pattern
+
+* Dependency Injection / Inversion
+  Service Locator 
+
+
+--------
+
+Topics :
+
+- navHostFragment  // Host the fragment layout 
+  navgraph
+
+- Menu 

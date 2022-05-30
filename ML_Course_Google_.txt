@@ -1,0 +1,6 @@
+https://cloud.google.com/training#learning-paths
+
+https://cloud.google.com/training/machinelearning-ai
+
+
+-> Machine learning Crash Course Google

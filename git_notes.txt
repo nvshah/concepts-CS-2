@@ -1,0 +1,90 @@
+Git : PAT | SSH (instead of normal password)
+  - https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/
+
+[vcs ml code] https://algorithmia.com/blog/how-to-version-control-your-production-machine-learning-models
+[vcs ml model] https://towardsdatascience.com/version-control-ml-model-4adb2db5f87c
+
+
+git configurations :
+-------
+
+ - git config --global user.name "user_name"
+ - git config --global user.email "user_email@gmail.com"
+
+   git config --global credential.helper cache   //Cache the next username & password I gave So in future it can use same password for same username
+   git config --global --unset user.password
+
+   git config --global --add user.password "new_password"
+
+ - git config -l
+   
+   [Delete Your authentication]
+   
+ - git credential-osxkeychain erase
+   host=github.com
+   protocol=https
+
+
+
+ rebase git commits :
+------------
+
+  Squash :- Git squashing is achieved with a Rebase, of a special form called Interactive Rebase.
+  
+  git rebase -i branch#commitNo
+
+
+* git merge :
+  ------
+   git merge --no-ff documentation   // merge documentation branch into current branch
+                                     // flag prevents git merge from executing a "fast-forward" 
+
+* git cherry pick :
+  -----
+   1) Do Pick & Commmit (of hash)
+      - git cherry-pick af02e0b
+
+   2) Apply Changes but do not commit 
+      - git cherry-pick af02e0b --no-commit
+
+* git status :
+  -----
+   -> Short Status :-  git status -s
+
+
+----------------
+Readme & Markdown
+
+ online prepare :- readme.so 
+
+ template ref :- https://github.com/scottydocs/README-template.md
+
+ online edit :- https://stackedit.io/app#
+                https://dillinger.io/
+
+
+-----------------
+
+https://github.com/microsoft/vscode/issues/56664
+2021-10-10 11:55:19:443] 
+Failed to execute git {
+  "exitCode": 128,
+  "gitErrorCode": "RemoteConnectionError",
+  "gitCommand": "push",
+  "stdout": "",
+  "stderr": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n"
+}
+
+ssh validation failed 
+https://www.youtube.com/watch?v=IN89bys9uc8
+
+
+----------------
+
+(James Murphy mCoding Youtube)
+
+* Pre-Commmits :
+  -----
+    
+    pre-commit InstallIn
+ 

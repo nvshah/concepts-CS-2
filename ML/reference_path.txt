@@ -1,0 +1,90 @@
+Google crash course on Collaberative Filtering
+
+
+1) Data Visualization using Python : CourseEra 
+
+2) Data Visualization with Tableau specialisation : CourseEra
+
+3) Data Visualization for EveryOne : DataCamp
+
+4) Learn Data Visualization using Python : CodeAcademy
+
+5) Python for Data Science : UCsan Diego (https://www.edx.org/course/python-for-data-science-2)
+
+6) Data Science : Machine Learning (Edx) Harvard Univerity (https://www.edx.org/course/data-science-machine-learning?index=product&queryID=2cd8bb57a5c8b28971beddef55b85dbd&position=1)
+
+7) Machine Learning with Python : https://www.coursera.org/learn/machine-learning-with-python?ranMID=40328&ranEAID=jU79Zysihs4&ranSiteID=jU79Zysihs4-b09AZbxp.a9afHIygeK._w&siteID=jU79Zysihs4-b09AZbxp.a9afHIygeK._w&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=jU79Zysihs4
+
+8) Google IT Automation : https://www.coursera.org/professional-certificates/google-it-automation
+
+9) MLOps : https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops
+
+-----------------
+Online place to learn python 
+
+ 1) codeAcademy 
+ 2) learnpython
+
+Online place to find ML courses 
+
+https://www.greatlearning.in/?arz=1  [mygreatlearning.com]
+
+
+Youtube :-
+
+ 
+ StatQuest
+ Serrano
+ 3blue1brown
+ Kris Naik
+
+ Python Engineer  (For Impl of Algo)
+ SentDex 
+
+ derrick Sherril
+
+
+Udemy :-
+
+  Mathematics foundations for Machine learning 
+
+
+
+----------------- 
+ Best book for Data Science (Python)
+
+ linear Algebra :- gilbert strang
+
+-----------------
+
+Offline Read :- 
+
+   (Kaggle - Intro to ML) https://www.kaggle.com/learn/intro-to-machine-learning
+
+   DataCamp (https://www.datacamp.com/community/tutorials)
+   RealPython 
+   Microsoft (https://docs.microsoft.com/en-us/learn/modules/intro-to-python)
+   GeeksForGeeks
+
+
+-------------
+   Github 
+     https://github.com/Chandra0505/Data-Science-Resources/tree/master/machine-learning
+
+
+   Online DeepLearning
+     https://www.deeplearningbook.org/
+
+
+-------------
+
+   ML CheatSheet 
+     https://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html#:~:text=In%20order%20to%20map%20predicted,to%20map%20predictions%20to%20probabilities.
+
+
+* matrix Multiplication : matrixmultiplication.xyz
+
+
+--------
+
+Research Paper Published :- arxiv.org

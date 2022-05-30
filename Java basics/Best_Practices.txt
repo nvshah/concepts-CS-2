@@ -1,0 +1,15 @@
+* Primitives vs Non-Primitve : 
+
+ - Use primitive for loops, intermediate results , local scope 
+
+   When passing variable inside method use Non-Primitve as only referece will be passed 
+   & thus so no memory overhead.
+
+
+* For Immutability :
+  -----------
+   Make Constructor `private` & use factory for creating instances
+
+   failure atomicity - 
+   ________________
+    -> if an immutable object throws an exception, it’s never left in an undesirable or indeterminate state

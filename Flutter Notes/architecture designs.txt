@@ -1,0 +1,46 @@
+MVVM
+VIPER
+
+MVC (Model View Architecture  )
+MVI ()
+MVU (Model View Update)
+
+
+VIPER : 
+ https://www.raywenderlich.com/8440907-getting-started-with-the-viper-architecture-pattern
+
+VIP :
+ raywenderlich.com/29416318-getting-started-with-the-vip-clean-architecture-pattern?utm_campaign=rw-weekly-issue-359&utm_medium=email&utm_source=rw-weekly
+
+
+Bloc Architecture : 
+ - https://medium.com/codechai/architecting-your-flutter-project-bd04e144a8f1
+
+
+Flux :
+ https://everyday.codes/mobile/bloc-in-flutter-implement-clean-flux-like-architecture/
+
+RxDart & Bloc :
+  https://medium.com/flutter-community/why-use-rxdart-and-how-we-can-use-with-bloc-pattern-in-flutter-a64ca2c7c52d
+
+RxDart :
+  https://www.burkharts.net/apps/blog/rxdart-magical-transformations-of-streams/
+
+
+
+
+-----------------
+ Design Patterns articles : [Most Imp topic in software programming]
+
+
+  1) https://medium.com/flutter-community/flutter-design-patterns-0-introduction-5e88cfff6792
+
+  2) https://dev.to/marcossevilla/cleaner-flutter-vol-1-intro-to-clean-mo6
+
+
+------------------
+ 
+  Clean Architecture :
+     https://proandroiddev.com/clean-architecture-data-flow-dependency-rule-615ffdd79e29
+
+     https://proandroiddev.com/why-you-need-use-cases-interactors-142e8a6fe576

@@ -1,0 +1,18 @@
+CS NOTEs :    https://github.com/CyC2018/CS-Notes  
+
+Python Algo : https://github.com/TheAlgorithms/Python  
+
+https://github.com/ivanmmarkovic/Problem-Solving-with-Algorithms-and-Data-Structures-using-Python
+
+
+Ebooks : https://github.com/EbookFoundation/free-programming-books/blob/master/books/free-programming-books.md
+
+Competitive Programming Algorithms :
+   https://cp-algorithms.com/
+
+
+Good Articles :
+
+  Backticks & tildes 
+
+  pencilprogrammer.com

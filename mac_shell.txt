@@ -1,0 +1,60 @@
+https://mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/
+
+https://mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/#what-is-usrlibexecjava-home
+
+cd /
+
+ls -la // list all files
+
+
+
+Windows Command :
+
+ copy somehting to clipborard
+
+   clip < ~/.fName
+
+
+
+iterm setup (interactive shell) :
+
+  https://www.mokkapps.de/blog/boost-your-productivity-by-using-the-terminal-iterm-and-zsh/
+
+
+* make directory :
+  -----
+   mkdir -p ~/bin
+
+
+* reload a terminal :
+  ---------
+  source .profile
+
+* move a file :
+  ---------
+   mv ~/Downloads/.../path/file path2_to_where_move
+
+
+* Terminal Zshrc Tips Complete :
+  ----------
+    https://www.sitepoint.com/zsh-tips-tricks/
+
+    oh my zsh themes : https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+
+
+    With Git : 
+
+    gaa – git add all
+gdca – git diff --cached
+gp – git push
+gpf! – git push --force
+grhh – git reset --hard
+gst – git status
+
+* clear the terminal : `ctrl + L`
+  ----------
+
+
+* modify bash file (mac) :
+  ---
+   nano .bash_profile

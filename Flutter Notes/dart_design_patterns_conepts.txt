@@ -1,0 +1,24 @@
+ref : 
+  https://www.geeksforgeeks.org/software-design-patterns/
+
+
+* OOPS :
+  ----
+   Encapsulation
+   Polymorphism (compile time & run time)
+   Inheritance
+   interface / abstract class 
+
+* SOLID :
+  -----
+   https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898
+   https://www.educative.io/blog/solid-principles-oop-c-sharp
+   https://dev.to/elianmortega/vol-2-solid-rules-in-dart-2e6m
+   https://medium.com/flutter-community/s-o-l-i-d-the-first-5-principles-of-object-oriented-design-with-dart-f31d62135b7e
+
+
+   Liskov Substitution Principle :- 
+           The child class must not affect the parent class attributes/behaviours 
+           The child class may introduce new behaviours but should not affect the Parent class behaviour 
+
+           Child must perform in same way as parent (when domain is common)

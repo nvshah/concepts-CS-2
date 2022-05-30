@@ -1,0 +1,3 @@
+To check any issue with python file :- `python3 -m tabnanny filename.py`
+
+To run command in terminal from Jupyter NB :- !pip3 install pyPDF4   // use ! at start

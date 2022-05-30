@@ -1,0 +1,132 @@
+https://discuss.kotlinlang.org/t/did-you-consider-to-make-inline-the-default-behaviour/12719
+
+[Abstract class & this] https://stackoverflow.com/questions/3003689/can-the-keyword-this-be-used-in-an-abstract-class-in-java
+[Equality in Kotlin] https://stackoverflow.com/questions/45772946/equality-in-kotlin
+
+[String Concatenation] https://www.baeldung.com/kotlin/concatenate-strings
+
+* Generics & Boxing :
+  ---------------
+   -> generics can’t deal with primitives, 
+      this leads to a lot of boxing and unboxing
+      
+      You can avoid this by marking the function as inline.
+
+  Inline function : 
+  -------------
+   ->  Copying the function body and pasting it to the point where it is invoked. 
+
+
+ 
+* Sealed Classes vs Enum Classes :
+  ---------------------
+   Sealed Classes - multiple instances of subclasses is possible
+   Enum Class - shared instance of each case
+
+   Sealed Class subclasses instances can store property whereas Enum Class Instances can't
+
+   -> Enum can't have generic type parameter while Sealed Class can 
+
+* Inner class :
+  ----------
+   `inner` keyword :- 
+     
+     Allows nested class to access variables existing in it's enclosing namespace (i.e class)
+
+
+* Abstract classes :
+  -----------
+   -> Cannot be instantiated but `this` is allowed in abstract class attributes
+
+   Proxy Object :
+   ------------
+
+   -> The abstract keyword only ensures that, 
+      when instantiated, it's instantiated in the form of a subclass.
+
+* Inheritance :
+  ----------
+   Fields Overriding :-
+   --------------
+   -> fields cannot be overridden but they can be hidden 
+      i.e if you declare a field in a subclass with the same name as one in the superclass, 
+      the superclass field can only be accessed using super or the superclasses type
+
+      Fileds cant be overriden but are shadowed
+
+MIMP ->>>
+--------
+  this & Inheritance & Abstract :
+  --------------------------
+   -> this referred to dynamic run time type of object by class hierarchy
+
+      i.e `this` -> will refer to real object memory reference 
+                    from that class to its ancestor (if any)
+
+
+* Interface & Generics :
+  ----------------
+   -> used an interface to give your generic types more power.
+
+* Generics Imp :
+  ------------
+   -> • A class with a generic constraint shouldn't need to know what specific type T is in
+      order to be able to do things with it. 
+      If it has to know what subtype it's holding, the point of generics is somewhat defeated
+
+      To solve above use : Generics With Interface
+
+
+* reference of Variable :
+  -----
+   To gain & pass the reference of Variable in kotlin use `::` operator before variable-identifier
+
+* Delegation & `by` :
+  -----
+   Kotlin supports “delegation” design pattern by introducing a new keyword “by”.
+   
+
+===================================
+
+* Some Kotlin Facts from designer of Kotlin :
+  ----
+
+- Data Classes :- less bloated & easy to consume
+   
+- Delegation Property : (Abstraction mechanism)
+  -----------
+   - helps you to get rid of repeatation of the lazy logic
+   -> by lazy {}
+
+- Extension methods in  kotlin  = Monkey Patching in Python
+
+- Sealed class :
+  ---
+   - all sub classes are knownn early 
+     so no required of else in when{}
+
+-> Kotlin have lot more expression (in between functional & procedural tradition)
+
+- when expression in kotlin = patternn matching python
+
+- inline func :
+  ------
+   - can access eenclosing parent scope variable
+
+- threads vs coroutine : 
+  ----
+   cost :- cheaper than thread
+
+- @Volatile :
+  -----
+   -> makes the obj visible instantly to all other threads
+   -> allow only 1 thread to accesss the property at a time.
+
+- synchronied(){}  blocks allow you to access code one at a time among multiple
+                   thread attempts
+
+
+- override fun invoke()  // to make kotlin class callable/invokable
+
+
+* Wrapper Class in Kotlin can be of any kind :- ie Sealed Class or Data Class 

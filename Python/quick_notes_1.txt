@@ -1,0 +1,29 @@
+cache in python : https://docs.python.org/3/library/functools.html`
+
+* Inheritance :
+  ---
+   -> Concepts of Generalized to Specialized 
+
+
+* Python uses peephole optimization (until 3.7) i.e 20 character max interned for strings 
+  now Python uses AST Optimizer i.e So string upto 4096 characters are interned.
+
+  NOTE :- python can canonicalized a tuple with max-to-max 256 elements
+
+
+* perf_counter() doesnt uses actually clock but it uses CPU clock cycles 
+  so you always need to use 2 time instances of perf_counter & subtraction to calculate elapsed time
+
+* Sentinel Values :
+  ----
+   ref : https://www.python.org/dev/peps/pep-0661/
+
+---------------------------------------------
+
+Flavours of Python :
+  
+  Monkey Patching 
+  Controlled Monkey Patching
+
+  MetaClass
+

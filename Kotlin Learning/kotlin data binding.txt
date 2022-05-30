@@ -1,0 +1,69 @@
+ref : https://developer.android.com/topic/libraries/data-binding/expressions   [Layouts & Bindings Expression]
+     https://developer.android.com/topic/libraries/data-binding/architecture#viewmodel [ViewModel for binding]
+     https://developer.android.com/topic/libraries/data-binding/architecture#livedata  [LiveData Notify UI about Changes]
+     https://developer.android.com/topic/libraries/data-binding/expressions#resources [DataBinding Expressions]
+
+* Data Access View (Binding)
+
+<data>
+   <variable>  </variable>
+<data>
+
+@{...}    //Example of Data Binding Expression
+
+KEEPINMIND - once you create this variable you might need to rebuild the project
+
+
+----------------------- 
+
+=> Data Binding helps us to get rid of `findViewById()` all the times.
+
+* View <---> UiControllers <---> ViewModels
+
+  View :- Eg xml files
+
+  UIControllers :- Eg Fragments/Activity
+
+  ViewModels :- Associates ViewModels ot Fragment
+
+=> ViewModel will hold LiveData
+
+
+* Data Binding :- Binds Data between View & UIControllers i.e Inflation
+
+* Normally Communication Flow
+  ----
+   ViewModel -> UIControllers -> View
+
+* Direct Communication between ViewModels & Views 
+  ----------
+   ViewModel -> View  [via bindings]
+
+   1) create binding variable in xml
+   2) assign that variable value in view model (mostly onCreat method)
+
+   LiveData to automatically update layouts (in View)
+   ----
+
+   //Syntax in ViewModel class
+   binding.setLifeCycleOwner(this)
+
+   So with this you can get rid of 
+      - model.prop.observe(){}     //this observe impl.
+
+
+* Data Binding Expressions :
+  ------
+    -> You can call method
+    -> You can perform single statement (like addition, subtraction, etc... )
+
+
+* View Binding (delegate) :
+  ------------
+   - purpose :- less boiler plate code
+       \
+        Mo need to write onDestroy() to set _binding variable to null 
+
+   1) `by viewBinding()`   //delegate the varaible to this way 
+
+   2) override onViewCreated() 

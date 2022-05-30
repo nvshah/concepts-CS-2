@@ -1,0 +1,27 @@
+* Stack vs Heap ;
+  -----
+   in Python 
+     to compare reference equality :- `is`
+    & to compare value equality   :- `==`
+
+
+* Tuple & Copy :
+  ---------
+   - When you create a tuple from another tuple then same tuple object is referred (ie Canonical Form)
+   - There is no point in creating a Shallow Copy of an immutable obj so thus its just making a copy of reference
+
+* Positional & Keyword Args :
+  -----
+   * to seperate the positional & keyword only
+
+   /  -> any argument before slash needs to be positional only 
+         afterwards it can be positional or keyword
+
+   
+   def f(pos_only, /, pos_or_kw, *, kw_only)
+
+   slash (/) at end :- meanns everything positional
+   start (*) at front :- means everything is Keyword onlys
+
+   normal func are better thab pos args &
+   pos arg are better than kw-args

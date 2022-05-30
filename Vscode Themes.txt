@@ -1,0 +1,6 @@
+Settings Sync :
+ -> https://betterprogramming.pub/sync-visual-studio-code-settings-extensions-shortcuts-across-multiple-devices-9fa6a980f25e
+
+
+Intellij Setting Sync :
+  - https://stackoverflow.com/questions/70253770/how-to-sync-intellij-settings-to-another-jetbrains-account

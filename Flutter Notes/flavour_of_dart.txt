@@ -1,0 +1,13 @@
+Flavors of Dart :
+-----------
+ 
+ 1) asynchronous programming -> Future & Streams, Completer, Timer
+
+ 2) parameters passing -> short syntax i.e this.fieldName 
+
+ 3) OOPS -> Mixins, factory constructs 
+
+ 4) Every class is implementing its own implicit interface
+
+ 5) factory constructor redirection using '='
+

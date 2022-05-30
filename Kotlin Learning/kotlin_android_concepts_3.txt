@@ -1,0 +1,167 @@
+ref :
+  [DiffUtils] :- https://developer.android.com/reference/android/support/v7/util/DiffUtil
+
+* RecyclerView :
+  ------
+
+   Room + ViewModel -> Adapter (Interface) -> RecyclerView
+
+  =>  Adapter Interface (for RecyclerView)
+     ----------
+
+    - # items count          (getItemCOunt())
+    - how to draw an items   (onCreateViewHolder())
+    - create a new item      (onBindViewHolder())
+
+  => ViewHolder
+
+    - hold views
+    - store information for recyclerview (i.e such as pos of item in recyclerview)
+    - recyclerview's main interface 
+
+=? Adapter will adapt to something which can be used to drawn on the screen.
+  
+   RecyclerView will utilised ViewHolder during scroll of screen, efficiently
+    \
+     keeping the view but changing content (Reusability)
+
+  -> Adapter will take care what to bind which data at moment
+
+=>> RecyclerView do not directly interacts with View instead it interacts with ViewHolder
+
+* RecyclerView : (= ViewGroup)
+  ------
+  
+   -> layoutManager : how to layout items in RecyclerView
+
+  Q. tell recyclerview that some data has changed by Adapter :
+    
+  -> notifyDataSetChanged()   <--** | MIMP |
+
+
+* ListAdapter : 
+  --------
+   -> will help you keeping track of List
+     
+      So while extending Adapter you can choose ListAdapter if required so.
+
+
+    2 generic arg :
+      1) Type of List Data it holds
+      2) ViewHolder
+       
+      in Addition there is constructor param that take item callback
+
+
+
+=> DiffUtil & ListAdapter figure out what needed to be changed & also perform animation likewise
+
+
+* Views :
+  ---
+- you can create views in activity | fragments
+- or using LayoutInflator 
+
+
+* RecyclerView Updates
+  ----------------
+   - Add, Remove, Update, Move
+
+
+  DiffUtils :  (library) 
+  --------------
+   -> identify via algorithms minimal changes required in terms of re-drawing on UI
+     - Figured out what has changed.
+
+
+  Eg class Name : DiffUtil.ItemCallback<T>(){}
+
+
+
+Overall Scenario :
+-----
+  
+  Adapter Jobs is to adapt incoming data (i.e from VieModel | other repo) s.t it RecyclerView can use it.
+
+  Observer data changes from ViewModel in Fragment 
+    \
+    Adapter will prepare data from ViewModel to be used in UI (inside fragment.kt only)
+
+  -> Adapter can inflate view & place view in place holder 
+  -> RecyclerView can be in View file (i.e XML)
+
+          / Adapter \
+
+   ViewGroups -> ViewHolder -> 
+
+  -> Most Logic resides inside ViewHolder i.e to get ViewHolder, bind views to ViewHolder
+
+     Adapter only utilise those things as API from ViewHolder object.
+
+
+* Data Binding : 
+  ________
+   Binding Adapters : 
+      - help to bind data in data binding 
+
+   Binding Objects : that connects, maps 2 pieces of distant information together at compile time.
+                     so that you dont have to look for it at run time.
+                      - Its created by compiler
+
+          -> Data binding will automatically generate a binding object.
+             
+             We can use binidng object to inflate layout.
+
+    How to create binding obj : 
+
+
+* Binding Adaptar : 
+  --------
+   - takes some views & data
+   - responsible for updating the view to represent the data 
+
+   @BindingAdapter :
+    ---
+     - to tell binding view about binding adapter
+
+  -> Binding Adapter will take care of formatiing & updating the view as data changes
+  -> helps to move data bind logic to XML
+
+  ViewModel to use data-binding s to bind the data
+
+  TiPS : call->  binding.executePendingBindings()
+
+
+* RecyclerView - (Managers)
+  -------
+   
+   1) LinearLayoutManager
+
+
+   2) GridLayoutManager
+
+       spanCount = column nos
+
+       .spanSizeLookup()   // Configure spans  
+
+
+* ClickEvents for item in RecyclerView :
+  -------------
+   - Right Place to handle Click Events is in ViewModel
+
+   - So 
+
+
+----------------------
+  
+  * Automatic generated Fragment Class :
+    -----------
+     - when you want to access the Fragment root View (i.e ListFragment) its automatically generated 
+       & this fragment is responsible for Adapter & ViewHolder things
+
+
+  * Search & RecyclerView :
+    ------------
+     1) Data Source ;- 1.Remote (API)
+                       2.Local  (ROOM) 
+      

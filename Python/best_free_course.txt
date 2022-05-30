@@ -1,0 +1,92 @@
+Best Python Online Interpreter : 
+   https://pythonexamples.org/run.php?pgm=x+%3D+%27%5C101%5C102%5C103%27%0Aprint%28x%29
+
+
+1) Cognitiveclass.ai
+
+2) EDX : https://www.edx.org/course/python-for-data-science-2
+
+3) dabeaz : https://dabeaz-course.github.io/practical-python/
+
+4) Coursera : https://www.coursera.org/learn/data-science-k-means-clustering-python#syllabus
+
+5) Coursera : Statistics for Data Science with Python
+
+6) Coursera : Data Science Fundamentals with Python and SQL Specialization
+
+7) Learning Python ;- Artciles
+   
+   Pencil Programmer :- https://pencilprogrammer.com/python-tutorials/
+
+   IntelliPat :- https://intellipaat.com/blog/tutorial/python-tutorial/data-structures-with-python-cheat-sheet/ 
+   
+   Python Course eu :- https://www.python-course.eu/python3_class_and_instance_attributes.php
+   
+   FullStackPython - https://www.fullstackpython.com/
+
+-----
+
+8) Python Tips : 
+    - https://book.pythontips.com/en/latest/#
+
+    - https://pythontips.com/?theme_preview=true
+
+    [Daily Dose of Python]
+    - https://jerry-git.github.io/daily-dose-of-python/
+   
+-----------
+
+real python :
+  -> Learning Paths : https://realpython.com/learning-paths/
+
+PyMotW : https://pymotw.com/3/index.html#
+
+CheatSheet | Gist Python 
+
+[Comprehensive Python] https://gto76.github.io/python-cheatsheet/   <-**BEST
+
+[online cheatsheet] https://www.pythoncheatsheet.org/
+
+[python sheets] https://www.pythonsheets.com/
+
+[denzyhang ] https://cheatsheet.dennyzhang.com/cheatsheet-python-a4    //(LeetCode as well)
+
+[patloeber] https://patloeber.com/10-python-basics-you-should-know
+
+[pynative] https://pynative.com/python-random-choice/
+
+[Python Engineer] https://www.python-engineer.com/posts/string-methods-python/
+
+------------
+
+For Emails :
+
+  real python 
+  academia.edu
+
+  revue.co
+
+
+---------------
+ 
+ Github Python best 
+
+   Python Weird Tricks Amazing : https://github.com/satwikkansal/wtfpython#-first-things-first-
+   CS NOTEs :    https://github.com/CyC2018/CS-Notes  
+   Python Algo : https://github.com/TheAlgorithms/Python   
+
+   Python WTF : https://github.com/satwikkansal/wtfpython#-first-things-first-
+
+   Python Deep Dive : https://github.com/fbaptiste/python-deepdive
+----------------
+ Youtube
+
+   Memory management :- python 101 #3 (https://www.youtube.com/watch?v=OdQSWuG78Sk&t=165s)
+   Memory management in Python- the basics - (https://www.youtube.com/watch?v=URNdRl97q_0) 
+
+
+------------
+(Certifications)
+
+Google IT automation (CourseEra)
+Google Data Aanalytics Professional Certificate

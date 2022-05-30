@@ -1,0 +1,115 @@
+=> State inn Compose (ie func) needs to be Remembered (MIMP property)
+
+=> Hois State to altleast lowest Common ancestor of its consumers
+
+=> UI behaviour logic should always live in Composition
+
+=> View Model can be used as State Holder for State that is governed by the business Logics
+
+* Recomposition 
+  -----------
+    There are 2 things for Compsable i.e 
+     1) InitComposition
+     2) ReComposition 
+
+    Composable function can have state i.e mutable or immutable (mutableStateOf)
+
+    It remembers this state using `by remember` deferred variable
+
+    * Intelligent ReComposition :
+      -----
+       -> Skips those which not changed.
+
+    NOTE :- 1) Composable Function can execute in any order 
+            2) Composable functions can execute in parallel   [i.e take advantage of multiple cores]
+            3) ReComposition skips as many Composable functions & lambdas as possible.
+            4) ReComposition is optimistic & can be cancelled.
+            5) A Composable function might run frequently, as often as every frame of seconds.
+
+
+    1) execute any order :
+      ----
+       Composable decides that if some UI elements are in higher order & required drawing them first.
+
+    
+    * by remember & mutableStateOf() :
+      ------
+       -> Allows you to unwrap mutableStateOf() string in normal strin value using property 
+          delegator i.e `by remember`
+
+          So using `by` keyword you do not need to type variableName.toString() explicitly
+
+          remember : 
+           ----
+            -> this function will save single obj in memory (initial composition)
+               & saved val will return during recomposition
+
+          mutableStateOf(variable) :
+           ----
+            -> variable is transformed into state & state is observed by Compose
+               i.e whenever variable changes Compose will be notified & part of Compsable fun will be updated becuase of ReComposition process.
+
+    * rememberSavable :
+      ------
+       -> Survive Activity LieCycle Changes such as Orientation Changes 
+
+       
+* Stateful Composition & Stateless Composable : 
+  --------------------------------------
+
+  State Hoisting : 
+  --------
+   -> Pattern to convert stateful Composable to stateless composable .
+   -> Decoupled the state from Stateful Composable, by passing event as param to Composable function.
+
+
+  * ViewModel :
+    ------
+     -> ViewModel will survive Configuration Changes, So they hold state for Composable fun 
+        
+     -> Should expose state in an Observable manner such as LiveData or StateFlow 
+    
+     -> Can Achieve Single Source of Truth.
+
+
+     => .observaAsState()
+        --------
+         -> To observe state in ViewModel 
+
+
+* UniDirectionl Flow : 
+  ----------
+   State flows from ViewModels to Screen 
+   Event Flows from Screen to ViewModel.
+
+
+* Coil :
+  --- 
+    rememberImagePainter()
+      \
+       builder -> It's a stack of composable (as far as my knowledge)
+
+
+* State Holder :
+  -------
+   Instead of remembering state directly in composable,
+     Use Class for that purpose
+
+     Such class are known as State Holder
+
+     State Holder also often resides & live the life-cycle of composable function
+
+
+* Composition Local :
+  -----
+   = same as Provider in Flutter
+   = accessing the Parent property via context in Flutter (same concept)
+
+   compositionLocalOf{}
+   CompositionLocalProvider()
+   LocalContext 
+
+
+--------
+
+* items() => ListView in Flutter

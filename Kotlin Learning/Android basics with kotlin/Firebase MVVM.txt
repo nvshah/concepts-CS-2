@@ -1,0 +1,8 @@
+* GLide & Firebase-FireStore :
+  ------------
+   -> Glide plugin can directly load or store the image from cloud firestore
+
+* Firestore User Listener :
+  -----
+   - ListenerRegistration : Whenever something changes on Firestore for user we will get the updates.
+   

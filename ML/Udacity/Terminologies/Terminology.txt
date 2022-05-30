@@ -1,0 +1,106 @@
+Impute
+  Impute is a common term referring to different statistical tools 
+  which can be used to calculate missing values from your dataset.
+
+Outliers 
+  Data that are significantly different from others in same sample.
+
+HyperParamters 
+  Hyperparameters are settings on the model which are not changed during training 
+  but can affect how quickly or how reliably the model trains,
+  such as the number of clusters the model should identify.
+  Hyperparameters are set manually
+
+Loss Function
+  A loss function is used to codify the model’s distance from this goal
+
+Model paramters 
+  Model parameters are settings or configurations the training algorithm can update to change how the model behaves.
+
+Log Loss
+  Log loss seeks to calculate how uncertain your model is about the predictions it is generating.
+
+Model Accuracy
+  Model Accuracy is the fraction of predictions a model gets right.
+
+Continuous
+  floating point alues with an infinite range of possible values.
+  The opposite of categorical or discrete values, which take on a limited number of possible values.
+
+Plane 
+   A mathematical term for a flat surface (like a piece of paper) on which two points can be joined by a straight line.
+
+HyperPlane
+  A mathematical term for a surface that contains more than two planes.
+
+Bag of words
+  A technique used to extract features from the text. It counts how many times a word appears in a document (corpus), 
+  and then transforms that information into a dataset.
+
+Data vectorization
+  A process that converts non-numeric data into a numerical format so that it can be used by a machine learning model.
+
+Silhouette coefficient
+  A score from -1 to 1 describing the clusters found during modeling
+  near 0 :- overlapping clusters, 
+  less than 0 :- data points assigned to incorrect clusters
+
+Stop words
+  A list of words removed by natural language processing tools when building your dataset.
+
+Neural Network 
+  A collection of very simple models connected together.
+    
+    Input Layers 
+      first layer in NN, recieves all data passes through NN 
+    
+    Hidden Layers 
+      tailored to specific task 
+
+    Output Layers 
+      prediction are generated based on info captured in hidden layers. 
+
+Discrete 
+  finite number of values 
+
+FFNN 
+  most straight forward neural network 
+
+RL
+  Agent: (RL)
+    The piece of software you are training is called an agent. 
+    It makes decisions in an environment to reach a goal.
+  
+  environment
+    surrounding area with which agent interacts
+
+  Reward
+    Feedback is given to an agent for each action it takes in a given state. 
+    This feedback is a numerical reward.
+
+  Action 
+    For every state, an agent needs to take an action toward achieving its goal
+
+  Exploration vs Exploitation 
+    An agent should exploit known information from previous experiences to achieve higher cumulative rewards, 
+    but it also needs to explore to gain new experiences that can be used in choosing the best actions in the future.
+
+Generator 
+  A neural network that learns to create new data resembling the source data on which it was trained.
+
+Discriminator
+  A neural network trained to differentiate between real and synthetic data.
+
+Generator loss
+  Measures how far the output data deviates from the real data present in the training dataset.
+
+Discriminator loss
+  Evaluates how well the discriminator differentiates between real and fake data.
+
+AR-CNN 
+  Piano Roll
+    2D matrix that represents the input tracks from piano.
+    time is on horizontal axis & pitch is on vertical axis.
+
+  Edit event 
+    When a note is added or removed from your input track during `inference`

@@ -1,0 +1,175 @@
+* Setup :
+  ----
+  build.gradle (app) file 
+  - dependencies 
+  - compile options inside android {} block
+  - apply more plugins
+
+  build.gradle (project) file
+  - classpath for navigation components
+  - maven for chart in allProjects-repository block 
+
+  manifest file 
+  - permissions add :- for access fine location, 
+                                  Coarse Location, 
+                                  Background Location,
+                                  Foreground_Service
+
+  - attrib in activity tag :- launchmode : singletask
+     (There cant be new instance at same time)
+
+  - metadata tags
+
+1) Database :
+   ---
+    DAO :- we will define interface for how we access our database
+
+    Bitmap :- complex obj -> to ByteArray to be stored in database
+   
+
+2) Dagger :
+   -----
+    Dependecy Injection
+
+    - helps to define the object based on different scope (instead of singleton)
+      where Singleton is available throughout app lifetime
+
+      Dagger can help us on top of it to maintain the lifetime of obj based on diff scope
+
+
+   Dagger vs Kode-in :
+   -----
+    Dagger - is a Dependecy Injection 
+    Kode-in - service locator 
+
+    DI :- happens at compile time 
+    Service locator :- happens at run-time
+
+    So Dagger is more performant thann Kode-in
+
+
+   Dagger Android vs Dagger Hilt :
+   -----
+   -> add dependencies for Dagger Hilt in build gradle files
+      add plugin for dagger hilt
+      add classpath for dagger hilt in project-gradle file
+   
+   
+   Dagger Hilt :
+   --------
+    1) First thing to do when we wannt to use Dagger Hilt as DI, we need to tell app
+       that we want to use Dagger hilt as an DI techniqye
+        \
+         create Application class
+
+         @HiltAndroidApp
+
+       Register the entry of Application class name in Manifest File ie. android:name
+
+    Module Files :
+    ---
+     - Manuals to let Dagger know how to create the Dependecy ie Classes Objects
+        \
+         - Funcntions put into module classes
+
+         @Module, @InstallIn
+
+   NOTE :- all the dependencies menitoned innisde Module, will be created in onCreate() method call 
+           of Application class 
+
+      Components :
+      --------
+       ApplicationComponent :- Module will be created & destroyed throughout lifetime of an application
+       ActivityComponent :- Module will be created & destroyed throughout lifetime of Activity
+
+       ServiceComponent
+       FragmentComponent
+
+      Contexts :
+      -----
+       ApplicationContext
+
+
+   Manuals :- (Registering Manuals)
+     
+     @Provides :- factory behaviour to Manual Func
+     @Singleton :- Singleton Scope to Manual
+
+   
+   Use Module :
+   -----
+    @AndroidEntryPoint
+    @Inject
+
+   Tip :-
+       
+       To inject ViewModel inside fragment :- use private varaible & 
+              -> `by viewModels()`
+
+       If your class is not registerd in module but all of its dependecy does 
+       then you can inject that class though its not registered
+
+---------------------
+
+* Logging : (Timber)
+  ---
+   - Timber.plant()   // in onCreate() of application
+
+
+-------
+
+* Repository :
+  ---
+   - collect data from all sort of data sources 
+   
+
+* requireContext() :
+  -----
+   Makes sure that context of activity is not null 
+
+   - If we want the context of activity from one of its Fragment
+
+* For Permissions : EasyPermission
+
+
+* Service Class :
+  -----
+   - Service, IntentService, LifeCycleService
+
+   LifeCycleService :- to observe LiveData   
+                       to tell observe in which state LifeCycleService is in !
+
+   Communicate to Service :- send inntent to service from either activity or fragment
+   Bound Service :- Service class acts like Server & Client can bound to it (alike Socket)
+
+  => The observe func of LiveData obj needs LifeCycle Owner
+
+  TrackigService :- will get intent so that it can track & perform necessary commands 
+
+Flow :
+---
+ MainActivity -> Intent -> Trackingservice
+ TrackignService -> PendingIntent -> MainActivity
+
+* Foreground Servicec:
+  ------
+   Notification Channel :
+   ----
+   Note :- Notification Service is System Service (from Android Framework)
+
+* Pending Intent :
+  -------
+   -> useful when we want to implement Deep Link kinda things
+   -> intent that can be launch later & not instantly
+
+Note :- When our MainActivity launched with new Intent then either of following 2 methods 
+        are called !
+         1) onCreate()
+         2) onNewIntent()
+
+   -> FLAG_UPDATE_CURRENT  // To update the extra content passed in Pending Intent
+
+
+* Global Action in NavGraph :
+  ------- 
+   -> To directly navigate to particular fragment Globally via navController

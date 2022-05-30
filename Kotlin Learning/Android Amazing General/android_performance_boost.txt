@@ -1,0 +1,32 @@
+* R8 :
+  ---
+   -> R8 helps us when we want to release the app 
+   -> R8 basically obfuscate the code.
+   -> R8 just remove unused classes & unused function
+   -> R8 rename all classes & props to smaller names
+
+* Android Studio Profiler :
+  ---
+  (Just Kinda Dart Dev Tools)
+   -> How faster app is 
+   -> Battery & memory or network consumption by an app
+
+* Get Rid of memory Leaks :
+  ----
+   -> happen when GC does not collect the obj that does not need in memory anymore
+   -> leak Canary (*app)
+
+* Optimize the Network Usage of an APp :
+  ----
+   -> Networking Drain so much of your Battery 
+   -> Phone 
+        \ 
+         -> networking (radio) Chip  (by default turn off)
+               \
+                When initiate any req (by app) then it will turn on & connect with cell-phone tower
+                & will stay on for while (until wait for response)
+
+
+* WorkManager :
+  ----
+   -> Put diff types of Work together

@@ -1,0 +1,141 @@
+ref :- 
+  https://resocoder.com/2018/10/06/kotlin-coroutines-tutorial-stable-version-async-await-withcontext-launch/
+
+_______________________________________
+
+
+Coroutine = suspendable function = async method (in Flutter)
+
+runBlocing = async block with implicit await when required 
+           = alternative to suspend function for code block
+
+launch() = new coroutine scope => async block in Flutter
+
+.join()  = await in flutter
+
+deffered = Future in flutter
+
+=> - use async when you want to run multiple calculations concurrently
+     when you want to await multiple things at oncne use async 
+
+   - dont want to run concurrently you can use withContext{}
+
+______________________________________
+
+NOTE :- Suspended Fun when use another suspended fun inside it implicitly await & do synchronous operation 
+        You need to use asunc block 
+
+-----
+
+* Thread :
+  -----
+   - sleep()   // sleeps a thread 
+
+   - main Thread
+
+* Coroutine :
+  ------
+   -> are a light weight Threads
+   - a way to manipulate the Threads
+
+
+* delay () :- on Coroutine suspend function
+
+* suspend function : 
+  ----
+   -> you need to create suspend fun to call other suspend fun
+   -> It is called as Coroutine
+
+
+* runBlocking :
+  -------
+   -> pretty much simulating Thread.sleep()  // blocks the current thread
+   -> alternative to suspend fun 
+
+   ie suspend fun f1(){}
+      
+      fun f2 = runBlocking(){}
+
+      f1 & d2 are similar in terms of Concepts
+
+   -> runBlocking = async method where await is implicitly applied for the Coroutines in the enclosing context
+
+   Dispatcher :
+   ----
+    -> When we provide Dispatcher to runBLocking ie Coroutine it will switch to 
+       different thread most of the time.
+
+    => eventhough runBLocking code runs in different thread via Dispatcher, 
+       it will block the current Thread 
+
+
+* GlobalScope.launch :
+  --------
+   -> delegate work to new Thread (child or worker thread)
+   -> But this time this Thread will work non-blocking way to current thread
+   -> to execute the block of code not Blocking current Thread
+
+   Job :
+   ----
+    -> returned by the GlobalScope.launch{}
+    
+    -> .join() to await in current thread till the job gets completed in either another thread or current thread
+
+* this.launch :
+  ------
+   -> If you launch new Coroutine job in current coroutine scope 
+      then you do not require to await or join() the job
+
+=> all in all :
+   ----
+    - If you launch new async code as a child or sibling of current Coroutine scope 
+      then no need to join() as current Coroutine is aware about its children
+
+    - If you launch new async code in seperate Scope then you need to join 
+      explicitly
+
+    - Within same scope you can utilise to work with dif Threads
+
+* Dispatcher :
+  -------
+   will dispatch ie delegate your job code to one of Thread in its Pool (ie Queue)
+
+* async block :
+  ---------
+   .await()  // to get return value from suspended function ie Coroutine
+
+   async returns the deffered
+
+
+* withContext :
+  -------
+   - doesnt returns deffered but it returns whatever coming out directly from the async block
+   - its equivalent to calling await() after each async block
+
+
+=> - use async when you want to run multiple calculations concurrently
+     when you want to await multiple things at oncne use async 
+
+   - dont want to run concurrently you can use withContext{}
+
+
+
+---------------
+GOOD PRactices
+
+1) Calling Multiple API Fun (Suspended Fun)
+    \
+     -> CoroutineScope -> async{} -> deffered -> awaitall()
+
+     - ensureActive()
+
+
+2) Main Safe & Suspended Fun :
+   ---
+    ->
+
+3) ViewModel should not expose the Suspending Function to UI
+
+[RULE of THUMB]
+4) To utilise the suspended fun inside non-suspended fun we need some scope
+   ViewModel Scope outlives the lifecycle of activity

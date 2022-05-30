@@ -1,0 +1,17 @@
+mathisfun.com
+
+calculushowto
+
+[projection] https://www.cuemath.com/geometry/projection-vector/
+
+https://textbooks.math.gatech.edu/ila/projections.html#:~:text=In%20the%20special%20case%20where,as%20in%20the%20following%20picture.
+
+
+https://www.calculushowto.com/probability-mass-function-pmf-definition-examples/
+
+brilliant : (best for Data Science)
+
+--------
+
+Constrained Optimization + Langrange (Khann Academy)
+  khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/lagrange-multipliers-and-constrained-optimization/v/lagrange-multiplier-example-part-1

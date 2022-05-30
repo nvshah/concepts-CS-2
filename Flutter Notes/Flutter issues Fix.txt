@@ -1,0 +1,5 @@
+Bundled Java Version
+https://stackoverflow.com/questions/51281702/unable-to-find-bundled-java-version-on-flutter
+
+Set Java Home Env in Mac
+https://mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/#what-is-usrlibexecjava-home

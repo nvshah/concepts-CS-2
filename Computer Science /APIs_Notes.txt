@@ -1,0 +1,41 @@
+REST :- API :
+----
+ -> Representation State & Resources
+
+ -> All abt transferring data from 1 place to another
+     \
+      betn client & server or server & server
+
+ -> Transfer of Representational State 
+ -> Managing the resources
+
+
+Some Server -> represent state in some format f1
+  \
+   transfer data to other place via internet 
+    require representation in other format of same data 
+
+* URI :- point to some resource
+     
+     - also called api endpoint
+     - get, put, post, patch to interact with resource 
+
+     Path Parameter :- Points to diff URI - diff resource 
+     Query Parameter :- filter data from 1 resource
+
+     Request Payload :- send some data extra 
+     Response Body 
+      
+     HTTP Headers :- meta-data associated with api req (Eg language used in request)
+
+------
+
+- Request -> { HTTP-Methods + Endpoint + Query-Param + Data } -> REST API -> Web Services (resources)
+
+
+__________
+
+* Pagination & Filters :
+  ------------------
+  
+

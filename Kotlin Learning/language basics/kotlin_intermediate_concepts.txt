@@ -1,0 +1,20 @@
+* Kotlin java Interop :
+  ----------------
+   -> @file:JvmName("UserExtensions")
+
+* Free Function :
+  -----------
+   global function (function that are not tied to any class)
+
+* synchronized block :
+  ---------
+   synchronied(lock:this){
+     // allowing only 1 thread to ente this block at a time
+   }
+
+
+* Delegated Properties :
+   1) Observable
+* lazy Property 
+* lateinit
+

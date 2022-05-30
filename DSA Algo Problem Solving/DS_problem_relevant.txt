@@ -1,0 +1,33 @@
+Deque :- sliding Window Maximum
+
+DFS :- recursion & backtracking
+
+* Queue :
+  ------
+   UseCase :- Movie Theatre Ticket Counter
+
+
+* Heap :
+  ---
+   -> useful when you want to get smallest or largest element 
+   - nsmallest or nlargest
+   - n most-freq-element
+
+   - Min Heap :- get Smallest Elem in O(1) time 
+     Max Heap :- get Largest Elem in O(1) time
+
+   - Eg Seat-Reservation-Manager (UseCase) 
+
+
+* LRU Cache :
+  ----
+   LRU Cache = Doubly LinkedList + Hash-Map
+                &
+               also keep track of capacity
+
+
+* TreeSet | TreeMap :
+  -----
+
+
+* BellMan Ford | BFS :  Cheap Flights

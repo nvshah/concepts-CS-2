@@ -1,0 +1,266 @@
+Scaler_IPL_HLD  Date :- 22/5/2022 by Nama Bhalla
+
+ref : Designing Data Intensive Application
+      highscalability.com
+      Grokking System Design
+
+     Youtube :-
+      Gaurav Sen
+      Narendra L
+      Alex Xu
+
+
+* Live Streaming Platform (System Design)
+----------------------------------------
+
+High Level Design = System Design
+
+----
+terms :-
+Web Socket
+Distributed Servers (Large Scale) | Load Balancers
+
+BLOBs (binary large objects)
+
+S3
+Pre-Signed URL
+
+Event driven System
+Kafka
+
+Web-Sockets
+__________
+
+
+* What is HLD ??
+---
+ High Level := Bird's Eye View (ie OverView)
+
+ Load Balancer :-
+  sitting somewhere for largeScale
+  - Distribute the req among real servers
+
+ File Storage System :-
+   Eg AWS (S3)
+
+ CDN :
+   Distribute File content across the world
+   - Akamai, CloudFront
+
+ Database :-
+  From where you fetch the details of your file
+
+ Infastructure Layers :-
+  - LB, App.Server, DB, ...
+
+ Def :- HLD is all abt dealing with this Infra-layers
+
+
+* Approach the HLD :
+---
+ Functional
+ - Understand the Features of the System
+
+ Non Functional
+ - Latency (Delay)
+ - Consistency vs Availability
+
+ Back of Envolepe Calculations
+ - back on the requirement, quantify the scales
+ - guestimates
+    - size of data
+    - network bandwidth
+    - concurrent users (using app at same time)
+
+ -> Helps you understand the cost
+
+ APIs
+ - to support
+
+ Schema
+ - diff entities that I'll store & attrib for those entities
+ - Eg User (Name, Phone, Address)
+ - Data Models
+
+ Design :
+ - start with basic design
+ - database (ie Sql or noSql)
+
+* CAP theorem :
+---
+ - When some work is happening in distributed fashion (ie partion way)
+   then it can be either Consistent or Available
+
+ - In Distributed System, it can have either Consistency or Availability
+
+ Partition Tolerance :-
+ ___
+ -> When Distributed System breaks out
+
+ - When partiton breaks out
+   then your system can have consistency or Availability
+
+   Available :- You get response from the System
+
+ - Eg
+   1. In Banking System, Consisentcy is preferred to support Partition Tolerance
+   2. For HotStar, We will prefer Availability to support Partition Tolerance
+   3. Whatsapp prefer Availability
+
+ - If your system is running on 1 machine then you can have both consistency & availability
+   (practically impossible for high-scale systems)
+
+ => Tradeoff between Consistency & Availabiility
+
+____________________
+
+* Live Streaming Platform :
+----------
+
+Functional Req :
+ - Streaming at diff qualities (360, 480, 720,...)
+ - upload & download video
+ - Replay
+
+Non Functioanl Req :
+    (for Streaming)
+     - low latency
+     - high availability
+    (For Uploading | Live Streaming)
+     - High Availability (because of Live Streaming)
+    For Non Live Streaming :
+     - Consistency may be the better
+
+* Back of Envelope Calc :
+* Quantifications :-
+  ---
+   - #Users watching Concurrently
+   - Upload bandwidth
+   - It will require caching for huge bandwidth (inorder to upload)
+      \
+       uploaded by multiple servers to serve the humongous users base
+       - inorder to upload to many users you need good bandwidth for uploading
+         (ie Server Upload bandwidth will be used &
+             Clients Download bandwidth will be used)
+
+    -> So we will need so many machines for above purpose
+
+   Recorder Videos :
+   ---
+   - How to decide Storage ?? (Guestimations)
+   - Not much imp for Live Streaming
+     but if you need Replay/Rewind then you need
+
+
+* CDN : (Content Delivery Network)
+  ---
+  - manages File Storage System
+
+
+-> Normally upload to Server & then server to S3
+   \
+    -> Client -> Server -> S3
+    - here dual bandwidth is needed
+
+
+* Pre-Signed URL :
+  ---
+  - provides authentication
+  - allow client to upload video to AWS(S3)
+
+  - Server is generating the pre-signed url
+  - presigned url is diff for every file & it is valid only for sometime
+
+* Worker | Parallel | Event Driven Systems :
+  ------------------------------
+  - Apache Kafka
+  - messaging Queue
+
+  - when something can be done in parallel on the server side (by some other worker)
+
+  - once video upload gets completed, server needs to process it (let say for quality)
+    this can be done via Event Driven Systems
+
+  - Multiple set of Workers
+
+  - Publishers & Subscribers (for Queue)
+
+  Kafka :
+   - Just deliver the content to appropriate servers
+
+  What does each Worker do ??
+  - download the raw video from AWS
+  - compress, convert to resolution (240, 360, 480, 720,..)
+     - break the video into multiple chunks
+  - upload to AWS
+  - also should store the details in DB
+
+
+* Segments :
+  ---
+   - Divide video inot small segments
+      |
+      So that client can start downloading videos from that particular segments likewise
+
+  -> Netflix try to divide the video by scenes chunks (ie Manual process or AI/ML way)
+
+  - Each Chunk is a Seperate File
+
+
+* Web Sockets :
+  ---
+  - server can send data without client asking for it
+  - used by client (in live streaming) to get meta deta about chunks
+
+  - Each WebSocket connection has a TCP conn.
+    So it takes some memory on device
+    So you can't have many websockets conn from same device
+
+  - WebSocket will be setup for unique video-id (whilst watching)
+  - server has a map for video-id -> list of websocket connection
+     \
+      so that it can broadcast video to all connections
+
+  In live stream often chunk size is very small
+
+  => 1 Server can handles 2*10^6 websocket conn. at max.
+
+
+* Overview : (Live Stream)
+---
+Uploading :-
+1. Client gets pre-sign url
+2. Client upload video to AWS S3 directly
+3. Server publish event asa video upload gets completed
+4. Events will read by diff set of workers (ie 360, 480, 720p workers)
+5. Workers Job is to get video from AWS & compress, convert it & process it as necessary
+   also break it into chunk
+   then upload it to AWS & update the DB with chunk details
+
+Downloading (client)
+
+6. Each client web-socket conn. with Servers.
+7. asa any chunks comes up server broadcast the messages to client
+8. How server comes to know abt events
+    - workers will upload event to Queue (ie publishers of updates)
+    - then server will know that (ie servers here are subscribers to this workers)
+
+   Q2 -> Event Queue 2
+
+    - All servers will read every event
+    - Every server has map of vide_id, res_id -> Web-Socket Connections
+       &
+       thus server broadcast likewise to clients
+
+All of this happens in  less than 10 seconds so it takes about 5-6 sec of delay from realtime streaming
+
+
+=> When you pause or change the resolution your prev-web-socket is removed &
+   new is created for next time
+
+
+* CDN Url :
+  ---
+   - Video is not store on AWS url but on CDN url
+   - caching the files happens
+   - Files are served from CDN

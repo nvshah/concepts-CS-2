@@ -1,0 +1,108 @@
+
+https://towardsdatascience.com/the-6-steps-of-a-sql-select-statement-process-b3696a49a642
+
+https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/sqlproc/p0aymxwsvbt5wcn1lncugwjtf758.htm#:~:text=In%20PROC%20SQL%2C%20a%20column,ORDER%20BY%20clause%20is%20executed.
+
+https://bertwagner.com/posts/the-ultimate-sql-server-json-cheat-sheet/
+
+There are six parts in the conceptual order of execution of a SELECT statement from the ANSI SQL standard or ISO SQL standard perspective. If all six parts exist, the sequence is the following:
+
+The FROM part is executed first.
+The WHERE or ON part is executed second.
+The GROUP BY part is executed third.
+The HAVING part is executed fourth.
+The SELECT part is executed fifth.
+The ORDER BY part is executed last.
+
+----------
+
+* SQL stores info in 2 files :
+  ---
+   .MDF 
+   .LDF
+
+* Rename Database :
+  ---
+   1) Alter database DatabaseName Modify Name = NewDatabaseName  // via SQL query
+   2) Execute sp_renameDB ‘OldDatabaseName’,’NewDatabaseName’    // via system SP 
+
+* SQL Sub :
+  ---
+   DDL (5 commands- create, alter, sp_rename, drop, truncate)
+    DML (3 commands- Insert, Update, Delete).
+    DQL/ DRL (1 command- select).
+    TCL (3 commands- commit, rollback, savepoint)
+    DCL (2 commands- Grant, Revoke).
+
+* Foreign Key :
+  ----
+    foreign key actually references a key that should contain unique values.
+    So reference colummn can be -> Primary Constrained 
+                                   or 
+                                   Unique Constrained
+
+* Self Referential Integrity Constraint in SQL Server :
+  -----
+   -> Both Foreign & Primary Key exists in Same Table 
+      Referential Integrity Constraints (Cascade, Delete, ...) on same table
+
+
+* Identity Column :
+  ---
+  - automatic increment
+  - To OFF the behaviour :- SET Identity_Insert Person OFF
+
+  -> it is tied to Table
+
+
+* Sequence Object :
+  ----
+   - user defined database object
+   - Custom Object define in SQL Server
+   --> allow more customization in place of Identity Column 
+
+   - It is not tied to sepcific Table
+   - It can be utilised amon multiple tables
+
+-----------
+[Select | Where]
+
+* Top n [percent] with Ties
+
+* having Clause :
+  -----
+   having clause filters the rows from the intermediate result set that is built by using the FROM, WHERE, or GROUP BY clauses in the SELECT statement.
+
+[REMEMBER]
+=> The Where clause in SQL Server is used to filter the rows before aggregation,
+   whereas the Having clause in SQL Server is used to filter the groups 
+   that mean after aggregations
+
+=> Where clause in SQL Server will not work with the aggregate functions such as sum, min, max, avg, etc.
+
+
+* Union : Combine 2 Rows 
+  Join : Combine 2 Columns
+
+
+-----
+
+* Index vs Full-Scan :
+  ----
+   When SQL Server is searching for information under the database, 
+   first it will verify the best execution plan for retrieving the data 
+   and uses that plan which can be either a full-page scan and index scan.
+
+
+* Stored PRocedures :
+  ----
+   What is Advantage ??
+   -> Execution Plan Retention which Improves the Application Performance
+   -> Reduces the Network Traffic 
+   -> Code Re-usability and Better Maintainability
+   -> Better Security 
+
+Q) What is an execution plan?
+  -> An execution plan is nothing but for the query to retrieve the data what is the best possible way available. 
+    This depends on the indexes that available on the SQL Server to help that query. 
+    Based on those it generates the execution plan and then it executes the query.

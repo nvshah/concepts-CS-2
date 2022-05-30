@@ -1,0 +1,35 @@
+* Clean Architecture 
+
+* State Management
+
+* Streams & Futures 
+
+* BLOC :- Inter & Intra Communication 
+
+* Animations (Maths)
+
+* Services 
+
+* DI 
+* Architecture 
+
+* Navigation (Navigator2.0 & Nnavvigator1.0)
+
+* Key-Val Storage (Hive|ROOM|MOOR)
+
+* Chopper | DIO -> HTTP Client 
+
+* Widgets | Tree | Render 
+
+* Navigation | NNavigator1 | Nnavigator2 
+
+* Scrollable | Slivers 
+
+* RxDart
+
+
+
+-------
+
+* Ddynamic Themmeing 
+* Setting Environment (Dev, Stage, Test)

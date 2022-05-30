@@ -1,0 +1,34 @@
+=> use @volatile to mark thise field or property, which needs to be access by 
+   only 1 thread at a time 
+   @volatile will make that particula field visible to all other threads
+
+=? synchronied block for executing 1 block per thread at a time 
+
+=> ROOM provides well safety with Coroutine Thread tasks so you can use 
+   Coroutine Scope of Main while doing operations for ROOM 
+
+
+* BloCkStore :- 
+ ---------
+  -> You can store auth tokens for your app inside Block STore 
+     It can be use ful whilst auto sign in in D2D transfer
+
+
+* SavedStateHandler :
+  -------
+   -> To get the navigation argument passed whilst navigation
+   -> to restore state of ViewModel
+
+
+* GGradle Properties & Build Configg Prop : 
+  ----
+   -> We can use Gradle files to hold the config propeerty 
+      modulee wise (ie declared in build.gradle file -> default Config {})
+
+      Those Val will be avail unnder `BuildConfig` class
+
+
+* Share the Object among multiple Composable Screen :
+  ---
+   1) Via BackStack State 
+   2) Via Shared ViewModel

@@ -1,0 +1,37 @@
+* Collections :
+  ----------
+   
+   1) Array :- Primitve, Boxed(Nullable)
+   2) List :- ArrayList, LinkedList, Vector (in Java)
+
+
+* Anonymous Class in Java :
+  ---------
+   -> object 
+
+* TypeToken :
+  -------
+   -> used to define particular type i.e 
+
+      object: TypeToken<T>(){}.type
+
+* inline function :
+  --------
+   -> inlining function will eliminate function calling overhead
+   -> inline function should be always used with reified type parameter
+
+
+* infix function :
+  ------------
+   -> Eg `with()`
+      
+      Such function dont require dot notation
+
+* Delegated Properties :
+  ------
+   Delegates.observable 
+   Delegates.vetoable
+
+* Lazy properties :
+  ----
+   by lazy

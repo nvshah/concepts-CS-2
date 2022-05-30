@@ -1,0 +1,26 @@
+Q |-> Why google introduce flutter despite they back heavily for Native(Kotlin) Android
+
+!! -> Why Flutter ? -> Cross Platform | alike Unity behaviour (i.e rendering pixels swiftly)
+      Why Google only introduce Flutter ? (As they already have Native+ Kotlin)
+
+
+* Type Inference issue :
+
+  When assign int to num variable inside extension{} block it's saying can't assign int to num
+
+  But same thing when done outside i.e global scope it's allowing
+
+
+  Eg extension on List{
+     List add(num a = 0){}   // Not allowed to assign 0, we have to do 0 as num
+  }
+
+     num a = 0;   //allowed Why ??
+
+
+* Dart Nested Class (not supported) ??
+  ---------
+
+* Q) Why class with name `Object` is allowed to be declared in dart, 
+     eventhough There exists already inbuilt class for same in dart at root i.e Object ??
+  

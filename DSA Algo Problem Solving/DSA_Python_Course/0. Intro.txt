@@ -1,0 +1,70 @@
+* DS :
+  --
+  - diff ways to Organize Data on Computer So that it can be used effectively.
+
+  Eg : Queue at Cinema 
+       Stack of Book Piles 
+
+* Algorithm :
+  ----
+   - set of steps to accomplish tasks 
+   - set of rules for a computer to perform tasks 
+
+   Eg Compression Algo  // to transmit video by Google 
+      Graph Algo        // To Finnd Path on Map 
+      Optimization & Schedulingn algo // NASA to arrange solar panels on International Space Station
+
+   - Usefulness : Correctness, Efficiency
+
+* Why ?
+  ---
+   input -> process -> output 
+
+   To make this process efficient we need to optimize the process steps & 
+   this can be done via DSA
+
+
+* Example :
+  ---
+   Google Map   // Graph 
+   Library-Books  // Organized (Dict)
+
+
+* Types of DS :
+  ---- 
+   1. Primitive  2. Non-Primitive
+
+   1. Primitive :- available in programming lang itself 
+                   {int, float, string, character, boolean}
+   
+   2. Non-Primitive :- Combination of Primitve 
+              \
+               Linear & Non-Linear 
+
+        Linear DS :- data arrange in Linear Sequential manner 
+             \
+              static & dynamic 
+              
+              static :- asscoiated Memory Locations are fixed at compilem time
+                        Eg array
+
+              dynamic :- associated Memory Locations are decided ar run time 
+                        Eg LinkedList, Queue, Stack
+
+        Non-Linear DS :- Tree, Graph
+
+
+* Types of algorithms :
+  -----
+   - based on Problem Solving Approach 
+
+   - Sorting Algo 
+   - Searching Algo 
+
+   - Recursive 
+   - Divide & Conquer Algo 
+   - Dynamic Prog Algo     -> (Memoization & used for Optimization Programming)
+   - BruteForce Algo       -> (All possibilities)
+   - Greedy Algo           -> (Optimization & Local prefer instead of Global)
+   - Randomized Algo       -> (Use random number atleast once to make decision)
+

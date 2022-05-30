@@ -1,0 +1,14 @@
+* Production Code :
+    Software running on prod server to handle live users data.
+
+* Clean Code :
+    simple, readable, concise.  
+
+* Modular Code :
+    Code that is broken into functions & modules, logically, & organized.
+
+* Module :
+    file
+
+* Refactoring: 
+    Restructuring your code to improve its internal structure without changing its external functionality

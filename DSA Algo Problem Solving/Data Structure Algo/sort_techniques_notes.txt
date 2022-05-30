@@ -1,0 +1,88 @@
+Tips :
+  
+-> When array is sorted & you need to add new element into array at correct location
+    1) Binary Search & Swap 
+    2) Insertion Sort
+
+-> In sorted array (1 -> n)
+   property :- index = element-1
+
+
+* Stable Sort (Order should be same when value is same)
+
+* Bubble Sort : ()
+  ----
+   -> Also known as Sinking Sort | Exchange Sort
+   -> Inplace
+   -> Space - O(1)
+   -> Largest element at the end at each step
+   -> Counter + Pointer
+   -> At the end of each iteration, the end portion of the list will be sorted.
+
+
+* Selection Sort :
+  ----
+   -> Not Stable
+   -> performs well for small lists
+
+
+* Insertion Sort :
+  ----
+   -> Partially Sort 
+   > Good if array is already sorted & to insert new item
+   -> insert item to correct position in current array
+
+   -> # swaps reduce compare to bubble sort 
+   -> smaller values of n & when array is partially sorted 
+   -> part of hybrid sorting algo
+
+
+* Cyclic Sort :
+  -----
+   -> Sort in single pass (n comparision)
+
+   => In sorted array index = element-1
+
+   element from 1 -> n  or continuous numbers
+
+
+* Merge Sort :
+  --------
+   mine intution :- 
+     merge the lg(n) times & for each merge we will have asymptotically O(n) Complexity 
+     So overall :- n * O(lg(n))
+
+
+* Quick Sort :
+  ---------
+   Put the pivot at correct location at each iteration
+
+   Idea Impl :- 2 pointer ramesh suresh
+
+   NOTE :- In merge sort evennthough array is sorted we need to boil down to base conditions
+           which is not in the case of quick sort
+
+
+* Hybrid Sorting Algo :
+  --------
+
+   1) Tim Sort (Python)
+    -----
+   (Merge Sort + Insertion Sort)
+
+   Works well with partially sorted data 
+     \
+      because insertion sort is best for partially sorted data & 
+      merge sort is best in case of general as its worst case complexity = nlg(n)
+
+   
+   2) Dual Pivot Quick Sort :
+     -------
+
+
+
+* Topological Sort :
+  --------
+   DAG :- Directed Acyclic Graph
+
+   => PostOrder DFS = Topological Sort :- Gives you Reversed sorted string/result

@@ -1,0 +1,5 @@
+* cmd - netsh wlan show profiles   //display all wifi avail on your computer
+
+        netsh wlan show profile profile_name           //details abt individual profile
+   
+        netsh wlan show profile profile_name key=clear //show security key

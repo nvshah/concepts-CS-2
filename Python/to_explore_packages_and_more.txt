@@ -1,0 +1,71 @@
+
+
+builtins,
+os,
+argparse
+inspect,
+gc 
+pdb
+importlib
+sys      --- MIMP
+dis
+
+math 
+unittest
+shutil
+contextlib
+secrets
+
+glob
+logging 
+
+sqflite3
+
+joblib     // deal with pickle file 
+tqdm
+
+
+get topics from this course :-
+  https://www.udemy.com/course/python-programming-beginner-to-advanced/
+
+
+  monkey-patching in python
+
+
+
+* Imp Concepts in Python :
+  ---------
+   -> namespace 
+      iterator/generator 
+      sequence 
+      iterable 
+      collections 
+
+      closures 
+      Monkey Patching 
+      Controlled Monkey Patching (vis slots)
+      circular references 
+      
+
+
+---------------------------
+
+Explore this combination :
+   
+    - importlib + pathlib + os 
+    - 
+
+
+
+--------------------------
+
+Packages & Trademark
+
+- zip()  : Transpose of a matrix 
+  Counter() : find first non repeating char in string 
+              List Intersection
+
+  itertools.count() : series of stride = float point (eg 0.5)
+  itertools.islice()
+
+      

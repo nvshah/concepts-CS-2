@@ -1,0 +1,7 @@
+FrameWork Creator :-
+---------------
+1. Singleton
+2. Facade 
+3. Bridge/Adapter
+4. Strategy 
+5. Observer 

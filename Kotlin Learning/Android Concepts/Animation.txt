@@ -1,0 +1,6 @@
+* AnimationSpec :
+  ----
+   - spring 
+   - tween
+
+=. updateTransition() => to update multiple vals at a time via single anim spec

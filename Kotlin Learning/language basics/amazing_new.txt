@@ -1,0 +1,26 @@
+
+Que -> What is dispatch reciever ?? 
+
+* Annotations :
+  ---------
+   Eg @Composable -> 
+     
+     Tells kotlin to add more support to that functions
+
+     @Volatile 
+       writes to corresp property is available to other threads
+
+* To get Java Class from Kotlin Objects :
+  ----------
+   -> .javaClass
+
+* To get Class Object from class name i.e string  :
+  ----------
+   -> Class.forName('className')
+
+
+* abstract class in kotlin can be invoked via ClassName() ??
+-> how ? -> need to over
+
+* You can use anonymouse object ie with {} for implementing the interface at run time
+  also

@@ -1,0 +1,23 @@
+ref : https://www.youtube.com/watch?v=S1UImO-ptK8&list=PLbKJc0NMPDrB1qFjrc5I-Nu7DocWnZf_f&index=6
+
+-----
+
+Flutter + Deploymment + IOS | Android 
+  \
+   -> https://www.youtube.com/watch?v=S1UImO-ptK8&list=PLbKJc0NMPDrB1qFjrc5I-Nu7DocWnZf_f&index=6
+
+* BitRise 
+  -----
+   automation & devops for Mobile Development
+
+   - Customise Work Flow
+
+
+   Android :-
+     - KeyStore & Password
+
+   IOS :-
+     - Development Certificate
+     - Distribution Certificate
+
+     Product Archive is used for Validiting if Signing Doc goes well 

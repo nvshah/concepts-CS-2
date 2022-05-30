@@ -1,0 +1,36 @@
+
+* annotations :
+  ---
+   @Module
+   @Installin()   // live as long as specific activity
+
+   @Singleton
+   @Provides
+
+   @AndroidEntryPoint
+
+   @Inject
+   @Named    // named annotation to provides
+   @ActivityScoped  // single instance inside particular activity
+
+   @ApplicationContext
+
+   @ViewModelInject  // to inject dependencies in VM constructor
+
+* Dagger Hilt :
+  ---------
+   Create Modules 
+        \
+         contains dependencies that lives specific amt of time 
+
+* If you want to inject in any activity then annotate that activity with @AndroidEntryPoint 
+
+  If you want to inject inside Fragment 
+  then also You need to mark the parent activity with @AndroidEntryPoint  
+
+
+* View Model DI :
+  ------
+   by viewModels()   // Dagger will inject appropriate VM 
+
+   @ViewModelInjection

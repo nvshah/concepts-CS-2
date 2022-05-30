@@ -1,0 +1,132 @@
+https://www.python-course.eu/python3_formatted_output.php
+
+http://rosettacode.org/wiki/Cubic_Special_Primes
+
+Useful moduels :
+  threading, socket 
+
+Merging Operator : - pipe i.e `|`  [python 3.9, for dictionaries]
+Update Operator :-   |=            [ Python 3.9]
+
+-------------------------------------------------------------
+
+* Formatting :
+  --------
+  https://mkaz.blog/code/python-string-format-cookbook/
+
+
+* File :
+  ----
+  1) Write mode ('w')
+
+     -> When you write something inside file, you must call close() on file obj.
+        this will internally flush the changes. 
+        or You must call flush() on file obj.
+       
+        close(), flush()
+
+        So if you use with context manager then it is taken care automatically. otherwise it will not update content. 
+
+        -> flush() -> provide latest update onto file.
+
+        -> close() -> closes file stream, so you no longer can provide updates.
+
+    -> If you try to write onto file that not exists then it will create new one ! 
+
+
+  => os & file :
+     -------
+
+     from os import * 
+
+     mkdir(), chdir(), rename(), remove()
+
+
+* threading : 
+  -------
+   module -> threading
+
+    threading.Thread()
+               \
+                .start()
+                .join()
+    
+    threading.Lock()
+
+    Event :
+    ---
+     - threading.Event()
+                  \
+                   .wait()   // wait till triggered event finish
+                   .set()   //trigger the event
+       
+        // Event can be triggered or waited (triggered to perform some duty)
+
+
+* Queues :
+  -----
+   module name :- `queue`
+   Why queus ?
+    
+    -> when multiple threads are running you need structure data 
+         - to get into the 
+           &
+           to get out of it
+
+    Eg Imagine when multiple threads try to get out data from collections/sequence 
+       (by managing counter)
+
+       So use Queue as collection/Sequence data structure
+
+
+* sockets :
+  -------
+   Networking with python 
+   sockets are ednpoints to connect to network 
+   TCP or UDP
+
+   -> network socket (for internet)
+
+   -> unix socket
+
+   TCP - connect oriented        {online chat}
+   UDP - connection non-oriented {video call, video games}
+
+   To run the socket we need 2 info :- {ip address, port number} 
+
+* sqlite3 :
+  ------
+   module -> sqlite3
+
+   1) connect to db 
+   2) get cursor from connection 
+   3) execute via cursor 
+   4) commit inorder to reflect in db
+
+
+* Logging :
+  -------
+   -> Log for backups
+   -> find problem, avoid problems
+
+   => Not message are equally imp (so can't use print stmts everywhere)
+      Eg 
+         Critical Message :- System Crash 
+         Informative Message :- Your backup is done
+
+      DEBUG, INFO, WARNING, ERROR, CRITICAL
+
+      default security level -> WARNING
+
+  => Looging into directly file is really useful
+      \
+       .FileHandler()
+     
+     NOTE : By default Log File is created in append mode 
+
+  => formatter that formats & manipulates the log messages.
+       \
+        .Formatter()
+     
+
+   

@@ -1,0 +1,219 @@
+ref : https://developer.android.com/topic/libraries/view-binding
+
+      https://wajahatkarim.com/2020/04/evolution-of-finding-views/
+
+
+-> MainActivity is itself context
+
+-> Views Object are accessible until setContentView() is called
+
+   View Objects are found by unique id given to View in XML.
+
+-> Vector Drawable Suppor (Android X)  
+
+     app:srcCompat    [:- compatibility for older versions of android]
+
+-> Note: A constraint in the context of the Layout Editor represents a connection or alignment of a view to another view, 
+        the parent layout, or an invisible guideline.
+
+
+* Attributes (Imp) - User Experience - accessibility guidelines
+
+  importantForAccessibility
+
+- ImageViews should have a content description to help make your app more accessibles.
+
+
+* Data Binding : 
+  __________
+  - depraved of using findViewId() [Not relying on deep heirarchy at runtime]
+  - connect activity or layout to a fragment to compile time instead of run time.
+  - Compiler generate Binding Class (at compile time) , which we can use to find View without any overhead
+  
+  It's imp topic to master (that enclose JetPack)
+
+
+  Simple Features -> use View Bindings   [ref- https://developer.android.com/topic/libraries/view-binding]
+  Advance features -> use Data Binding
+
+* Others (UI)
+
+Ratio - Width:height ratio, auto calculated by providing atleast 1 val. 
+Chains - help to create view groups
+
+
+* fragment :
+  --------
+   -> Can manually inflate layout, which is independednt of onCreate()
+   
+* Navigation :
+  ------
+   - Back Stack  [between activities]
+   - Fragment Back Stack [between fragments under same activities]
+
+   Nav-Directions :
+  -----
+   - safe pass of arguments between fragments, (Bundle) 
+
+   Navigation Interface :
+  ----
+   - provides 1 api, that listen when navigation changes
+
+   NavHostFragment : 
+
+
+   => To pass argument via navigation from in xml :-
+
+       <fragment> <argument> ... all details for argument ... </argument>   </fragment>
+   
+
+
+* Menu :
+  ---
+   - Menu are created in method called onCreatedOptionsMenu()
+   - Much like layouts you need to inflate Menu
+
+
+* Intents :
+  ----
+   - Navigation between activity
+     -> Implicit : beware of fact that where to target the intent
+                   Each implicit intetn must have an action
+                  certain { action, Category, datatype }
+
+            For launcher activity it has to register in manifest with correct intent-filter
+
+   Implicit Intent -> Launches an activity based upon parameters, such as action, data, and data type.
+   Explicit Intent -> Launches an activity based upon its class name
+
+   Compat - makes less boiler plate code to share something via intent
+
+   NOTE : If no intent activity are found then it may crash tha app.
+
+   => The packageManager knows every activity register in manifest across every application.
+      So it can be used to check if implicit intent resolve to something. 
+
+
+  Share Implicit Intent :
+  ------
+   -  shareCompat to create our share Implicit intent.
+
+* Life-Cycle :
+  -------
+   - Every Activity & Every Fragments have a Life-Cycle
+   -> To manage activity or fragment you need to know your current state 
+
+   Android Activity State & OS
+
+   onStart, onStop -> Visibility
+   onResume, onPause -> Focus
+
+   onCreate -> 1 time initialization, (inflation binding)
+   onDestroy -> final tear down 
+
+   onPause -> blocks UI from drawing (no interaction)
+   onRestart -> Anything that runs if only being not created
+
+   => onCreate or onRestart will be called when activity became visible 
+
+
+   Android LifeCycle Object :
+   ----------
+   -> this object can be queried for the state.
+    
+    LifeCycleOwner :- A class that has a life cycle (Activity & Fragment)
+    LifeCycleObserver :- allow to observe LifeCycleOwner
+
+    LifeCycle library classes can be used to notify something (with Observer Patterns) 
+
+
+    Observer Patterns :   [Philosophy/Paradigms/Principle]
+    ------
+
+    LifeCycleObserver :
+    -----------
+     -> It listen & react via a syntax of `Annotation` 
+     - Every Activity has property : lifeCycle
+
+* Application Class :
+  -----
+   - main class that contains global application state for your entire app.
+
+* Save State to Bundle (manually) :
+  -------
+   - Bundle : Collection of Key-Value pair.
+
+   - OnSaveInstanceState()   // callback that occur whenever android os try to stop/kill app in background
+      \
+       It's called after onStop().
+        - Safety measure when app is torn down by OS
+
+  - OnRestoreInstanceState() // callback 
+     \ 
+      It's called after onStart()
+
+  
+  * Parcel & Parcelable :
+    ----------
+     Parcelable is interface
+
+     using parcel in android for processes is similar as using xml/json for web-services.
+
+     App Bundle -> Is kinda Parcelable
+
+     Parcelable Interface :
+       scribeContents() : used by android to share active file descriptors by processes.
+
+       => IMP : order is importent, while parceling. [i.e Read/Write/to/from Parcels]
+
+       Q. How to Parcelize data class ??
+       -> @Parcelize,   [from kotlin-android-extension ]
+
+      @Parcelize :
+      -------
+       -> Turns a Kotlin data object with simple and Parcelable types into a Parcelable object.
+
+----
+TIPS ->
+----
+
+Extract constants string in Resource Value
+        style that is commonly used in most widget into Resource style
+
+
+To match app theme (use below in xml)
+       - widget.AppCompat.Button.colored    [Use Button color from theme]
+
+
+To add listener to navigation backstack
+    addOnDestinationChangedListener(),
+    DrawerLockMode
+
+->  Retrieve and use the data (from OnRestoreInstanceState) in onCreate if you're restarting to Activity
+
+
+Amazing Info 
+-----------
+
+-> Buttons are an extension of TextView
+
+-> To interact with Fragment/Activity LifeCycle, We can have 2 ways
+    1) Overriding methods (i.e create(), start(), stop(), pause(), etc...)
+    2) AndroidLifeCycle object
+
+* Bundle & App-State Info (Implicit & Explicit Bundling) :-
+-> When androis OS stop/destroy any of app activity or app itself, it save some states of app into `Bundle`,
+   which can be later utilised when restarted.
+
+   It can trace - text, labels, even BackStack Information ...
+  
+   hint : most time it will try to bundle the information that has ID's associated with it
+
+   When return back to app - it try to reads from BUNDLE 
+   => Sometimes You need to manually add info to bundle (i.e manual saving state info)
+
+-> When app is switch between Potrait-Landscape mode, Configuration Change, i.e Activity Rebuilds 
+   LifeState - 
+     OnDestroy -> OnCreate -> onStart -> ...
+
+-> To kill any activity ;- finish()

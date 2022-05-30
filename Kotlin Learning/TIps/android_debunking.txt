@@ -1,0 +1,5 @@
+* Firebase & IOS Error (Flutter)
+  ---
+   -> In terminal go to "ios" folder (by "cd ios")
+      &
+      then execute "pod install --repo-update"

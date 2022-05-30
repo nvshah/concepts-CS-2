@@ -1,0 +1,9 @@
+HashNode 
+
+https://iamdarshshah.hashnode.dev/optional-chaining-in-javascript
+
+ML-----
+
+Ronny Restrepo BLogs (Eg Sigmoid Func)
+
+sebastian Ruder Blog (Optimizing Gradient + Momentumm + SGD)

@@ -1,0 +1,7 @@
+SAX
+DOM
+
+1) SAX 
+
+   handler - works with the file 
+   parser  - translates the file

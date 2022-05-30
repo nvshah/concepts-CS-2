@@ -1,0 +1,17 @@
+Numpy
+Pandas
+Matplotlib
+Seaborn
+
+Scikit learn
+SciPy
+
+Spark
+Tableau
+
+Flask
+Django
+
+Deployment (Azure, GCP)
+ 
+NLTK - SpaCy 

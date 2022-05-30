@@ -1,0 +1,16 @@
+1) Iterate with enumerate() instead of range(len())
+2) Use List comprehension instead of raw for loop
+3) sort complex iterables with sorted() 
+4) Store unique values with sets 
+5) Save Memory with generators
+6) default value for dict with get() or .setdefault()
+7) Use collections.Counter to calculate count of every item in list
+8) Format strings with f-string
+9) concat with .join() instead of + every time
+10) merge dictionary with ** syntax
+11) Simplify if statement for multiple checks
+
+
+* bool or not :
+  ------
+   use not not x instead of bool(x)

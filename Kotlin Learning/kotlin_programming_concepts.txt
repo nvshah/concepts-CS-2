@@ -1,0 +1,167 @@
+
+
+=> If the package is not specified, the contents of such a file belong to the default package with no name.
+
+=> On the JVM, if all of the primary constructor parameters have default values, 
+   the compiler will generate an additional parameterless constructor 
+   which will use the default values
+
+=> On the JVM: Access to private properties with default getters and setters 
+   is optimized to avoid function call overhead.
+
+
+=> Relfection & Referecne
+   ---
+    ::  - 1. runtime reference of a kotlin class ( val myClass = MyClass::class )
+          2. method references   (this::isEmpty)
+          3. Property reference  (::someval.prop)
+          4. Constructor reference (::MyCalss)
+
+   Eg ::println   // refer to println defines in standard kotlin library
+
+   NOTE : `this::funName` is same as `::funName`
+
+=> If Function is marked `suspend` then its kotlin way of saying that its Coroutine friendly
+
+=> measureTimeMillis{}   //To timeit the code of lines
+___________________________
+
+* Arrays in kotlin are invariant :
+                       -------
+              - means : Array<int> can't be assign to Array<Any>
+
+* Type erasure : 
+  
+    -> At run time generics type are resorted to *
+
+       Eg List<T> -> List<*>
+         
+       So you can check instance against star-projected type 
+
+
+* Generic & reified : 
+  
+    -> Use reified type parameters to make cast such as arg as T, checked.
+
+* When subject :
+    -> You can define varaible onSpot, but scope would be inside a When block only.
+
+       subject = expression of assignment 
+         \
+          Eg when(var k = 2+6)    // here var k = 2+6, is a subject
+
+=> A for loop over a range or an array is compiled to an index-based loop 
+   that does not create an iterator object.
+
+IMP
+==> Lambda's return statement is non-local return means that it appear as returning from closest
+    enclosing scope instead from lamnda expression
+
+
+* Lambda Expression vs Anonymous Function 
+  -------------
+   { }    //expression
+   fun(){}  //Anonymous fun
+
+
+=> return@lable 'sds'   // return 'sds' at label
+
+
+* try-catch-finally
+  --------
+   Expression point of view :
+      > Contents of the finally block do not affect the result of the expression.
+
+
+* Checked Exceptions :
+  --------
+   Exceptions that needs to be handled with try-catch.
+    or
+   indicate that current scope can throw such exception to parent.
+
+
+* Nothing?
+  ---
+   -> If compiler can't get idea to infer type of null literal then it will infer to Nothing?
+
+
+* Class
+  -----
+   -> Can have more than 1 init{} blocks
+
+   init block :- 
+     Code in initializer blocks effectively becomes part of the primary constructor
+     code in all initializer blocks and property initializers is executed before the body of the secondary constructor
+
+   flow : primary constructor -> init block + property initializer -> secondary constructor block
+
+   | HMM. What is use of more than 1 init block ??
+     -> multiple dependencies & initialization of each dependencies is non-trivial
+
+   Property : 
+     1) via initializer
+     2) via get method
+
+   NOTE : You can also override a val property with a var property, but not vice versa
+
+          i.e var property in super & val in child - allowed
+              val in super & var in child          - n.a
+
+   getter :
+   ------
+    INTERESTING ->  (for object only i.e Singleton)
+       If you use val for getter property then it's fine 
+       but If you use var for getter then it must be initialized
+
+  
+  Inheritance :
+  ----------
+
+  => All class have superclass, Any
+
+  => The open modifier has no effect 
+     when added to members of a final class – a class without an open modifier.
+
+  => A member marked override is itself open, so it may be overridden in subclasses.
+     If wanna stop this then use `final`
+
+   
+   Interface : 
+   ---------
+    -> interface members are 'open' by default
+       interfaces cannot store state.
+   
+   SAM Interface :
+   --------
+    -> Interface with only 1 abstract method is called functional Interface (SAM)
+
+
+   Property :
+   -----
+    -> You can left body part empty for property setters or getters, to default 
+       i.e do not use (){} after set or get
+
+    => Backing Field :
+        ---
+         -> `field` to reference corresponding property inside set()
+
+      NOTE : The field identifier can only be used in the accessors of the property.
+      
+      => By default if you not specify the accessors it will have implicit one
+    
+    lateinit :
+    ----
+     -> Can only be used if property does not have custom getter/setter
+     -> It can be used for top-level properties or local variables.
+
+* Nullable Reciever :
+  ----------
+   -> extension function on nullable Reciever types.  
+
+  Dispatch Reciever :
+  ---------
+   -> an instance of class in which extension is declared
+
+  extension Reciever :
+  ----------
+   -> an instance of reciever type of the extension method is called an extension reciever.

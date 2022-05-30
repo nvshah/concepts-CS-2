@@ -1,0 +1,28 @@
+* Wrapper Classes 
+
+* instance init block, static init block, constructor block 
+  -------
+   -> static -> init -> constructor.
+
+
+* Java System properties
+
+* final classes :
+  -------------
+   -> Final classes in java can not be extended.
+
+
+* Immutable classes in Java :
+  ---------
+   -> String, 
+      Wrapper Classes :- Integer, Long, Double,
+      Java enums
+
+  Major plus of Immutable objects :- Concurrentcy , Synchronization & thread safe.
+      \
+       failure atomicity (i.e if exception thrown via immutable class then it will not be left in an undesirable state)
+
+
+* Anonymous Class in Java :
+  ----
+   https://www.baeldung.com/java-anonymous-classes

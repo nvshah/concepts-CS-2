@@ -1,0 +1,15 @@
+* language {java, kotlin, swift, dart, js}
+
+* async programming {async, await, Future, Coroutine, Deferred, etc...}
+  Concurrent Programming 
+
+* Reactive Programming {Streams, Rx, Observer}
+
+* State Management & Architecture {MVVM, VIPER, MVC, BLOC, REDUX}
+  => App Architecture
+
+* Design Patterns {all }
+
+Extra :- Singleton, Delegate, Observer
+
+         Memento, Iterator

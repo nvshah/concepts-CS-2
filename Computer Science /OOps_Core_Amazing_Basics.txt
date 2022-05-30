@@ -1,0 +1,42 @@
+* Referential Equality vs Value Equality in diff langugae :
+  ------------
+  
+   1) Java/.C#  -> .equals() | ==
+   2) Python    -> ==        | is or id()
+   3) Kotlin/JS -> ==        | === 
+   4) dart      -> ==        | identical()
+
+   All on left can be overriden
+
+* Object vs dynamic :
+  -----------
+    dynamic is not a type it's just a convention that inores type checking at compile time 
+    Object is actual a type & parent of any type in language, Though it also ignore type checking at compiletime
+    but that is via polymorphism 
+    So its actual type is decided by runtime type of an actual object its pointing to at run time.
+
+==
+MIMP
+==
+* Interface composition
+  Abstract inheritance
+
+  (Inversion of Control)
+
+
+
+-------------------
+
+ANy Object -> have reference type or value type 
+              have run time type or compile time type 
+
+              (Its gona decided by dynamic or static dispatchers respectively)
+                
+Boxing vs UnBoxing in java
+  https://reneferrari.github.io/understand-boxing-in-kotlin/
+
+-------------------------------------------
+
+To EXPLORE :-
+
+ Sealed Class !

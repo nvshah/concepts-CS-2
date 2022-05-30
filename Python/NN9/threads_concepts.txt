@@ -1,0 +1,11 @@
+* Usually Thread :
+  -----
+   - python program waits till all its thread perform running 
+
+
+* Daemon Threads :
+  -------
+   -> Run in background even if program completes(Stopped)
+      Not bound to program
+
+   so script will get terminated asa all non-Daemon thread gets completeds

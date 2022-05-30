@@ -1,0 +1,84 @@
+* Paging 3 & UnSplash API :
+  ------
+
+-> Paging 3 & Remote Mediator & Offline Caching :
+   ---
+    -> using these two we will be able to paginate the remote data from response of API 
+
+    [Offline Caching]
+    -> Whenever the data in local DB reaches end, Paging3 will request Remote Mediator to fetch more data from api, (automatically)
+        (on Scrollinng)
+
+-> Paging3 & Online Api Call 
+   ---
+    - In online call (ie Search call), there is no need for Remote Mediator 
+      (as we can directly make the call)
+
+------------
+
+* Paging 3 :
+  -------- 
+  - to paginate the data from diff data sources
+  - to paginate the data either from Local (ROOM) or Remote (API)
+  - data will be provided Page by Page (there is no need to get all data at once)
+     \
+      in small chunks
+  
+  - this will increase the performance of application
+
+  features of Paging Lib :
+    - In-Memory Cache Data 
+    - first class support for kotlin-Coroutines & Flows (awa LiveData in RxJava)
+    - Automatically requests the correct page when user scrolled to the end of the current list 
+    - Ensures that multiple requests are not triggered at same time. 
+    - Offline Cache 
+    - Track the Loading State 
+    - Allow to execute common operation like map() or filter()
+  
+  Classes 
+
+  1) PagingSource :
+     ---
+      - load the data from data source like {database, remote server}
+      - key : page number or
+      - val :- data on Page
+
+  2) Paging Data :
+     ---
+      - Container for Paged Data from single generationn of Loads 
+      (Each refresh of data will have seperate corresp Paginng Data)
+
+      - Queries the data from Paging Source
+
+  3) Paging Config :
+     ---
+      - set the behaviour while loading data 
+      - page size 
+      - Initial Load Size (Typically larger than page size)
+      - Max Size (max numbers of items that can be loaded into PagingData before Pages should be Dropped)
+          \
+           - useful to cache when user scroll back 
+
+  4) Remote Mediator 
+     ---
+      - to connect local storage with remote source to provide consistent flow of data to UI
+      - with Remote Mediator we will be able to implement the Offlinee Caching easily   
+
+      - with Remote Mediator, Our Local Database can be act as a Single Source of Truth 
+        (beware of Data is coming from online or offline)
+          |
+          App will contact local DB to get data 
+            \
+             - if data from local -> then fetch from DB 
+             - if from remote :- then Remote Mediator will fetch data & store in Local DB
+                 NOTE :- It will not load data directly into UI 
+                         It's job of an application to consume it from local DB
+
+      - In other words application only displays data that is cached
+
+      - PagingSource is responsible for providing the data to an application from local cache
+
+      
+      Remote Keys :
+      ----
+       -> keys that remote mediator is using to tell backend service abt which data to load next

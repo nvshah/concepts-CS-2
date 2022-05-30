@@ -1,0 +1,49 @@
+* Flow = Stream in Dart 
+
+* Flow Operators :
+  -----------
+   - filter, map, onEach,
+     
+     count, reduce, fold
+
+     flapMapMerge, flatMapConcat, flatMap
+
+     buffer, conflate, latest
+
+NOTE :- When collect is done with one val then only the flow will send next one
+
+=> Normal flow with builder is called as Cold Flow 
+
+* Cold Flow :
+  -----
+   -> do nothing when there are no collectors
+
+* Hot Flows :
+  -------
+   -> If there are no collectors even then they are active 
+    - ie value is lost & not retained if there is no one to collect 
+
+   -> do sommething when there even no collectors
+
+  
+  1) StateFlow :
+     ----
+      -> to retain the state's val when screen is rotated (ie Activity is re-created)
+      -> It will also do something when there are no collectors
+
+      -> When only 1 event matters
+  
+  2) SharedFlow :
+     ----
+      -> Its used to send One-Time events (SnackBar)
+      -> recieve events single time
+      -> Can have multiple collectors
+      - it waits till all active collectors collects val before sennding new val 
+         \
+          shared flow emitter suspend till all collectors collects 
+
+      - There is options to replay ie cache
+
+      -> when sequence of event matters
+
+      LaunchEffect{}

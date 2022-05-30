@@ -1,0 +1,11 @@
+Example Implementation :
+------
+ 1) https://aws.amazon.com/blogs/machine-learning/create-a-model-for-predicting-orthopedic-pathology-using-amazon-sagemaker/
+
+
+Libraries : 
+  
+   Common ML tasks :- scikit-learn 
+                      scipy
+
+   Deep Learning :- mxnet, tensorflow, pyTorch

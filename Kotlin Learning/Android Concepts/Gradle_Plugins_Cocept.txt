@@ -1,0 +1,32 @@
+
+=> Gradle are just configurations Files & they are scoped (project | app | etc..)
+
+=> Gradle Scripts :- are helping android in automation of build tools 
+   ----
+    \
+     Its kinda Task which use to generate or build the artifacts of an app or project 
+     
+     artifcats = apk & other files bundled
+
+* Plugins :
+  -----
+   -> You can register several Task inside Plugins that needs to be run before build 
+      & 
+      then you can call that Plugin from Gradle files
+
+   -> Plugins will extends the functionality of Gradle
+
+
+* Multiple Gradles Files :
+  ---------
+   - For Diff Modules in Entire App (Clean Architecture Decopouled)
+
+   - Project Level Gradle :- configurations available throughout all sub modules 
+
+   NOTE :_ Your projects can be Decomposed into Multiple Modules :
+             - App
+             - Domain 
+             - Data 
+             Etc...
+
+=> To see all the modules of your project :- check settings.gradle file

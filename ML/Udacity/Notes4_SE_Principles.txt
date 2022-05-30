@@ -1,0 +1,189 @@
+
+[vcs ml code] https://algorithmia.com/blog/how-to-version-control-your-production-machine-learning-models
+[vcs ml model] https://towardsdatascience.com/version-control-ml-model-4adb2db5f87c
+
+[Integration Tests] https://www.fullstackpython.com/integration-testing.html
+[pytest configurations] https://docs.pytest.org/en/latest/reference/customize.html
+
+[Data Science TDD] https://www.linkedin.com/pulse/data-science-test-driven-development-sam-savage/
+[TDD for Data Science] https://tanzu.vmware.com/content/pivotal-engineering-journal
+[TDD essential for good data science] https://medium.com/uk-hydrographic-office/test-driven-development-is-essential-for-good-data-science-heres-why-db7975a03a44
+[general python test case] https://docs.python-guide.org/writing/tests/
+
+[Code Review Best Practices] https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html
+
+Efficient Code make you better programmer over time
+
+Side Effects
+
+-----------------------------------------
+
+Install pytest -> pip install -U pytest 
+
+
+------------------------------------------
+
+* Production :
+ --------
+  -> Code : clean, simple, concise
+             \
+             necessary for maintainability & collaberation in software development.
+
+  Modular Code : 
+  -------
+   -> logically broken up according to functionality (i.e logical grouping)
+   -> helps to quickly find appropriate code 
+   -> splitting your code into logical functions & modules allows you to quickly find relative pieces of code. 
+
+-> So that team can understand
+
+
+   Clean Code : (Practice)
+   ---------
+    1) use meaningful names for variables & less comments [Be Descriptive]
+    2) whitespace effectively
+    3) 79 characters per line
+
+    Tips : 
+        For booleans :- `is_` | `has_`
+        Avoid abbreviations and single letters
+    
+.... 
+=> DRY principle for more modualrize code
+....
+
+   Modular Code :
+   ---------
+     * DRY (Don't Repeat Yourself)
+     - Abstract logic to improve readability
+     - minimize the # of entities (i.e functions, class, modules, etc..)
+     - Functions Should do 1 thing (Avoid unnecessary side effects) (instead generalize & reuse)
+     - Arbitary variable names can be more effective in certain functions 
+     - Try to use fewer than 3 args per function. (most cases)
+
+
+* Efficient Code :
+  ------------
+   -> reduce run time 
+      reduce memory usage
+
+      Eg Some Bathc Data processes migh not need to be optimized away, if it runs every 3 days
+         for few finutes
+         On the other hand code to update post on social media, needs to run fast as it updates instantaneously
+
+      TIPS : 
+      ===
+       1. Use Vector operations over loop (i.e numpy & pandas)
+       2. Know Data Structure & which methods are faster 
+
+
+* Documentation :
+  ----------
+  - Line Level (Inline Comments)
+  - Function or module level (doc strings)
+  - Project Level
+
+  => MIMP & first interaction of any project/application is :- README file
+
+
+* Git : (Version Control System)
+  ----
+
+  branching, commits, merging
+
+
+------------------------------------------------------
+
+---
+* Reliability :
+---------
+
+
+* Testing : 
+  ------
+   -> TDD 
+       -- 
+        Write test before development
+
+       
+      - Unit test :
+        --------
+         -> partiular for unit of code (i.e function)
+
+         TIP : `assert()` can be useful for test files 
+
+         => The advantage of unit tests is that they are isolated from the rest of your program, and thus, no dependencies are involved.
+            They don't require access to databases, APIs, or other external sources of information
+
+             However, passing unit tests isn’t always enough to prove that our program is working successfully.
+
+          Integration tests ;
+          -----
+             To show that all the parts of our program work with each other properly, communicating and transferring data between them correctly, 
+             we use integration tests
+
+
+         module -> `pytest`
+         ___________________
+          \
+           start your test files with prefix :- `test_`
+           start your test functions with prefix :- `test_`
+
+           Pytest configurations
+
+           Steps : 
+
+            1. Create a test file starting with test_.
+            2. Define unit test functions that start with test_ inside the test file.
+            3. Enter pytest into your terminal in the directory of your test file 
+               and it detects these tests for you.
+
+            NOTE :
+             test_ is the default; if you wish to change this, you can learn how in this pytest configuration.
+            
+           Judging :
+             In the test output, periods represent successful unit tests and Fs represent failed unit tests   
+
+          TIPS :- 
+
+           1. Since all you see is which test functions failed, it's wise to have only one assert statement per test. 
+              Otherwise, you won't know exactly how many tests failed or which tests failed.
+
+              test won't be stopped by failed assert statements, but it will stop if you have syntax errors.
+
+
+      * TDD (Test Driven Development) :
+        --------------
+         -> Writing test before you write the code that's being tested.
+         -> Your test fails at first, and you know you’ve finished implementing a task when the test passes
+
+         -> Tests can check for different scenarios and edge cases before you even start to write your function.
+         -> When refactoring or adding to your code, tests help you rest assured that 
+            the rest of your code didn't break while you were making those changes. 
+         
+         -> Tests also helps ensure that your function behavior is repeatable, regardless of external parameters such as hardware and time.
+         
+
+* Logging :
+  ---------
+  
+  Log messages :
+    -> records messages to describe events that have occured while running program
+
+  Tip: Choose the appropriate level for logging
+
+   - Debug: Use this level for anything that happens in the program
+   - Error: Use this level to record any error that occurs
+   - Info: Use this level to record all actions that are user driven or system specific, 
+           such as regularly scheduled operations.
+
+
+
+* Code Review : 
+  ---------
+   plus : 
+
+     -> catch errors 
+     -> Ensure readability 
+     -> Check standards are met 
+     -> Share knowledge among team

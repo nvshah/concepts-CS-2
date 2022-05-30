@@ -1,0 +1,12 @@
+* Why static (in context to OOPS) :
+  ---------
+
+   -> class is a collection of unrelated methods and properties that are not related to each other.
+      Thus it will not represent any real-world object
+   
+   -> So any kind of OOPS principles (Abstraction, Polymorphism, Inheritance, Encapsulation)
+      will not be applied. (to static Classes)
+
+   -> class with fixed behavior
+
+   => We cannot apply any OOPs principles to the static class like inheritance, polymorphism, encapsulation, and abstraction

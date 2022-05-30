@@ -1,0 +1,14 @@
+<group>
+    <person id="1">
+        <name>Manu</name>
+        <age>30</age>
+        <weight>90</weight>
+        <height>186</height>
+    </person>
+    <person id="2">
+        <name>Pavitra</name>
+        <age>28</age>
+        <weight>80</weight>
+        <height>176</height>
+    </person>
+</group>

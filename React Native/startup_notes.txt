@@ -1,0 +1,9 @@
+* create new project using (explo cli) :- expo init proj_name
+
+* yarn start -> start expo server
+
+* yarn android -> open android
+  yarn ios     -> open ios
+
+  npm install react-navigation-drawer
+  yarn add react-navigation-drawer

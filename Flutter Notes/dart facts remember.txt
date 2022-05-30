@@ -1,0 +1,45 @@
+* dynamic vs List<dynamic> :
+  -------
+   You can assign dynamic to any type in dart  (at runtime there can be err)
+
+   You cannnot assign List<dynamic> to List<T> // It will give compile time err
+
+
+* InternalLinkedHashMap vs Map 
+  ------
+   https://stackoverflow.com/questions/57845333/dart-how-internallinkedhashmapstring-dynamic-convert-to-mapstring-dynami
+
+   When you try to cast List<dynamic> as List<Map> it will work 
+   but 
+   it does not go true for InternalLinkedHashMap
+
+
+* Factory Constructor vs Generative Constructor :
+  -------------------------
+   - If you have either of constructor you will loose the default constructor definition
+   - If parent class has only factory constructor then you cannot extend it
+   
+   -> When a class implements a interface, It do not require that Parent class must have Generative Constructor 
+      but 
+      If a class extends (ie Inherits) from Parent class 
+      then inorder to utilise the Generative Constructor of Child Class it is required that 
+      Parent class also must have atleast 1 Generative Constructor 
+      else 
+      Child class can define Factory only 
+
+   Why ?
+    -> During implements => Child class is creating its own solid base class (with all impl in its envelope)
+      Whereas 
+       During extendns (ie Inheritance) => Child class is creating its own attribs 
+       but along with this its also invoking Parent class (it many be abstract or not) Constructor (probably Generative)
+       & 
+       for this innvocation it requires that Parent class also possess default Generative Constructor
+
+   NOTE :- 
+    Factories actually hide the implicit Default generators constructor availabl at hand for each class definition
+
+
+* Field Innitialization in Dart is bit different :
+  ------
+   - When you define field at that moment its not get initialized but 
+     if you refer that same field via this.fieldName then at that momment field gets initialized

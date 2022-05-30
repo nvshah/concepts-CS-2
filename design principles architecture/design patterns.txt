@@ -1,0 +1,210 @@
+[Dart Design Patterns]  https://medium.com/flutter-community/flutter-design-patterns-3-template-method-89799d84e378
+
+Heart of OOPS/DP is 
+    \
+     -> Inheritance, Polymorphism, Abstraction
+
+--------------------
+
+Do Not Violate Open-Closed Principle -> modify existing code much...
+       
+
+
+---------------------
+
+* Adapter :
+  ------
+   -> That adapts the data from multiple source/format to our needs 
+
+   -> Eg Data from diff API to Ody2 format via xslt-transformation 
+
+       means for Adapter -> XSLT transformation (for xml incoming data)
+
+                            JSON-POJO transformation 
+
+  Eg Ody2 <-> api-specific  json/Xml response
+
+* Template :
+  ------
+   -> behavioural dp
+
+   - resembles kinda Interface
+
+   Steps of an algorithms are fixed & structured 
+   but 
+   implementation of those steps may differ internally.
+
+   HollyWood Principle :- Don't Call us, We will call you
+   
+   => High-Level Component manages when & how
+   => Low-Level Components never calls high-level components directly.
+
+   Higl-Level Components usually calls Low-level components 
+   & Low-Level Components don't calls themselves
+
+   --MIMP--
+    abstractions should not depend on details, 
+    but the details should depend on abstractions
+   --------
+
+   When to use Template approach :
+     - Implement invariant parts of algo (first go)
+     - Low-Level decide varying steps
+
+
+* Composition :
+  --------
+   (Tree DATA structure)
+
+   Any hirerachical data can be represented as Tree (leaf, composite)
+
+   Composite Pattern -> Widget tree in Flutter [Almost Widget is interface which we have to define]
+
+   1) Leaf -> no child, 
+              behaviour of primitive obj in Composition
+              don't have to delegate any work down the tree 
+
+   2) Composite -> children,
+                   delegate the works to children, process intermediate result & then returns the final result 
+
+   Client :
+     - use interface to interact with objects that is/resembles the composite structure,
+
+
+  Eg File & Directory
+
+
+* Strategy :
+  -------
+  (behavioural design pattern)
+
+  - Feature Wise Segregation
+
+  Encapsulate diff calculation logic in seperate classes i.e (Strategies) 
+
+  emphasis encapsulation 
+    to isolate the code, internal data, and dependencies of various algorithms from the rest of the code
+
+  The primary purpose of the Strategy design pattern is to encapsulate a family of algorithms (related algorithms) 
+  such that they could be callable through a common interface, 
+  hence being interchangeable based on the specific situation.
+
+  => Allows you to switch different logic calculation with single interface at run-time.
+
+  Eg - several if/else or switch statement
+       for diff behaviour (i.e enums)
+       \
+        You should opt for Strategy Pattern.
+
+       list Utils or Num Utils
+
+       Sealed Enums | Sealed Classes(Kotlin)
+
+  Open-Closed Principle -> You can add new Strategy(new algo) without interrupting existing one.
+  ----------
+  
+  => (Extract functionality from start) & Define Common Interface to interact
+
+     Why common interface ?? -> help to inject diff strategy (algo) at run time.
+
+
+* Facade :
+  -------
+   (Structural design patterns)
+   - Whenever you want to provide something on top of something !!
+
+   -> Common Interface class that provides functionalities for SubSystem Classes 
+      in a Simplified manner
+
+      As a result, the number of dependencies and references between client and subsystems 
+      is reduced (the weak coupling is promoted between them),
+
+   -> reduce coupling between multiple sub-systems by requiring them communicate 
+      only through facades.
+
+   -> Facade kinda help to work over Dependency Inversion principle of SOLID
+
+   -> most used features of the API can be provided via Facade
+
+   - To Combine different API's into single interface/API serving a commonn purpose
+     Single action via different API
+
+   -> Eg Agora media options (instead operating Video + Audio manually)
+
+
+* Iterator :
+  ------
+   (behaviour Design Pattern)
+
+  -> It allows you to access the elements sequentially beware of underlying DS
+
+  Collection interface :
+  _____
+    - It stores the underlying DS
+    - provides method to create iterator for such DS to iterate it sequentially
+
+  This abstraction of Collection & Iteration allows client to iterate over any Collection
+  in same way
+
+  Iterable :- creates iterator 
+   \
+    means Collection
+
+
+* Factory Methods :
+  -------
+   Creational Design Pattern 
+
+   Factory Method is also known as a Virtual Constructor
+
+   -> it enables compile-time flexibility via subclassing
+   
+   - This resolves the issue of creating objects directly within the class which uses them.
+   => By implementing the pattern, subclasses can be written to redefine the way an object is created.
+
+   - Concrete Creator SubClass 
+
+   - Via this way UI is not tightly bound to class specific implementation
+
+   -> Basically there are 2 interfaces i.e 1) Creator Class 2) Product Which is being created
+
+   Singleton :
+   --
+    - can be implemented via caching the obj of factory methods
+
+
+* Abstract Factory :
+  ---------
+   Provide an interface for creaating families of related or dependent objects without specifying their 
+   Concrete Classes 
+
+   the Abstract Factory consists of several factory methods 
+   where each one of them creates only one specific object.
+
+   Provides Compile-Time flexibility & Run-Time flexibility
+
+   this pattern removes the direct binding of application-specific classes into the code.
+
+
+* Command :
+  -----
+   -> commands become a convenient middle layer that reduces coupling between the UI and business logic layers.
+
+   Sender - UI
+   Reciever - Business Logic Layer (Presentation Logic Holder)
+
+   
+
+* Memento :
+  ----
+   - behavioural 
+   - works alongside Command Design pattern
+
+   -> Capture or Take Snap of Object curr state 
+  
+   -> Good Eg of Memento is Github & Git -> Snaps of branches
+
+   Terms :
+     1. Originator : one whose state's gonna be tracked 
+
+     2. CareTaker : responsible for storing & restoring Originator's internal state

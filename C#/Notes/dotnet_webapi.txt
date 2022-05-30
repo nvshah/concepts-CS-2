@@ -1,0 +1,24 @@
+
+* WebAPI Service :
+  ----
+
+_______
+REMEMBER 
+ - If a method return type is void in Web API Service 
+   then by default Web API Service returns the status code 204 No Content
+
+
+_______
+
+* WebApiConfig.cs :
+  ---
+   -> Registration takes place
+
+* MediaTypeFormatter :
+  ----
+   - The serialization in the ASP.NET Web API application is generally performed by the MediaTypeFormatter.
+
+     Eg JsonMediaTypeFormatter, XmlMediaTypeFormatter
+
+    [ Content negotiation]
+   -? The process through which the MediaTypeFormatter is chosen is called content negotiation

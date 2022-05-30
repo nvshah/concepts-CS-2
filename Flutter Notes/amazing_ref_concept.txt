@@ -1,0 +1,85 @@
+void : https://medium.com/dartlang/dart-2-legacy-of-the-void-e7afb5f44df0
+
+       https://medium.com/flutter-community/the-curious-case-of-void-in-dart-f0535705e529
+
+
+Note : When return type of Function is void, we can return Null
+                                       null, we can return void
+
+       As void or null, which is returned cannont be used.
+
+
+* Lambda & void Interesting :
+  -------------------
+   -> You can return any type i.e int, float, Function for VoidCallback Lambda
+
+      Eg 
+          void g() => 2   // return 2
+
+
+   -> REMEMBER : values that are returned under void type cannot be utilised
+
+                 shorthand functions always returns a value
+
+
+* Flutter Box Constraints :
+  -------------
+  https://itnext.io/flutter-box-constraints-columns-rows-382dcf82256a
+
+* Theme :
+  ----
+   https://medium.com/flutter-community/flutter-build-theme-with-abstract-factory-method-e07df8f730e2
+
+
+* Future, build context, showDialog [Flutter threading Module]
+  ---------------------
+   Q. Why wrapping some task inside Future allows it to be perfrmed successfuly without 
+      error while build function is running ???
+   -> (https://medium.com/flutter-community/flutter-threading-5c3a7b0c065f)
+
+   Ans : Future is queuing the method to be executed in the Dart event loop
+
+   Event Loop :
+   ---------
+    that queues all tasks to be performed by isolate
+
+* stream listen() vs await for :
+  ---------------------------
+   stream.listen() sets up code that will be put on the event queue when an event arrives
+
+   `await for` suspends between events and keeps doing so until the stream is done, 
+   so code following it will not be executed until that happens.
+
+
+* Abstract method not shadowing concrete implementation : 
+  -> 
+
+  ref : https://stackoverflow.com/questions/68653795/dart-abstraction-polymorphism-conundrum/68654170#68654170
+
+   The abstract method has no implementation, and has no effect on implementations, only on interfaces, 
+   so it doesn't shadow the inherited concrete method implementation from A.
+
+
+* Extension class & some inconsistency :
+  ---------------------
+   Inside extension class we cannot compare two num objects i.e 
+    num a = 10
+    num b = 20
+    a < b  // is invalid inside extension methods why ??
+
+
+* Null Safety Initialization :
+  ----------------
+   Function 
+   -<> Variables are allowed to omit value during Initialization inside function
+       eventhough their type are not nullable
+       But they must be assigbmed before used 
+
+   Thus local variables :- are late by default 
+
+        instance variable (class variables) :- need specific type either nullable or non-null;
+
+
+* Factory Constructor & null return (ie Mixin Concept)
+  --------------
+   https://stackoverflow.com/questions/21792489/is-it-acceptable-to-return-null-from-a-factory-constructor-in-dart#:~:text=5%20Answers&text=With%20null%2Dsafe%20Dart%2C%20factory,with%20static%20methods%20when%20migrated.

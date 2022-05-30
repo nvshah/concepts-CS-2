@@ -1,0 +1,92 @@
+* JetpackCompose Event Handlers :
+ ----------
+
+-------
+Terms
+
+- Side effects
+
+-------
+
+-> rememberBy delegate is used to preserve & hold the initial or updated state value for particular
+   enclosing Composable Function
+
+
+________
+
+
+* Side Effects :
+  ---
+   -> Something that escapes the scope of Composable Function
+
+=> We wanna avoid to do Non-Compose things in Composed Code 
+    |
+    We can do this via Effect Handlers.
+
+
+--
+
+REMEMBER :
+  -> If we want to emit any event from View Model to UI, We normmally use SharedFlow at ViewModel
+     Side 
+     SharedFlow is like Stream (Reactive Prog | Flow)
+
+  -> With Every ReComposition you must not launch the new Coroutine (ie may be network call or else)
+     all in all Non-Composable idea|logic should not be re-considered with every re-compose
+      \
+       & this is what we meant by preventing the Side-Effect Concept
+
+1) LaunchedEffect : 
+  -----
+   - key is used to make sure that it's not making re-compose things unnnecessary
+
+   - Eg Animation, 
+
+   - Whenever `key` changes it will cancel current lambda (Fun) & launch new one 
+   - LaunchedEffect itself provides us Coroutine (as it needs suspendable code block)
+
+
+2) rememberCoroutineScope
+  ----
+   - We get the ref of CoroutineScope that is aware of Composition
+   - asa the composable needs the re-compose, all coroutines in this scope will be cancelled
+   [**]
+   -> it can only be used in callback (ie lambda) //For eg onClick 
+
+3) rememberUpdatedState :
+  ----
+   -> to keep hold of any state (ie param val) pass in to composable function
+      whilst that re-compose happen & so provide latest val to that re-composed part 
+
+4) LifeCycleEventObserver :
+  ----
+   -? To notify & react whenever lifecycle of an activity changes 
+
+
+5) DisposableEffect
+  ----
+   - similar to LaunchedEffect
+   - allows to tear-off or clean the things
+   - when we need some type of clean up i composable
+
+6) SideEffect :
+  ----
+   - called whenn composable is recomposed
+
+7) Produce State :
+  ----
+   - gives us Coroutine Scope
+   - something similar to Flow|Stream Concept
+   - more composed way to simulate Flow in Kotlin
+
+8) DerivedStateOf :
+  -----
+   - `by derivedStateOf`
+   - utilise cache & wont recompute multiple times (during ReComposition)
+
+9) snapShotFlow :
+  ----
+   - you can use collectAsState() to get Flow in form of Composed State 
+   - snapShotFlow -> to convert Composed State to Flow
+   - distinctUntilChanged()  // kinda BLOC to emit unique States
+       

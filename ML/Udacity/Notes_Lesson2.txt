@@ -1,0 +1,221 @@
+* ML - Intro :
+  -------
+    Computer can learn from data to dicover pattern & make predictions.
+
+    Supervised Learning :
+    -----
+     -Labels | Output Values
+
+    Unsupervised Learning :
+    ----
+     -non-labeled
+
+  -> Model inspect data to discover patterns, in supervised & Unsupervised learnings.
+
+    Reinforcement Learning : 
+    ---
+      Learn through consequences of actions in an environment
+
+=> Nearly all tasks solved with machine learning involve three primary components:
+
+A machine learning model
+A model training algorithm
+A model inference algorithm
+
+
+
+=> goal :- Flexibility of Model is key
+
+  1) Machine Learning Model 
+     ---
+      - generic program block
+
+  2) Model Training Algorithm :
+    -----
+     - Determine changes needs to be made
+     - Make Small changes to model
+
+  3) Model Inference Algorithm :
+    ----
+     - Used to predict
+
+
+* Major Steps in ML models : 
+  --------
+   1. define the problem & identify Approach
+   2. Collect & prepare Dataset
+   3. Train/Test Model 
+   4. Deploy Model 
+   5. Predict 
+
+
+* ML task :
+  ----
+   - supervised or Unsupervised
+      classification, regression or clustering
+
+   - based on kind of data we can decide ML task
+
+
+* Labeled data : data that already contains solution inside them, i.e label
+
+
+--------
+
+* Working With Data :
+  --------
+    Understanding the data
+     
+    4 ways :
+     Data Collections  -> Data Inspection -> Summary -> Visualization
+
+     -> summary statistics (see trends) & Data Visualization
+         \
+          Mean, Inner Quarter Range (IQR), Standard Deviation
+
+    1) Data Collection :- SQL queries, Web Scrapping, etc...
+    2) Data Inspection :- Quality of Data
+                           {Outliers, missing/incomplete values, transformation}
+    3) statistics      :- inline with assumptions, {mean, IQR, SD}
+    4) Visualization   :- outliers & trends
+
+
+* Training Model :
+  --------
+   -before training, you need to split your dataset
+                                 \
+                                  training, test
+
+   What is model training ?
+     - Iteratively update model parameters to minimize the loss function
+
+   Model parameters :
+   ----------
+     - deteremines how our model behaves
+     - weight or biases (based on context)
+
+   Loss Function :
+   _______
+     How close model is from the goal (i.e measurement)
+
+   Hyperparamters :
+   _______
+    - Cannot be change inbetween model training
+    - affects how quickly or how reliably model trains
+    - helps to estimate or derive model parameters
+
+
+    Types :
+      - Linear Model,   { Logistic, Regression }
+      - Tree-based Models,  { XGBoost }
+      - DeepLearning Model { Neural Network }
+          \ 
+           FFNN - Feed Forward NN 
+           CNN  - Convolutional NN                          - processing images
+           RNN/LSTM - Recurrent NN / Long Short Term Memory - processing seq of data
+           Transformer - 
+
+
+* bias-variance trade-off
+  -------
+
+
+* Evaluate the Model :
+  -------
+   precision & F1-Score
+
+  * Log Loss :
+    ________
+     - helps to identify how uncertain model is about the predictions it is generating.
+       uncertainty refers to how likely a model thinks the predictions being generated are to be correct.
+
+       Log loss enables you to measure how strongly the model believes that its prediction is accurate
+        
+  Tools that can be used to evaluate Linear Regression Model : 
+
+    1) MAE (Mean Absolute Error) :
+    
+    2) RMSE (Root Mean Squared Error):
+         - val with larger error will recieve higher penalty
+    
+    3) R-Squared
+
+
+* S5 Model Inference :
+
+
+
+-------------
+
+ Example : (gist)
+
+  1) Dataset :
+
+     1. collection
+     2. Explored
+     3. Cleaned
+     4. Visualization             [to find trends in data]
+     5. Split (training + test) 
+
+  2) Model :
+     
+     Linear, 
+     Python ML libraries (for training models)
+
+  3) Evaluation :
+     
+     RMS (root mean squared error)
+       - Improved model will have better RMS
+
+     Sanity Check :
+       Manual Thresold Check
+
+
+    => Interpreting Results :
+        - As model improves, better RMS result.
+
+  4) Prediction :
+
+      for real market (new values)        
+      
+  
+* Linear Model & When to ???
+  -----------
+
+   -> If Trajectory is not linear, it's curved. Then any straight line would be invalid.
+      & so linear regression is not suit here.
+
+      But 
+
+   Kernel Methods :
+   -------
+    -> Techniques do exist to modify your data so you can still use linear models in these situations. 
+    Such methods are called kernel methods.
+
+
+* UnSupervised Learning  :
+  -------------------
+    
+    Transformation :
+         Bags of Words :- 
+         _____________ 
+           -> transforms the data into another form
+
+    Model : K-Means
+
+    Evaluation Metric :- 
+    
+     Silhouette Coefficient
+     _____________________
+       -> helps to determine, how well data is clustered
+
+
+* Supervised Learning : (Deep Neural Network)
+  ---------------
+   -> Deep Neural Network :
+      
+      CNN :- For images
+
+      Evaluation Metrics For Neural Networks ???
+
+        Precision & Recall.

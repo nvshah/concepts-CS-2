@@ -1,0 +1,103 @@
+https://medium.com/@amanpreet9391/learning-path-devops-8aaf828167be
+
+https://medium.com/must-know-computer-science/basic-concepts-you-need-to-know-about-building-large-scale-distributed-system-5956a90c7ad2
+
+CourseEra Course : 
+  Google IT Automation with Python
+
+Civo :
+  Kubernetes
+
+
+Roadmap :
+----
+ 1) Git | Github 
+ 2) Linux 
+ 3) ssh 
+ 4) Python automate boring stuff
+ 5) Networking
+       \
+        DNS name resolution 
+        Subnets 
+        Gateways
+        DHCP/NAT 
+        HTTP 
+ 6) Firewalls 
+     \
+      Incoming Traffic | Outgoing traffic 
+      Stateful | Non Stateful 
+      layer 3 vs layer 7
+
+ 7) Load Bouncers 
+     \
+      Algorithms
+      Round Robin 
+      Weighted Round Robin 
+      Least Connections
+      Resource Based 
+
+  8) Proxy Server 
+      Forward & Reversed Proxy 
+
+  9) Cloud Providers 
+      AWS | Google | microsoft azure
+
+  10) infrastructure as code 
+        codify entire infastructure
+
+        1) Containers
+           
+            Docker :  
+               lightweight thab VM
+               Create env for app to run on
+
+            Orchestration:
+               Workload
+                 Kubernetes
+                 Pods - collection of containers
+
+            Docker Swarm
+
+         2) Terraform 
+           
+             Creat | change | Improve 
+
+    tIP : create own lab environment
+
+  11) configuration Management
+    
+        Ansible, puppet, chef 
+
+        Ansible 
+          Working ssh connection
+
+  12) CI/CD 
+        
+        Linting
+        Dependency Checks
+        Unit tests
+        Architecture test
+
+        { Gitlab, Jenkins, TravisCi, Github Actions}
+
+  13) Monitoring and Log management 
+   
+        Splunk
+        Grafana
+        Elk Stack
+
+
+  ----------------
+   Also Learn 
+
+    understanding DNS 
+    HTTP -> (status codes 1xxx, 2xxx, 4xxx, etc..)
+
+    Web Servers 
+       -> Apache, Nginx, IIS 
+
+    Reverse Proxy (Nginx)
+     
+    Load Balancers 
+       -> Layer 4 vs Layer 7
+       -> HA proxy, Nginx

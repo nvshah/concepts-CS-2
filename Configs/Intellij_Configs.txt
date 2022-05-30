@@ -1,0 +1,64 @@
+Plugins
+
+1. AceJump
+2. ADB Idea 
+3. Atom material icons
+4. Atom One Theme
+5. Atom OneDark Theme 
+6. Base16 Tommorrow Dark Theme 
+7. Better Comments 
+8. BLOC 
+9. CodeGlance
+10. Color Highlighter
+11. Dart 
+12. Dart Data Class 
+13. eduTools
+14. Embedded Dart Pad 
+15. Flutter 
+16. Flutter build Runner Helper 
+17. Flutter Enhancement Suite 
+18. Flutter Provider 
+19. Flutter riverPod Snippets
+20. Flutter Snippets 
+21. flutter-img-sync 
+22. flutter_json_format
+23. Generate Kotlin Data Classes from Json
+24. GitToolBox 
+25. GrepConsole
+26. HiberBee Theme 
+27. IdeaVim
+28. Imag3 Icon Viewer
+29. Json Parser 
+30. Key Promoter X 
+31. Kite AI Code AutoCompletionn
+32. maria Proggress bar 
+33. Material Design Col0r Plate
+34. Materia Theme UI 
+35. Monokai Pro Theme 
+36. Notebook
+37. Nyan Proggress Bar 
+38. Presentation Assistant
+39. Pretiffy Python
+40. Python Community Edition
+41. Quick Notes 
+42. Rainnbow Brackets 
+43. RegexpTester
+44. String Manipulation
+45. Tabnine AI Code Completion
+46. Tommorow Dark Color Scheme 
+47. Tommorow Night Theme 
+48. Zero width Character Locator
+
+
+
+---------
+
+* Appearance & Theme :
+  ---
+   -> Theme :- Dracula 
+
+  Editor :
+  ---
+   -> ColorScheme :- Atom One Dark
+
+   Font - Operator Mono Lig  // (with Ligature Enabled)

@@ -1,0 +1,166 @@
+1) Kadane's algorithms  ( lonngest sum substring )
+
+2) Decision Tree (Appraoch | For Dynamic Programming Problem Solving)
+
+3) KMP algo (Knuth Morris Pratt)
+
+4) Sliding Window for manipulaitng on big size array
+   Sliding Window & Anagrams
+
+5) quick Select (same as Quick Sort)
+
+6) bucket Sort (Top K frequent element)
+
+7) Boyer-Moore Voting algorithm (Majority element)
+
+8) Seive of Erastothenisis (Prime Number element)
+
+9) String Longest Repeating SubString (Suffix array)
+
+10) Floyds Algorithm (Find Duplicate in range 1->n) (Cycle Detection Algo)
+
+11) Monotonic Increasing|Decreasing Stack 
+
+12) Detect Squares & Rectnagles in Grid
+
+13) 1 dimensional Array BFS + Greedy
+
+14) Prefix Tree ( Trie )
+    Fenwick Tree (Prefix Sum)
+
+15) Suffix Array (Kasai algo)
+
+16) Tarjan's Algo
+
+
+list of alog:- https://github.com/xizhengszhang/Leetcode_company_frequency
+
+* Sieve of Erastothenisis :
+  -------------
+   - start with 2 & all its multiples : not prime 
+   - do same thing with 3 & all its multiples
+
+* Knuth Morris Pratt (KMP algo) ' 
+  ------------
+   - For substring index finding
+   -> O(n + m)
+
+   -. longest prefix suffix
+       \
+        LPS array -> keep track of Longest prefix thats equal to longest suffix
+
+   LPS array building : O(2 * n)
+
+
+* Boyer-Moore (Majority Elemment)
+  ---------
+   - given that 1 element appears majority time in array ie (more than equal to n/2)
+
+   - Consider Story :- element having max count will sit on Crown 
+   
+   - Assume starting as majority element 
+      \
+    move forward & check if some other elements claim of majority then 
+    decrease the propensity of our assumption accordingly
+     ie when some other elements counter the current king - king's value & popularity decreases 
+
+    When there is no one sitting on crown (ie Current king value is 0), 
+    then next element (claiming for crown ie (wit atleast 1 count)) can take sit
+
+
+* Binary Search or Bisection Search :
+  ----------
+   -> rule : at each step ruleout space by half
+
+
+* DFS & Recursion :
+  ---------
+   DFS is well suited with Recursion because Recursion needs Stack as DS to be get implement seamlessly
+   &
+   Recursion involves the  Func call itself till base case &
+             this function internally aree piled up using stack by the compiler
+
+  So when you use the DFS with Recursion you are already implementing the DFS using Stack
+
+* BFS & Queue : (Iterative Algo)
+  ----------
+   - BFS is preferred with Iteration
+   - deque
+
+* BFS & Heap :
+  -------
+   - You can also used Heap if you need certain priority for each level pop-out
+   - heapq
+
+* Tree Traversal Techniques:
+  ------
+   1) Recursive DFS 
+   2) Iterative DFS 
+   3) BFS
+
+* Merge sort & Linked List :
+  -------
+   Merge Sort suits well with the linked List
+   slow & fast pointer
+
+* Cycle Detection & Floyd Algo  :
+  -------
+   - 2 Pointer Approach
+
+* Graph :
+  ----
+   - Adjacency List  // Connected Components
+
+   - Path Search :- Djkistra, Bellman-ford
+
+
+* BellMan Ford Algo :
+  ------
+   Useful in several scenarios :
+   
+   - Cheapest path in Graph (directed) giveen some connstriants
+
+   - It can deal with -ve Weights whereas DijkStras cannot 
+
+   - BFS resembles in technique to BFS kinda thing (ie layer by layer)
+
+
+* Prims Algo (Minimum Spanning Tree) :
+  ---------
+   - Min cost to join n nodes wwith n-1 edges
+   
+   - BFS application
+
+   -> 2 data structures are used :- 
+       1) Visit :- Hash Set (to avoid cycles during exploration)
+       2) Frontier :-  Min Heap (to hold all possible candidate at curr level)
+
+* Djikstra's Algo - Shortest Path 
+* Kruskal Algo 
+
+
+* Prefix Tree ( Trie ) :
+  ------
+   - Special type of Tree
+   - Allow you to filter based on prefixes
+
+   - Prefixes can be checked very efficiently
+
+* Tarjan's Algo
+  ---
+   -> it is used for Bridges
+   -> To detect the Strongly Connected Components
+
+   Critical Connections :-
+     on removing edge if it disects the graph in multiple components then that
+     edge is called as Critical Connections (Bridge)
+
+   Bridge :-
+     If there is no back edge from a subgrapg to its ancestor or parent (across the edge being checked)
+     then that edge will be called as a Bridge
+
+   Application :- Find all bridges in the Graph
+                  Find Strongly connected components in Graph
+
+* Kosaraju Algo :
+  ---

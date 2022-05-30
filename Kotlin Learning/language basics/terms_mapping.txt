@@ -1,0 +1,3 @@
+* @Volatile = Impl of Mutes manually  // only 1 access to shared resc at a time
+
+* operator invoke() = call in python or call() in dart

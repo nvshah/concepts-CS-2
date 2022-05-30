@@ -1,0 +1,91 @@
+
+ref 
+
+iOS Universal Links: https://www.raywenderlich.com/6080-universal-links-make-the-connection.
+Android App Links: https://www.raywenderlich.com/18330247-deep-links-in-android-getting-started.
+
+
+* Scrollable View 
+   
+   ListView & GridView
+     \
+      -> BoxScrollView - CustomScrollView - Sliver
+
+   Slivers are just part of a scrollable area. 
+   A benefit of using slivers is to lazily load items in as it scrolls into view. 
+   This makes the list efficient, especially with a large number of children in your list.
+
+   CustomScrollView
+   PageView
+   StaggeredGridView
+
+   Use ScrollController and ScrollNotification to control or listen to scroll behavior.
+
+* Barrel File 
+    - Barrel files are handy to group imports together. They also let you import many widgets using a single file.
+
+* Provider-Consumer
+
+* uuid :
+  ---
+   - for random unique id generator
+
+* Navigation - 
+    - Navigator 1  (Imperative)
+       - pop/push
+       - comes under wrapper called WidgetsApp & MaterialApp extends WidgetsApp
+    - Navigator 2  (Declarative)
+       - router widget & router delegate
+       - Use a router widget to listen to navigation state changes and configure your navigator’s list of pages.
+       - the navigator widget holds a list of MaterialPage objects.
+       - When the state changes, the router will reconfigure the navigator with a new set of pages
+
+       - Back Button Dispatcher events
+
+* Deep Link 
+    - A deep link is a URL that navigates to a specific destination in your mobile app
+
+    3 types :- 1) URI scheme
+               2) IOS universal Links
+               3) Android apps Links
+
+    -> URI :-
+              scheme:://path/queryparam?
+
+    Main Idea :- Convert URL -> AppState
+                 &
+                 Convert AppState -> URL
+
+    Navigation State :- conversion of url string into user defined data type is known as Navigation State (path + query param)
+    Then you need to connect RouteInformationParser to your app (via Material())
+
+    -> The app notifies RouteInformationProvider when there’s a new route.
+    -> The provider passes the route information to RouteInformationParser to parse the URL string.
+    -> The parser converts app state to and from a URL string.
+    -> AppLink models the navigation state. It is a user-defined data type that encapsulates information about a URL string.
+
+    packages :- beamer, etc are wrapper for navigator 2.0
+
+* Shared Preferences :
+  -----------
+   There are three primary ways to save data to your device:
+
+   1. Write formatted data, like JSON, to a file.
+   2. Use a library or plugin to write simple data to a shared location.
+   3. Use a SQLite database.
+
+   => Note that this simple data saved to a shared location is lost when the user uninstalls the app.
+
+   -> shared_preferences plugin gives you a quick way to persist and retrieve data,
+   but it only supports saving simple properties like strings, numbers, and boolean values.
+
+   -> Be aware that shared_preferences is not a good fit to store sensitive data.
+   To store passwords or access tokens,
+   check out the Android Keystore for Android and
+   Keychain Services for iOS, or consider using the flutter_secure_storage plugin.
+
+   - There are multiple ways to save data in an app: to files, in shared preferences and to a SQLite database.
+   - Shared preferences are best used to store simple, key-value pairs of primitive types like strings, numbers and Booleans.
+   - An example of when to use shared preferences is to save the tab a user is viewing, so the next time the user starts the app, they’re brought to the same tab.
+   - The async/await keyword pair let you run asynchronous code off the main UI thread and then wait for the response. An example is getting an instance of SharedPreferences.
+   - The shared_preferences plugin should not be used to hold sensitive data. Instead, consider using the flutter_secure_storage plugin.

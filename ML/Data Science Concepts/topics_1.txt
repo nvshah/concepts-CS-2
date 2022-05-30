@@ -1,0 +1,9 @@
+-> Multi-Armed Bandit (UCB)   {Exploration + Exploitation }
+
+-> PCA - SVD
+
+-> Data Representation 
+   Data Embeddings / Vector Embeddings
+
+
+-< Outliers (https://www.jessicayung.com/removing-outliers-from-your-data/)

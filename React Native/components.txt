@@ -1,0 +1,6 @@
+ScrollView, Button, Text, StyleSheet, View
+FlatList, TouchableOpacity
+
+
+ScrollView + List  == ListView
+FlatList           == ListView.builder()

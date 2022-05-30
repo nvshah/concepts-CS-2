@@ -1,0 +1,75 @@
+*l, = operator :
+  ----------
+  
+
+* struct.pack() :
+  -----
+   -> to get actual representation of number in floating pt repr 
+
+   Note :- floating point number are represented in this way for 64 bits number :-
+          \
+           -> (-1)^sign * 2^ (e-1023) * 1.fraction   // fraction bit comprises of 
+            
+                sign     exponent     fraction
+                
+                1 bit    11 bits      52 bits
+
+           -> if repeated decimals the it will get rounded or truncated at some point
+              that is why .1 + .2 is not .3 (ie rounding error)
+
+   Struct.pack() rule :-
+      When exponent gets down to 0 -> You drop 1 at the begining of fraction
+       \
+        this allows to few more power of 2 to closer to 0
+
+
+* bool vs not not :
+  -------
+   not not x is faster than bool(x)
+
+   because :- inorder to perform bool(x) we need to look for `bool` in global scope 
+              as bool can be overriden
+
+              but there is no way to override the not operator in python
+
+
+   So in case of bool(x) :- lookup of `bool` name + call function bool() 
+                     
+   => Calling Function in Python :- actually is slow than workinng woth operator 
+   => Whereas `not not x` does nnot have to go with func-call path it directly goes to boolean conversion 
+
+   not :- UNARY_NOT instruction (in assembly lang)
+
+
+* if and bool expresssion :
+  --------
+   
+   if x   vs   if bool(x)
+
+   `if x` is not calling bool() on x 
+          instead its using internal mechanism & its faster than calling func ie bool(x)
+
+
+* Sentinel Val : (Default Val in Function)
+  -------
+   When  0 or empty list are considered as valid value then use None as a default val 
+    ie in such case None become Sentinel Val 
+   
+   If None is also a valid val then you need to create some sentinel object like 
+     Eg SENTINEL = object()
+   & use this senntinel object as Default val
+
+  Thus inorder to distinguish None We need to make our own Sentinel Val
+
+
+
+* data class :
+  --------
+   @dataclass 
+   @attr.s 
+
+
+* Meta Classes :
+  -----
+   - way to add function overloding in Python
+   - type of class in python

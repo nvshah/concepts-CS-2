@@ -1,0 +1,147 @@
+* var args in c# -> `params`
+
+* the addition operation overflowed the allowed values of integers.
+
+* facts :
+  -----
+   -> To get MachineName :- System.Environment.MachineName
+
+   -> Max size of int   :- int.MaxValue
+
+   -> to get size of any datatype :- `sizeof()`
+
+
+* const vs static :
+  ----
+   -> The only difference between a static and constant variable is that 
+     the static variable value can be modified but a constant variable value can never be modified.
+
+
+* const vs read-only ;
+  ----
+   -> A constant variable is a fixed value for the complete class whereas 
+     a read-only variable is a fixed value but specific to one object of the class.
+
+* == vs Equals() :
+  ----
+   -> Reference variables are created on the stack and they point to the actual objects which are stored in the heap
+
+REMEMBER : 
+  - If two objects have reference equality, then they also have value equality, 
+    but value equality does not guarantee reference equality.
+
+* Convert.ToString() vs ToString() :
+  -----
+   -> Convert.ToString() method handles null, while the ToString() method doesn’t handle the Null and throws an exception
+
+* checked vs unchecked arithmmetic :
+  ----
+   In simple words, we can say that the checked keyword is used in scenarios where you want to ensure that your left hand side data type is not getting overflow
+
+   unchecked :-- need 
+         -> If you want to bypass this behavior at compile time then you need to use the unchecked keyword in C#
+
+
+[IMP]
+* Stack, Heap & GC :
+  -----------------
+   -> When any method is called 
+      then its - value type variable are allocated on Stack
+               - reference type is allocated on heap 
+
+      Now when method is done ie reach last `}`
+      then stack will be emptied
+      but Obj created on Heap will not 
+      So GC's role is to sweep out obj present on Heap
+
+  => heap memory will be de-allocated by the garbage collector.
+
+  => The memory allocation which is done on the stack is gone 
+     when the control moves out from the method i.e once the method completes its execution.
+
+
+* Value Type :
+  ----
+   -> Primitive Types 
+   -> types that hold both data and memory in the same location
+
+* Reference Types :
+  ----
+   -> a reference type is a type that has a pointer that points to the actual memory location.
+
+
+----
+
+* Class-OOPS 
+
+* Static Constructor :
+  ----
+   -> can be thought of as lazy Factory/Singleton
+
+=> Explicit call to Destructor via GC :- GC.Collect() 
+
+* Types & Type Members:
+  -----
+   Types :- {Classes, Structs, Ennums, Interfaces, Delegates, }
+
+   Type Members :- { }
+
+* Internal & Access Modifier :
+  ------------
+   Assembly = Class Library Project
+
+   Class Library := collections of classes 
+
+   -> Internal allowed per .dll files
+
+* protected internal :
+  ------------
+   -> allows internal variables to be accessed in sub-class of diff assemmbly as well
+
+* Polymorphism :
+  -----
+   1 CompileTime / Early Binding / Static : Method Overloading
+   2. RunTime / Late Binding / Dynnamic : Method Overriding 
+
+
+   Method Overloading vs Overriding vs Hiding :
+   ------------------------------------------
+    Overloading :- diff params 
+    Overriding :- virtual, abstract 
+    Hiding :- new
+
+* Method Overrdiding vs Method Hiding :
+  ------------------------
+  [Overrdiding]
+  In Method Overriding parent class gives permission for its child class to override the method 
+  by declaring it as virtual.
+
+  [Hiding]
+  In Method hiding also, the parent class methods redefined under the child classes 
+  re-implement the method in the child class by using the ‘new‘ keyword.
+
+  [Poly behaviour]
+  In method overriding a base class reference variable pointing to a child class object 
+  will invoke the overridden method in the child class. 
+  In method hiding a base class reference variable pointing to a child class object 
+  will invoke the hidden method in the base class.
+
+
+* Partial Methods :
+  -------
+   REMEMBER 
+    - The implementation of a partial method is optional. 
+    If we don’t provide the implementation, 
+    the compiler removes the signature and all calls to the method.
+
+* Sealed Class :
+  --------
+   - Bottom Most Class in hierarchy
+
+
+* Extension Methods :
+  ----
+   - Extension methods must be defined only under the static class.
+   - The first parameter of an extension method is known as the binding parameter 
+     which should be the name of the class to which the method has to be bound and 
+     the binding parameter should be prefixed with this keyword.

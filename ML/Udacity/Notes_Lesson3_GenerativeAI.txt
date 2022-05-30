@@ -1,0 +1,220 @@
+* Generative AI :
+  -------------
+
+  - Mostly Generative Models are Unsupervised
+
+  -> generate new data from pattern learn during training
+
+     Eg sketches into images
+
+
+  3 popular models :-
+  ------
+   1) Generative adversarial networks (GANs)
+   2) Autoregressive Model (AR-CNN)      - to study data which evovles around time (time series data)
+   3) Transformer-based model
+
+---------------
+  
+   * Descriminative Model :
+     -------------
+      -> aims to answer the question, "If I'm looking at some data, how can I best classify this data or predict a value?" For example, 
+         we could use discriminative models to detect if a camera was pointed at a cat.
+
+   * Generative Model :
+     -------------
+      -> A generative model aims to answer the question,"Have I seen data like this before?"
+
+         Eg whether an image with the label "cat" is more similar to data you’ve seen before 
+            than an image with the label "no cat."
+
+      -> 2nd usecase
+         The patterns learned in generative models can be used 
+         to create brand new examples of data which look similar to the data it seen before.
+
+---------------
+
+* Generative AI models :
+
+  1) Autoregressive models
+        Autoregressive convolutional neural networks (AR-CNNs) are used to study systems that evolve over time 
+        and assume that the likelihood of some data depends only on what has happened in the past. 
+        
+        Eg from weather prediction to stock prediction.
+
+
+  2) Generative adversarial networks (GANs)
+        Generative adversarial networks (GANs), are a machine learning model format 
+        that involves pitting two networks against each other to generate new content. 
+        The training algorithm swaps back and forth between training 
+        a generator network (responsible for producing new data) 
+        and a discriminator network 
+        (responsible for measuring how closely the generator network’s data represents the training dataset).
+
+
+  3) Transformer-based models
+        Transformer-based models are most often used to study data with some sequential structure (such as the sequence of words in a sentence). 
+        Transformer-based methods are now a common modern tool for modeling natural language.
+
+
+-------------------------------------
+
+* AWS DeepComposer :
+  -----------
+
+    Music studio - to learn generative AI by creating music
+
+
+
+* GANs with AWS DeepComposer :
+  -----------
+
+   -> A GAN is a type of generative machine learning model 
+      which pits two neural networks against each other to generate new content: 
+      a generator and a discriminator.
+
+      generator 
+         neural network that learns to create new data resembling the source data on which it was trained.
+
+      discriminator
+         another neural network trained to differentiate between real and synthetic data.
+
+      => The generator and the discriminator are trained in alternating cycles. 
+
+      => The generator learns to produce more and more realistic data 
+         while the discriminator iteratively gets better at learning to differentiate real data from the newly created data.
+
+   
+   * Collaberation between an orchestra & its conductor :
+     -----
+      nice example for GAN 
+        think orchestra = generator 
+              conductor = descriminator 
+
+              orchestra trains, practice, to get polished music 
+              conductor act as both judge & coach 
+                           judge - quality of output 
+                           coach - at same time give feedback to acheive a specific style.
+
+
+      generator loss :
+       -----
+        -> descriminator takes generated music tracks from generator & predict how they deviate from
+           real data present in the training dataset.
+           The deviation is called generator loss.
+
+
+           This feedback from the descriminator is used by generator to incrementally get 
+           better at creating realistic output.
+
+
+      Decriminator :
+       -----
+        As generator is getting better with feedback, it begins fooling the descrimantor.
+        So, the descriminator also needs to retrained itself.
+        
+        descriminator loss :
+           The descrimantor measures the descriminator loss to evaluate how well it is differentiating
+           between real & fake data.
+
+      Gist : 
+        - Evaluating output quality : discriminator
+        - creating new output : Generator 
+        - providing feedback : discriminator
+
+
+
+* Autoregressive Convulational Neural Network :
+  ---------------------
+   -> used to study models that changes over time. 
+
+      Assumes that some future events depends on what happen in past
+
+      - output is generated iteratively over time
+
+   - Edit Event 
+     ----
+      When note is added or removed from your input track during inference.
+
+   - Piano Roll :
+     ----
+      - Piano roll: A two-dimensional piano roll matrix that represents input tracks. 
+        Time is on the horizontal axis and pitch is on the vertical axis.
+
+   - How the AR-CNN Model Works ??
+     -----
+      -> To train the AR-CNN model to predict when notes need to be added or removed from your input track (edit event),
+          the model iteratively updates the input track to sounds more like the training dataset
+
+   Autoregressive models can be used to study weather forecasting.
+
+
+--------------
+
+-> Build a Custom GAN : 
+   __________________  
+
+   Jupyter Notebook in Amazon SageMaker
+
+   Q) How the Model Works
+     
+      The model consists of two networks, a generator and a discriminator (critic). 
+      These two networks work in a tight loop:
+
+         The generator takes in a batch of single-track piano rolls (melody) as the input 
+         and generates a batch of multi-track piano rolls as the output by adding accompaniments to each of the input music tracks.
+
+         The discriminator evaluates the generated music tracks 
+         and predicts how far they deviate from the real data in the training dataset.
+
+         The feedback from the discriminator is used by the generator to help it produce more realistic music the next time.
+         
+         As the generator gets better at creating better music and fooling the discriminator, 
+         the discriminator needs to be retrained by using music tracks just generated by the generator as fake inputs 
+         and an equivalent number of songs from the original dataset as the real input.
+
+         We alternate between training these two networks until the model converges and produces realistic music.
+
+
+         All In all :-
+           
+           Generator has to improvise base on feedback 
+           & 
+           Descriminator has to detect where to improve by finding fault in fake music & real music
+
+
+      Binary Classifier :
+      ------------
+       -> The discriminator is a binary classifier which means that it classifies inputs into two groups, 
+          e.g. “real” or “fake” data.
+
+
+      Model Training and Loss Functions
+      ________________________ 
+
+       Loss Function :- 
+       ----
+        -> The measure of the error in the prediction, given a set of weights, is called a loss function
+
+       Weights :- 
+       ----
+        ->  Weights represent how important an associated feature is to determining the accuracy of a prediction.
+
+
+      IMP -> 
+        Loss functions are an important element of training a machine learning model 
+        because they are used to update the weights after every iteration of your model. 
+        Updating weights after iterations optimizes the model making the errors smaller and smaller.
+
+
+      
+
+
+    
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+
+1) GANs with AWS DeepComposer :
+   ------------
+     
+     - Generator 
+
+     - Descriptor 
+         \ 
+          2 roles - classify as well as feedback
+          So Descriptor itself update itself with time to perform better in classification
+
+
+   What ??
+    ->  A GAN is a type of generative machine learning model which pits two neural networks against each other to generate new content: 
+        a generator and a discriminator.
+
+        generator :
+          - A generator is a neural network that learns to create new data resembling the source data on which it was trained.
+
+        descriminator :
+          - A discriminator is another neural network trained to differentiate between real and synthetic data.
+
+
+      The generator and the discriminator are trained in alternating cycles. 
+      The generator learns to produce more and more realistic data 
+      while the discriminator iteratively gets better at learning to differentiate real data from the newly created data.
+
+
+   Eg 
+
+     Collaboration between an orchestra and its conductor
+
+         The orchestra trains, practices, and tries to generate polished music, 
+         and then the conductor works with them, as both judge and coach. 
+
+   
+   generator loss :
+      
+      -> The discriminator then takes these generated music tracks 
+         and predicts how far they deviate from the real data present in the training dataset.
+         this deviation is called generator loss
+
+   => generator use feedback from descriminator to incrementally get better at creating realistic output
+
+
+   descriminator loss :
+      -> The discriminator measures the discriminator loss to evaluate how well it is differentiating between real and fake data.

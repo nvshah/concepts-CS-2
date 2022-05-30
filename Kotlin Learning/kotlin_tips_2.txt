@@ -1,0 +1,155 @@
+References :
+  https://medium.com/androiddevelopers/the-android-lifecycle-cheat-sheet-part-i-single-activities-e49fd3d202ab
+  https://medium.com/androiddevelopers/the-android-lifecycle-cheat-sheet-part-ii-multiple-activities-a411fd139f24
+  https://medium.com/androiddevelopers/the-android-lifecycle-cheat-sheet-part-iii-fragments-afc87d4f37fd
+
+
+-> Don't put all code in global Application(), i.e (World Readable World Writtable)
+
+* ADB --
+=> ShitDown App in Background (Emulator) via CMD
+   goal - to simulate stop of android as if it was destroyed by OS in Background
+
+   command :- `adb shell am kill <com.example.android.packageName>`
+
+   ADB (Android Debug Bridge) is command line tool, and if you want to use it from the command line, 
+   it needs to be part of your path. 
+   First you’ll find where the adb executable lives, then you’ll add that to your path.
+
+   general adb location :- {locationOfAndroidSdk}/platform-tools/
+
+   NOTE :- add adb to system path/ Env Variables
+
+   Remember : When in realtime System close app, it save some status of that app (which on resuming or restart is utilised)
+              When OS destroy & resumes app, android tries its best to resume app in last state
+
+* Bundle :-
+   Bundle is manegd in RAM, so keep less manual data in it as much possible (i.e via onSaveInstanceState() callback)
+   Generally You should store less than far 100 KBytes
+
+- LifeCycle -> For Observing State Changes of Fragments/Activity
+
+- OnSaveInstanceState -> Helps to Save State Change Manually, before when OS kills App
+
+* LiveData :
+  --------
+    An Observable Data Holder class that is life-cycle aware
+    - It's an mechanism that allows to communicate from ViewModel to Fragment
+
+    - We get feature automaticaaly of Observable 
+
+
+* Backend Property :
+  ----------
+   - Expose diff object in getter 
+
+
+* CountDownTimer
+  -------
+   ref - https://developer.android.com/reference/kotlin/android/os/CountDownTimer
+    
+
+* Formatting String :
+  ------
+    ref : https://developer.android.com/guide/topics/resources/string-resource#formatting-strings
+
+   1) Put String Format Entry in strings.xml
+   2) Access that format as function in View i.e layout xml file via expression bindings
+
+
+* Transforming LiveData :
+  -----
+    ref :- https://developer.android.com/reference/kotlin/androidx/lifecycle/Transformations#map(androidx.lifecycle.LiveData,%20androidx.arch.core.util.Function)
+           https://developer.android.com/reference/kotlin/androidx/lifecycle/Transformations#switchMap(androidx.lifecycle.LiveData,%20androidx.arch.core.util.Function)
+           https://developer.android.com/reference/kotlin/androidx/lifecycle/MediatorLiveData
+    Transformations.map()
+  
+
+* Permissions :
+   https://developer.android.com/guide/topics/permissions/overview
+
+
+* LayoutInflator :
+  ---
+   To create View from code
+   
+   Remember : You need to pass `parent` that recycler gives us 
+
+   => inflater.inflate() will return view  (i.e root view)
+
+* Get Binding Object for specific Layout
+
+   layoutObj.inflate()   // gives you binding object
+
+
+* Access the View reference directly without findViewById() in kotlin 
+  
+  -> Just import this :-
+        import kotlinx.android.synthetic.main.YOUR_LAYOUT_NAME.*/// HERE "YOUR_LAYOUT_NAME" IS YOUR LAYOUT NAME WHICH U HAVE INFLATED IN onCreate()/onCreateView() 
+
+
+* THings to look for External Libraries : 
+  ----------
+
+   - which permissions are required by library
+   - min sdk support
+
+
+* Back Button Android :
+  -------------
+   -> In Navigation Graph :
+        - select property popUpto
+
+* Kill current activity :
+  ----------
+   -> finish()
+
+* Safe Args :
+  -------
+   -> To get arguments passed :- `arguments` property 
+
+   -> lazily :- `by navArgs<T>`
+      non-lazy :- SeconArgs.fromBundle(arguments)
+
+
+* Animation from backedn :
+  -------
+   Animation 
+   AnimationUtils.loadAnimation()
+
+
+* Stateflow observer in lifecycle scope :
+  -------
+   lifecycleScope.launchWhenStarted{} 
+
+* For Firebase Cloud messaging :
+  ----
+   FirebaseInstancIdService
+
+   
+
+//----------- Third Party Package For Android (Kotlin)
+
+- Timber -> for Logging Purpose`
+
+- RetroFit -> for http REST API purpose`
+
+- Moshi -> Convert json to Kotlin Objects by parsing properly (Better)
+- Gson -> Json Serializable in Kotlin/Android 
+
+- glide -> load & cache & buffer` (Images)
+
+- coil  -> Image loading library` (From Internet) - Convert Image from URL to bitmap
+
+- CircleImageView
+
+- Anko -> Toast, Snackbar
+
+- kodein -> (Service Loactor)
+  DaggerHilt -> DI
+
+- groupie -> RecyclerView  // (all of notifying & extra stuff done by groupie library)
+
+- Accompanist -> System UI Controller
+
+- compose-destinations   // simple & better Navigator in Jetpack Compose

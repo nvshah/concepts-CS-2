@@ -1,0 +1,59 @@
+* Permutation & Combinations & Subsets :
+  ----------------
+   Subsets = Non Adjacent Collections
+
+
+* DP & DFS :
+  ------
+   DP = Bottom Up 
+   Memoized Recurrssion
+
+   processed + Un-Processed 
+   Include + Not-Include 
+
+
+* Backtracking :
+  ----
+   -> HINT : When a choice can affect the Future, Think about Backtracking
+
+
+* Floyd's Algorithm :
+  -----
+   -> Detect Cycle 
+   - Slow Pointer & Fast Pointer
+
+   - Both fast & slow pointer will meet in case there is cycle 
+     \
+      - Fast Pointer has atleast need to complete a 1 loop before meeting the SLow Pointer (in case of Cycle)
+    
+     -> If slow pointer takes n complete circles before travelling (c-x) distance in circle 
+        then 
+        Equivalent complete circles for Fast Pointer would be (2*n + 1)
+           \
+            2*n because rate of fast fointer is double of slow 
+               so if slow pointer completes 2 circles the in same timme fast pointer will complete 4 circles (& yet not met each other)
+
+            + 1  => because fast Pointer will always loop 1 more circle compare to Slow Pointer 
+
+            thus 2*n+1 => n`+1  // where n` = 2*n 
+
+        Let distance from initial Poinnt to Cycle start point  = p 
+            distance from meeting point (slow & fast) to cycle start point = x 
+            lenngth of cycle = c 
+
+            So now  2 * slow = fast 
+                    2 * (p + n*c + c-x) = p + (n`+1)*c + c - x 
+                    2p + 2nc + 2c - 2x = p + (2n + 1)c + c - x
+                                       = p + 2nc + 2c - x 
+                    p - x = 0
+                    p = x 
+      -> Now we will take 1 more slow pointer from initial Pos (0) 
+         & 
+         Earlier Slow Pointer is already X dist away fromm cycle start point  
+
+         So second slow pointer will travel {p} distance & first slow pointer will travel {x} dist &
+         both will meet at Cycle Start Point  
+
+
+* Stack & Monotonic Inncreasing Stack :
+  -----------------

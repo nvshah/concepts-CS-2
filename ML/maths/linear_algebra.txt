@@ -1,0 +1,21 @@
+* Cross Product of 2 vectors gives us a 3rd vector that is orthogonal to others
+
+A dot B -> projection of A on B
+
+Dot Product :- product of length of vectors that are moving together
+               \
+                -> A & B moving in B's direction
+
+               - multiplying part of A that is going in same direction of B
+               - how much they move in same direction
+
+Cross Product :- multiplying part of A that is going in perpendicular direction of B
+               - how much they move in perpendicular direction
+
+               -> Will give you the Vector perpendicular to 2 existing Vectors 
+
+* Tangent :
+  ------
+   -> is a Line that touches the Funnction at one Point
+   -> It helps to find the Slope of an Equation
+   -> It helps to determinne if Funnction is Growing or Degrading

@@ -1,0 +1,48 @@
+* Time Complexity :
+  
+* Space Complexity :
+  
+    -> Auxilary Space - extra space 
+
+    => Do not count Input and Output Space i.e as those are trivial
+       (for any algo, you require Input & Output Space) 
+
+
+* Recuresion & DP :
+  ---
+   -> when you go for Permutation & Combinations = BruteForce = Worst 
+
+      Recursion + DP = Good + Worst = Avg = Greedy(Eager)
+
+   [**MIMP]
+   => Recursion Takes Space on Call Stack 
+      (So Space Complexity in Case of Recursivve Soln cannot be considered constant always)
+
+   
+
+
+
+* DP :
+  ---
+   -> With the help of DP, we can reduce exponential complexity m^n to polynomila ie m*n 
+       \
+        m^n -> m*n
+
+   -> 2 Dimension DP  (Eg -> Coin Change)
+      1 Dimension DP  (Eg -> Fibonnacci, Bank Robber)
+
+* Memoized Recurssion :
+  ------
+   -> DFS & BFS are inherently used during Memoized Recurrsion
+
+
+* Hash-Map Table & Size  :
+  -----
+   - If you design custom hash-Map 
+     then keep size of hash-map array to be large prime number (ie let say 769)
+     So that hashing becomes efficient
+
+   - Inorder to make Hashing efficient whilst chaining 
+     use inital size as Large Prime Number (ie such as 769)
+
+   

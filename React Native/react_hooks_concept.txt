@@ -1,0 +1,14 @@
+* React Hooks ??
+ -----------
+
+ -> react feature w.o writing a class.
+ -> Hook dont work inside classes.
+
+ -> Hooks lets you have make your functional component to hold state without use of class
+
+ Rules :
+   1) Only calls hooks at Top Level 
+   2) Only Calls Hooks from react functions
+
+ Data Fetching :- componentDidMount & componentDidUpdate 
+ Event Listeners :- componentDidMount & componentWillUnMount

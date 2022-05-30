@@ -1,0 +1,29 @@
+* DI 
+  Its very bad practice to create/instantiate object inside Activity
+  because it makes object dependent on that activity 
+
+  DI dont change functionality of app but makes more cleaner & better architecture wise
+
+
+Kodein.lazy{} allows us to use application context`
+
+
+Dagger vs Kode-in :
+  -----
+  Dagger - is a Dependecy Injection 
+  Kode-in - service locator 
+
+  DI :- happens at compile time 
+  Service locator :- happens at run-time
+
+  So Dagger is more performant thann Kode-in
+
+
+* View Model Advantage :
+  ------
+   -> LiveData 
+      ---
+       -> When Device is rotated, then all data from Activity gets lost 
+          but 
+          If we follow MVVM pattern then its not much concern as We can immediately get those 
+          data from LiveData 

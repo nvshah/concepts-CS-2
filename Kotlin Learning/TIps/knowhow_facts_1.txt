@@ -1,0 +1,6 @@
+* In ViewModel you do not have access to context 
+
+* To Publish Own Library :
+  ---
+   1. maven 
+   2. JitPack (ie From Github Repo)

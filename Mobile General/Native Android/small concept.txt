@@ -1,0 +1,1 @@
+* Diff way to hide Action Bar :- https://www.geeksforgeeks.org/different-ways-to-hide-action-bar-in-android-with-examples/

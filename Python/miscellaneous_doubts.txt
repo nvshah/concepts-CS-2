@@ -1,0 +1,84 @@
+1) lambda & nonlocal(free) variables 
+   How to modify the nonlocal var from lambda 
+
+
+2) How to get nonlocals variable for given function object
+
+
+3) How to get all instance variables of an object in python
+   -> vars(obj)
+
+
+4) monkey patch fixture
+
+5) __dict__ & vars() :- https://medium.com/analytics-vidhya/dict-attribute-and-vars-function-in-python-42d82dbaba73
+
+6) tuple & Canonical :- https://stackoverflow.com/questions/14135542/how-is-tuple-implemented-in-cpython
+
+    - free list :- an array, storing pointers to unused tuples
+
+    NOTE :- python can canonicalized a tuple with max-to-max 256 elements
+
+7) Slice assignment is faster than list assignment 
+    - http://www.openbookproject.net/books/pythonds/AlgorithmAnalysis/Lists.html
+
+8) SLice assignment is faster than list.insert()
+    - https://stackoverflow.com/questions/12537716/why-is-slice-assignment-faster-than-list-insert
+
+9) String Interning in Python :
+    - https://medium.com/@bdov_/https-medium-com-bdov-python-objects-part-iii-string-interning-625d3c7319de
+
+
+10) reduce() takes no keyword argument, even though definition allows
+
+11) import module in python from specific folder : 
+          https://stackoverflow.com/questions/4383571/importing-files-from-different-folder
+
+
+12) raw_input() vs input() in python 2 :-
+     
+      Python 2 -> input() == eval(raw_input())  
+      
+      /// Explanation :- i.e raw_input() always str & input() try to evaluates that str
+
+
+13) division in python 2 & 3 ::
+   
+     Python 2 -> int/int -> int 
+                 float/int -> float 
+
+            3 -> division by `/` always produce float result 
+                 division by `//` gives int result
+
+
+14) forward slash in python arguments :
+     
+     indicates all arguments prior to it are positional only argument.
+
+
+15) pip vs conda :
+    -----------
+    => pip could not handle data science packages that depended on libraries outside of Python.
+      which Conda can do.
+
+
+16) open file as 'rb'
+    --------
+    (ref : https://stackoverflow.com/questions/33054527/typeerror-a-bytes-like-object-is-required-not-str-when-writing-to-a-file-in)
+     -> open file will return bytes object on read, not strings
+
+17) os.rmdir() is used to remove empty directory. ( i.e no sub dir or files)
+    use shutil.rmtree()  // to remove non-emty directory
+
+
+18) Bare Exception :
+    --------------
+     (ref : https://www.flake8rules.com/rules/E722.html)
+
+     
+19) Wonky behaviour `+=`
+    -----------
+     When your immutable object contains mutable object & 
+      You tries to use += on your that mutable object it will behave differently
+
+      

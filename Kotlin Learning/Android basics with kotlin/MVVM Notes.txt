@@ -1,0 +1,132 @@
+https://resocoder.com/2018/09/07/mvvm-on-android-crash-course-kotlin-android-architecture-components/
+
+* MVVM :
+  ----
+   is Opinionated Way to Structure your Android Project
+
+=> Data-Binding Put Code right in XML rather than Activity files
+
+* Architectural Pattern :
+  ----
+   Seperation of Concerns  (Model, View, ViewModels)
+   Single Source of truth  (Repository)
+   Tight/Loose Coupling   (less entanglement & best for testing)
+
+  Tight Coupling : less entanglement between classes
+
+  Loose Coupling : (what we aim for)
+  ----- 
+   -> Less entanglement & better for testing
+   ViewModel do not have direct reference to Views 
+   View do have reference to ViewModel
+
+   The trick - Observable (i.e via losse coupling)
+               ASA changes View will get update w.o VM having reference to View 
+
+    So View Model do not have any ref but it exposes some data, functions
+    which View can Observe
+
+    This Observation can be done through `LiveData` or `RxJava`
+
+ This is contraty to MVC 
+    Where in MVC Controller have direct reference to View 
+
+ 
+ * LiveData :  (Same as Mobx's Observable in Flutter)
+   -----
+    - perfect in sync with life cycles
+    - child exposes data via some library such as `LiveData` or `RxDart`
+
+    Advantage :-
+      Once an activity that is listening to live data via ViewModel gets destroyed
+      It will no longer observe it 
+      & all is taken care itself by LiveData
+
+ * Repository is Single Source of truth
+
+ * ViewModel also observes the data in Repository (Local + Remote DB)
+
+
+NOTE :- We will use Repository as mediator to access dao for room db
+
+
+* Repository Role:
+  -------
+   Single of Source of Truth for all data that View Model Requests to it
+   - mediator between database(data-source) & ViewModel(business-logic)
+
+* View part :
+  ------
+   Activity & Fragment
+
+* Idea of DI :
+  ------
+   -> To make code modular & Independent of each other
+   -> Don't make dependecy inside the class but instead make them pass via Constructor of that class
+
+   => dependency injection is a way to modularize your code
+
+   Eg If not DI then testing via dummy Data would be hard ie Mocking would be hard
+       \
+        need to change every single constructor call in every class you need 
+        using DI, create dependecy in one place & use many places via DI
+
+IMP :- View Model must survive Orientation Changes i.e lifecycle of activity & fragments
+
+
+* ViewModelProvider :
+  --------
+   -> Checks & take care i.e if View Model is present than pass reference to that VM
+      Do not reset View Model.
+
+   -> View Model cannot be created directly but via Factories i,e inherit ViewModelProvider
+
+   Syntax : 
+   ---
+    ViewModelProviders.of(this, factory).get(classname::class.java)  // get if exists or create from factory & get
+
+
+____________  DI  ________
+
+* Loose Coupling :-
+  ------
+   - Not having dependecy pass to class directly but instead take it from centralized place 
+   - This means that classes operate with their dependency through their interface & not via concrete impl.
+      \
+       This allows you to swap impl very easily
+
+   Eg Repository is dependecy of View Model
+
+   DI - framework - kodein
+
+
+   singleton :- same instance 
+   provider  :- new instance every time (ie fatcory alike)
+
+
+----------- Data Binding ---------
+
+-> Accesing your view via findViewById() is still ugly
+-> You can do most of your stuff in XML with Data Binding via LiveData
+
+* Data Binding with Live Data:
+  -------------------------
+  -> Use viewmodel instance inside XML directly
+
+  1-Way Data Binding :
+  -----
+   @{}
+
+
+  2-Way Data Bindinng :
+  -------
+   @={}
+    
+    -> Let UI change the data directly under my LiveData living in View Model
+
+  => Every XML file that has <layout></layout>, generate automatically a file i.e ActivityMainBinding.kt 
+     
+     {FileName}Binding.kt
+
+
+

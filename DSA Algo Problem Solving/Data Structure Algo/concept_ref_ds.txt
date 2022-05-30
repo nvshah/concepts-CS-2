@@ -1,0 +1,3 @@
+Hash-Map Choose Capacity
+https://pzemtsov.github.io/2015/12/14/choosing-the-hash-maps-capacity.html
+https://stackoverflow.com/questions/22741966/how-to-choose-size-of-hash-table

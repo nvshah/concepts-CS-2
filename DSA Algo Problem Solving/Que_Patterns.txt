@@ -1,0 +1,18 @@
+1. Sliding Window 
+2. 2 Pointers or Iterators 
+3. Fast & Slow Pointers 
+4. Merge intervals  
+5. Cyclic Sort 
+6. InPlace Reversal of Linked List 
+7. Tree BFS 
+8. Tree DFS 
+9. 2 heaps
+10. Subsets DP 
+11. Modifed Binary Search
+12. top k elements
+13. k-way merge 
+14. topological sort 
+15. Valley Peak Approach 
+16. Find Cycle in Graph
+17. Union & Find (Connected Components)
+18. Tarjans Algo (Strongly connected components)

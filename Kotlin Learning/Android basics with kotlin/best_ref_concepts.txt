@@ -1,0 +1,3 @@
+[MVVM Basic] :- https://resocoder.com/2018/09/07/mvvm-on-android-crash-course-kotlin-android-architecture-components/ 
+
+[Kotlin KMM] :- https://www.raywenderlich.com/19144111-kotlin-multiplatform-project-for-android-and-ios-getting-started

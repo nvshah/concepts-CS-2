@@ -1,0 +1,176 @@
+* Thread Safe Initialization :
+   -> Wrap in synchronized{} block
+
+=> REMEMBER : Database on android are stored on file system or disk
+              Its imp that Disk-IO runs on IO dispatchers
+
+-----------------------------------------------
+
+* Offline Caching :
+  --------------
+    - Sae data from the last time app open.
+
+  Cahcing :
+  _____
+   -> Storing smthng for future use.
+
+   File System :
+     place to store cache on android system
+
+   Cache Invalidation :
+   ____________
+    -> Identifying the data that is no longer useful (out of data)
+    -> Data is too old.
+
+    Network Caching
+
+   => ROOM is best way for complex data. < local data caching
+   
+Q. How to Store Data ??
+->
+* ( Good Principle : (Single Source of Truth)
+   ---------
+    -> Always show the data from the database
+       
+       When data arrives from the network first store onto the db, (& UI will get notified)
+       Here Database is treated as Single Source of truth
+
+    Delay Update Offline Cache :  
+      -> while updating data to server, once server ack the green signal.
+      (Similar to idea of Rollback)
+
+
+* Data Transfer Objects :  
+  ----------------------
+   - responsible for parsing the data from network
+   - prepare data for network
+
+  Domain Obj :
+  ---------
+   - App data
+     used by UI
+     Seperate from the Network
+
+  Network Obj -> Domain Obj -> Database Obj
+
+  1. Convert Database Obj to Domain Obj
+  2. Data Transfer to Database Object   [data transfer obj = Network Obj]
+
+* Caching Mechanism :
+  ------------
+   -> UI will observe/watch the offline storage, (i.e any queries  if so)
+
+  Advantage of using LiveData<>, for query !!!
+
+  -> Without LiveData, UI thread might get block when perform some quert to fetch list of data
+     but
+     With LiveData<>, Room will perform query & bg thread & UI thread will not be hindered.
+      - Also to this, it will updata live data anytime data changes in cache.
+
+  => So (Offline Cache + LiveData) is better Combination 
+
+MIMP :::
+Q. When should prefer LiveData in Room @Queries ?
+
+  -> Want changes to db & update UI dynamically
+     want be able to call query from UI thread
+     want Room to run query on background thread
+
+* Repository Pattern :  
+  -----------------
+
+  -> repo provides Unified view of data from several sources
+    - data in repo may arrive from any resource to say it {network, db, etc..}
+    - responsibility to manage data in cache
+       \
+        So take data from network & update same in cache
+
+       Seperation of Concerns :- dont need to worry how repo manage to cache those data
+      
+      - Responsible for providing api for data sources.
+
+  -> Dependency Injection :
+      \
+       DI -> Repo require some database instance, so passing it via constructor argument
+             is a DI
+
+
+* Offline Caching Strategies :
+  -----
+   ? What to do when some data on server gets deleted ???
+
+
+* WorkManager:
+  ----------
+   - require some work when app may be in the background or even not running.
+
+   Background Work : Upload Logs
+                     Process data
+                     Upload metrics
+                     Pre-fetch data
+
+    WorkManager - to perform task when app is in background
+                - It's a JetPack library
+
+                - LightWeight api
+                - Schedule background work
+
+    Compare to Coroutine :
+        - Dont tell how to do but
+           Under what constraints to do !!
+
+        Constraints such as : Charging, Wifi, Bluetooth, Device IDle, etc...
+
+    Background Work & Battery Friendly :
+       
+        - Optimized (CPU/GPU, are not excessively used) 
+        - rarely
+
+    => Pref-fetching :
+       -------
+        - Load what users need next
+        - in background
+        - usually done nightly
+        - Workmanager schedule efficiently (least battery usage)
+
+    = Practical :
+      ---
+       To get Worker i.e extend `CoroutineWorker` 
+          
+       CoroutineWorker - doWork() is a suspend fun 
+
+        Success & Retry -
+
+        Payload() -> to retur SUCCESS | RETRY
+  
+
+    * Work Request :
+      ----
+       2 types : 1) One time 2) Periodic
+
+       PeriodicWorkRequestBuolder()
+       enqueUniquePeriodicWork()   // 
+
+    * Constraints :
+      ----
+       Tell work manager under what conditions, do work :-
+         \
+           Constraints.Builder()
+                        \.setRequireNetWorkType()
+                         .setRequirebatteryNotLow()
+                         .setRequiresCharging()
+                         .setRequiresIdle()         //[on Marshmellow or above]
+
+
+* Best Practice for OnCreat i.e First Screen Shows :
+  -----------------------------
+   -> onCreate() : our first screen shows up
+
+   -> Good way to initialize something that may take some time in onCreate is to
+      launch it on coroutine i.e
+       
+       scope = CoroutineScope(Dispatchers.Default)
+
+       scoper.launch{}
+
+    -> i.e Move initialization out of onCreate()

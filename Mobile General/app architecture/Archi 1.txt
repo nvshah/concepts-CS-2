@@ -1,0 +1,43 @@
+Ref :- 
+ Architecture : Data Layer (MAD Skills)
+
+* Data Layer :
+  -----
+   - Responsoble for Managging the Data that app needs 
+   - Repository + Business Logic + Centralized Logic 
+
+   - Create Repository for each different type of data that you want in your APp 
+      \
+       - MoviesRepos, PayemntsRepos, ...
+
+   - Repository :- communicate with Data Source to make data available to app as a Sinngle Source for Data
+           - Data Source :- may be local or remote
+
+   - Entry Point to Data Layer is always repository Classes
+
+   - Data Exposed by Data layer must be Immutable
+       \
+        So that it is Safe also amongst Multi-Threading
+
+
+* Multiple Level Of Repository :
+  -------
+   - Multipler Repository can share samme DatSource
+   
+
+* UI Layer :
+  -----
+   - visual representation of Application State (in the Data Layer)
+
+   Responsibilities : (pipeline)
+    1) Convert App Data -> UI Data 
+    2) Convert UI data -> UI Elements 
+    3) User Events -> UI Changes 
+
+    4) Repeat 
+
+    View Models = State Holders
+
+   - Unidirectional Data Flow 
+
+   -> While Collectig from Flow in UI, you must keep check that it only consumes when Activity is not dead

@@ -1,0 +1,72 @@
+* Assemblies (.dll or .exe)
+  ----
+   - Assemblies are the building block of .NET Framework applications; 
+     they form the fundamental unit of deployment
+
+   - Assembly is nothing but a precompiled .NET Code that can be run by CLR (Common Language Runtime).
+
+   - an assembly is nothing but a single unit of deployment or it is a precompiled chunk of code 
+     that can be executed by CLR.
+
+   Console Application :- .exe 
+   Web App Project / Class Library Project :- .Dll
+
+   1) EXE :
+      ---
+       EXE is an executable file and can run by itself as an application.
+
+   2) DLL :
+      ---
+       -> DLL cannot run by itself. It needs a consumer who is going to invoke it.
+       -  DLL is run inside another memory space
+          This other memory space can be Windows/Console/Web Application
+
+       - The reason behind the DLL is reusability. 
+
+   Diff between EXE & DLL :
+   ---
+    -> the difference between them is an EXE is an executable file and can run by itself as an application 
+       whereas DLL is usually consumed by an EXE or by another DLL and we cannot run or execute DLL directly.
+
+
+* App Domain :
+  -----
+   -> The App Domain (Application Domain) is a logically isolated container inside a process
+   -  logically isolated container inside which the .NET Code runs  
+   -> Note: By default always there is an App Domain under which our .NET Code runs.
+
+   Advantage :-
+     - Can load Third Party DLL inside this container without affecting the own files 
+     - Easy to manage diff version of .DLL
+
+
+* Assembly :
+  ----
+   Equi to Packages in Python (ie Collection of Modules/nameSpaces)
+
+
+* IIS :
+  ---
+   - Its a Windows Application 
+   - It allows any Windows System to become Host & Serve an applicationn as Public via Public IP
+
+   For Linux : PHP -> Apache Server 
+               Windows -> IIS
+   
+   - Web Server Application Hosting on Window System
+
+
+
+------
+[UI]
+
+Q1) Diff between aspx, asxc, asmx ??
+
+  .aspx: The file extension of Web page.
+         webpage provides a graphical user interface (text, images, buttons, etc.), using which you can design the page which will be rendered to user on browser
+
+  .ascx: The file name extension for the user control.
+         User controls works as containers into which you can put markup and Web server controls. You can reuse this user control as a normal control across the application in web pages (.aspx files)
+
+  .asmx: The file extension of web service page.
+         web service does not provide a graphical user interface. It is mainly used to fetch data and perform actions.

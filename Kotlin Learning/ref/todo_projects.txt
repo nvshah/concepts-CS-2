@@ -1,0 +1,13 @@
+* MVVM (Currency Converter - Philip)   [https://www.youtube.com/watch?v=ct5etYgB5pQ]
+
+* MVVM (Tracking App - Philip)  
+
+* Paginng3 & Compose (StevdZa)  | UnSplash API
+
+* MVVM Parkign SPot (Map & MVVM Archi)
+
+* Stock Market App (Clean Architecture | Philip Lackner)
+
+
+------
+

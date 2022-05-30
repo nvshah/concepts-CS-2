@@ -1,0 +1,25 @@
+* Modulo :
+  ----
+
+* Multiplicative modulo inverse & Co-Primes :
+
+* Co-Primes :- except 1 nothing in common
+
+* Fermats Little Theorem :
+  ------
+
+
+* Chinese Remainder Theorem :
+
+
+* HCF of eqn :
+  -------
+   ax + by = c 
+
+   HCF of above eqn = min positive val for above eqn where a & b are int
+
+   Thus 3x + 9y = 0
+    ans = HCF(3, 9)
+
+  if you are given 2 numbers a & b, HCF(a,b) = minimum val of equation of ax + by 
+  where x & y can be any int you want

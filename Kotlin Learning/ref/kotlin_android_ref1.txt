@@ -1,0 +1,37 @@
+* Compose CheatSheet
+   - https://proandroiddev.com/cheat-sheet-for-jetpack-compose-7a197909fa42
+   - https://www.droidcon.com/2021/12/13/cheat-sheet-for-jetpack-compose/
+   
+
+-------
+
+* Android Articles (basic)
+  
+  http://tutorials.jenkov.com/android/activity.html
+
+
+--------
+
+Youtube 
+
+Layout :
+ - WSCube Tech (XML Layout) https://www.youtube.com/watch?v=Hl5MwiTF_yQ
+ - Coding With Tea
+ - Android Breakdown  (Java + XML)  // imp
+
+ - Mastering Constraintslayout (https://www.youtube.com/watch?v=rzmB3UxxhaA)
+
+ - Onboarding/Walkthrough Screen - Geeks for Geeks (https://www.youtube.com/watch?v=0EnVUZhYNEI)
+       - StevDza Onboarding (https://www.youtube.com/watch?v=zLfRuBy2LzA&list=PLSrm9z4zp4mG9o873gDqCuGZkgOb_TR4N&index=21)
+
+ 
+
+------
+
+Youtube Channels
+
+ - StevDza 
+ - philip Lackner 
+ - 
+ - HoodLab
+ - WsCube Tech

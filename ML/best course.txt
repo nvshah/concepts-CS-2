@@ -1,0 +1,104 @@
+1) Google Machine Learning Crash Course 
+
+Written tutorials
+2) Kaggle Intro to Machine Learning 
+          Intermediate Machine Learning
+
+3) Microsoft Machine Learning (Github)
+
+4) Deep Learning MIT 
+     https://www.deeplearningbook.org/   (html)
+
+5) https://www.dataschool.io/ml-courses/
+
+-------------------------
+
+Extra Other Courses  
+
+1) DataCamp
+2) Udacity 
+3) Applied AI
+4) DataQuest
+
+Free -> 
+
+DataQuest.io
+
+Certification ->
+
+WorldQuant University
+  - applied data science 2 
+  - applied data science labs (https://www.wqu.edu/programs/applied-ds-lab/)
+
+NPTEL ->  
+
+ Introduction to Machine learning  - IIT kharagpur
+ Machine Learning for Engineering & Science Applications (Video) - IIT Madras
+
+CourseEra
+Udacity 
+Edx
+AnalyticsVidhya
+mygreatlearnings.com
+RealPython
+CognitiveClass.AI 
+Youtube
+
+
+
+Best Articles ------------------
+
+(via Email )
+ 
+ 1) Machine Learning mastery .com (especially maths)
+ 2) academia-mail.com 
+
+ 3) https://www.dataschool.io/ml-courses/
+
+
+ Statistics Mini Course :-
+    https://machinelearningmastery.com/statistics-for-machine-learning-mini-course/
+
+
+---------
+Youtube reference :
+  
+handson :-
+  CodeBasics
+  SentDex 
+  Corey Schaffer
+  Keith galli
+  Python Engineer
+  Tech with Tim
+  Kimberly Fessel (Seaborn)
+  DataSchool
+  
+theory :-
+  Krish Naik
+  ritvik math
+  Code Basics
+  StatQuest with Josh
+  Serrano Academy
+  Khann Academy
+
+  Jeffrey Chasnov (Vector Calculus)
+
+  Steve Brunton (ML Math Topics)
+     \
+      - data driven science & Engineering
+      - Intro to data science
+      - SVD 
+      
+  
+  Normalized Nerd  (** iMP)
+  Weights & Biases
+  Inntutive Machine Learning  (** Imp)
+
+Maths & Stats :-
+  3 blue 1 brown
+  Tibees
+  MartinStatsLecture
+  Visually Explained
+
+
+  DataLab

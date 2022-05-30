@@ -1,0 +1,41 @@
+Modern Android Dev 
+
+
+* Gradle : general purpose andoid automation build tool
+
+   - Multi Project Builds :- settings.gradle
+
+   gradle -> Tasks
+   
+   Android-Gradle plugin :
+   ----
+   Android comes with pre-defined plugins & these plugins can build project gradle
+
+   To tell android : that i am building android application // com.android.application
+
+   - android DSL  //  helps to customise the build files
+
+  -> gradle dependency management supports maven
+      maven dependency -> to gradle
+  
+  Gradle runs in 3 phase ;
+    1) initialisation : gradle decides which project instance needs to be done 
+
+    2) configuration : evaluates all build scripts or the projects included in build 
+                        apply plugins
+                        register tasks
+
+    3) Execution : gradle executes set of tasks needed for build
+
+  Gradle DSL supports groovy or kotlin scripts for build file
+
+* Gradle :- Helps in build tools scripting 
+
+* Plugins & Tasks :
+  ----------
+   -> you can define your own plugins 
+       \
+        you can register tasks in that plugin 
+
+      then you can run that Plugins from Gradle File (ie Every time when build is triggered)
+

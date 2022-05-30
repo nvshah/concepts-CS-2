@@ -1,0 +1,6 @@
+1) *args & **kwargs
+
+2) splat operators (*, **) for iterable unpacking
+
+3) help()
+

@@ -1,0 +1,31 @@
+* Groupie for RecyclerView
+
+
+* Listener + Registration Mechanism :
+  ---------
+   - To listen to the documents changes on firebase we will have listener & registration mechanism
+     Just Same as Stream 
+
+
+* Groupie (RecyclerView) :
+  ------
+   Group - holds the Section - Section - holds the content
+
+- FirebaseInstanceIdService :
+  FirebaseMessagingService
+
+=> Firebase Cloud messaging use token to identify the new devices
+   Which user is using the current device by storing info in FireStore
+
+   We can get userId of other user to whom we are sending the message 
+   &
+   then we can get token for that users from firestore 
+
+
+* UserProfileChangeRequest.builder()   // use to change the username & image of user on firebase profile
+
+* SHA-1 Certificate :
+  ----
+   Why ? -> to tell firebase that this particular app can use google credentials
+            to do sign in
+

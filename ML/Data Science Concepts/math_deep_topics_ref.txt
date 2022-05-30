@@ -1,0 +1,7 @@
+* (Transpose of a matrix * matrix itself)
+   -> https://math.stackexchange.com/questions/158219/is-a-matrix-multiplied-with-its-transpose-something-special
+
+
+* An interactive Guide to Hypothesis Testing
+  https://towardsdatascience.com/an-interactive-guide-to-hypothesis-testing-in-python-979f4d62d85
+

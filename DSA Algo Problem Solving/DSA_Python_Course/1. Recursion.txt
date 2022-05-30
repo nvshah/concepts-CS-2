@@ -1,0 +1,14 @@
+* Recurrsion :
+  ---------
+   -> Function callinng itself
+   
+   - Performing the same operation multiple times with different inputs
+   - each time make inputs smaller thus making problem smaller 
+   - need some base cases to terminate the recursion
+
+
+* 3 Steps :
+  ----
+   1) Recurssive Case 
+   2) Base Case (Stopping Condition)
+   3) Constraints | Edge Case ( Stopping Condition)   // often `assert` is used

@@ -1,0 +1,7 @@
+1) Ridge Regression
+
+2) Kernel Methods (for Linear Regression)
+
+3) Bag of Words
+
+4) Evaluation Metrics (different)

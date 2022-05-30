@@ -1,0 +1,4 @@
+* Subset Pattern (Recursion)
+   -> Taking some elements & removing some is known as SubSet Pattern
+
+* 

@@ -1,0 +1,74 @@
+Code Ref :
+  https://github.com/avalanche-tm/youtube-videos/tree/master/flutter_simple_state_management/lib/state_management
+
+
+* State management :
+  ---
+   - Way to access the state of some part from another part of an app 
+
+* Built in Mechannisms :-
+   |
+    - Provider, ValueNotifierProvider  // InheritedWidget
+      Streams
+
+* What is Diff between State Mgmt & StateFul Widget ??
+ -> 
+   Stateful Widget := have state(logic) + UI 
+     |
+     - here the state is local pertaining to that specific widet only.
+     - You still dont have convenient way of accessing the state of other widgets 
+
+   Thus there are 2 types of States :
+       \
+        - Local & gLobal 
+
+   1) Local State :
+      ----
+       - State limited to particular Widget (Eg StatefulWidget)
+
+   
+   2) Global State :
+      ----
+       - State that can be shared by multiple Widgets of an app !
+       - Eg :- User (logged in) details
+                \
+                 as user info is required at diff places in same app (ie checkout, profile, cart, ...)
+
+[TIPs]
+=> Decouple UI from Business logic 
+    \
+     this can be achieved by seperating local state into Seperate Class 
+
+[REMEMBER]
+=> Private variable declare by leading underscore can be accessed by other file unless its declared inside library
+   |
+   ie library libName;   // At Top 
+
+
+* Global State & Injection :
+  -----------------------
+   - Global State needs to be injected via Depedency Injection / Service Locator 
+
+
+* Depedency Injection | Service Locator :
+  -----------------------
+   - At it core, it comprises of 2 things 
+     1) list of instances 
+     2) list of constructors (ie Factories) { to create those instances }
+
+     & Some Manipulations method to play with above 2 variables 
+        \
+         get, register, reset, ...
+
+--------
+
+* Store state Mgmt Mechanism :
+  ----
+   -> Store<T> abstract class 
+        |
+        that uses ValueNotifier to manage state of type T
+
+
+
+      
+       

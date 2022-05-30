@@ -1,0 +1,2 @@
+* drawable folders & images diff name ??
+  https://stackoverflow.com/questions/58363128/drawable-v21-vs-v24-vs-custom-folders-for-hdpi-mdpi-xhdpi-etc-in-which-folde

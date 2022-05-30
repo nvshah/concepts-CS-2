@@ -1,0 +1,13 @@
+* Data Layer :- basic Foundation of any app
+     \
+      create, store & manage the data for an app 
+
+      - comprises of various repository (ie consider repository as individual Room of your House)
+
+* UI Layer :
+    \
+     Interactions with User
+
+* Domain Layer : (Optional)
+     \
+      Simplifies the interaction between Data Layer & UI Layer 

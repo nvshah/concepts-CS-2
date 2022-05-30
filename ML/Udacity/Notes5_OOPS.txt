@@ -1,0 +1,180 @@
+[Udacity OOP] https://github.com/udacity/DSND_Term2/tree/master/lessons/ObjectOrientedProgramming
+
+[class instance attributes]  https://www.python-course.eu/python3_class_and_instance_attributes.php
+[Mixins ] https://easyaspython.com/mixins-for-fun-and-profit-cb9962760556?gi=c24e199ad78d
+[Decorator] https://realpython.com/primer-on-python-decorators/
+
+[Venv] https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
+
+[github contribution] https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/
+[contributing]  https://github.com/MarcDiethelm/contributing/blob/master/README.md
+
+-----------------------------
+
+Why ?
+
+ -> Object-oriented programming allows you to create large, modular programs that can easily expand over time.
+ -> Object-oriented programs hide the implementation from the end user
+
+
+* Object : 
+  ----
+   -> An object has 1) characteristics  [Noun]
+                    2) Actions          [Verb]
+
+                    Eg Dog :
+                              characteristics - name, color, breed, age 
+                              Actions         - bark, run, walk, bite
+
+            Tip -> Actions usually starts with `To` as it is verb Eg To bark, To Talk,...
+
+     technical terms :
+        characteristics <-> Attributes 
+        Actions      <-> Methods 
+
+
+* Class :
+  -----
+   -> blueprint, (generic version of object)
+
+  Encapsulation :
+  -------
+   -> combine functions and data all into a single entity. In OOP this entity is called class
+   -> Allows you to hide implementation details
+
+  Inheritance :
+  -------
+   Sharing down the tree.
+
+
+Q) function vs method ??
+-> method is inside of a class whereas a function is outside of a class.
+
+Q) What is slef ?
+-> self tells python where to look in memory for object
+
+
+* Modularise code :
+  -------
+   -> use module with import statement
+
+   => Packages & module need not to be in same directory as long as python know where to
+      look for package
+
+
+Q) Why might it be better to change a value with a method instead of directly? 
+-> Changing values via a method gives you more flexibility in the long-term. 
+
+
+* Package : 
+  -------
+
+  Create & Install Python Package Locally :
+  -------------
+  Keep Setup.py file & package in same folder.
+  go that folder 
+  run - pip install .
+
+  -> setup.py - 
+     ---  
+     -> require inorder to use `pip install` 
+     (pip install .)  :- dot tell to look for setup.py file in current folder.
+                         install package into workspace (i.e venv or global (default) env)
+
+      pip install --upgrade .  -> to upgrade the package present, in same directory
+
+
+* pip :
+  ---
+   -> Python Package Manager, helps to download package from python repository PyPi
+
+
+   Virtual Env :
+   ---------
+    -> Consider setting up a virtual environment.
+       That way, if you install your package on your computer, the package won't install into your main Python installation.
+
+    => A virtual environment is a silo-ed Python installation apart from your main Python installation.
+   
+   => pip only manages packages.
+
+* venv :
+  ----
+   -> manages the virtual environment.
+   -> experiment WO affecting real python env.
+
+   -> To create : python3 -m virtualenv env
+                  python3 -m venv env
+
+  conda :
+  -----
+   -> manages packages & manages environments.
+
+   ```
+    conda create --name environmentname
+    source activate environmentname
+    conda install numpy
+   ```
+   
+   => pip could not handle data science packages that depended on libraries outside of Python.
+      which Conda can do.
+
+
+  Q) Steps to follow :
+  
+   -> 1. python -m venv venv_name
+      2. source venv_name/bin/activate
+      3. pip install python_package/. 
+
+
+  NOTE :- 
+  ---
+   If you change the code in the distributions folder after pip installing the package, 
+   Python will not know about the changes.
+
+   When you make changes to the package files, you'll need to run the following:
+
+   ```
+    pip install --upgrade 
+   ```
+
+* PyPi :
+  -----
+   
+   Inside folder where package & setup.py resides :-
+     
+     1) python setup.py sdist
+
+     2) pip install twine 
+       
+     3) twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+
+
+     To install package from test repository :-
+       
+       pip install --index-url https://test.pypi.org/simple/ pack_dir_name
+
+     To upload to regular repository instead if test :
+       
+       twine upload dist/*
+
+     To install from regular package :
+       pip install pack_name
+
+
+  * Summary Of Commands :
+    -------
+     
+      cd binomial_package_files
+      python setup.py sdist
+      pip install twine
+
+      # commands to upload to the pypi test repository
+      twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+      pip install --index-url https://test.pypi.org/simple/ dsnd-probability
+
+      # command to upload to the pypi repository
+      twine upload dist/*
+      pip install dsnd-probability
+      
+

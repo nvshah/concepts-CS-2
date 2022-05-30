@@ -1,0 +1,9 @@
+* seperation of Concerns :   (Uncle Bob)
+  ---------
+   -> Single Function Single Responsibility
+
+* XML or Json Parsing :
+  --------
+   -> XML or JSON parsing 
+      the concrete calculation classes to a separate class 
+      using the Adapter design pattern,

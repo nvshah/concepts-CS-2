@@ -1,0 +1,66 @@
+* IntrinsicHeight | IntrinsicWidth
+
+* BackdropFilter
+
+* Alert Dialog is used typically with showDialog
+
+* ConstrainedBox vs LayoutBuilder   // for constraints
+
+* ScopedModel & Dialog & Scaffold Context
+
+* AnnotedRegion
+
+* ShaderMask
+
+---------
+
+Top 10 useful Widgets 
+
+1) IntrinsicHeight & IntrinsicWidth
+2) Wrap   // next line
+3) Spacer()
+4) FittedBox()
+5) Expanded()
+6) Flexible()
+7) MediaQuery()
+     \
+      Orientation
+8) OrientationBuilder()
+9) LayoutBuilder() // instead of MediaQuery
+     \
+      constraints to create responsive desings
+
+
+------------
+External Package
+
+* functional_widgets   // reduce boiler plates 
+     \
+      -> Widget class into Functional Widgets
+
+      - goes well when use with ( Flutter_Hooks + RiverPods )
+
+
+* Asset Image :
+  ---
+   -> make sure if you gonna use the image from local src, then it is of small size (ie not in Mb's)
+      TOOL Heelpful :- compressjpeg.com
+                       ezgif.com/resize
+
+   -> Make sure it is not having very high dimension 
+      Ideal :-- (400 * 500)
+
+
+* Background Img :
+  ----
+   -> colorFilter will be applied over top of Backgrounnd Img
+        \
+         ColorFilter.mode()
+
+   - ShaderMask  // to make blend of shade over bg img
+      \
+       Used esp when you need to apply linear grad on top of Img
+
+
+* It's no necessary to have the Scaffold as the root element for every single screen 
+  - ie Scaffold can be a child of Container in certain cases for Example

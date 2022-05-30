@@ -1,0 +1,29 @@
+ref :
+ [XML] -> https://www.youtube.com/watch?v=5lSQcJjZPFs
+ [Compose] -> https://www.youtube.com/watch?v=HmXgVBys7BU
+
+
+----
+
+[XML]
+
+1) 1st Principle :- Use ConstraintsLayout
+    \
+     (nested layouts needs more processing whereas ConstraintsLayout not)
+     - ConstraintsLayout helps us to define relative Sizes easily
+     - You should avoid hardcoding layout sizes 
+       instead 
+       define constraints for them
+
+
+2) Qualifiers 
+
+---
+
+[Compose]
+
+<600 dp -> mobile  (Compact)
+600-800 dp -> Tablet (medium)
+>800 dp -> Desktop (Expanded)
+
+To get current dimennsion iof Screen :- LocalConfiguration.current

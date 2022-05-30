@@ -1,0 +1,13 @@
+[Comprehensive Python] -> https://gto76.github.io/python-cheatsheet/
+
+[latest python 3.9] -> https://analyticsindiamag.com/top-features-of-latest-python-3-9-new-parser-iana-timezone-type-hinting/
+
+[__contains__()] -> https://www.journaldev.com/23451/python-string-contains
+
+[dunders in python] https://www.section.io/engineering-education/dunder-methods-python/
+
+[mCoding Python] https://github.com/mCodingLLC/VideosSampleCode
+
+[Algorithm Analysis] http://www.openbookproject.net/books/pythonds/AlgorithmAnalysis/Lists.html
+
+[Pythonn Morsels - built in functions]

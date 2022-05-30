@@ -1,0 +1,113 @@
+[String Interning] https://medium.com/@bdov_/https-medium-com-bdov-python-objects-part-iii-string-interning-625d3c7319de
+                   https://stackabuse.com/guide-to-string-interning-in-python/
+
+=> Significance of 0-based indexing in python : 
+      at any index we can get #elems on left side of that index
+
+-----------------------------
+
+1) Use any() or all() whenever its suited, those are equi to 
+  logical OR    logical AND 
+
+2) Guard Clause | Statement 
+    \
+     do short and siple decision at start of function to return things 
+
+3) Simplify sequence Checks 
+    \
+     empty sequence & collections leds to false
+
+4) use !r or %r as prefix to get repr() of an object in formatted string 
+
+5) Emphasis Comprehension (list, set, dict) when possible
+
+6) Positional only parameter :- use forward slash i.e `/`
+
+7) use `string` module whenever you want to mess with ord(), chr() or likewise str manip 
+
+   NOTE -> ascii subtraction is not supported in python
+
+8) If you have ability to use built-in function than use such function instead of for loop or while loop
+    
+9)  `+=` when used with mutable types such as `list` will perform inplace operation 
+         i.e `iconcat()`
+
+10) perf_counter() doesnt uses actually clock but it uses CPU clock cycles 
+  so you always need to use 2 time instances of perf_counter & subtraction to calculate elapsed time
+
+11) f-string format specifier i.e after colon `:` is calling __format__() dunder on the object
+
+12) Inorder to sort the List of Tuples based on Priority, Don't use add or minus
+    instead use tuple with prior elem from left side so it will consider sorting likewise
+    & move to seek right side on tie
+
+-------reference
+
+[Import Python Tips]  https://realpython.com/python-import/
+
+Articles :- analytics vidhya 
+
+            pencilprogrammer
+
+----------
+
+1) To get maxsize for Int or numeric use -> sys.maxsize
+
+2) To see some help for object in python cmd -> pydoc obj_name
+
+3) builtins module -> to get builtin obj identifiers
+
+4) To get filepath for module -> __file__ property on module 
+
+5) To time your function code you can use :- time.time()
+
+6) use `functools.partial` -> to partially used function and provide default value will using function as expression
+
+7) use dictionary comprehension with zip most of time to get elegant 1 liner
+
+8) To get comma seperated large number in string format -> use placeholder i.e 
+    => "{:,}".format(10_000)  // 10,000
+
+9) To get `HOME` env path -> os.environ.get("HOME") 
+
+10) List all keywords in python -> keyword.kwlist()
+
+11) to print doc of python file just use first Statement i.e `print(__doc__)`
+
+12) To remove non-emtpy directory -> shutil.rmtree()
+    To remove empty directory     -> os.rmdir()
+
+13) To generate series of float step-size (eg 0.5) -> itertools.count() + itertools.islice()
+
+14) In f-string conversion technique -> !s is applied before other formatting
+
+15) set recursion depth limit :- sys.setrecursionlimit()
+
+16) To see underlying full repr of bits :- struct.pack()
+
+17) fetching a range & list or array is sorted :- then use -> bisect module
+
+18) heapq lets you fetch top t of n items in O(t+n) time
+
+19) To calc time :- timeit 
+            space :- o.__sizeof__()
+
+20) Use enumerate(zip(t)) => to get tuple with respective indexes unfold
+
+[inspect members]
+21) To get the all the Function Member of particular {ClassName} :- 
+      -> inspect.getmembers(ClassName, inspect.isfunction)
+
+22) To get the name of datatype of a variable :- type(vname).__name__
+
+--------------
+
+Python builtin frequently used 
+
+isinstance(), type(), any(), all(), min(), max(), sum(), prod()
+ord(), chr(), issubclass()
+round(), truncate()
+
+zip(), enumerate(), reduce(), partial(), 
+
+exec(), eval()

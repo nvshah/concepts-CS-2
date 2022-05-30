@@ -1,0 +1,93 @@
+Articles :
+
+https://www.geeksforgeeks.org/fundamentals-of-algorithms/?ref=lbp
+
+https://emre.me/categories/#data-structures
+
+https://big-o.io/algorithms/comparison/cycle-sort/
+
+https://www.geeksforgeeks.org/mathematical-algorithms/mathematical-algorithms-gcd-lcm/  [mathematical algorithms]
+
+
+Competitive Programming Algorithms :   [MIMP]
+     https://cp-algorithms.com/
+
+Dynamic Programming GfG :
+  https://www.geeksforgeeks.org/dynamic-programming/
+
+Algorithms :
+  https://pencilprogrammer.com/algorithms/
+
+
+Visual Algorithms :
+  https://visualgo.net/en/sorting
+
+Python Practice Problems :
+  https://realpython.com/python-practice-problems/
+
+Ace Python Coding Interview 
+  https://realpython.com/learning-paths/python-interview/
+
+Dynamic Programming :-
+  https://pencilprogrammer.com/algorithms/coin-change-problem-using-dp/
+
+Heap Sort 
+  https://medium.com/basecs/heapify-all-the-things-with-heap-sort-55ee1c93af82
+
+
+====
+BEST
+====
+ William Fiset
+   https://www.williamfiset.com/
+   https://github.com/williamfiset/Algorithms/tree/master/slides/datastructures
+
+ Kunal 
+   https://github.com/kunal-kushwaha/DSA-Bootcamp-Java
+
+ DSA Algo :
+   https://www.baeldung.com/cs/red-black-trees  
+
+ cpp edu 
+   https://www.cpp.edu/~ftang/courses/CS241/notes.htm
+
+ Rosetta Code :
+   http://rosettacode.org/wiki/Sorting_algorithms/Heapsort#
+
+ Brilliant :
+   https://brilliant.org/wiki/heap-sort/
+
+ Vaidehi :
+   https://medium.com/basecs/tagged/data-structures
+
+
+ Intro To Algo : (Best theoretical class)
+   https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-notes/
+
+ 
+ Algo :
+   cheonhyangzhang.gitbooks.io
+
+-----------
+ Contest :
+   
+   https://github.com/nathan-abela/HackerRank-Solutions/tree/master
+
+
+
+----------
+
+Youtube : 
+
+  Heap Sort :
+    https://www.youtube.com/watch?v=t0Cq6tVNRBA
+
+  Nick White : 
+
+  Data structures :
+    
+    https://www.youtube.com/watch?v=fYlnfvKVDoM
+
+
+  NeetCode 
+  Reducible

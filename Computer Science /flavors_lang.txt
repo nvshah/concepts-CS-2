@@ -1,0 +1,103 @@
+NOTE -> 
+
+  Java supports ascii subtraction i.e 'c' - 'a',
+
+  Whereas python do not == ord('c') - ord('a')
+
+
+=> Major Concept goes by diff name inn diff ecosystem  
+
+
+
+* C#
+  ---
+   -> Boxing UnBoxing
+   -> ref out 
+   -> virtual, new 
+   -> LinQ/Lambda  (Kinda Sql Query)
+
+   -> Method ( Overloading, Overrdiding, Hiding )
+   -> Partial Class, Partial Methods 
+   -> Sealed Class
+   -> Extension Method
+   - Digit Seperator ('_')
+
+
+* Kotlin 
+  ------
+   -> Boxing UnBoxing  
+   -> range syntax
+   -> Sealed Classes vs Enum Classes (State machines & When)
+   -> Companion Object
+   -> Anonymous Objects  (via object)
+   -> reified parameter
+   -> Delegated Properties  (`by`)
+   -> Infix function (eg with, matches, etc...)
+   -> tailrec function 
+
+
+* Java 
+  ----
+   -> for Each Loop 
+   -> Heap & Stack Management Uniquely by JVM 
+   -> psvm
+
+
+* Python  
+  -----
+   -> Multiple assignment
+   -> Chained Comparisions & Transitivity
+   -> tuple (tuple unpacking)
+   -> dunder (magic) methods  &  facade methods
+   -> generator & context
+   -> namespace, loader, executor
+   -> garbage Collector & ref Counts (generational GC)
+   -> *args, **kwargs, (SPLAT operator)
+      arguments unpacking & packing
+   -> Monkey Patching & Dynamic Monkey Patching
+   -> GIL (global interpreter lock) 
+   -> Augmented assignments (Shorthand Assignments i.e __iadd__)
+   -> Pattern Matching (i.e tuple unpacking, list unpacking, etc...)
+      (switch case in python using pattern matching)
+   -> Duck Typing
+   -> EAPF (Pythonic :- Easier to ask permission than Forgiveness)
+   -> LBYL (Non-Pythonic :- Look before you lead)
+
+   -> Sloted Objects  & non-slotted objects 
+   -> Proxy Objects | Temporary Objects
+   -> __slots__ vs __dict__ 
+   -> weakreference  (weakref)
+   -> free list  (for tuple canonicalization)
+   -> Window vs Iterable vs Iterator
+   -> GIL | MultiProcessing | MultiThreading
+   -> Multiple assignments ( Chained Assignments )
+   -> Tuple assignments
+   -> Cyclic Reference (Tricky Assignmennt)
+       \
+        Ellipsis operator
+
+   -> Chaining vs merging (python dictionary)
+   -> ShortHand | Inplace modification (mutable vs immutable)
+   -> Sentinel Obj|Value  (Eg None)
+
+   -> Optimization | Memory management | GIL 
+   -> Garbage Collections
+   -> Finalizers | __del__
+
+   -> Python Virtual env
+
+
+  
+
+
+* Memory management :
+  ------------
+   -> Python (Interpreted) :- Ref-Counting + GIL 
+      Java, Dart, (JIT Compiler) :- Garbage Collections 
+
+
+* Enum :
+  ----
+   in Kotlin, Java, :- clas types 
+      C#            :- Value types 
+

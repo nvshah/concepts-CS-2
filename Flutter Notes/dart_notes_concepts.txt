@@ -1,0 +1,409 @@
+//Wicked Youtube
+
+* Operators :
+  ---
+   -> always operator method is referred to left operands i.e
+      
+      a + b
+
+      here + is called for a object, passing b as other operand 
+
+   Expression :
+   ----
+    - Using an operator - create an expression
+
+   ==  vs identical:
+    -------------
+     -> As all things in dart is objects, so comparision is also based on reference by default
+     -> The only variables that are equal in dart are those which are pointing to same object in memory
+        &
+        variable pointing to same objects in memory must contains compile time objects
+
+      So all constants literals - will hold singleton object in memory & variable will point to those reference
+
+
+siwtch() stmt :
+   ----
+    -> value type constant such as int, String, etc...
+
+       Switch statement can only compares compile time constants
+       
+       When compare with each other their == will make a call to identical() to check whether its pointing to
+       same compile time constant or not
+
+
+    -> continue with labelName :
+       ------------------------
+        continue labelName;
+
+        labelName:
+
+* const vs final :
+  ------------
+   -> const can be used for {top-level, static, local} place 
+      constant are baked into code 
+
+      constant constructor may take final field that is Future ?? (Why)
+
+       - when we used constructor as const it will be prefix with (const)
+         when we used it normally it will be prefix with (new)
+
+      constant context -> (const)
+      instantiation context -> (new)
+
+      When you need to mention `const` as prefix on RHS 
+       \
+        when you want to assign canonical variable into non-constant final variable
+
+
+* Class Rules  :
+  ---------------
+   1 - Every field of class have by default getter method
+   2 - Any non-final fields & late final fields will have a default setter method
+
+   -> Every class must implements its own interface   <-- MIMP|
+
+   Canonicals & Const Constructors :
+   --------
+    -> point to same object in memory
+
+
+   factory :
+   ------
+    -> factory constructors do not have access to `this` keyword 
+       but factory constructor can used `return` statement inside it
+
+       factory constructor is best way to use Singleton pattern
+
+   
+   Singleton vs const Constructor :
+   --------------------
+    -> with const constructor we need to use const everytime
+       and 
+       Singleton will always give use same object
+
+   Inheritance :
+   ------------
+    `super`
+    `this`
+
+   Que : By default any class extends `Object` class then how come when we extends another class
+         as in dart a class can only extends 1 class & It is i.e extending the Object class 
+
+         -> If a class extends any defined class then it will replace Object class but single inheritance principle is still
+            maintained
+
+    Polymorphism :-
+      ---
+        Compile time & run time 
+
+       Compile time -> method overloading (not exists in Dart)
+       run time -> method overriding 
+
+       1) override the methods 
+       2) overload the methods (with optional parameters)
+
+       NOTE :- you cannot define same method name with different signatures
+
+       override :
+       ________ 
+        -> can only take place iff body is define, (header alone will not work)
+
+   Abstract class & super 
+   -------------------
+    - Though abstract class not allows to create/instantiate obj, it allows to define constructor why??
+      
+      -> because When any child class object is created we need memory for parent class attributes
+         So to fulfill that `super` is used 
+
+         super() will not create new instance of Parent class but indeed it will facilitate the attributes
+         (precisely the non-abstract attributes) by allocating them memory in child class context
+      
+      -> abstract class can be instantiated indirectly 
+         1) via super() call from child method 
+         2) via factory patterns
+
+   Interface :
+   ----------
+    -> Only possess signatures
+    -> Inorder to create essence Interface create an abstract class with all abstract fields/methods
+       
+   IMP -> A non-abstract class must always have an implementation for its own interface.
+         
+       => The abstract method has no implementation, and has no effect on implementations, only on interfaces, 
+          so it doesn't shadow the inherited concrete method implementation from A.
+
+   covariant :
+   --------
+    -> Every time when you want to tighten type from super class to sub class 
+       you can use `covariant` keyword (in overriden method signature) 
+
+    -> Use `covariant` keyword when you are overriding any operator & you want to pass the Type for an argument (ie Method Overloading)
+
+    -> useful especially in doing method overriding with diff param type 
+
+
+   extends vs implements :
+   --------------
+    -> extends (i.e Inheritance) shared the base class behaviour   (to suit your needs)
+ 
+    -> implements (i.e Interface) forced behaviour of Parent class to child class (to suit parent needs)
+ 
+   NOTE : If method possess body then only it will get overriden otherwise not 
+
+   
+   external methods :
+   -------------
+    In non-abstract class if you want to omit the body part & only want to mention the header part
+    then that can be achieved using `external` keyword 
+   
+
+ * Constructor :
+   ---------
+    -> Constructor cannot be overloaded
+       \
+        Alternatives :- factory, named constructor
+
+
+ * Multiple Inheritance & Polymorphism :
+   ------------------------------
+
+     DDD - Deadly Diamond of Death
+
+* Mixins :
+  -----
+   -> A class with no constructors 
+   -> behaviour can be shared with other class
+
+      Ideally you shouldnt instantiate the mixins
+
+   -> Therefore, we can use the code from a class without inheriting from it, 
+      unlike interfaces and abstract classes
+   
+   => Mixins can have abstract methods and props
+
+
+* Sealed class :-  (final classes)
+  ----------
+   Aim : not allows class to extend by another classes 
+
+   -> Partially it can be achieved via private, internal constructor (i.e Cname._())
+
+     Why Partially > - As it can be extended in same file but not from outside that files  
+
+* Generics :
+  ---------
+   -> Generics make everything more abstract, more universal, more widely-compatible
+   -> used esp when you want to create data structure of your own.
+
+
+* libraries :
+  --------
+   .dart -> represent a library
+
+   => If `library name` is not present as first line of dart file then unique tag 
+   will be given automatically | implicilty by dart
+
+   libraries that can be accessed are present under lib folder
+
+   -> Package contains many library files.
+
+   Dart does not offers a class private fields but library private fields
+
+   1 Feature = 1 Library
+
+   keyword : `part` & `part of`
+
+   1) Library composed of multiple files.
+
+    -> All extension files can access both private & public members of library
+
+   2) library composed of multiple libraries :
+    
+    -> `export` small libraries inside a big top library 
+
+        1) part of approach -> Extension to single library 
+        2) export approach -> Composition of small small library into a big library
+
+
+   standart Rules ;
+     1) Declare all libraries inside lib folder of package
+
+     2) Use Absoulute path (i.e with package name) when you want to access from outside lib folder
+        Inside lib folder (you can use relative paths)
+
+   #1 Libraries cotaining specific impl from package should be placed inside the lib folder.
+      As lib is the only folder accessible publicly to other packages.
+
+   #2 A file represents a library unless :
+       - you want to have multiple files inside a library ("part & part of" approach)
+       - you want to have a multiple libraries inside a bigger library ("export" approach)
+   
+   #3 Never reach in/out of lib folder, using relative paths
+      Always use the "package" directive.
+
+
+* Tests :
+  -----
+   -> Mock -
+      --- 
+       allows you to mock or mimic any events, functions of components/class.
+        Eg If you want to mimic pressed() event then it can be achieve via Mocking without actualling having a pressing event.
+
+
+* Synchronous & Asynchronous
+  ------------------------
+
+  Terms :- {Events, Event Loop, Event handler, Single Thread (Mutator), Helper Thread (GC), Isolate, Isolate VM (internal memeory)}
+
+  * Isolate : 
+    ------
+     -> a.k.a factory of dart 
+     -> place where all code of dart is managed & run
+
+     Main Isolate :
+     ---------
+      - dart spawns an isolate having name main
+
+      -> Single Thread Execution 
+         Single Thread is also called ( Mutator Thread )
+
+      -> Event : boxes on single thread, 
+         Event Queue
+
+         => Event can be of 2 types : Synchronous | Asynchronous
+
+         Synchronous Events : processed immediately
+         Asynchronous Events : processed later on. (We will place it somehwere back at the event Queue)
+
+      NOTE -> Event can be issued synchronously, but they can be processed synchronously or Asynchronously
+
+     Isolate VM (Heap Memory) :
+     -------------
+      -> Isolate's internal memory 
+      -> shell where Event Loop will store it's processed result 
+
+      NOTE :- not all event get position in Isolate VM i.e Heap Memory 
+              Eg Tap event (without any function)
+
+   * Mutator Thread : Single Thread in isolate
+
+   * Helper Thread :
+     -----------
+      -> A thread that is specialize in garbage collections. 
+      -> this thread do GC for events that has been processed by Event Handler
+
+
+   NOTE :- Dart is Single Threaded to Event Processing i.e all events & instruction pass by single thread.
+           But operations regarding isolates are being handled by other internal threads
+
+   => By Default -> 1 isolate is spawned (i.e main) with single thread of execution.
+
+
+   * Parallelism :
+     ---------
+      -> Can spawned new Isolate to calculate heavy task other than Main Isolate
+      -> But Each isolate has its own dedicated memory, So it can be quite expensive.
+   
+   * Isolate Groups :
+     ----------
+      -> Shared memory between Isolates 
+
+   * MicorTask Queue :
+     ----------
+      -> Some Event has higher priority than other 
+      => MicorTasks Events have higher priority compared to Future Events
+
+
+* Iterables :
+  ---------
+   
+   IMP :-
+   --
+    Asynchrony :- I'll generate items in background, while you can process other tasks 
+
+    Laziness   :- I will generate your items synchronously, but only at time you need them.
+
+
+   yield* :
+   -----
+    -> delegate to another generator from one generator
+
+    -> Think of it as 2 person helps in transfering bricks for building wall 
+        Where 1 person do check of brick quality & 
+              other person just take that brick from that qa person & pass it forwards
+               
+            So 1 is actually doing work & other just helps transfering the brick to other place 
+            So that first person can do next things 
+
+
+* Streams vs Iterables :
+  ------------
+   -> Streams can emit value Asynchronously while Iterables can emit value synchronously
+
+
+* Events :
+  -------
+   Asynchronous Events :-
+   - Think a Box 
+      States :- UnProcessed, UnCompleted, Completed Value, Completed Error
+
+   Sync Events :-
+   - Think a Box 
+      States :- UnProcessed, Completed Error, Completed Value
+
+
+* Future :
+  -----
+   -> callbacks :- then()
+                   onError()
+                   whenComplete()   // like finally statement beware of error or success
+
+   Q) What is diff between Future(() => 1) & Future.value(5) ??
+   -> 
+      Future.value() will be immediate than Future() constructor
+           \
+            .value() will place task on microtask queue
+
+      Future.sync() also send its task on microtask queue
+
+
+   REMEMBER : Future that is constructed for micro task Queue will placed on micorTask Queue only
+     
+     Q How to construct Future on MicorTask Queue >
+     -> Future.microtask()
+
+   MicorTask :
+    -------
+   -> IMP :
+           The processed task of Future item on microtask queue will be placed on Event Queue once that Future
+           is ready on microtask queue.
+           i.e It will stay on micorTask queue as Future till its not gets Completed
+               but once it gets completed it will be placed on Event Queue 
+               i.e completed result will be placed on an event queue
+
+   
+   .then() :
+   ------
+    -> these callbacks are executed immediately when future completes. i.e It will not 
+       queue the then() callback on event queue but will execute immediately asa the corresponding future gets
+       completed.
+
+
+* Streams :
+  ------
+
+   => Similar to Future 
+      Instead of Returning single val in Future, Streams can return 0, 1 or many values in 
+      asynchronous manner.
+
+   -> We have listen() call back same as then() in future
+
+   Stream Controller :- authority that is adding item to stream 
+   Stream Subscription ;- listener that is waiting for an item on stream 
+
+
+* TearOffs :
+  ------
+   -> When you provide the function as a variable to something 
+      without unnecessary addressing of the lambda is known as TearOffs

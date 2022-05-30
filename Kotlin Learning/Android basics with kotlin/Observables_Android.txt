@@ -1,0 +1,59 @@
+----------
+
+-> Flow = Stream in Flutter
+
+__________
+
+* Observables in Android :
+  ---------------
+
+  1) LiveData
+     
+      - all observes will be notified abt current val whe triggered
+      - It's LifeCycle-Aware (ie detect if activity in foreground)
+
+  
+  2) StateFlow 
+      
+      - Flow is based on Coroutine framework of Kotlin 
+      - similar to LiveData
+
+      Hot Flow :- keep emitting val even when there are no collector 
+      Cold Flow :- Not emit when there is no collector 
+
+      use stateFlow.collectLatest{}
+
+      With StateFlow use .launchWhenStarted{}
+
+      - automatically emit the val when activity recreates
+
+  
+  3) Flow 
+     
+      - Normal Flow (ie Just like Stream)
+      - Normal Flow doesn't contain any state (it's like one time thing)
+  
+  4) SharedFlow 
+
+      - Hot Flow (send data even when no collector)
+      - Same as StateFlow but not emit same val again & again on screen rotation
+      - One time event (alike Listener in Flutter)
+
+
+* StateFlow vs LiveData :
+  -------------------
+   StateFlow has initial values always 
+   whereas LiveData need not necessary have initial Value
+
+   StateFlow keeps running when app is in Background
+   LiveData is LifeCycle aware so it not 
+
+   with StateFlow, We can have access to 
+      Flow :- which allows us to modify the arriving data before Observing things
+
+   Thinks of StateFLow as (We provide initial state in BLOC)
+
+   StateFLow's collect() is same as LiveData's observe() function
+
+   
+

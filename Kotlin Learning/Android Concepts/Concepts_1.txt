@@ -1,0 +1,5 @@
+* Process Death :
+  -----
+   -> When app is killed by android (beware its in background or foreground)
+
+   saveStateHandler()   // use to remember val of state 

@@ -1,0 +1,176 @@
+ref : Architexture BluePrint Repository
+
+      https://developer.android.com/reference/kotlin/android/os/CountDownTimer
+ 
+     [View Model] https://medium.com/androiddevelopers/viewmodels-a-simple-example-ed5ac416317e
+
+----
+Code Tips
+
+-> Dependecy for ViewModel :- androidx.lifecycle:lifecycle-extensions:2.0.0
+
+----
+
+* Seperate of Code (Archi)
+
+  - Makes code more organize
+  - Easier to Debug
+  - Fewer LifeCycle Issues
+  - Modular (Easier to update section of code)
+
+* Application Architecture :
+  -------------
+   -> classes & relation between them
+   - Archi depends on circumstance, needs & taste
+
+   MVVM 
+   ----
+    UI Controller :- Display Data       [Eg Fragment]
+    ____________
+       - responsible for drawing data on Screen
+       - manage user & os events
+
+
+    View Model    :- Decision Making (Prepare Data needed for displaying Data)
+    ________
+     -> Abstract class that holds UI's data.
+     -> hold & manage UI-related data in life cycle conscious way.
+     -> View Model will be aware of UI Controller's lifecycle
+     -> to seperate application data from UI (i.e Views)
+     -> ViewModelProvider class is used to connect UI controller with View Model. (by passing context as argument)
+
+     NOTE : never store UI controller or context directly or indirectly inside a view model.
+            (i.e not to store in a ViewModel, )
+
+            direct or indirect ref to UI controllers can defeat the motif of data seperation in itself & can lead to memory leaks
+
+          => View Model is not used for data persistence in itself (but it is used in combination with onSaveInstanceState & local db)
+
+     Why ViewModel ?
+      -> When Configuration Changes, Fragment forgets it & rebuilds
+         So instead of having UI data in fragment, move it to ViewModel & let Fragment refer it.
+
+      -> The ViewModel Survives Configuration Changes.
+
+      -> Unlike OnSaveInstanceState(), the ViewModel has no restriction on Size.
+
+      -> ViewModel are made for single fragment or an activity
+
+    -> ViewModel is created & destroyed with associated Fragment
+      
+      -> LiveData resides inside ViewModel
+
+    Adding a ViewModel :-
+    ____________
+
+      1. Add Gradle Dependecy
+      2. Class for ViewModel
+      3. Link UI Controller & ViewModel   (Associate fragment & ViewModel)
+
+    IMP :
+    ---
+     - You never create view model your self, if you did then you end up creating view model every time fragment was re-created
+       which wouldn't solve our purpose for viewmodel
+     
+     -> So life cycle library creates ViewModel for you.
+        \
+         So you request it from class called ViewModelProvider
+          
+          What ViewModelProvider does ??  (How association exists between view mode & UI Controller)
+                ----------
+                 \
+                  - It requires the Fragment reference for which ViewModel was requested.
+                   - It will create ViewModel for first time when requested (i.e lazy Loading)
+                     & then manage ViewModel as per lifecycle of fragment
+                   - and that instance of ViewModel will be associated with the fragment\activity  class
+
+    * To dispose ViewModel when Fragmenr gets desteoyed :-
+
+       -> onCleared()  // Override this method
+
+          i.e when onPause() -> onStop() -> onDestroy() | at this time onCleared() of view model is called
+
+          onCleared() is called when application is put in background & before app process is killed by the android OS.
+          (inorder to free up system memory)
+
+          -> UI Controller context must not be used in ViewModel (i.e View, Fragment, Activity)
+             whereas Application context is allowed
+            
+            Application context is tied to Application lifecycle 
+            Activity context is tied to Activity lifecycle
+
+    * Advantages :
+        - Help us to prevent some error from LifeCycle Problems
+        - ViewModel does not contains reference to activity, fragments, or Views
+
+
+    * UI Controller  & View Model 
+      
+      -> Ui Controller knows about View Model but vice-versa not (i.e Uni-Directional)
+
+
+* LiveData:
+  ________
+   -> An Observable Data Holder (Wrapper) class that is life-cycle aware
+
+   subject = LiveData Object
+   observer = UI Controllers (Fragments, etc.)
+
+
+   * Observer Object : 
+     ---
+      -> It has single method in it. i.e onChanged()
+      Observer{}    //simplified Lambda 
+
+   * LifeCycle Awareness :
+     ---
+      -> LiveData knows life cycle state of its corresponding UI Controller
+      -> LiveData will only update UI which is on Screen
+      -> If UI Controller gets destroyed, LiveData internally clear up connection
+
+
+   * LiveData is also responsible for manipulation
+     
+     Eg LiveData1 -> Map(1, 2) -> LiveData2 -> Listeners (i.e Fragments,etc...) 
+
+     impl -> `Transformations.map()`
+
+
+__________________________EXTRA VIEW MODEL_______________________
+
+* View Models :
+  -------
+   
+   ViewModel Factory : 
+   ---------------
+    - If we want to pass argument in ViewModel then we need to use factory
+       \
+        ViewModelProvider.Factory
+
+
+   Shared ViewModel :
+   --------------
+    1 View Model - shared among multiple fragments
+     \
+      scoped the View Model to a Parent Activity
+      
+      Why Activity ?? -> because we are hosting navigation component inside single activity
+
+      Scope to main activity
+
+    
+    1) Delegating ViewModel from fragment to Activity :
+      -------------
+     Eg private var sharedVm: Type by activityViewModels()  //delegating the instance to view model of an activity
+
+         //: `by activityViewModels()` syntax // helps to scope our shared fragments to activity
+
+    2) Alternative to above delegating approach :
+       -----------
+      sharedVm = ViewModelProvider(this).get(type::class.java)   //wrong this will be scoped to fragment not activity
+
+         //: So to get Activity use -> `requireActivity()`
+
+      sharedVm = ViewModelProvider(requireActivity()).get(type::class.java)  //corrwctly shared amon multiple fragments by main activity
+
+      NOTE :- remember to pass `requireActivity()` & not `this`

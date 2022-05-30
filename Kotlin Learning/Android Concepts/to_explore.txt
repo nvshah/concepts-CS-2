@@ -1,0 +1,28 @@
+* GreenDAO (ORM SqlIte)  // DB-ORM 
+* Fresco               
+* Hilt (Dagger)    // DI 
+* RxJava / Kotlin  // Reactive 
+* Coroutines       // Parallelism
+* Compose          // Declarative UI 
+* MVVM             // Aarchitecture
+* Flows            // streaming
+* Junit | Expresso
+
+-- Intermdeiate
+
+* Solid Architecture
+    \
+     - MVC, MVVM, MVI 
+     - SOLID Principles 
+     - Automated Tests 
+     - Layered Aarchitecture (Presentation, Domain, Data, Application)
+
+
+-- ADVANCE
+
+* Bluetooth
+* Sensors
+* Storage
+
+* Service in Kotlin/Android
+

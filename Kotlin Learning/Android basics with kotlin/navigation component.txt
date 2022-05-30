@@ -1,0 +1,166 @@
+navArgs<> vs bundle ; https://stackoverflow.com/questions/57034392/what-is-the-difference-between-by-navargsscorefragmentargs-vs-scorefragme
+
+* Navigation Component :
+  -------------
+   -> tool of library for In-App Navigation
+   -> The component centralize all navigation logic in 1 place i.e Navigation Graph
+
+   -> principle : use 1 activity & multiple fragments
+                  Do fragment trasactions in bg for us
+
+
+   1) Navigation Graph :
+      ---
+       an `XML resource` type - that defines all possible path user can take through app
+       It shows visually all destination that can be reach from given destination.
+
+
+   2) Nav Host :
+      ----
+       Container that displays destinations from nav graph
+
+       Navigation Component contains default NavHost implementation, NavHostFragment
+       NavHostFragment :- displays fragment destinations 
+
+   3) nav Controller :
+      ----
+       -> manage app navigation within a navHost 
+       -> orchestrates the swapping of destination content inside a NavHost.
+
+
+    XML files :
+    -------
+     root element is <navigation> & child are <fragment>
+
+      <navigation>
+          <fragment></fragment>
+          <fragment></fragment>
+          ...
+      </navigation>
+
+   
+* Navigation Drawer :
+  ------------
+   -? When we swipe from left to right or hamburger present on top-left
+
+   1) DrawerLayout as root tag in xml
+
+   2) NavigationView will represent drawer menu !
+
+     2 things require for configurations :
+       1) appBarConfigurations
+       2) drawerLayout 
+
+       `setUpActionBarWithNavController()`
+
+
+* Menu :
+  ----
+   Link menu items with existing fragments by using same id as fragment to menu items.
+
+   to link :
+     -> navController.navigateUp(appBarConfigurations)
+
+   generally :- menu items have same id as fragment destinations
+
+* Changing action bar color :
+  -------------------
+
+  support action bar :
+  -------------
+   supportActionBar :- used to change bg color of drawer
+
+  also override `onPause()` & `onResume()` methods
+
+
+* Bottom Navigation :
+  --------------
+   -> View : BottomNavigationView
+
+     setup in code.behind - 
+        `bottomNavigationView.setupWithNavController(navController)`
+
+
+  App bar configuration :
+   --------
+    AppBarConfigurations(setOf()) 
+
+    setUpActionBarWithNavController(controller, appBarConfig)
+
+    To change the label name on app-bar for particular fragments :
+      -
+       <fragment>
+          <android:label = "label name">
+       </fragment>
+
+
+* Slidable Drawer Menu with Navigation Drawer :
+  -------------
+   DrawerLayout -> NavigationView
+
+   toggle := ActionBarDrawerToogle()
+   drawerLayout.addDrawerListener(toggle)
+   toggle.syncState()
+
+
+* ViewPager2 :   (= PageView in Flutter)
+  --------
+   -> It can contains multiple screens (as in Onboarding)
+
+   -> ViewPageAdapter needs to extends the FragmentStateAdapter
+
+    FragmentStateAdapter ;-
+             - getItemCount()
+             - createFragment()
+
+   -> to get supportFragmentManager
+       -> requireActivity().supportFragmentManager
+
+
+   -> viewPager.currentItem // gives current page hosted by ViewPager
+
+
+* Custom Animation (Transition):
+  ------------
+   
+   animation resource file :-
+       
+       -  <set> </set>
+       
+       - <translate>
+          -> fromXDelta, roXDelta, fromYDelta, toYDelta
+
+
+* SafeArgs :
+  -------
+  
+   Custom Object 
+     -> 
+
+     class -> `FragmentADirection`
+        :- automatically generated class by SafeArgs 
+
+      
+      Tip :- rebuild your project to see parameter in method if not seen
+
+    custom Object : Parcelable :
+     ------------------
+      -> `@parcelize`
+      -> extends the `Parcelable` class
+
+    
+    how to pass :-
+       findNavController().navigate(action)
+
+    how to access :-
+       private val variablename by navArgs<FragmentBArgs>
+
+       Note :- here `FragmentBArgs` is created by SafeArgs 
+
+
+
+    Note : Opposite to Parcelable there is one other class i.e Serializable that is used
+           when passing data between activities using putExtra() mechanisms
+
+
+     

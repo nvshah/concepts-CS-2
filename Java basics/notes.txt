@@ -1,0 +1,125 @@
+nextInt() -> Input -> Amazing Note :
+
+  https://stackoverflow.com/questions/40145337/why-does-nextint-ignore-n
+
+Value & ObjectComparision 
+  https://stackoverflow.com/questions/22835674/value-comparison-vs-object-reference-comparison
+
+Inheritance ;
+  http://tutorials.jenkov.com/java/inheritance.html#:~:text=Java%20Inheritance%20Basics,-When%20a%20class&text=The%20subclass%20can%20also%20override,be%20%22shadowed%22%20in%20subclasses.
+
+Sealed Classes :
+  https://docs.oracle.com/en/java/javase/15/language/sealed-classes-and-interfaces.html
+
+Boxing/unboxing
+  https://reneferrari.github.io/understand-boxing-in-kotlin/
+
+static vs dynamic binding : 
+  https://techvidvan.com/tutorials/static-and-dynamic-binding-in-java-differences-and-examples/
+
+
+------------------
+TIPS 
+
+var args in Java -> `...args`   // in function definition
+
+getClass() -> to get class type of an object in java
+
+`+` operator 
+   -> define for primitves & only when 1 of operand is String type
+
+-----------------------------------
+
+* Imp topics :
+
+  -> scoping, 
+  -> Pass by Val & Pass By Ref
+
+  -> Shadowing
+  -> Wrapper Classes (like int & Integer)
+  -> static vs dynamic binding
+
+
+* Shadowing :
+  -------
+   -> Scope will begin when value is initialised
+
+* Continuous Memory Alloc :
+  -------
+    In java array may be not continuous (internally)
+      because In heap objects are not assured continuous locations (depend on JVM)
+
+* null :
+  ---
+   -> special literal of null type
+   -> Can only be assigned to Non-Primitives
+
+* Primitives & Non-Primitives :
+  ---------------
+   -> Primitives are store on Stack 
+   -> Non-Primitives are stored on Heap. (Reference Types most probably)
+
+   Primitives :- Something that can't be broken down 
+
+* == vs Equals() :
+  ---------
+   -> == : reference equality 
+      Equals() : value equality (mostly if overriden or not)
+
+* default (modifer) :
+  -------
+  Same as internal modifier in c#
+
+   -> package-private 
+      access inside same package only
+
+
+* ascii subtraction :
+  -------
+   -> Java supports ascii subtraction i.e 'c' - 'a' = 2
+
+* String & Character :
+  --------
+   -> You can do character + String concatenation in Java (there will be implicit string convrsion)
+
+
+* String :
+  ------
+   1) String Pool 
+      
+      - seperate memory str inside Heap 
+      - all similar values are not re-created inside string pool 
+      - helps to achieve interning & optimise 
+      -> String Pool is basically meant for Immutable Objects
+
+   2) Immutability
+
+   Why are string immutable ? -> for security & atomicity
+
+   -> `==` to check the reference of 2 strings in String Pool 
+   -> use `new` keyword to create string object outside of String Pool 
+
+   To check value only used :- `.equals()` method
+
+   methods :_ equals(), charAt()
+
+   String.valueOf()
+
+   -> System.out.printf() : used for formatted string print
+
+  NOTE :- When int is concatenated with string, int get converted to Wrapper class i.e Integer 
+          ie Auto-Boxing
+
+          "a" + 1 -> a1
+
+  Amazing :-
+   =====
+    -> If you want to add character in your string you are having complexity of n or n-squared.
+       As each time new obje is going to be created in memory
+
+  Mutable String :
+  ------------
+   StringBuilder :
+      - like arrays for character
+      - reference remains same
+    

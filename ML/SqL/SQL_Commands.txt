@@ -1,0 +1,6 @@
+MySql
+
+show databases   // display all databases
+show tables 
+
+use tableName

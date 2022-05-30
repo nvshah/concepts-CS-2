@@ -1,0 +1,4 @@
+Heap :
+  idx of parent -> (k-1) / 2
+  left child idx -> 2i + 1
+  right child idx -> 2i + 2

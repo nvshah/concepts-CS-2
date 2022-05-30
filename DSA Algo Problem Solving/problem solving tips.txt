@@ -1,0 +1,61 @@
+Common -> math module 
+          %, log(), divmod(), //, 
+          floor(), ceil(), round() 
+
+
+* Use `Log` function :
+  -----------
+   -> When you want to grow or downfall exponentially on some base
+
+
+AMAZING QUE : Why -ve num can't be base ??
+
+  -> https://www.kristakingmath.com/blog/why-cant-logarithms-be-negative#:~:text=So%200%2C%201%2C%20and%20every,the%20base%20of%20the%20logarithm
+
+
+* use 'math.sqrt()' or 'math.isqrt()' function :
+  ----------
+   -> 
+
+* range [1, n] given : use Cyclic sort
+
+* for rhs set bit :- n & -n 
+  for checking if num is power of 2 :- n & (n-1)
+
+
+* To reverse a bit :- Do XOR i.e `^`
+
+* sliding windows for long size array
+
+* use dummy node in case of array or linked list to cover edge cases
+
+* Use Heap DS to find something like Kth largest or smallest element 
+
+* heapq lets you fetch top t of n items in O(t+n) time
+
+* bisect let you fetch a range from sorted list or array using binary search
+  
+* Tree problems can be solved in 2 ways :- 1) Decision Tree 
+                                           2) backtracking
+
+* Subset Kinda Problem 2 ways :- 1) Explore & backtrack 
+                                 2) Processed & UnProcessed
+
+                                 3) Include & Exclude
+                                 4) Recursion Memoized
+
+* Sliding Window problem can be well suited with the 2 pointers method
+
+* Top k fequent elements :- Counter or heap or Bucket Sort
+
+* Use tuple :- when order matters 
+      frozenset :- when order not matters 
+
+* When need to work through rows & cols of matrix, 
+  then just create Hash-Set of Rows & Columns seperately
+
+* Stack -> Monotonic Incr/Decr Stack 
+
+* While using LinkedList | Queue :- use dummmy pointer to get rid off edge cases 
+     
+* Cheapest Path in Graph (esp Directed) :- Bellman-Ford

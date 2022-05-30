@@ -1,0 +1,103 @@
+* mixin 
+
+ https://medium.com/flutter-community/dart-what-are-mixins-3a72344011f3
+ https://www.educative.io/blog/dart-2-language-features
+ https://www.programmersought.com/article/75333446596/
+
+ https://quickbirdstudios.com/blog/flutter-dart-mixins/
+
+* Upcast  (Implicit Casts)
+  -----
+   -> Implicit Widening 
+
+      https://stackoverflow.com/questions/20859702/dart-typecasting-error/20859856
+
+   -> You can turnn off implicit-casts in dart by mentioning them in pubspec.yaml
+
+   => TypeCastinng (Moulding or Upcasting) do not change the underlying types & do not create new instance
+        \
+         Instead it just restrict the field access on current object 
+
+
+* generics & Constructor :
+  -------------
+   -> Constructor can't have generics types 
+
+* Constructor Expressions :
+  --------------
+   factory constructor can be assigned using `=` during initialised i.e redirection
+
+
+* Mixins Facts :
+  ---------
+   => Mixins can't have constructors
+      
+      But you can access Mixin in your class methods 
+
+      Note -> if mixin have instance member then it can't be accessed inside static scope
+
+* static members concept :
+  ----------
+   -> as we know static methods can access static fields 
+
+      scenario 1) -> If static memebers is present in enclosing class 
+                     -> then static methods of same class can access without full qualifier name
+
+               2) -> If static members is from Inherited class 
+                     -> then you need to use full qualifier name i.e (ClassName.memberName) in 
+                        the Child's static methods.
+   
+* this & super, inheritance :
+  ----------------
+   -> Initializer List can be used for list for enclosing class only  
+      \
+       Why ? because `this` refer to enclosing class only so.
+
+* factory & default constructor :
+  ----------
+   -> If you define the Factories then you will loose default imp of default (parameter less) constructor
+
+
+_______________
+
+* Abstraction :
+  ------
+   (Ideas & Functionalities Only)
+
+   - Declarative Way to Program
+
+   - A way to deal with the ideas 
+      (ie pondering the high level functionalities without knowing the Low-Level Impl)
+
+   - In programming this is done by providing the interface ie APIs 
+
+  WHY ABSTRACTION ?
+    - for impl-agnostic
+    -> When you want to Decouple the impl from the application i.e impl-agnostic 
+
+    Decoupling such way is done for 
+    
+    - Long term maintainence
+    - Easier to Understand  
+    - Easier to test  (Mock Versions | Fake Data Versions)
+    - Implementation can be Swapped out 
+    - Speeds up the architecting the Development (Services & Functionailites)
+    - fake Data is king & abstraction allow us to use Fake Data efficiently
+
+    Eg You can start development even if API is not completed
+
+
+* Mixin vs SubClass|Iheritance :
+  ----------
+   In SubClass Methodology : properties & methods are shared by all descendents
+   Whereas in case of mixins : we can restrict this & only those children that want it can use it.
+
+   Mixin helps us to deal with 2 Major things :
+     - Don't loose the abilities of Your parent class (as Single inheritance is only allowed in dart)
+     - DRY principle :- Dont repeat yourself
+
+   Idea :- Create class for Minimal Properties Shared by multiple descendents
+
+   => a way to reuse the code in multiple class hierarchies
+
+   Mixins := Allows -> { Encapsulation, DRY, }

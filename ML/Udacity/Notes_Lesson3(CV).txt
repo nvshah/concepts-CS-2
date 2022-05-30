@@ -1,0 +1,177 @@
+What is Computer Vision ?
+ -> enables machine to detect patterns & gaina a high-level Understanding of images & videos
+
+* CV & NN :
+  -----
+   --> Each layer uses & abstract diff information from feeded data
+
+ - image classification
+ - object detection
+
+
+* Three main components of neural networks
+  - Input Layer: This layer receives data during training and when inference is performed after the model has been trained.
+  - Hidden Layer: This layer finds important features in the input data that have predictive power based on the labels provided during training.
+  - Output Layer: This layer generates the output or prediction of your model.
+
+* feature extraction :
+  ------
+   In the CNN process, hidden layer are used to extract diff info of images & this process is called feature extraction.
+
+
+Q. How CV benefits ??
+  -> automates visualisation process that human eye cannot do quickly
+
+     - Image classification - {sorting objects, Text Detection (OCR), Content filtering }
+
+     - Object detection     - {Autonous vehicles, Object Counting (eg Car Parking Slot, People in Shop Store)}
+         \
+          -> Where in this image the objects are of interests !!!
+          
+          -> allows to gain more granular details about an image
+       
+     - Semantic Segmentation :- (pixel level details of where an object is in an image)
+         \  
+          -  Pixel by Pixel approach
+
+          -> which pixel in an image represent our object of interest ?
+             Eg 1) which satellite image corresponds to buildings or road
+                2) Cellular Segmentation
+
+     - Activity Recognization 
+        \ 
+          Video
+           \
+            Video add time dimensions to our image data  <= MIMP >=
+
+            Eg - Analyze videos to understand human actions
+
+
+* AWS Deep Lens :
+  -------------
+   -> deep learning–enabled camera that allows you to deploy trained models directly to the device
+
+   There are severla models provisioned in AWS cloud. Deep Lens can leverage them & provide services.  
+
+
+   How AWS Deep Lense Works ??
+
+    -> Deep Lens is integrated with multiple AWS services. 
+       You use this services to create, train & launch your AWS deepLens Project
+
+    -> Its can be thought as divided into 2 diff streams :-
+
+       1) Device Stream - video streams passed through w.o processing 
+       2) Project Stream - results of model's processing of the video frames
+
+    => you used AWS Lambda to deploy your model onto an AWS DeepLens device.
+
+
+    * Workflow :
+      ------
+       1) Define problem 
+       2) Build a Dataset 
+       3) Train Model 
+       4) Evaluate model 
+       5) Use Model
+
+    
+    => To store data you can use - Amazon S3
+
+
+  * AWS SageMaker :
+    -----------
+     -> AWS service to train ML Model in cloud 
+
+
+   **) Four key components are required for an AWS DeepLens–based project.
+
+    1. Collect your data: Collect data and store it in an Amazon S3 bucket.
+    2. Train your model: Use a Jupyter Notebook in Amazon SageMaker to train your model.
+    3. Deploy your model: Use AWS Lambda to deploy the trained model to your AWS DeepLens device.
+    4. View model output: Use Amazon IoT Greenrass to view your model's output after the model is deployed.
+
+  Example :
+  ------
+
+  1. Define Problem :-
+     ------ 
+      Define Trash type to throw in dustbin
+      - A classification problem { Composed, Recycling, landfill }
+
+  2. Data :
+     ---
+      -> Need to provide a labelled data.
+     
+
+  4. Evaluate Model :
+    ---------
+
+     Loss Function ;- 
+     ---------
+     -> Model training algorithms use loss functions to bring the model closer to its goals
+     -> The loss function improves how well the model detects the different class images 
+        while the model is being trained
+   
+  5. Use the Model :
+     --------
+      -> deploy our trained model to our AWS DeepLens device, where inference is performed locally.
+
+
+   Step 1 :- (Data Storage) 
+          S3 -> buckets -> folder
+
+   Step 2 :- (Train & Evaluate Model in cloud)
+
+          Amazon SageMaker -> Notebooks (Hosted Jupyter Nb)
+            -> using jupyter nb hosted in amazon sagemaker
+                       \
+                        source code to create & train model
+                          - Hyperparameters for training model
+
+          after train, test images present in cloud to check accuracy of model
+
+        SageMaker endpoint :
+        ----------
+         Web server that host model & we can send/feed it images to test
+
+         Confidence :- how accurate prediction is (according to model)
+
+         Confusion Matrix :
+         ----------
+          -> helps to understand which labels model struggle a most
+
+
+        Clean Up :
+        --------
+         - delete endpoint when done, so that you don't get charged
+
+
+    step 3 (deploying via deeplens)
+        
+         New project  ->  add model                (from sagemaker created in step2)
+                          add function (code a lambda function)
+
+         lambda function :
+             - host the code that will run inference on AWS DeepLens
+
+        NOTE -> you used AWS Lambda to deploy your model onto an AWS DeepLens device.
+
+        After Project Created -> Deploy to device
+
+
+        Confidence >= 65% hints to be correct classification
+
+        Cleaning Up :
+        ---
+
+        -> Delete Project in Aws DeepLens once you done (to avoid being charged)
+        -> Delete resources on amazon sagemaker aswell which are ot being used (i.e Notebook instances - stop & delete)
+
+        -> Inference -> EndPoints -> Action -> Delete
+        -> S3 -> bucket -> delete
+
+    
+    gist : once your model has been deployed to your device, 
+           you can use AWS IoT Greengrass to view the inference output from your model
+           actively running on your AWS DeepLens device.

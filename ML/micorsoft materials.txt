@@ -1,0 +1,20 @@
+https://docs.microsoft.com/en-us/learn/modules/intro-to-python/
+https://docs.microsoft.com/en-us/learn/paths/python-first-steps/
+
+ML 
+
+https://github.com/microsoft/ML-For-Beginners
+
+https://docs.microsoft.com/en-us/users/jenlooper-2911/collections/k7o7tg1gp306q4?WT.mc_id=academic-15963-cxa
+
+
+ML - AI - Azure Fundamentals
+
+https://docs.microsoft.com/en-us/learn/certifications/azure-ai-fundamentals/#certification-exam-disclaimers
+https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4ARlg
+https://docs.microsoft.com/en-gb/learn/certifications/azure-ai-fundamentals/?tab=tab-learning-paths#two-ways-to-prepare
+
+
+Python & Microsoft 
+
+bit.ly/nbpy-micosoft

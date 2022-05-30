@@ -1,0 +1,35 @@
+* Topics to Care:
+ 
+   Wrapper Classes - int & Integer    [primitve vs Boxed|nullable]
+
+
+ ----------------------------------
+
+* Arrays :
+  -----
+   int[]
+    -> fixed size allocated when defined. 
+   int[][]
+    -> 2D array  (We need to define size at root level & can make it dynamically sized)
+
+   Array.toString()
+
+* ArrayList :
+  --------
+   -> arrays i.e [] are of fixed size 
+
+   -> ArrayList are of Dynamic size   (It's an impl of List interface using Array DS)
+      (equi to Vector in c++)
+
+   -> Cannot index on ArrayList, use `get()`, instead
+
+
+* `instanceof` operator :
+   --------
+   -> To check if object is instance of particular type i.e 
+       a = 10
+       a instanceof Integer 
+
+* `+` operator :
+  ------
+   -> define for primitves & only when 1 of operand is String type

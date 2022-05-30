@@ -1,0 +1,82 @@
+* Page & Controls :
+  ----
+   Page Consists of Several COntrols : {Server Controls + Html Controls}
+
+* Viewstate :
+  ----
+   -> State associated with View (ie aspx) that gets transferred between Server & Client
+   - to retain state of Variable between request between client & Server
+
+  Server Generate HTML from Either Server Controls  + HTML Controls & send it back to Client 
+
+  Server Controls retains the state between PostBack
+
+  ViewState variables are used to preserve data across the page post back. 
+  But by default, ViewState of 1 WebForm is not available in ViewState of another
+
+* Events :
+  -----
+
+  Techniques to send data from 1 WebForm to another :-
+   1. Query Strings 
+   2. Cookies 
+   3. Session State   (single user global data)
+   4. Application State  (multi user global data)
+
+  Global.asax :- 
+    - application level events
+
+  Page Level Events :-
+    - load, 
+
+  Control Level Events :-
+    - Submit, Button Click
+
+* session & Cookies :
+  ---
+   - session :- unique instance of browser
+   -> By default Session uses cookies
+
+   Diff Browser :- Diff Cookies & Diff Session
+
+   -> Session State is Shared across All WebForm (Pages) but across sinngle user session
+
+   Web Server uses the session id to identify from where does req is coming from ??
+
+* Application State :
+  ----
+   -> available across all pages & all sessions 
+   -> restarted when process hosting the Web App is restarted
+   -> IISReset
+
+
+* Web.Config :
+  ----
+   -> You can determine timeout spec here 
+
+
+* Page Life Cycle Events :
+  -----
+   -> Preinit  :- Master page & Theme Dynamically
+      init   :- ViewState Restoration for Controls 
+      InitComplete
+      PreLoad 
+      Load 
+      Control Events ;- Button Click, Dropdownn Select
+      PreRender 
+      PreRenderComplete  :- Page is ready to send to CLient 
+      UnLoad :- not allowed to modify Final HTML generated
+      Error :- 
+
+
+
+* Server Control Events :
+  ----
+   PostBack Events 
+   Cached Events     // (onChange() callback likewise)
+   Validation Events   
+
+* IsPostBack :
+  ----
+   -> Page Level Property 
+   -> To identify initial get Req

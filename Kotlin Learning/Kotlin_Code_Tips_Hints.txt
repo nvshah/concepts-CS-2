@@ -1,0 +1,143 @@
+// Hide the keyboard.
+val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+imm.hideSoftInputFromWindow(view.windowToken, 0)
+
+-----------
+ 
+//Enable Data Binding (build.gradle, app module)
+dataBinding{
+    enable = true 
+}
+//Also wrap your xml-file layout into <layout> tag. so root element is no more ViewGroup but layout tag
+
+//Data Binding Usage
+DataBindingUtils.setContentView()
+
+invalidateAll()  // = setState() in flutter
+
+
+//Constraints
+Ratio - constraintsDimensionRatio
+
+//android back button
+app:defaultNavHost
+
+
+//Menu Enable Screen
+setHasOptionsMenu(), 
+onCreateOptionsMenu()    
+onOptionsItemsSelected()
+
+//Share (Implicit) Intent  Compat
+ShareCompat.IntentBuilder.from().setText().setType() 
+
+//Check if activity is found or not 
+getShareIntent().resolveActvitiy()
+
+//Application (global class)
+Application() 
+Also dont forget to add that inherited class to AndroidManifest
+
+
+//LifeCycleObserver Eg
+class CName(lifeCycle: LifeCycle) : LifeCycleObserver 
+lifeCycle.addObserver()
+
+
+//ViewModel
+ViewModelProviders.of(this).get(ViewModel::class.java)
+
+//LiveData
+var score = MutableLiveData<T>()
+
+//LiveData direct update in View from ViewModel without UIController
+binding.setLifeCycleOwner(this)
+
+//LiveData Mapping
+Transformations.map()
+
+//get the reference to application from UIController
+requireNotNull(this.activity).application
+
+//layout inflator from adapter
+LayoutInflator.from(parent.context)
+
+//Binding Adapter Tip 
+bindings.executePendingBindings()  
+
+//--> RetroFit Builder
+Retrofit.builder()
+
+//-> To choose thread
+withContext(Dispatchers.IO){
+    //TODO...
+} 
+
+//-> Network call
+Network.modName.methodName().await()
+
+//-> Workmanager & Coroutine Worker 
+class C1(appContext) : CoroutineWorker(appContext){}
+
+//-> Layout Inflator 
+LayoutInflator.from(context).inflate()
+
+//-> To navigate 
+viewInstance.findNavController().navigate(action)
+
+//-> AppBar Change with navigation bottom 
+AppBarConfigurations(setOf())   //set of frgaments id
+setUpActionBarWithNavController(controller, appBarConfig)
+
+// -> Hide Action Bar 
+supportActionBar?.hide()
+
+
+// -> perform some handling after some seconds 
+Handler().postDelayed({},seconds)
+
+// -> SharedPreferences
+requireActivity().getSharedPreferences()
+sharedPref.edit()   //gives editor that can manipulate shared pref
+
+// -> Kill Current Visisble Activity 
+finish()
+
+// -> start activity via intent
+Intent(this, TargetActivityName::class.java).also(startActivity)
+
+// -> Pass data between Activities 
+ //Pass Data 
+Intent().also{
+    it.putExrta("pName", value1)
+}
+ // Get Data 
+intent.getStringExtra("pName")
+
+
+// Turn on Night Mode by default 
+AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)   // [in onCreate() of MainActivity.kt]
+
+// TabLayout <-> ViewPager2 (Swipable View)
+TabLayoutMediator(tabLayout, viewPager){tab, pos -> }.attach()
+
+
+// Toggle button <-> back button toggling enabled 
+supportActionBar?.setDisplayHomeAsEnable(true)
+
+
+// Check current version of android OS 
+Build.VERSION.SDK_INT >= Build.VERSION_Codes.O   //Oreo here
+
+// Create Pending Intent 
+intent = Intent()
+TaskStackBuilder.create(this).run{
+    addNextIntentWithParentStack(intent)
+    getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT)
+}
+
+//Interrupt Current Thread 
+Thread.currentThread().interrupt()
+
+
+

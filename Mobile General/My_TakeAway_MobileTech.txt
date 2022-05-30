@@ -1,0 +1,5 @@
+What is Cominng in Mobile Tech in Futre (Trending) ??
+ -> Animation (became easy | more customisable | experimentable )
+ -> Harnness ML | AI capabilities 
+ -> Cloud Functionalities
+ -> AR | VR capabilities

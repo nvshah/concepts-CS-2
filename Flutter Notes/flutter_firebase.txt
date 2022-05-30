@@ -1,0 +1,6 @@
+* Analytics Services :
+  ----------
+  DebugView :
+   ----
+   To allow device to send debug logs for specific package :
+   command :- adb shell setprop debug.firebase.analytics.app com.pkg.name

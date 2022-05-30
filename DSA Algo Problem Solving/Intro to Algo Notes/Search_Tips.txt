@@ -1,0 +1,8 @@
+* Binary Search :
+  -----------
+   - sorted array, 
+   - start + end, or range( given & need to find potential answer in between
+   - floor, ciel like findings
+   - near like findings
+
+

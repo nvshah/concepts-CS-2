@@ -1,0 +1,7 @@
+* Precision
+* Recall 
+* Mean Absolute Error 
+* R-Squared
+* F1 Score 
+* Quantile Loss 
+* Log Loss

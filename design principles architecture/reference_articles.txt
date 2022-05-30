@@ -1,0 +1,10 @@
+# Design principles 
+https://www.raywenderlich.com/18409174-common-design-patterns-and-app-architectures-for-android
+
+
+# Clean architecture
+https://www.raywenderlich.com/3595916-clean-architecture-tutorial-for-android-getting-started
+https://rubygarage.org/blog/clean-android-architecture
+
+# MVI
+https://www.raywenderlich.com/817602-mvi-architecture-for-android-tutorial-getting-started

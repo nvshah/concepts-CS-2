@@ -1,0 +1,35 @@
+* TIPS :
+--
+
+  time.time() :- will give you number of seconds pass since now. (UTC)
+
+_______________________________
+
+* random numbers are not random in python :
+  ----------------
+
+  -> It's actually Pseudo Random Number generator under the hood.
+     (It's not truly random number generator)
+
+  -> You can control random sequence you get based on seed
+      \
+       reason is that `seed` is actually starting value for generating a random number
+
+    How Pseudo random number generator works ??
+
+    -> It starts at seed value and applky some deterministic fun to generate random values.
+
+    So if we start at same seed we get exact same seq every time.
+
+    Eg MineCraft
+
+
+  => Random Seed
+     ----------
+      -> A random seed (or seed state) is a number or vector used to initialise the pseudo random number generator.
+
+
+    What is by default used by seed ??
+     -> It's current time.
+
+     i.e System Time as random seed.

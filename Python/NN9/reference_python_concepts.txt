@@ -1,0 +1,34 @@
+Python Referece :
+
+  Pynative,
+  Programmiz   -> IMP
+  Real Python
+  DaBaez 
+
+  https://dabeaz-course.github.io/practical-python/Notes/00_Setup.html
+  https://pythonprogramminglanguage.com/
+  codeAcademy.com
+
+  stackabuse.com
+  
+  great courses
+  https://www.greatlearning.in/?arz=1  
+
+  tips
+  https://book.pythontips.com/en/latest/function_caching.html
+
+  zetcode
+  https://zetcode.com/python
+
+
+ReactiveX in python :
+ 
+  RxPy : https://rxpy.readthedocs.io/en/latest/installation.html
+
+ZedShaw : 
+  https://github.com/zedshaw/learn-more-python-the-hard-way-solutions
+
+
+Books Repository (Python)
+
+https://github.com/oddsun/Free-Python-Books/tree/master/book

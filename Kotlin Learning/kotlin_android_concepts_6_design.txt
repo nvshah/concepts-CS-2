@@ -1,0 +1,185 @@
+Tips :
+
+-> To move some view to some alignment :
+
+    use attribute - `android:layout_gravity`
+
+_____________________________________
+
+
+* Theme :
+   ---
+    -> to entire app at once (i.e all views)
+
+   Styles :
+    ---
+     -> specific View, more customization, consistent fonts, colors, etc...
+
+    Attributes :
+     ---
+     -> Not-reusable
+        Eg margin, paddings, etc..
+
+    Theme + Styles + Views 
+
+    Attributes will override all (both)
+    Styles override Theme.
+
+    Theme attributes point to a lots of pre-defined styles, 
+
+    Theme Overlay:
+    ----
+     -> ThemeOverlay.... (used to appy theme for specific view, via app:theme attribute) 
+
+
+    * Dimens :
+      ----
+       - short for dimensions
+       - file for dimensions managing throughout the app 
+       -> Allows you to provide useable measures for app, (that can be utilised by multiple views)
+
+       - ALlow you to apply consistent styleing (margins, paddings)
+         Allow you to change size based on screen size
+
+    * Colors :
+      ----
+       - colors resource for specifiying colors.
+       - can be used by all views. 
+
+
+* UX Design :
+  ------
+   1. Define Use Cases
+   2. Implement Design
+
+   
+   Accessibilty : 
+    Design for everyone
+    Vision impairment
+    Other input devices
+
+* Material Design Components : 
+  ------------- 
+
+
+* CoordinatedLayout :
+  ------
+   = stack abilities
+
+  NestedScrollView :
+  -----
+   = When you want to use scroll view inside another view
+
+  
+
+Eg Apply headline5 : 
+   - <TextView style="?attr/textAppearanceHeadline5"
+
+   android:textAppearance - is attrib that is used so that our fonts will override theme fonts
+ 
+TIP : to access the style define in theme or style.xml file
+
+   Use -> `?attribName`
+
+ ImageView's tint :
+ -------------
+   android:tint = ?colorOnPrimary
+
+
+* RTL languages :
+  -------------
+  right to left 
+  Mirroring
+
+  Android manifest :
+
+  <application 
+        android:supportsRtl="true">
+      .
+      .
+  </application>
+
+
+  start, end (instead of right, left)
+
+
+  NOTE :-
+           values directory - by default for string values 
+
+           values-es dir    - if mobile uses spanish then this folder will be respected
+
+      Android will only select correct folder based on language 
+          -> It depends on translated content present inside that folder 
+
+
+  * Content Descriptor ;
+    -----------
+     -> Descriptive labels that explains meaning of View.
+
+        <android:contentDescription />
+        <android:hint />
+
+    =>  Wrap content group in a LinearLayout.
+
+
+* Live Regions :
+  ----------
+   -> To notify user something have changes since past
+      great way to make an app more accessible
+
+      `android:accessibilityLiveRegion="polite"`
+
+  => Change the content descriptor & text dynamically 
+       .contentDescription = "";    // in backend on view object for dynamically changing the hint text
+
+     
+* Drawables :
+  ---------- 
+   -> Drawables are not Views. i.e It cannot be put direclty inside Constraint Layout 
+
+   Drawables can be used for  
+
+     - background preview (Eg beside Text)
+     - As Image Preview   (Eg Image View)
+
+
+* Accessibility Scanner :
+  ------
+   -> helps you to improve accessibility of apps.
+
+
+* ChipGroup :
+  ---------
+
+
+* Colors Selector block :
+  --------
+   <selector>
+   ....
+   </selector>
+  State Less will work from top to bottom for color selector
+
+
+* DarkTheme :
+  ---------
+   -> s1) styles.xml
+           \
+            -> Change LightTheme to DayNight i.e (parent = Theme.MaterialComponents.DayNight.NoActionBar)
+
+
+  => To force default night mode :
+      ---
+        MainActivity.kt 
+           \
+            -> in onCreate()
+               \
+                -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+
+
+  NOTE : If you want to customise dark theme colors then you can 
+         1) create directory named `values-night/colors.xml` inside Drawable
+
+         2) and put all custom theme code between 
+              <resource>
+               ...
+              </resource>

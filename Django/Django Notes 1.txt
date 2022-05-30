@@ -1,0 +1,49 @@
+- pip intsall django
+- python -m django --version
+- django-admin
+
+Tips :
+cd !$   //enter in current directory folder
+
+-> static files such as css & js should be put in static directory
+
+------
+
+App :
+ - python manage.py startapp {appname}
+
+Superuser : (for admin login)
+ - python manage.py createsuperuser
+
+migration commands : (database)
+ - python manage.py makemigrations   // detech changes & prepare django to update changes 
+ - python manage.py migrate  // do migration
+
+(Change All the Model using Aadmin Page guI - backend )
+Register your model so that they can show up on admin page (used by GUI)
+
+
+-------
+
+urlpatterns = []
+
+{% extends "base_template.html" %}
+
+{% url 'name' %}   // 'name of url pattern'
+
+vertical bar ie `|` as date filter
+
+
+-------
+
+Models & Objects in django : (SQL backend Database)
+  
+  - User model in built (for Admin & Non-Admin tracking)
+
+  Anyn Model -> .Objects.all()   // gives query result equi to slect * 
+
+  instance.save()  // commit the query in database
+
+
+
+

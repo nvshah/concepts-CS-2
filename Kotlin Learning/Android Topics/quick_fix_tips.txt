@@ -1,0 +1,1 @@
+* Use appcompat -> widgets when something not works as per UI you wish

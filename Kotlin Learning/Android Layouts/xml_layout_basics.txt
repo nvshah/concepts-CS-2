@@ -1,0 +1,7 @@
+1) ConstraintsLayout :
+     - For more commplex layout
+
+
+---- TIPS ---
+
+=> Sometimes Linear Layout with Weight is a good choice rather than relative layout.

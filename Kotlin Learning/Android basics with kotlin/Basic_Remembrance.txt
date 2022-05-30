@@ -1,0 +1,19 @@
+
+
+
+* Bottom Navigation menu :
+   -> You need to seetup the bottom navigation from Activity.kt files &
+      not in xml file 
+
+* For Navigation :
+   -> You need to bind the nav graph name in xml file
+
+
+* Life Cycle :
+  ------
+   onCreate  // Activity when created
+   onNewIntent  // When new Intent req arrives to this Activity
+
+=> If you minimize the app then activities will not get destroys
+
+

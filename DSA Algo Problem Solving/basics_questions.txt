@@ -1,0 +1,5 @@
+1) prime -> https://www.geeksforgeeks.org/prime-numbers/
+
+2) Square-Root  (via Binary Search)
+
+3) Prime - Seieve of Erastothenisis

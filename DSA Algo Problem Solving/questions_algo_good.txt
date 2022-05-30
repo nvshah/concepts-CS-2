@@ -1,0 +1,174 @@
+
+1) Maximum SubArray Sum - Kadane's Algorithm
+   Prime Less than  :- Sieve of Erastothenisis
+   Majority element :- Boyer-Moore Algorithm 
+
+   2 Pointers Partition : Hoare & Lamuto
+   prefix Sum :- Fenwick Tree
+   Longest Repeating SubSeq :- Suffix Array
+
+
+Custom Data structure 
+
+  LRU Cache := Doubly Linked List + Hash-Map 
+
+  Randomized Set := https://leetcode.com/problems/insert-delete-getrandom-o1/
+
+
+logics :
+  
+  group Anagrams  [https://leetcode.com/problems/group-anagrams/]
+
+-** largest number (custom sorting total order)  https://leetcode.com/problems/largest-number/
+
+2 Pointers | Partition 
+  
+  Hoare / Lamuto / remove elements (https://leetcode.com/problems/remove-element/)
+  Lamuto | Window | 2 Pointer (https://leetcode.com/problems/find-k-closest-elements/)
+
+
+Linear Search :
+   Fair Candy Swap https://leetcode.com/problems/fair-candy-swap/
+
+Binary Search :
+   
+   Find Peak index in Mountain array  (https://leetcode.com/problems/peak-index-in-a-mountain-array/)
+   Find Peak element in Mountain array (https://leetcode.com/problems/find-peak-element/)
+   Find in Mountain Array   (https://leetcode.com/problems/find-in-mountain-array/)
+   Find peak element in Array (https://iq.opengenus.org/peak-element-in-array/)
+   find the square root (https://leetcode.com/problems/sqrtx/)
+
+
+   MIMP -)
+   ---
+   Split Array Largest Sum (https://leetcode.com/problems/split-array-largest-sum/)
+   Kth missing element   (https://leetcode.com/problems/kth-missing-positive-number/)
+
+   Max Remove Character (https://leetcode.com/problems/maximum-number-of-removable-characters/
+)
+
+Data Structures :
+ 
+
+-** Sliding Window Maximum (Deque) (https://leetcode.com/problems/sliding-window-maximum/)
+-** Sub Array Sum Equals K (HashMap Imp) (https://leetcode.com/problems/subarray-sum-equals-k/)
+-** min size sub array sum (Grow-Shrink Window) # https://leetcode.com/problems/minimum-size-subarray-sum/
+
+Stack :
+
+-Stack :- Asteroid Collision (LeetCode)
+ *-* Monotonic Incr Stack :- 
+      - Max SubArr MinProd (# https://leetcode.com/problems/maximum-subarray-min-product/)
+      - Remove K Digits (# https://leetcode.com/problems/remove-k-digits/)
+    
+ *_* :- monotonic Decr Stack := Daily Temperatures (https://leetcode.com/problems/daily-temperatures/)
+
+-** LRU Cache 
+-** Detect Squares/Rect in Grid
+-> Long valid parenthesis ( https://leetcode.com/problems/longest-valid-parentheses/ )
+
+Heap :
+
+-> Single Thread CPU (Heap-Priority Queue) (# https://leetcode.com/problems/single-threaded-cpu/)
+
+ - Seat-Reservation-Manager (Heap) (# https://leetcode.com/problems/seat-reservation-manager/)
+ - Longest Happy String (MAX HEAP) ( https://leetcode.com/problems/longest-happy-string/ )
+
+ - Caar Pooling (min heap) (https://leetcode.com/problems/car-pooling/)
+
+    
+Sorting  :
+   
+   n largest elem - (Heap Sort) | (https://leetcode.com/problems/maximum-product-of-three-numbers/submissions/)
+   kth largest element - [Heap ds] (https://leetcode.com/problems/kth-largest-element-in-an-array/)
+
+   [Bucket Sort alike Logic]
+   top kth frequent elements -  (https://leetcode.com/problems/top-k-frequent-elements/)
+
+   [Quick Sort] | [Bucket Sort] (https://leetcode.com/problems/sort-colors/)
+   [Quick Selct]  (https://leetcode.com/problems/move-zeroes/)
+
+   {sort via compare}
+   (Traditional Sorting) [https://leetcode.com/problems/largest-number/]
+
+
+Recursion : 
+  [Backtracking + Recursion]
+  Partition to k equals Sum  (https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
+
+  Combination SUM 2 (# https://leetcode.com/problems/combination-sum-ii/)
+
+  4 Sum (https://leetcode.com/problems/4sum/)
+  
+Tree :
+   
+   BFS (https://leetcode.com/problems/rotting-oranges/)
+   DFS (https://leetcode.com/problems/path-sum/)
+   Greedy BFS | Snake Ladders (https://leetcode.com/problems/snakes-and-ladders/)
+
+   DFS-BFS 
+-** BFS (https://leetcode.com/problems/find-bottom-left-tree-value/) 
+   BFS Good Que (https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
+
+   Cartesian Product (https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+
+   Unique Permutation (DFS|Backtrack) (https://leetcode.com/problems/permutations-ii/)
+
+   Longest Path between 2 nodes (Bottom Up | DFS) (https://leetcode.com/problems/diameter-of-binary-tree/)
+
+  **IMP--
+   Course Prerequisite ( https://leetcode.com/problems/course-schedule/ )
+
+   Stack |
+   Inorder Traversal BST (https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+   PreOrder Traversal    (https://leetcode.com/problems/merge-two-binary-trees/)
+
+   PreOrder Mimp (https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
+   
+   Subsets ((https://leetcode.com/problems/subsets-i/))
+   Subsets With Duplicates (https://leetcode.com/problems/subsets-ii/)
+
+Graphs 
+   
+ -** Topological Sort - Alien Dict (https://leetcode.ca/all/269.html)
+
+ - Bellman Ford - Cheapest Fight | BFS (https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+ - Smallest String With Swap - Union Find ( https://leetcode.com/problems/smallest-string-with-swaps/ )
+ - DjKstra - path with min efforts ( https://leetcode.com/problems/path-with-minimum-effort/ )
+
+
+* Sliding Window :
+
+ -** (Max Substring Window) (https://leetcode.com/problems/minimum-window-substring/)
+ -** (Anagram in Substring) (https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+
+ - (Longest_Rpeatinng_SubString_Replace) (https://leetcode.com/problems/longest-repeating-character-replacement/)
+
+
+* DP :
+  
+  longest increasing SubSequence (https://leetcode.com/problems/longest-increasing-subsequence/)
+  no. Longest Incre Subseq  (https://leetcode.com/problems/number-of-longest-increasing-subsequence/)
+
+  longest Increasing Path in Matrix (https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
+  House Robber (1D-DP) (https://leetcode.com/problems/house-robber/)
+
+-MIMP-**
+  Russian Dolls (DP (LIS) | Binary Search | Insertion Sort )
+
+
+* Greedy Solution 
+
+  Jump game  (# https://leetcode.com/problems/jump-game/)
+  
+  **IMP :- [Greedy + BFS | 1-dimensional array BFS]
+  Jump Gamme 2  (https://leetcode.com/problems/jump-game-ii/)
+
+* String 
+  
+  Longest Repeating SubSeq (https://leetcode.com/problems/longest-duplicate-substring/)
+
+
+* System Design :
+   
+  Encode & Decode String (https://www.lintcode.com/problem/659/)

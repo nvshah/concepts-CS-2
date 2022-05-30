@@ -1,0 +1,21 @@
+* List 
+
+* FrozenSet 
+
+* Deque 
+
+* heapq 
+
+* OrderedDict 
+
+* ChainMap 
+
+* Array 
+
+* defaultdict 
+
+* Counter
+
+* LinkedList   // Via Array
+
+* queue -> PriorityQueue 

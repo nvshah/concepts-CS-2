@@ -1,0 +1,15 @@
+1) Rule of 3 :  (Code Refactoring)
+
+2) Don't Comment what Happen
+   - Istead write comment for `Why` particular thing happen !
+
+3) Dont afraid of choosing long names (if purpose gets Cleared)
+
+4) Avoid Gennius Code & Write More Naive Code
+
+5) The law of Demeter 
+     - Encapsulation
+
+6) avoid Side-effects
+
+7) avoid if-else 

@@ -1,0 +1,27 @@
+ref :- #TheAndroidShow: Tablets, Jetpack Compose, and Android 13  (youtube)
+---
+
+Yoali Sotomayor Baquerio (Twitter SE)
+Sneha Patil (Twitter SE)
+Andrea zvinakis (PM, Google)
+
+Best :- I hope I have good chance writing in compose & never touch XML again 
+
+
+* Animation (Compose) 
+  ---
+  
+1) animateToFinalPosition()
+  ----
+   -> perform 2 things 
+        - decide final position 
+        - start the animation towards that final position
+
+2) animateContentSize 
+
+
+
+* New Features :
+  ---
+   - Drag & Drop
+   - Title bar

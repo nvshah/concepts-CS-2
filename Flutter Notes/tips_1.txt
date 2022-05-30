@@ -1,0 +1,38 @@
+* If you want to preserve the child under Expanded then use Align() in between i.Expanded 
+   
+   Expanded(child:
+      Align(
+          align: Alignment.BottomCenter,
+          child: YourWidget()
+      )
+    )
+
+* padding vs margin 
+  ------------
+   When there is no child for container at that time padding value is useless, so need to use margin at that time
+
+* ViewPadding vs ViewInsets :
+  ------------
+   In Flutter, a Widget, usually a Scaffold , can consume viewPadding, padding or viewInsets 
+   and modify the MediaQuery which then is passed down to it’s child.
+
+* barrel file = file of import statements 
+
+* Shrinkwrap & ViewPort :
+  -------------
+   ViewPort : Space allowed for ListView
+   Shrinkwrap :- Forcibly evaluate inner nnested Widgets
+
+* Wrap & Full Screen Size :
+  ----
+   - by default Wrap widget not takes full screen 
+     but you can simply wrapped it with SizedBox with infinity width to do so
+
+* Flexible Widget & LayoutBuilder :
+  ------
+   - You can use Flexible Widget alongwith LayoutBuilder to display Placeholder or Image accordingly
+
+
+* absolute & relative import related package :
+  -----
+   - always_use_package_imports 

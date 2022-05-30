@@ -1,0 +1,46 @@
+https://aws.amazon.com/blogs/machine-learning/
+
+https://sklearn.org/auto_examples/applications/plot_outlier_detection_housing.html#sphx-glr-auto-examples-applications-plot-outlier-detection-housing-py
+
+
+
+
+Good ML Referecnes (blogs):
+
+- https://machinelearningmastery.com/
+
+Ridge Regression :
+  https://machinelearningmastery.com/ridge-regression-with-python/
+
+Evaluation metrics :
+  https://machinelearningmastery.com/regression-metrics-for-machine-learning/
+
+Bag Of Word Model Sentiment Analysis
+  https://machinelearningmastery.com/deep-learning-bag-of-words-model-sentiment-analysis/
+
+
+AWS AI Services (NO ML skills required)
+  https://aws.amazon.com/machine-learning/ai-services/?utm_source=Udacity&utm_medium=Webpage&utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course
+
+
+Advance ML :
+=========
+
+ CV : https://aws.amazon.com/blogs/machine-learning/protecting-people-through-virtual-boundaries-computer-vision/
+
+ RL : AWS
+ https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-basic-concept.html?utm_source=Udacity&utm_medium=Webpage&utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course
+
+
+VCS ML :
+======
+ [vcs ml code] https://algorithmia.com/blog/how-to-version-control-your-production-machine-learning-models
+[vcs ml model] https://towardsdatascience.com/version-control-ml-model-4adb2db5f87c
+
+
+--------------
+
+maths :
+ 
+ [stats] https://classroom.udacity.com/courses/st101
+ [stats descriptive https://classroom.udacity.com/courses/st101

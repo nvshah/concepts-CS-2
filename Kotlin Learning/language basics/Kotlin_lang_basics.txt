@@ -1,0 +1,404 @@
+https://www.baeldung.com/kotlin/destructuring-declarations
+
+[ intArray vs Array<T> ] https://stackoverflow.com/questions/45090808/intarray-vs-arrayint-in-kotlin
+[Kotlin Boxing Understanding] https://reneferrari.github.io/understand-boxing-in-kotlin/
+
+-> Fun Fact : Lambda - derive from lambda calculus of Alonzo Church
+
+_____________________________________________________________________
+
+TIP - Unicode is the standard for mapping characters to numbers.
+      A single mapping in Unicode is called a code point
+
+    - init block is executed prior to constructor block.
+
+    - Enum Classes used when state machine is required for impl.
+
+=> To pass a named function as an argument to another function, you use the :: operator.
+
+* Wrapper :
+  --
+   There are wrappers available for all primitives and the Object base class.
+
+_____________________________________________________________________
+
+* String templates :
+  ----------
+   -> Same as f strings in python
+
+* Amazing When Expression : 
+  -----------
+   -> The power of a when expression comes from leveraging pattern matching to
+       compare values using complex rules.
+   -> It totally relies on branch-matching rather than 1 variable check among diff conditions
+   
+   -> You can omit variable after when i.e 
+       when{//branch_1 -> ''
+            //branch_2 -> ''}
+
+* Range :
+  ----
+   A closed range can never be empty or empty ??
+    -> It can be empty E.g 2..1 -> []
+                           1..1 -> [1]
+
+* Function parameters 
+  ---- 
+   -> Function parameters are constants by default, which means they can’t be modified.
+
+* method reference operator, ::
+   `::`
+   -> used to assign method ref to a variable
+
+* nothing :
+  ----
+   -> Functions can have a special Nothing return type to inform Kotlin that this function
+      will never exit.
+
+
+* += :
+  ---
+   -> You can use this to add element into array or list at the end
+
+* Kotlin Pair Object :
+  -----------
+   Pair<T1, T2>()
+
+    alternative : `to` infix notation i.e T1 to T2
+
+
+=> Built-in Kotlin types such as String, Int, Double have efficient hash values out of the
+   box.
+
+* lambda (closure) :
+  ----------
+   -> a lambda can access, store and manipulate the value of any variable or constant 
+      from the surrounding context, acting as a nested function
+   
+   * trailing lambda syntax. 
+      _______________________
+   => when the lambda is the final argument passed to a function.
+      You can use it as a function block
+
+      Eg fun f(i: Int, l: (Int, Int) -> Int){
+           return l(i, 10)
+         }
+
+         //call
+         f(20){a,b -> a+b}
+
+    -> lambda is saied to capture the entities existing in the same scope where it is lying
+       A lambda can capture the variables and constants from its surrounding context.
+
+       {filter, map, fold, reduce}
+
+
+  Pass a function as a reference :
+  ----------
+   ::funAnme
+
+   => The :: operator is the reference operator
+
+
+* Int::plus -
+  ------
+   -> refering the operator `+`
+
+* value vs reference equality 
+  -------------
+   ==  : value equality    [ can be overriden by equal()]
+   === : reference comparison (identity comparison) [if poiting same block of data on heap or not]
+      
+   REMEMBER :  For values which are represented as primitive types at runtime (for example, Int ), 
+               the === equality check is equivalent to the == check.
+
+   == -> checks for stack 
+   === -> checks for heap
+
+   to overcome the == i.e equality check at stack level :-
+     override {hashCode(), equals()}
+
+
+* Collections :
+  ---------
+   1) Array :-
+
+     -> Boxed vs Non-Boxed 
+      
+        arrayOf() -> will generate list of Objects i.e (in case of primitve, value will be Boxed)
+
+     NOTE :  Using primitive types over their boxed counterparts will consume less memory 
+             and result in better performance
+
+         Array<Int> -> Object array 
+
+         IntArray, DoubleArray -> Primitve types array 
+                                  They will initialize by their default values (i.e 0 in case of int)
+         
+         IntArray -> int[] -> array of primitive types 
+                           -> no boxing occurs
+
+         Array<Int> -> Integer[] -> array of objects(nuallable) -> TypedArray in Kotlin
+                                 -> Boxing Occurs 
+                                 -> Integer.valueOf() call to manually box a value 
+         
+         In Kotlin to Convert to Boxed/Wrapped/Typed Container :-
+              -> `toTypedArray()`
+
+   2) lists :-
+     
+      -> Unfortunately you can't use primitives with lists 
+
+      -> the List type in Kotlin is an Interface
+          Concrete realizations :- {ArrayList, LinkedList}
+
+
+   * Hash values :-
+     -------
+      -> The hash value has to be deterministic — 
+          meaning that a given value must always return the same hash value
+
+
+  * cast safe :
+  -------
+   -> as? 
+
+* reified :  
+  -------
+   -> used with inline functions
+
+* Comparable :
+  -------- 
+   -> fun compareTo()   // this will decide total ordering 
+  
+
+---------------------------------
+
+* Singletons :
+  --------
+  via `object` keyword
+  - Use of
+   singletons is sometimes discouraged because they introduce a global state into your
+   application; therefore, you must be careful when accessing a singleton from different
+   application threads. But singletons are useful in certain use cases wherein the scope of
+   use is limited.
+
+  - Shared Instance
+
+* Anonymous objects | object expression
+  --------
+   -> Anonymous objects — or object expressions — let you create unnamed instances
+      of interfaces and to override class behavior without subclassing.
+
+   -> object are generally used to create namespaces.
+    
+* Object declarations :
+  --------
+   -> allow you to create Singletons inside Kotlins
+   -> it has always an object name following object keyword
+
+   - an object declaration is not an expression
+
+
+* class-properties :
+  -----
+   => Properties are variables and constants that are part of a named type.
+
+   delegated properties : observe, limit or lazily evaluate
+   
+   * Delegates.observable() 
+   * Extension properties do not have backing fields, so you can only define them using custom accessors.
+
+* Companions :
+  ------
+   -> object declaration inside class (with companion keyword)
+
+   -> The companion object holds properties that are universal to all instances of a particular class
+   -> static block in kotlin (alike but not actual static)
+
+   -> simulate static keyword behaviour in kotlin 
+
+   -> Note that even though the members of companion objects look like static members in other languages, 
+      at runtime those are still instance members of real objects, and can, for example, implement interfaces
+
+
+* namespace : (& Companions)
+  --------
+   -> The class with its companion object is said to act as a namespace
+
+* extension :
+  --------
+   -> Augment existing behaviour of class
+
+* static dispatch :
+  -----------
+   -> decision of which specific operation is decide at compile time.
+
+* super :
+  -----
+   -> invoke the methods in nearest implementing superclass
+
+* Nested & inner class :
+  ------------
+   NameSapce
+   -> When a class is nested inside another, 
+      it does not by default have access to the other members of the class 
+
+   inner class :
+   --------
+    -> can access variables in it's enclosing scope/namespace of class.
+
+
+* Sealed Classes :
+  -----------
+   -> The sealed classes themselves are abstract and cannot be instantiated.
+
+      allow subtypes which can have multiple instances and have state.
+
+      Kotlin sealed classes guarantee that there are no other implementations of the given class 
+      outside of the file they're defined in
+      each instance of a sealed class has a type from a limited set that is known when this class is compiled.
+   
+   =? Sealed classes are allowed to inherit only inside same package (i.e logical namespace)
+
+* interface :
+  ---------
+   -> like an idea
+      conform to someone (when implemented)
+
+   -> You can store properties in an interface
+      \
+       either abstract or give an impl to property 
+       (as interface cannot hold state so it cannot have backing field for property)
+
+   -> is-a relation with interface of child
+   
+   -> multiple conformance (multiple inheritance of interface)
+
+   => Interfaces allow you to declare information about what something does, 
+      rather than what it is, as a class hierarchy would.
+
+
+* Type erasure :
+  -------
+   -> You cannot use run time check for type T i.e Generic one as Compiler don't know at moment 
+
+  Star Projection :
+  ------
+   -> replace T with * when you want to do any run time check.
+
+   =>  Instead of actually getting information about the generic type, 
+       it assumes it must be... some type, which could be nullable.
+
+  reified :
+  -----
+   -> we can use class type as parmeter i.e with `is` & `as`, directly withour require `::` operator
+   -> allow you to use a generic type, but retain information about that type.
+
+gist -> `Type erasure` means that, within a class or interface that takes a generic type, 
+        you won't have any information about that type at compile time unless you annotate the
+        type with reified and inline the function.
+
+* Covariant : 
+  --------
+   <out T>
+   -> relation of objects that take the same generic type is similar to that of supertypes and subtypes
+   -> List<Int> can be assigned to variable of type List<Number>
+
+* ContraVariant :
+  --------
+   <in T> 
+   -> supertype to subtype 
+
+* Invariant :
+  -------
+   <T>
+   -> cannot make any inference.
+
+_______________________
+
+- FUNCTIONAL PROGRAMMING 
+
+* Higer-Order Func :
+  ---
+   - Func that recieves other func as param or returns other func are known as higher-order func
+
+* Lambda :
+  ------
+  - A lambda expression is always defined in curly brackets
+  - The last expression in a lambda body determines the return type and the value that is returned 
+
+  - it :
+    --
+    If a lambda has only one parameter, you don’t need to specify its name. 
+    You can access it by using it as a name
+
+  - In Kotlin, if a lambda is the last parameter of a function, 
+    it can be placed outside of the parentheses of a higher-order function.
+
+  - In Kotlin Lambda is internally (in java) is represented as a Class
+
+  Returning from Lambdas :
+  ---
+   -> If you use a regular return expression inside a lambda, 
+      you’ll return to the call site of the outer function.
+      (because lambda act as an closure to its enclosinng scope)
+
+  REMEMBER :
+   Remember that, for each lambda that you create to pass to another function, 
+   the Kotlin compiler generates an appropriate class extending FunctionN
+
+* Closures :
+  ------
+   - Lambas (as well as local functions) act as closures, 
+     which means that they can access and modify variables defined outside of their own scope
+
+* Extension Func :
+  -------
+   - Add new functionalities without Inheritance
+     - as multiple Inheritance is not allowed 
+     - or class may be not extendable (ie Sealed Class or final Class)
+
+   => extension function implicitly receives an instance of the extended class
+
+* Lambdas with Recievers :
+  -------
+   -> You can pass extension function as an argument for lambda as well to function
+
+
+* Qualified Return :
+  -----
+   use `return@qualifierName`
+
+* Inline Function :
+  -----
+   -> In case of lmabda func if you use it multiple times & as its creating class underhood
+      it may increase memory usage and have a performance impact on your application.
+
+     To avoid such behavior, you can mark your function with the inline keyword, 
+     which replaces the function call at the call site with the body of the function. 
+
+   If you try to inline a function which doesn’t receive any lambdas as parameters, 
+   then inlining has a high probability of being useless; 
+   no extra classes get generated and there’s no need to inline the function
+   
+   - noinline
+  
+  crossinline
+  ____ 
+   -> avoid non local return (ie return from main parennt function)
+   -> When lambda shouldnot allow nonlocal return (ie return without a label is not allowed) 
+
+* tailrec :
+  -----
+   -> If last call of function is call to itself then it is called tail recursive
+   -> You can mark such func as tailrec modifier
+
+* infix :
+  -----
+   -> func with only 1 argument can be invoked as a statement directly
+
+* Sequences :
+  ------
+   - generators | Iterators of python 
+   - Lazy Iterable 

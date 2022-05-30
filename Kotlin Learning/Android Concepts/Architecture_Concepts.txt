@@ -1,0 +1,65 @@
+* Clean Architecture :
+  --------
+------------------
+
+
+------------------  
+
+* UseCases :
+  --------
+   - sits between View Model & Data Layer
+   - defiens a single thing user can do in your app
+   - that uses repository pattern to communicate & utilise impl define in data layer
+   - business logic is now part of UseCase (& not a View Model)
+
+   - So we will inject usecases in View Model & not repository any more 
+
+   -> UseCase primarily holds Business Logic for single Functionality 
+   -> UseCase need not always need to access or get injected repository !
+   
+   - UseCase class can be maked invokable so as to resemble to function call  
+
+   Tip : When you have many UseCases for Single Feature :- 
+            - then wrap all those such usecases under single Wrapper (ie Sealed Class) ie FeatureUseCase Class 
+              Wrapper class can be any type such as Sealed Class or Data Class
+
+   Advantages :
+    ---
+    => Make Business Logic Code Reusable
+    => Specify Business Logic at one Place 
+    => `Screaming Architecture`
+    => Prevent God View Model (way lot of code | bulky | Messy)
+
+   Use Usecases whenn you have Complex Projects 
+   If not then dont use (OverArctiectured)
+
+
+* View Models ?
+  ---------
+   Q) What the hack VM does if Business Logic are covered by Usecases 
+
+  View Models do :
+   
+   - Execute UseCases 
+   - Provide the observables | states | LiveData | MobX | any kinda dynamic information 
+     to the UI 
+
+   - Map results to State
+
+
+
+
+[Good Habbit] :- 
+* Resource Class :
+  -----
+  Result Class :- A wrapper Class to Wrap Result 
+    \
+     Sealed Class with basically 2 States :- Success, Failure
+
+
+* Do put your validation things in ViewModel & not in Presentation or UI side
+
+
+DI : dependency injection 
+ \
+  - Inject Repository In View

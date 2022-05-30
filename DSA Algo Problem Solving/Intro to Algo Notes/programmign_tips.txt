@@ -1,0 +1,7 @@
+* to cacl time complexity :- timeit 
+     calc space  :- o.__sizeof__()
+
+
+* zip() + enumerate() 
+  ---
+   - Use enumerate(zip(t)) => to get tuple with respective indexes unfold

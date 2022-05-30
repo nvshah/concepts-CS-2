@@ -1,0 +1,127 @@
+API :- base URL + Path + Query
+
+
+1) Navigaton & Bottom Menu 
+
+2) retroFit 
+     1. Create the Response Data class 
+     2. API interface (data layer) - to call remote Api
+
+        Note :- to be able to use api methods in coroutine we need to mark those function as suspend
+
+        Store API_KEY in seperate class of constants
+
+        -> this innterface methods mostly returns the Response object you created in 1st step
+
+     3. Create RetroFitInstance Class (Singleton)
+        
+        Tip : Attach HttpLogginngInterceptor to your HttpClient so that we can have 
+              Logs prior sending req & post recieving response
+
+        RetroFit - baseUrl, 
+                   converterFactory (preferrably Gson)
+                   client  (okHttpClient used for logging purposes)
+
+     4. bind your API interface defined earlier to retrofit creation in step 3
+        ie retrofit client will work for API interface defined by you eralier
+
+3) ROOM :
+
+     1. Create the Data class for database table entity
+
+     2. Create DAO interface that will define methods which will be used by room
+
+     3. Create a Database class (ie abstract class & singleton )
+
+   => ROOM can only handle primitive datatypes so for other custom types 
+       we need typee-converter. on entity classes 
+
+     4. Create converter class for [Type-Converter] if required
+
+     Type-Converter :- use for custom datatype 
+
+
+* Adapter (For RecyclerView)
+  -----
+   inner class for Holder
+
+   => only content that changes should get updated instead of all between 2 list
+
+   * DiffUtils :
+     --------
+      - calculate difference between 2 lists & enable us to update those items which 
+        actually changed
+      
+      - It will happen in background & wont block our thread
+
+   => AsyncListDiffer() 
+      ______
+       -> that will compare 2 List
+       -> Managed the List
+
+
+4) View Model & Repository :
+  --------------
+
+   * View Model Factory :
+     ---
+      - when we have custom param to View Model 
+      - To tell how View Model should be created
+
+  TIP :-
+    -> You can cast fragment activity to main Parent activity
+
+
+5) Wrapper around Network Response 
+   -> Resource util class 
+    \
+     Success, Loading, Error
+
+  All in all there are 2 wrapper classes till now :-
+    1) Response :- used to wrap response 
+    2) Resource :- used to emit state based on response
+
+
+* LiveData :
+  -------
+   = observable (Mobx) in flutter
+   -> Whenever you observe the LiveData you need to provide the LifeCycleOwner
+
+
+   To observe you need Observer & Observer is a lambdaa function
+
+   MutableLiveData :
+   ----
+    \
+     postValue()
+
+
+6) Fragment or Activity Class :
+  ------
+   -> will consume the view model & adapter (for Recycler View)
+
+
+* Safeargs :
+  ----
+   - allow us to pass parameters during transition from 1 Fragment to another fragment
+   - Put your arguments in bundle
+
+* Serializable :-
+  ---
+   -> You need to make your custom class Serializable inorder to pass it in 
+      Safeargs
+
+
+REMEMBER :
+-----
+ => Fragment will be resetted when device rotated but View Model will not get destroy.
+
+* ItemTouchHelper & RecyclerView :
+  ---------
+   we can add/attach ItemTouchHelper callback to RecyclerView items
+
+
+* Internet Checking :
+  -----------
+   -> need to use Application Context 
+   - inorder to use Application Context register it in manifest file   

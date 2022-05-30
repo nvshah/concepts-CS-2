@@ -1,0 +1,7 @@
+-> let - final variable
+   var - normal variable
+
+   \() - string interpolation
+
+   ... - range specification
+   ..< - Exclusive end

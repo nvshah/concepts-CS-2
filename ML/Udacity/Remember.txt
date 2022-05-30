@@ -1,0 +1,3 @@
+* Loss Function is a 
+    - Model Hyperparameter
+    - measures how close model is towards its goal

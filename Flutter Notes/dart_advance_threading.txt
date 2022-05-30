@@ -1,0 +1,50 @@
+[Isolates] (https://medium.com/dartlang/dart-asynchronous-programming-isolates-and-event-loops-bffc3e296a6a)
+
+[Flutter Threading] (https://medium.com/flutter-community/flutter-threading-5c3a7b0c065f)
+
+[Isolates Eg] (https://www.jpryan.me/dartbyexample/examples/isolates/)
+
+Event Loop :
+--------
+ -> Isolates vs Threads 
+     isolates do not share memory while threads may can
+
+    So how to communicate ??
+     -> message
+
+
+  1) non async functions/methods/code blocks 
+  2) Futures 
+  3) Isolates 
+
+  Futures : (async/await)
+  _______ 
+   -> allows you to queue execution of code block in the event loop
+
+   -> It will give event loop a chance to execute the other events/tasks.
+
+     1) Future() :- enques directly 
+     2) Future.delayed() :- wait fot t seconds before enqueing
+
+
+  Isolates :
+  ________ 
+   -> rely on input & output 
+   -> compute heavy logics & not intend to interrupt the UI thread
+
+    - Compute 
+    - SendPort & RecievePort
+
+   -> Every isolate has its own event loop & own memory, which parent even also not allowed
+      to access.
+
+    1) Compute : (Way 1)
+       ------
+        - hides the messaging the mechanisms
+
+    2) Isolate.spawn()  (way 2)
+
+
+   Q)) Advantage of not having Shared Memory ??
+   -> Memory Allocation & Garbage Collection don't require locking.
+     

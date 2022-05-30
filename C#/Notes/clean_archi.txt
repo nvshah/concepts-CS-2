@@ -1,0 +1,17 @@
+
+=> Most often dependency always fall on Database at end
+
+* Abstraction / Interface :
+  ----
+   -> Plugin Can be Swap Out
+
+- Define Interfaces inside (ie in Core) in Inner Projects
+  &
+- Outer side (Outer Projects) can then implement those interfaces 
+
+
+* Entities vs Value Objects :
+  --------
+   Entitites :- have an id & can be recognize in DB based on id 
+
+   Value Objects :- generally they donnt have id & they are compared based on Properties

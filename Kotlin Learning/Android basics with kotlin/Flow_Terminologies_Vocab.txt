@@ -1,0 +1,22 @@
+* FLow :- flow is a Stream of data whose val can be computed asynchronously
+
+* Entities :- 
+     Producer :- Produces Values
+     Consumer :- Consumes Values
+
+     Intermediaries :- Rx Java kinda stuff filter, map, etc...
+        \
+         Modifies data from Producer & provides to COnsumer
+
+=> With a flow coroutine builder, producer cannot emit val from some else coroutine context
+
+2 ways Stream being Inactive
+  
+  1) Producer stops emitting val & Consumer ie. collect() stops     
+  2) Consumer Stops collecing -> in turn stops producer from producing vals
+
+=> Folds are cold & lazy if not specified intermediator operator 
+
+=> To deal with exception we can use catch() intermediate exception
+   
+   catch() needs to be used before collect()

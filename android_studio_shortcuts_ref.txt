@@ -1,0 +1,18 @@
+https://medium.com/@gotoark/most-useful-shortcut-keys-for-android-studio-with-bonus-plugins-bf95c85427f0
+
+https://gist.github.com/stkent/349cdda974fdb9697be5
+
+
+eval math operations inside Intellij -> shift + shift
+
+
+For Android Dev ;-
+  
+Restructure Your Code :- ctrl + alt + L   //(In alphabetical order)
+
+Implement methods override :- ctrl + i
+
+
+* String Manipulation :
+  -----------
+   -> cmd + shift + U    -> TO UpperCase

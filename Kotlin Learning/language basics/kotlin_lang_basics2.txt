@@ -1,0 +1,78 @@
+ref :
+[runBlocking Purpose]
+https://stackoverflow.com/questions/52331373/kotlin-coroutines-runblocking
+
+
+* Asynchronous PROGRAMMING :
+  -----------------------
+-------
+NOTE 
+
+-> Java threads are OS-level threads & consumes significant amount of System resources 
+
+-------
+
+* Coroutine & Threads :
+  ----
+
+* Threads := 
+   - One Execution Flow, which sequentially performs the commands in single thread.
+   - inderterminate & it depends on whatever is going on in your CPU at the time you run.
+   - don't wait for each other to complete
+
+  Problem with Thread (in java) :
+   - Java threads are OS-level threads & consumes significant amount of System resources 
+   - You can’t create thousands of threads as you’ll likely end up with an 
+     `OutOfMemoryError` thrown by the JVM.
+   
+   - It's controlled by OS
+
+* Coroutine :
+  ----
+   - Primararily, its a Computation
+   - A lightweight Thread
+   - It can be suspended & resumed at specific point of computation without bothering(blocking) the thread 
+   - It can be controlled by Programmer's Code
+
+   - Suspension is efficiennt operation, so you can even create thousands of Coroutine
+
+=> These suspending functions can only be invoked from coroutines or other suspending functions, 
+   as well as functions inlined in either coroutines or suspending routines.
+
+* Coroutine vs Thread :
+  ----
+   -> when using coroutines, threads are still used under the hood
+   -> But one thread can execute thousands of coroutines.
+
+   -> Therefore, you don’t spend precious memory resources to manipulate a large number of coroutines.
+
+* Connfiguring :
+  ----
+
+  CoroutineScope:- does nothing except providing CoroutineContext to Coroutine
+
+  CoroutineContext :- provide info such as Job, Dispatcher(thread related info), ExceptionHandler
+
+  Jobs :- background tasks, (independent tasks)
+  Dispatcher :- The Spawner of Coroutine (ie Thread)
+
+  [REMEMBER]
+   -> Inorder to launch a Coroutine, you need to Obtain a Scope 
+
+  Scopes :- GlobalScope, MainScope, CoroutineScope 
+
+  Coroutine Builders :-
+    - create nnew Coroutine inside specified CoroutineScope/Context
+    - Eg runBlocking(), launch()
+
+
+* Deferred vs Job :
+  ---
+   Deferred :-  Contains async result once ready
+   Job  :- allows you to create new Coroutine to perform some async tasks
+
+
+* LaunchedEffec :
+  ----
+   - Same as initState() in Flutter Stateful Widget
+     LaunchedEffect is same in Composable Function

@@ -1,0 +1,82 @@
+https://developer.android.com/reference/kotlin/androidx/lifecycle/ViewModelProvider.Factory.html
+
+https://developer.android.com/guide/topics/resources/string-resource#formatting-strings [Formatted Strings]
+
+Remember : 
+  
+  ViewModel is created Implicilty by Android Kotlin. If you want to create custom Constructor then need
+  to use `Factory` Pattern
+
+* ViewModel factory 
+  ----
+    -> A class that knows how to create ViewModel.
+
+* Observable Fields :
+  ----- 
+
+* Transformations (esp for LiveData)
+  ---
+    ref : map -           https://developer.android.com/reference/kotlin/androidx/lifecycle/Transformations#map(androidx.lifecycle.LiveData,%20androidx.arch.core.util.Function)
+          switch map -    https://developer.android.com/reference/kotlin/androidx/lifecycle/Transformations#switchMap(androidx.lifecycle.LiveData,%20androidx.arch.core.util.Function)
+          mediators map - https://developer.android.com/reference/kotlin/androidx/lifecycle/MediatorLiveDatas
+   Transformations.map()    // Map LiveData A to LiveData B
+
+* Coroutine :
+  ----
+   -> launch :
+        - launching Coroutine in some scope
+           \
+            It create Coroutine w.o. blocking current thread in the context define by the scope
+
+  * suspend :
+    ----
+    -> function can be marked suspend
+    -> such function can be called inside Coroutine that will not block others
+
+  Common Pattern :
+    -> Launch Coroutine on main/UI thread
+       \
+        that launched Coroutine will call suspend function (that may take long time to run)
+         |
+         such suspend function can launch another coroutine on diff thread (i.e say IO thread)
+          to get their work done
+
+
+  * Deferred :
+    ----
+     -> kinda coroutine job that can directly return a result
+
+        Job:
+         - cancelling &
+         - determining a state of coroutine
+
+        Deferred :
+         - await + Job
+
+  (While RetroFit request)
+   ------
+  NOTE : .enqueue() function will start a new thread 
+         So if possible then use Coroutine for lightweight task instead of seperate thread
+
+* synchronized block :
+  -------
+   -> Protect by execution from multiple concurrent thread 
+
+------
+
+ * Sealed Class :
+   -----
+     -> Need to define all sub classes in same file. So all subclasses are known to compiler at compile time.
+
+
+ * @volatile :
+   ----- 
+    -> right to this field is made immediately visible to other threads
+
+
+ * @Parcelize 
+   -----
+    annotate your class with this annotation &
+     extend your data class with `Parcelable`
+
+     To make that class Parcelable i.e (bundle & send over diff screen)

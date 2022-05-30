@@ -1,0 +1,37 @@
+* Naviagtion Controller - control switching between screens
+  
+  Navigation Host - host the current route in itself
+                  - It will keep all the routes & host the current one as per guided by nav controller
+
+
+----
+
+- Way to represent the routes :- Sealed Class
+
+navController.navigate()
+             .popBackStack()
+
+             popUpTo()
+
+
+* Passing Arguments :
+  -----
+   - Reuqired & Optional 
+   
+   NavType
+
+
+* Parcalebles :
+  -----
+   In navigation component of XML we were able to pass parcelables as argument 
+   but 
+   In case of compose it is not possible to pass parcelables as a argument in Navigation Compose
+    \
+     This is supported by third party library
+       (library from rafel)
+
+  Rafael Library for Navigation Compose :
+  ------
+   -> uses Navigator  (DestinationNavigator)
+              \
+               navigate()

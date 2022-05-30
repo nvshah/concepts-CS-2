@@ -1,0 +1,28 @@
+
+
+* nan 
+
+  is the only object which when compared with itself always gives false 
+  i.e float('nan') is the only object that do not get compared to itself.
+
+* shell inn subprocess :
+  ----
+   use shell = true
+
+* fetching a range & list or array is sorted :- then use -> bisect module
+
+* To get the info regarding any function call in python you can usen :- cprofile.run 
+
+* Use not not x instead of bool(x)
+
+--------
+
+=> 0 & -0 are same object ie integer 0 & -0 are same 
+   but 0. & -0. are not same object
+
+=> decimal.localcontext -> to change context settings for decimal module
+             \
+              -> context manager
+
+
+

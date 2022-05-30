@@ -1,0 +1,7 @@
+nfn -> const function 
+dar -> destruucturing array assignment 
+dob -> destructuring object 
+impr -> import react 
+imprn -> import react native
+anfn -> anonymous function 
+rnstyle -> style sheet

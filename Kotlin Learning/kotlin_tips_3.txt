@@ -1,0 +1,103 @@
+* Apps do not have Internet Conncectivity/Permissions by default
+  
+  soln :- androidmanifest file
+         <uses-permission android:name="android.permission.INTERNET" />
+
+  PERMISSIONS : Android Manifest file.
+
+* Parcelize the data class
+   -> use kotlin android extension
+    
+      @Parcelize
+
+* Serialize the Custom Object :
+   -> extend class Serializable
+
+* To Check if lateInit variable is initialized or not ??
+ -> 
+    ::i.isInitialized     //`i` is the lateinit variable
+
+
+* Thread Safe Initialization :
+  ------
+   -> You can make initialization thread safe by wrapping it into `synchronized` block
+
+* Smart LiveData
+  ---
+   -> LiveData is smart, so it will only work when Activity/Fragment is Listening. 
+
+=> You need to use scope.launch{}, to start a coroutine (so that task can be carrie out in bg thread)
+
+
+* require context somewhere :
+  ---------
+   -> use `requireContext()`
+
+
+* require activity reference :
+  ---------
+   -> use `requireActivity()`
+
+
+* to get intent reference :
+  --------
+   -> use `intent`
+
+
+* back button in android fragment :
+  -----
+   -> override `onSupportNavigateUp()`
+
+       i.e navController.navigateUp() || super.supportNavigateUp()
+
+
+* compileOptions & KotlinOptions : (SafeArgs)
+  ------------------
+   -< Accessing the passed data to diff fragment 
+
+      {FragmentName}Args  -> Created automatically when generatednor define args for fragment 
+
+      use those arg in fragment class "
+         `by navArgs<{fragName}Args>`
+
+         Eg : private val args by navArgs<{fragName}Args>()
+
+
+* navigate between Fragments :
+  ----------
+   -> you need action 
+      \
+       action can be get by 2 way 
+
+         1) R.id.action_from1-to-2
+             \
+              Used when no argument needs to be passed 
+
+         2) FragmentDirections.actionFrom1To2()
+             \
+              Used when need to pass safe arguments between screens/fragments/activity
+
+
+* menu - resource :
+  ------------
+   <menu></menu>
+
+   To enable it use 
+      -> `setHasOptionsMenu(true)`
+      -> override `onCreateOptionsMenu()`
+
+* AlertDailog :
+  ---------
+   AlertDailog.Builder()
+
+
+* ViewPager :
+  -------
+    -
+
+* SharedPreferences :
+  --------------
+   
+
+
+    

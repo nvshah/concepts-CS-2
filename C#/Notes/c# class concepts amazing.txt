@@ -1,0 +1,83 @@
+https://www.dotnettricks.com/learn/csharp/understanding-virtual-override-and-new-keyword-in-csharp
+
+Entire c# tutorials :
+  https://dotnettutorials.net/lesson/string-in-csharp/
+
+  https://csharp.net-tutorials.com
+
+
+C# algorithms :
+  https://www.csharpstar.com/csharp-algorithms/
+
+Dot Net : (RoadMap)
+  https://github.com/MoienTajik/AspNetCore-Developer-Roadmap
+
+LINQ :
+  https://github.com/dotnet/try-samples/tree/main/101-linq-samples/src
+
+
+Best Articles : (tutorialsteacher.com)
+
+  Boxing & Uboxing :
+    https://www.tutorialsteacher.com/articles/boxing-unboxing-in-csharp
+  String to int :
+    https://www.tutorialsteacher.com/articles/convert-string-to-int
+
+  Take input of choice type 
+    https://www.codevscolor.com/c-sharp-read-float-inputs
+
+
+  Nullable Types C# :
+    https://csharp.christiannagel.com/2018/06/20/nonnullablereferencetypes/#:~:text=NET%20guideline%20specifies%20that%20an,to%20get%20rid%20of%20it
+
+  String Builder :
+    https://docs.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=net-5.0
+
+    
+----------------------------------
+
+ Microsoft docs 
+
+  overall -> https://dotnet.microsoft.com/learn
+
+  DotNet tutorial 
+     https://docs.microsoft.com/en-us/learn/browse/?products=dotnet
+
+  DotNet Collections Tutorial 
+     https://docs.microsoft.com/en-us/users/dotnet/collections/2md8ip7z51wd47
+
+    
+ 
+
+Shadowing & local variable init under methods  :
+--------------------------------
+
+C# -> param array is alternative to varargs in java
+
+
+
+Boxing in C# vs Java 
+---------------
+ Int? -> Boxed in c#
+ Integer -> Boxed in Java
+
+
+Compose Formatting vs String Interopolation :-
+----------------
+
+StringBuilder :
+------------
+ -> dynamically sized string 
+     -> Initial Capacity - then doubles - to max Capacity
+        doubling happens at runtime when required 
+
+        Once maxCapacity reached Exception is thrown
+
+
+* default() 
+  -------
+   get initial value for type
+   Eg default(Int32)
+
+
+

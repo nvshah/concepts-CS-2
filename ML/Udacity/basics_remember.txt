@@ -1,0 +1,12 @@
+* Nearly all machine learning algorithms operate on data as numbers or sequences of numbers
+
+* True or false: Loss functions help us determine when to stop training a model.
+
+* Use vector operations whenever possible (i.e numpy & pandas)
+    = make computation faster
+
+---
+math
+----
+=> Great job! When finding the probabilities using a continuous distribution, 
+   the probability of obtaining an exact value is zero

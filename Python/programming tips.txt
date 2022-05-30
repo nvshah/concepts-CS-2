@@ -1,0 +1,127 @@
+* To get max int value in python -> sys.maxint
+         min int value in python -> -sys.maxint - 1
+
+
+* dis.dis()
+  
+  -> dis() expose a readable version of the Python bytecode 
+     allowing the inspection of the low-level instructions 
+     that the Python interpreter will use while executing the program.
+
+
+* Lambda, Closure & Evaluation time 
+
+  -> tip = pass free variable as argument to lambda inorder to avoid inconsistency
+
+* If you are maintaining diff namespace in same python file/module :-
+   then to get the names from root file level from nested namespace :-
+     Use below :-
+       from __main__ import obj_name
+
+
+* you can use `pdb` module for debugging purpose.
+
+
+* list(collection) related tips :
+  ---------------------------
+
+  list comprehension is better compare to other HOF.
+
+
+  -> list slice assignment is better than normal assignment :-
+    
+     1) insert via slice 
+     2) inplace list modification via slice 
+     3) entire list assignment via slice 
+
+     for list -> range is best, 
+                 comprehension  
+                 append
+                 concat   (+)
+
+   -> list comprehension is twice as fast as a for loop with an append operation
+
+   * List assignment inplace vs new :
+     -----------
+
+
+* Tuples & Dict & Size :
+  ----------
+   -> tuples takes less size than dict
+
+
+* itertools islice :
+  -----------
+   Note eventhough islice() provides you sliced values as asked, it's complexity is linear from 0 -> end 
+   Eg 
+      l = (100 elements)
+      you asked for 10 -> 13
+
+      Here it's complexity will not be only 4 but 0 -> 13 i.e 14 instead
+
+
+* Python equivalent of tic-toc from matlab for timing :
+  ------
+   ref -> https://stackoverflow.com/questions/5849800/what-is-the-python-equivalent-of-matlabs-tic-and-toc-functions
+
+   1) timeit()   // for small LOC 
+   2) time.perf_counter()  // for medium 
+   3) time.time()    // for any
+   4) time.clock()   
+
+
+* f-string :
+  -------
+   -> !s is applied before other string formatting  (i.e in Conversion)
+
+* If you want to compare 2 floats exactly then :- use Decimal library
+   - Decimal stores number as string
+
+* Use enumerate() when you want indices along with element while looping
+
+* perf_counter :
+  ------
+   time.time() is not as accurate as time.perf_counter()
+
+* clock() :
+  ----
+   time.clock() can also be used to track down time 
+
+* sys.getsizeof() do accounts the size of sub-objects
+
+-> generators are more readable & simplier than List often times
+  (when used with yield Statement)
+
+
+* lru_cache decorator  problem :
+  --------------
+   -> It cannot cache the named argument beware of their order passed as an argument  
+
+
+* useful Python functions :
+  ---------------
+   -> map(), filter(), reduce()
+   -> itertools : accumulate(), takewhile(), chain(), compress(), count(), permutation(), combination(), product()
+   -> collections : namedtuple, Counter, deque, frozenset, defaultdict, OrderedDict
+   -> math : log(), floor(), ceil(), round()
+   -> sys : maxsize, argv, getsizeof()
+   -> file: 
+   -> pathlib: 
+   -> os : 
+   -> dict : setdefault()
+   -< heapq : heapq
+   -> time: time(), clock(), perf_counter()
+   -> keyword : keywrod.kwlist
+   -> operator : operator.attrgetter(), itemgetter()
+   -> timeit 
+   -> functools : reduce, lru_cache, 
+
+
+* useful python concepts :
+  -------------
+   - circular references.   // `...`
+   - Pattern Matching
+    
+    
+
+        

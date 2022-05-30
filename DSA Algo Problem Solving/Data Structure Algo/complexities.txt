@@ -1,0 +1,52 @@
+* Constant time Complexity 
+
+2) Logarithmic Complexity : 
+     - Growing very slowly
+
+     Eg Divide & Conquer
+
+3) Linear Growth
+
+4) Pseudo Linear Growth :
+    - n * lg(n)
+    - Eg Merge Sort, Quick Sort
+
+5) Quadratic Time :
+
+
+6) Exponential Growth :
+     - extremely dangerous
+
+7) Factorial
+    - faster than exponential
+
+8) pow(n, n) 
+    - worse of all
+
+_________
+
+* pow() & log() are used in correspondence to each other 
+   \
+    pow can be derived using log() in Logarithmic time
+    pow & log are inverse of each other in the sense
+
+
+----------
+
+* Amortized Complexity :
+  -----
+   -> Such kinda complexity arouse when memory is full & need more memoru allocation 
+      (so not often but once in a while kind of complexity)
+
+   All the basic DS such as Linked-List or array or dict will always keep some empty slots 
+   So that they are not run out of empty place 
+
+   & whenever slots goes out of needs, new memory with more size (normally double of size)
+   is allocated & all the old contents is transfer to new one (created)
+   The overhead reuqire for such thing is known as amortized complexity
+
+
+* Hash & String :
+  ---------
+   Given String of length n :
+     - Computing hash(s) takes O(n) time as computing hash of individual character itself

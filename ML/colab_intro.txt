@@ -1,0 +1,45 @@
+To use any file store inside your drive (i.e csv)
+  
+  -> from google.colab import drive
+
+     drive.mount('/content/grive')  // This will fixed signature for any type
+
+
+Q How to make table of content ?
+ -> 1 Create a new section 
+    2 add `#` before 
+    
+    Heading will appear in table of content
+
+
+* If any package is not avilable from Google Colab (pre-installed)
+  the you need to install it by yourself
+
+  -> !pip install distance   // distance module is not available directlys
+
+
+* Load the dataset into Google Colab 
+  
+  1) from google.colab import files 
+     files = files.upload()
+
+  2) From google drive
+
+     from google.colab import drive
+     drive.mount('/content/drive')
+
+     // it will ask for authorization Token
+
+     To see content of drive data :- !ls
+  
+  3) Wget extension  (linux Command)
+
+
+* Table of Content 
+  ---
+   -> 1) Code Snippet Prints
+      2) Files 
+
+      You can add section to your colab nb so that you can jump directly to particular section
+
+    

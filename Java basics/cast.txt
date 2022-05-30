@@ -1,0 +1,11 @@
+=> java supports & working on Unicode values by default
+
+
+When performing arithmetic operations, Java internally promote to widening conversion if required
+  i.e (implicit conversion)
+
+  Eg byte a = 500
+     byte b = 400
+     int c = a * b / 20  // here a * b is promoted to int 
+
+  character can be implicitly converted to integer //Automatic Type Conversion

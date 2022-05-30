@@ -1,0 +1,10 @@
+* Static vs Dynamic 
+* Memory management 
+* OOPS concepts
+* Generic Programming  
+* Functional Programming  // Delegates
+
+
+* Polymorphism 
+    - Dynamic Binding
+    - function Pointer

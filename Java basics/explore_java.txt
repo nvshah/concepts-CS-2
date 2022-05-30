@@ -1,0 +1,33 @@
+https://github.com/google/guava
+
+https://howtodoinjava.com/java8/intstream-examples/
+
+https://www.baeldung.com/kotlin/java-8-stream-vs-kotlin
+
+[LazySeq] https://nurkiewicz.com/2013/05/lazy-sequences-implementation-for-java-8.html
+
+[Streams Lazy] https://www.logicbig.com/tutorials/core-java-tutorial/java-util-stream/lazy-evaluation.html
+
+[treeset]  https://www.cosmiclearn.com/kotlin/treeset.php
+
+Java Articles : 
+  https://howtodoinjava.com/java-array/   [Good]   <- Best to learn Java !!
+
+  https://techvidvan.com/tutorials/static-and-dynamic-binding-in-java-differences-and-examples/
+
+  https://www.cosmiclearn.com/kotlin/treeset.php
+
+  [SimpleNerd] https://simplernerd.com/java-dynamic-parameters/ 
+
+  [BaelDung]
+
+* Library : 
+  ------
+   Collection, Guava
+
+   Streams (IntStreams)    // Same as Iterator in python
+
+   TreeSet                 // Data Structure used to maintain set in stored order
+
+
+

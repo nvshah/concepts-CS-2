@@ -1,0 +1,7 @@
+* Refactoring :
+  ----
+
+  1) All the classes, variables and functions are clear and self-explanatory
+  2) All your classes have just one responsibility (files with 700+ lines are often a danger sign)
+  3) Concrete implementations of classes are decoupled from your domain logic 
+     (the core of your app's logic shouldn't depend on any libraries for example)

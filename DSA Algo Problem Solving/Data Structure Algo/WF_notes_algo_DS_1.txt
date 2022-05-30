@@ -1,0 +1,107 @@
+ref :- 
+
+
+[Indexed PQ] https://github.com/williamfiset/Algorithms/tree/master/slides/datastructures/priorityqueue
+
+-------------------------
+
+* Union & Find :
+  ----------
+   Idea : Magnets
+
+   Application : 
+     - Minimal Spanning Tree
+     - Redundant Connection
+       
+
+  Path Compression :
+  ---------
+
+
+* level Order traversal (Bfs) :
+  ------------
+   -> BFS goes in congruence with Queue
+   -> So iteration is preferred over Recurrsion for Level order Traversal (BFS)
+
+
+* Column Order traversal (DFS) :
+  ---------
+   -> DFS goes in congruence with Stack
+   -> & so Recursion is preferred for DFS traversaal
+
+
+* Fenwick Tree (Range Query) :
+  ---------
+   -> Better for range sum 
+
+   -> You cant update the fenwick tree structure 
+
+
+* Suffix Array :  
+  ---------
+   -> To find the Unique possible substring of String 
+   -> To find the LCS (Longest Common SubStr)
+   -> To Find the LRS (Longest Repeated Substr)
+
+* Balanced Binary Tree :
+  ---------
+   -> Advantage : Logarothmic Height is minimal as possible 
+   -> Tree is much Squashed
+
+   Tree Invariant :- Constraints that must get satisified for BBST 
+
+   Tree Rotations :- 
+   ---
+    - After Rotations, Invariant must be satisified
+
+   Doubly Pointers for each node :-
+      - to left child, right child, Parent as well 
+
+
+* AVL tree :
+  ------
+   Its a Balanced Binary Search Tree
+   - Any node possess some balance factor :- {+1, 0, -1}
+   - if its +2 or -2 then we need to ReStructure AVL tree (s.t Tree InVariant is maintained)
+
+
+* Indexed Priority Queue :
+  ---------
+  ref :- https://github.com/williamfiset/Algorithms/tree/master/slides/datastructures/priorityqueue
+
+   -> Help to manage the Priority queue with HashTable + Array + Key-Index Way
+   -> Any Operation on Indexed Priority Queue 
+      Will required associated Key Index (ki) of a Particular Key (k)
+
+   Priority Queue :
+    ---
+     - Simple to implement using array 
+     - If we need to remove node then we have to do search for it 
+
+     vals :- values array key -> index & value -> node val
+     
+     [Position Mapping]
+     pm :- array mapping for Keys_index -> Node pos in Binary Heap 
+      
+     [Inverse Mapping]
+     im :- inverse mapping for node pos in heap -> node val & node key_idx
+
+    -> vals array will remain constant (during heapification)
+    -> im & pm will change (swapping will take place) during heapify
+
+
+    Removal :
+    ----
+     -> Logarithmic time complexity, since node pos lookup is in constant time
+     -> O(logn)
+
+    Polling (Popping Root) :
+    ---
+     -> is also O(logn)
+     -> Sinnce node position lookups are O(1)
+
+    Update :
+    -----
+     - O(logN)
+     - Constant time O(1) to finnd where Key is !
+     - O(logN) time to update Key-Val Pair in Heap

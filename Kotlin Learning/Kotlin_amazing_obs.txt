@@ -1,0 +1,7 @@
+getter :   (Why ?????)
+------
+    INTERESTING -> for (object i.e singletone|companion)
+       If you use val for getter property then it's fine 
+       but If you use var for getter then it must be initialized
+
+

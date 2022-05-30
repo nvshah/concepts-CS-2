@@ -1,0 +1,46 @@
+1) multiple assignment
+2) comprehension
+3) f string
+4) Object Multiplication (i.e repetition)
+5) Inline ternary condition
+6) zip 
+7) unpacking vs extended unpacking
+8) *args & **kwargs and splat operator (*, **)
+9) For Else & While Else
+10) sort by key
+11) itertools   {accumulate, chain, compress}
+
+12) String Interning
+13) Memory Management (Heap/Stack/Ref Counter/Circular Reference)
+
+
+
+-------------
+
+import this 
+import antigravity
+
+--------------
+
+* While checking None -> do check `is None`
+
+* string `startswith` & `endswith` instead of slice & compare 
+
+* Function Arguments & Mutability :
+  ------------------------
+   -> When any function param has default mutable param, it will persist different function call 
+      & will point to same mutable object every time if any modification made on that mutable object
+
+      But If There is any immutable param, then it cannot be modified inplace & thus no risk of sideeffect
+
+   So beware whilst using mutable default parameter.
+
+* use defaultdict whenever code requires.
+  use setdefault() whenever necessary 
+
+* Use enumerate()
+
+* Use !r or %r for repr() of obj in string formatting
+
+* Use time.time() to get system time   // Note it will give number of seconds pass since now.
+

@@ -1,0 +1,35 @@
+* List analaysis
+     http://www.openbookproject.net/books/pythonds/AlgorithmAnalysis/Lists.html
+
+
+* Emphasis Comprehension when possible
+* Use list, dict, set comprehension whenever possible.  <-- Pythonic Way
+
+
+* List :
+  ----
+   1) list inplace modifications :
+      
+      Use slice if possible i.e [:], [2], [2:], etc...
+
+   2) list iterate & mapping 
+
+      use comprehension instead of append() or concat via + 
+
+   3) insert at some position :
+     
+      again use [i:i] instead of insert()
+
+   4) list assignment from any iterable : (Use Extended Unpacking)
+      
+      *l, = iterable 
+
+   5) pop() vs pop(0) :
+      
+
+* tuples :
+  -----
+   -> canonicalized by default by python i.e (1,2,3) is (1,2,3) => true 
+       i.e same tuple object is shared by    
+
+      Under hood tuple uses free-list to track pointers to shared tuple

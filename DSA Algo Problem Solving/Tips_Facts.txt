@@ -1,0 +1,77 @@
+
+* Custom Data Structure & GC :
+  -----------------
+   -> When you implement a data structure of your own, then do remember to deallocate memory 
+      (c/c++) to avoid memory leaks 
+
+      Scenario :-
+        Let say Stack, POP operation 
+           -> the popped out object must be made null, so that it can be picked up by GC (java)
+              asa no one is referencing it.
+
+
+* Pre-Allocate Memory :
+  ---------------
+   -> If memory required is known earlier then don't do those at run time.
+      As it may incur a optimization 
+
+
+* When given range from 1 -< n :
+  ------
+   -> Use Cyclic Sort
+       Eg - find missing number
+
+[n largest or n smallest]
+* Use HeapQ when need to find n largest or n smalleset elements
+  (NOTE :- you can also use BST & Stack & Traversal Technique such as inorder)
+  [Infact you can utilise any Tree based algorithm as well]
+    
+    - techniques :- heapq, quick-sort logic of partitioning
+
+  => Whenever you want something like nth smallest or kth smallest from tree :
+      then instead of using recursive approach its better to use iterative approach if possible 
+      because We do not require To Traverse all node in tree & want to break inbetween
+
+
+* Use Bucket Sort like technique for Counter kinda thing & when the values are bounded
+
+* Use backtracking in case of Tree like problems
+
+* pow() & log() are used in correspondence to each other 
+   \
+    pow can be derived using log() in Logarithmic time
+    pow & log are inverse of each other in the sense
+
+
+* Linked List - Middle :- using slow & fast pointer
+
+* backtracking Problem  :- You commonly undo or reverse your decision
+
+* Range Queries :
+  --------
+   -> If you want to find the sum of sub-array 
+      you can consider finding the prefix-sum first
+
+      Then you can find any sub-array sum in constant time
+
+* Recursive vs Iterative :
+  -------
+   User Recursion only when its needed ie When you want to utilise the recursive call results
+   if you are not going to utilise the Recursive Call Results & Just pass through all return statement
+
+   then its preferred to use Iteration
+
+
+* Dynamic Programming :
+  --------
+   -> You can have entire Matrix as DP 
+      or
+      You can have hash-set where matrix coordinates corresponds to cell val
+
+
+* For hash-map :
+  ----
+   -> use large Prime No as size of hash-map array so that hashing becomes efficient
+
+   - Inorder to make Hashing efficient whilst chaining 
+     use inital size as Large Prime Number (ie such as 769)

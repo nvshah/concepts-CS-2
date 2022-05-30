@@ -1,0 +1,225 @@
+* ui & controller ;
+  --------
+   XML & code need something between to communicate with :-
+   & that is id of views in xml 
+
+* fragments :
+  --------
+   - portion of screens, lighter than activities
+   - layouts that can be replaced inside container
+
+
+* Passing Data between Activities ;
+  ---------------
+  //Pass Data
+
+   Intent().also{
+     it.putExtra("name1", value1)
+   }
+
+  //Get Data 
+
+   intent.getStringExtra()
+         .getIntExtra()
+  
+    Serializable :
+    -----------
+    => Inorder to pass custom Object extends custom object with class -> `Serializable`
+
+    `intent.getSerializableExtra() as T`
+
+* Permissions :
+  --------
+   -> Access_Coarse_Location : permission of location in foreground of activity/app only.
+
+   `ActivityCompat.checkPermision()`   //method that gives status
+
+   Permissions To peek from :- `Manifest.permision.*`
+
+   => requestCode : used to differentiate between several requested permissions 
+
+
+* Alert Dialog :
+  --------
+    AlertDialog.Builder()
+
+
+* RecyclerView :
+  ---------
+
+   NOTE ;- If you add new element to your list dynamically then use 
+
+            adapter.notifyItemInserted(position)   // This will not rebuild entire recyclerview
+
+
+* fragments :
+  --------
+   -> Light Weight 
+   -> Static & Dynamic Fragment (i.e container that can add remove replace views in it.)
+
+   => In Fragment the views are created after onCreate() is called.
+
+   TIP :- pass Id of View in Fragment Constructor (that will do inflating of view for us)
+
+         Eg class FFragment: Fragment(R.layout.fragment_F){}
+
+
+  FrameLayout :
+  ---------
+   -> Can help to achieve dynamic fragment 
+   -> display something at a single time.
+   -> Used as Container for Fragment
+
+   -> Layout that has only 1 child ata a time (ie alike Container)
+
+* Nav-Graph :
+  -----
+   - The purpose of Nav-Graph is to define the transition between our fragments 
+     i.e we can define from which fragment we can navigate to which fragment !
+
+  
+* Swipable Views :
+  -------
+
+   1) TabLayout
+   2) ViewPager2
+
+   Connect TabLayout with ViewPager2 :- 
+      `TabLayoutMediator(tabLayout, viewPager){tab, pos -> }.attach()`
+
+   tablayout.onTapSelectedListener()
+
+
+* Shared Pref :
+  -----------
+    commit()  -> will put chnages synchronously, hence blocking main & UI thread 
+    apply()   -> will do same task as commit() does but asynchronously [ not block main thread ]
+
+    NOTE - use shared pref for small data only such as 
+            App Settings, Game info, Walkthrough Config Info
+
+
+* Notifications :
+  -----------
+   - set Notification behaviour with channel
+   - use NotificationCompat to create notification for that channel
+      \
+       get system service of notification manager
+        (We told another app to show notification pass through it)
+
+     { channel id, channel name, }
+
+     before oreo - no notification channel creation required.
+
+     Tip -> 
+      -- 
+      // Check current version of android OS 
+      Build.VERSION.SDK_INT >= Build.VERSION_Codes.O   //Oreo here
+
+    NotificationManager
+
+    --> get system service :- `getSystemService()`
+
+    NotificationCompat.Builder()   // create notification for particular channel
+
+
+  So here as mentioned earlier we are using system service and sending notification to other 
+  app so that it can show it 
+
+  pending Intent :
+  -------------
+   -> Allows another app to execute code inside our app.
+
+   s1) - create our own Intent()
+   s2) - create pending intent -> TaskStackBuilder.create(this).run{
+     addNextIntentWithParentStack(intent)
+     getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT)
+   }
+
+    addNextIntentWithParentStack(intent)   // allows us to fallback to intent when back button is pressed
+
+
+* Intent service :
+  --------- 
+   -> Continue to service even when app is minimzed (i.e Work in Background)
+   -> It will work on diff thread & not on UI/Main Thread
+   -> If you want to use mutlithreading then you cannot use intent-service for that
+
+   -> IntentWork Queue  // service will be processed 1 intent at a time.
+
+   IntentService (extend this class)
+
+  Que -> To interrupt current Thread :-
+        \
+         -> Thread.currentThread().interrupt()
+
+
+  To tell our app that we have service & we are using it :-
+    AndroidManifest.xml
+
+    create `<service></service>` after activity tag
+
+
+ NOTE -> Thread.sleep() // can throw InterruptedException
+
+   startService()   // is used to start the Intent Service
+
+
+* Service :
+  ---
+   IntentService will run in Seperate thread 
+    but IntentService wont support mutlithreading 
+
+   Service will support mutlithreading but It will run in main thread
+   So you should manually start new Thread 
+
+   We will start Service with some intent
+
+   Tip :-
+          use Thread{}.start()  to start service with heavy logic as Service by default run in main thread
+      
+
+   => Service will keep running until it's destroyed by System or itself
+      IntentService will destroy automaticaaly once onHandleIntent() is completed
+
+
+* BroadCast Reciever :
+  -------------
+   -> When any broadcast message is broadcasted by the android device system 
+      Eg Aeroplane Mode On Off
+         
+         -> You can listen such updates via BroadCastReciever()
+            
+            
+* Foreground Service vs background service :
+  -------------
+   Foregrounnd :- Notification
+         \
+          User is actively aware about the Service Running 
+          - cannot be killed by Android system 
+          - like activity inn foreground 
+    
+
+* Notification Channel :
+  -----
+   - To shown Notification 
+
+
+* Pending Intent :
+  ------
+   -> Intent is meant for communication between service & Activity 
+   -> Pending Intent is intent that can be started later
+
+   - FLAG_UPDATE_CURRENT
+
+* Implicit Intent :
+  ----
+   -> No components is provided explicitly
+      instead System recognizes the component itself to show up for intent 
+  
+   - Eg Opening Web Url (WebView)
+
+  Explicit Intnent :
+  ---
+   -> Component is required to be provided
+   - eg Navigation between pages 

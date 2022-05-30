@@ -1,0 +1,12 @@
+[regex ref] https://www.regular-expressions.info/refext.html
+[Python regex] https://www.regular-expressions.info/python.html
+
+[Escape Characters] https://pythonexamples.org/python-escape-characters/#10
+
+* Grouping & backreferencing :
+  ------------------
+   Grouping :-
+     Named  :-  (?<name>content) or (?P<name>content)
+
+
+   If else :- (?(if)then|else)

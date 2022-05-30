@@ -1,0 +1,18 @@
+1) Dependency Injection & Abstraction :
+   -----
+    Use DI ie locator to deal with which impl instance to create based on some 
+    tags bool set 
+    ie 
+    Let Service decide the impl-choices
+
+    but the consuming part ie Business Logic or Presentation should direct consumme that 
+    service via single name regardless of underlying complexities ie impl-agnostic 
+
+
+2) provider setup dart file 
+   ------
+    providers can be segregated into 3 categories 
+      \
+       - independent-services   // API 
+       - dependent-services    
+       - uiConsumableProviders

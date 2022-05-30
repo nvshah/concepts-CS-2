@@ -1,0 +1,32 @@
+* Tree
+------
+  DFS-BFS 
+
+
+* Inorder Traversal :- Sorted Order  (from BST)
+  PostOrder Traversal :- Reversed sorted order (from BST)
+
+  Reverse Inorder Traversal :- ie Decreasing Order (from BST)
+
+* Topological Sort :
+  --------
+   DAG :- Directed Acyclic Graph
+
+   => PostOrder DFS = Topological Sort :- Gives you Reversed sorted string/result
+
+   Visit 
+   Path
+
+* Backtracking :
+  -------
+   -> In a Decision Tree when we take any decision & follow path & cannot find answer 
+      then we actually revert our decision (& backtrack) to exploree new decision
+
+   -> When a choice can affect the future answers, Think something about Backtracking
+
+* Cycle Detection & Floyd Algo :
+  -----
+   - Linked List | Graph 
+   - Tortoise & rabbit (Fast & Slow Pointer)
+
+

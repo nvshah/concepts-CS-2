@@ -1,0 +1,237 @@
+=> Useful Dependecies :
+    
+    def arch_version = '2.2.0-alpha01'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$arch_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$arch_version"
+
+-------------------------------------------------------------------------------
+
+
+* What is Coroutine :
+  -----
+   -> Coroutine simplifies asynchronous programming by writting synchronous code.
+   -> lightweight thread
+
+   * suspend fun :
+    
+      tell compiler that this fun will run inside Coroutine or another suspend fun 
+
+       withContext() : 
+           requires to tell that on which thread the code should run on 
+
+
+      3 Dispacthers : 
+         1. Main - For UI thread 
+         2. IO   - for disk  
+         3. Default - CPU-intensive task & bigger computation
+
+    * Suspend : 
+        =  corresponding computation can be paused, removed from thread or stored in memory
+
+
+    Eg1 Coroutine :
+
+     GlobalScope.launch{
+         //Can call any suspend fun over here in global Coroutine
+     }
+
+     * delay() :
+        ----
+         - only available inside Coroutine or suspend function
+
+* Coroutine Scope & Context :
+  -------------------
+   -> Coroutine requires some scope to run in.
+      So that scope has idea & keep track of all coroutines running under it.
+
+   Coroutine Context :
+    ---
+     -> keep tracks of various info regarding coroutines
+        such as 
+           - Job, Dispacthers, CoroutineName
+    
+    Coroutine Scope <-> Coroutine Context
+
+    Coroutine Scope formalizes the way in which Coroutine context is inherited.
+
+    => Parent Scope & Child Scope 
+         By default Parent waits for all its child to finish
+
+    Some BuiltIn Coroutine Scope:
+
+     GlobalScope :
+     ---
+      Top level Scope
+      It exists till app closes
+      GlobalScope lives as long as app lives
+      Note : Eventhough, Fragment or activity life cycle ends, this globalscope will not disposed
+
+     LifeCycleScope :
+       = its tied to lifecycle of activiy(fragment)
+       - free/cancel itself
+       - Job cancellation
+
+     ViewModelScope :
+       = its tied to lifecycle of viewmodels
+       - free/cancel itself
+       - Job cancellation
+
+    => LifeCycleScope & ViewModelScope handles cancellation automatically  (not worry about memory leaks)
+
+     Job :
+     ----
+      -> Coroutine life cycles
+      -> It is responsible for cancellation of Coroutine 
+      -> Parent-Child relation
+
+      -> It is returned from `launch{}` method called on `scope`
+
+      Own CoroutineScope :
+       ---
+
+      kotlinx.coroutines library :
+        delay()
+        yield() 
+
+      Cancellable :
+      ---
+        job :
+         \
+          .cancel()
+          .join()
+          .cancelAndJoin()
+
+      Cooperative Coroutine :
+       ---
+        -> isActive
+           ensureActive()  //throw cancellationException
+
+           call suspending function from inside coroutine & they will do same work 
+            \
+             delay(), yield()
+
+
+      Remember :-
+        
+        When Parent cancel() -> all child will cancel()
+             child throw cancel() -> itself only will be cancelled
+                         other than cancellationException -> All sibling will be cancelled.
+
+
+      * runBlocking :
+        ---------
+         -> blocks the thread on which it is running, until the code inside it isn't completed.
+
+         -> this function should not be used from another coroutine.
+
+            Main Functions & Tests  
+
+            Note : multiple coroutines do not block each other on the thread which they are running ! 
+     
+      * WithContext :
+        -----
+         -> It's for switching the context 
+            It's a suspend fun
+            Shift the exec of bloc to diff thread
+
+            It by default checks the coroutine in which it is called is cancelled or not
+
+
+----------------------------> (Another View)----------------
+
+* Coroutine vs Thread:
+  ---- 
+   -> Executed within thread 
+   -> Coroutines are suspendable (We can suspend for sometime & resume later) 
+   -> They can switch their context (from 1 thread to another thread)
+
+   = lightweight thread with extra functionality
+
+  
+  delay() : 
+  --- 
+   - will pause only current coroutine but not entire thread.
+
+   If thread goes sleep, then all coroutines need to have stopped.
+
+
+  context :
+  ---
+   -> will decide in which thread our coroutine will start in.
+     
+      Dispatcher will dispatch in particular thread
+      ______
+
+  => start own thread insted of using {IO, Default, Main, UnConfined, etc...}
+      newSingleThreadContext()
+
+  withContext():
+  -----
+   -> We can switch context (i.e thread) in between execution (i.e same block)
+
+  runBlocking() :
+  ---
+   -> will block the thread enclosure, eventually will block sibbling coroutines
+
+  Alternative to delay() :
+        Thread.sleep()
+
+
+  Coroutines & Cancelled :
+  ----
+   -> When any coroutine job is performing its task & is cancelled in between :-
+      then if there is no any suspend task inside that job then might be that coroutine didnt
+      get time to inform about job cancellation
+
+      So we can check by simply `isActive`
+
+      if(isActive){}
+
+      withTimeout(){}  // If we dont want to cancel job manually
+
+
+  Job :
+  ---
+   -> If we want to manipulate the coroutine then only possible way is via Job that coroutine returns on creation.
+      
+      .cancel(), .join()
+
+    async :
+    ---
+     -> async{ } will return Deferred block.
+                             ________ 
+      .await()
+
+  launch vs async :
+  ----------
+   launch{}       //launch scope
+   async{}        // async scope, where Deferred object can be awaited
+
+
+   GLobalScope :
+   -----
+    -> Resources will not be garbage collected till app closes
+
+
+
+* measureTimeMillis{}
+
+
+* Thread :
+  ----- 
+   sleep()
+   interrupt()  // after thread is sleep we can use interrupt() to awake it 
+
+
+annotations :
+----------
+
+1) Volatile :-
+=> use @Volatile to mark thise field or property, which needs to be access by 
+   only 1 thread at a time 
+   @volatile will make that particula field visible to all other threads
+
+
+synchronied(){} blocks :
+-----------
+ -> allows to execute block to be executed by one thread at a time.

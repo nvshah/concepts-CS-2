@@ -1,0 +1,151 @@
+[Permission best practices] https://developer.android.com/training/permissions/usage-notes
+
+Fake rest api :- Jsonplaceholder.typicode.com 
+Wireshark - an application to monitor the network traffic
+-----------------
+
+
+* REST : 
+  ----
+   Representational State Transfer Architecture
+
+* URL vs URI
+
+  query Paramters : like function parameter  [uri?key=val&k2=v2]
+
+=> http protocol
+
+-> External Library : `retrofit`
+
+* Android JetPack Library :
+  --------------
+
+
+* retrofit :
+  ------
+   
+   s1) app-build.gradle :- in dependencies add dependency
+           1) retrofit
+           2) retrofit scalar converter
+
+   Network Layer : API that being used to communicate with Web Serivces.
+
+NOTE : RetroFit comprise of several facility for parsing common formats such as Json/XML  
+    -> RetroFit will take care of intensive tasks running in bg thread so as to not block UI Thread
+    
+     -> Retrofit will work seperately on Background Thread
+
+  IMPL :
+   ___
+    retrofit req. 2 things :- 1) Base Url (of Web Service)
+                              2) Converter (to parse response appropriately)
+
+      -> Retrofit.Builder() helps to achieve things 
+
+    enque() method
+    ____
+     -> Callback<T> lambda : handle response once available from server
+
+     => NOTE : here request is made in other thread (as it can take some time from server to respond)
+
+    
+   ** Moshi & RetroFit   (Alternative is GSON)
+      ---------------
+      -> Moshi can be used by RetroFit Converters to convert json response into kotlin objects
+        
+      s1) Create Data Class that corresponds to json Object
+      s2) Moshi object via Moshi.Builder()
+      s3) Add MoshiConverterFactory() instead of ScalarsConverterFactory()
+
+      = now we can directly expect kotlin type/objects instead of Json String. (from the API implemented for get call)
+
+      -> @GEt()
+         @Query()   // for filters 
+
+  * Coroutine & RetroFit :
+    =--
+    -> retrofit coriutine adapter  //library i.e dependency
+
+     usage :
+         RetroFit.Builder()
+            .addConverterFactory()
+            .addCallAdapterFactory(CoroutineCallAdapterFactory())
+
+     desc : callAdapter() adds ability to RetroFit create api that return something other than call class.
+
+     Eg - Deffered <- property
+
+
+    ** Deffered : (+ Retrofit)
+       -----
+        - kinda Coroutine job that can directly return a result
+
+        -> We can use await on deferred task/jobs
+            \
+             .await()  : It is non-blocking i.e it will not block any other thread exec. 
+            
+* glide :
+  ------
+    - load image 
+   
+
+* Parceling :
+  -----
+   -> In android parceling is same as sharing object between different processes.
+
+      Flattening of an object into stream of data (string bytes) is called an parcel (Same as Pickling in Python)
+
+   Parcable Interface
+   ___________
+    -> helps to & from convert for an object
+
+
+-----------------------EXTRA--------------------------ANOTHER 
+
+* Retrofit {Post req } 
+  -----
+   
+   @FormUrlEncoded :
+   ----
+    -> Requests made with such type will have `application/x-www-form-urlencoded` MIME type
+       instead of regular JSON type in POST request
+
+       filed names in values will be UTF-8 encoded before uri- encoded 
+
+
+   Json vs @FormUrlEncoded MIME type :
+   ---------
+    ( type :- application/json )
+    json :- send req to server in form json mime type 
+    
+    ( type :- application/x-www-form-urlencoded )
+    FormUrlEncoded :- send req to server in key-val form embedded into url & seperated by `&` 
+
+
+  * HTTP headers :
+    -------
+     - mostly used to add more metadeta info in api request/response
+
+      Eg { contetn-type, session-id, authoriaztion, etc... }
+
+      We need logging-interceptor dependecy
+       
+        chain.request() 
+        chain.proceed()
+
+      client ->  OkHttpClient 
+
+      @Headers
+      _______ 
+       - When custom header for specific request 
+
+
+----> GIST 
+
+RetroFit + Type Coversion req (i.e Moshi or Gson)
+
+s-1) define SampleApi class i.e contains all api-interface methods 
+s-2) Retrofit Builder (i.e req base url + Type Conversion if any !)
+     (Make Sure Instance is Lazu Singleton, i.e api must be single source to be consumed by app)
+
+s-3) Model classes for Json/Xml <-> Data Class, likewise SETUP

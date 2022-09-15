@@ -1,0 +1,6 @@
+Python Hardware Machine Info
+--------------------------
+
+modules
+-> platform
+-> psutil, cpuinfo, wmi

@@ -11,3 +11,5 @@
 [Algorithm Analysis] http://www.openbookproject.net/books/pythonds/AlgorithmAnalysis/Lists.html
 
 [Pythonn Morsels - built in functions]
+
+[Python Projects] https://thecleverprogrammer.com/2021/01/14/python-projects-with-source-code/

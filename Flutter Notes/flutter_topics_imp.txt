@@ -7,6 +7,7 @@
 * BLOC :- Inter & Intra Communication 
 
 * Animations (Maths)
+   - Dope Animations, Lote Anmations, Implicit, Explicit
 
 * Services 
 
@@ -27,9 +28,22 @@
 
 * RxDart
 
+* Barrel Files | Library | Package
 
+* FireBase | FlutterFire
 
 -------
 
 * Ddynamic Themmeing 
 * Setting Environment (Dev, Stage, Test)
+
+* Flutter Dynamic Linking (Deep-Link)
+
+* MultiModule (Modularization)
+
+--------
+
+UI :
+
+- CompositedTransformTarget
+- LayerLink()

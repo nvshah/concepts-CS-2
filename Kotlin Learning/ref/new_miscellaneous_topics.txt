@@ -1,0 +1,8 @@
+new_miscellaneous_topics
+
+
+* Media On Android :
+  - https://www.youtube.com/watch?v=nIhkNE6B2k0
+
+* Modularization & Gradle Structure
+  - https://www.youtube.com/watch?v=TWLkswxjSr0

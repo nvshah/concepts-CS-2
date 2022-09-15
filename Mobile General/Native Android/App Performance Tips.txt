@@ -1,0 +1,30 @@
+App Performance Tips
+--------------------
+
+* App Performance Tracking :
+  ----
+  1. Google Play Console
+     - Android Vitals Metrics
+     - ANR TroubleShooting Guide to diagnose & resolve any application
+
+  2. Keep track about the loading time
+      - Android Vital can helps you to keep track about the performance & loading time !
+      |
+      -> App Startup Time (can be tracked by Android Vitals)
+
+      => Apps that loads Quickly have more business sucess (ie less startup time)
+
+  3. Frame Rendering matters (60 fps)
+     - Monitoring the performance -> HWUI rendering
+
+  4. Outdated SDKs
+     - App Security at risks
+     - stability, security & compatibility
+
+  5. Dont let your App drain your User Battery
+     - WakeLocks
+     - Excessive Wakeups
+     - Background Wifi
+       Background Network Use
+
+      => Use WorkManager to run the battery-friendly bg tasks

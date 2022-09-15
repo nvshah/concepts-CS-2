@@ -1,0 +1,12 @@
+good tricky que logical
+
+* String -
+
+- Longest Palindromic Subseq (
+
+- Wiggle SubSequence
+
+
+--------------
+
+Sliding Window + Heap + CustomSort --> https://leetcode.com/problems/maximum-performance-of-a-team/

@@ -11,7 +11,13 @@
 
 
 -----
-Advance
+Advance (ML)
    
    - SentDex
-   - Keith Galli 
+   - Keith Galli
+   - Kimberly Fessel
+
+
+------
+Builtin Func ->
+https://www.pythonmorsels.com/built-in-functions-in-python/

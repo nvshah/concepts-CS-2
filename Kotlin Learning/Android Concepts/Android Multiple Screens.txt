@@ -1,0 +1,61 @@
+Android Multiple Screens
+---------------
+
+* Forms & Factors
+
+  - Ergonomics & Proximity
+    |
+    (One Handed Task - Mobile
+     Two Handed Task - Tablet)
+
+    Proximity -> How close the device is used for Viewing
+
+  1. Comfort
+  2. Capability
+  3. Efficiency
+  4. Immersion
+
+* Approaches for Adapting :
+  ----
+  - Expand & Reorganize
+  - Combining the Content
+
+* Building BLocks :
+  ---
+  - App Bar  (Screen Controls)
+  - Navigation
+  - Body
+
+* Canonical Layouts :
+  ---
+  - Helps to figure out how to divide space on screen
+  1. List Details -> (using 2 columns)
+  2. Supporting Panel Layout (Eg Document Editing , Comments)
+  3. Feed layout
+
+  => Adding a adjacent Column
+
+=> Tablet Designs inlcude variety of inputs rather than touch gestures in mobiles
+
+
+* ------------------------
+
+* Library for Large Screen Size Form Factor
+
+- Jetpack WindowManager
+     |
+     Window Size Classes -> {Compact, Medium, Expanded}
+
+
+* Activity Embeddings :
+
+- SlidingPaneLayout
+  NavigationRail
+
+- drag-drop
+
+Gist
+1. Handle & test diff orientation
+2. Interaction with other apps
+3. Check Camera Layout
+4. Diff Inp mode (keyboard, Mouse)

@@ -1,0 +1,10 @@
+Good Practice
+------------
+
+* API Keys :
+  -> local.properties
+     BuildConfig
+
+     Dont submit it at remote (ie put in .gitignore)
+
+* Single Activity

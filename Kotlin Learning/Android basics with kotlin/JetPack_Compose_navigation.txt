@@ -3,6 +3,7 @@
   Navigation Host - host the current route in itself
                   - It will keep all the routes & host the current one as per guided by nav controller
 
+REMEMBER :- Each NavController must be associated with Single NavHost
 
 ----
 
@@ -35,3 +36,10 @@ navController.navigate()
    -> uses Navigator  (DestinationNavigator)
               \
                navigate()
+
+
+Que) What is difference between navigation() & NavHost() ??
+---
+ navigation() -> construct nested navigation graph
+
+ NavHost() -> 1 navController & holds many navigation()

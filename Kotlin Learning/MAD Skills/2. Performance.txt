@@ -1,0 +1,3 @@
+2. Performance
+
+Remember 3I's : Inspect -> Improve -> Monitor

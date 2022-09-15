@@ -5,3 +5,9 @@
 
 
 * Deep DDive into RN - Lev Vidrak ( wix engineering Tech Talks)
+
+
+* React native Apps : 4 Apps
+  ----
+  (Sonny Sangha)
+  -> https://www.youtube.com/watch?v=AkEnidfZnCU

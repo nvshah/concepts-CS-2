@@ -30,6 +30,8 @@ Top 10 useful Widgets
      \
       constraints to create responsive desings
 
+10) Flow()
+11) LinearProgressIndicator
 
 ------------
 External Package

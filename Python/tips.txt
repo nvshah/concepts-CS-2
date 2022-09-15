@@ -41,6 +41,8 @@
     instead use tuple with prior elem from left side so it will consider sorting likewise
     & move to seek right side on tie
 
+13) To {move, copy} file to diff folder use `shutil` module
+
 -------reference
 
 [Import Python Tips]  https://realpython.com/python-import/
@@ -100,6 +102,9 @@ Articles :- analytics vidhya
 
 22) To get the name of datatype of a variable :- type(vname).__name__
 
+23) We can use `vars()` to get dict out of object's properties & can use it whilst Json Encoding !
+
+24) use getpass.getpass() instead of input() if you want to hide input while entering
 --------------
 
 Python builtin frequently used 

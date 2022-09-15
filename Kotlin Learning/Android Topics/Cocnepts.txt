@@ -3,3 +3,5 @@
 
 * Custom Buttons (StevDza-San, Youtube)
 * Custom ToolBar (StevDza-San, Youtube)
+
+* App Modularization (Google Article)

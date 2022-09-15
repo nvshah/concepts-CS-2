@@ -1,0 +1,4 @@
+Tips
+
+* File Provider
+  - File Providers are a special way of providing files to your app to ensure it is done in a safe and secure way

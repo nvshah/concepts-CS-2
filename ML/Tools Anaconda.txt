@@ -1,0 +1,7 @@
+Tools Anaconda
+--------------
+ref : https://www.youtube.com/watch?v=MUZtVEDKXsk
+
+https://stackoverflow.com/questions/2812520/dealing-with-multiple-python-versions-and-pip
+
+-> For Package & Environment Management :- Conda

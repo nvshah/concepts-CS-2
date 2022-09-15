@@ -1,3 +1,8 @@
+
+=> URI is composed of 3 main things :
+   1)Scheme 2)Authority 3) Path
+
+
 REST :- API :
 ----
  -> Representation State & Resources

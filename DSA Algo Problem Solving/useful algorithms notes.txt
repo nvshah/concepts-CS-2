@@ -164,3 +164,11 @@ list of alog:- https://github.com/xizhengszhang/Leetcode_company_frequency
 
 * Kosaraju Algo :
   ---
+
+
+
+* Djikstras Algo :
+  ----
+  - It is a Greedy Algorithm
+  - needs BFS
+  - needs Queue / Priority Queue (MinHeap)

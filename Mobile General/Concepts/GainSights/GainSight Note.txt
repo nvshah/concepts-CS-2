@@ -1,0 +1,12 @@
+GainSight Note
+
+-> It's way to track & analyze the Product Utilization
+   - Track, Screen Visit, Updates of an App, Events, etc ...
+
+   - Product
+       |
+        - Channel { Mobile, WebSite, WebApp, ...}
+           \
+            -> Tag-Key associated with each Product-ChannelId
+     => Tag-Key is used to communicate between an App & Dashboard of an GanSight PX
+

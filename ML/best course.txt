@@ -20,6 +20,11 @@ Extra Other Courses
 3) Applied AI
 4) DataQuest
 
+University Best
+
+Stanford,
+University of Berkely
+
 Free -> 
 
 DataQuest.io
@@ -65,13 +70,17 @@ Youtube reference :
   
 handson :-
   CodeBasics
-  SentDex 
-  Corey Schaffer
-  Keith galli
+  SentDex     <--***
+  Corey Schaffer  <--**
+  Keith galli     <--**
   Python Engineer
   Tech with Tim
-  Kimberly Fessel (Seaborn)
+  Kimberly Fessel (Seaborn) <--**
   DataSchool
+  CampusX
+
+  NeuralNine
+  Python Simplified
   
 theory :-
   Krish Naik
@@ -80,6 +89,8 @@ theory :-
   StatQuest with Josh
   Serrano Academy
   Khann Academy
+  CampusX
+  Assembly AI
 
   Jeffrey Chasnov (Vector Calculus)
 

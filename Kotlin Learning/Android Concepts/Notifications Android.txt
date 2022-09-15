@@ -1,0 +1,107 @@
+Notifications Android
+---------------------
+ref : Stevdza Videos Youtube
+
+Overall Glimpse
+
+NotificationManager -> NotificationBuilder -> NotificationStyle
+
+------
+
+* NotificationCompat.Builder()
+  NotificationManagerCompat
+  NotificationChannel
+
+=> priority levels : matters for API levels (before & after API 26)
+
+1) Builder :
+  - needs the channel-Id
+
+    API : NotificationCompat.Builder()
+
+  - Can control level of details displayed in Lock Screen
+     -> setVisibility()
+
+  - Importance Level - decides if to notify with sound & with what intensity
+
+  - onGoing : true // will not allow to get rid off the Notification via Swiping
+
+2) Manager :
+   -
+   -> You must create NotificationChannel prior to posting any Notifications
+
+   -> Manager will notify() to device for pushback notification
+       \
+        here builder will help to create a notification
+
+      Manager can also canel() the notification
+
+-> Builder depands on Manager & Manager creates a Notification Channel
+-> Creating exisitng notification channel (same) again, performs no operations
+-> User can define what is the importance level for given channel
+
+
+* Sensetive Notifications
+  ---
+  - when locked is enabled
+
+  NOTE :-
+   You can display different content for same notification based on Screen is locked or unlocked
+   (ie concept of private & public notifications visibility)
+
+
+* Action Button on Notification & BroadCast Reciever :
+  -------------------------------------------------
+
+  Broadcast Reciever
+  -> used to recieve some kinda message from Android System (ie OS) itself or
+     some other application as well
+
+  Reciever Element :
+  - need to add reciever element inside AndroidManifest.xml file below <application> element
+
+  Pending Intent :
+  -> Notify Broadcast reciver when action is performed
+
+  - PendingIntent.getBroadcast()  // if we use Broadcast reciever
+
+
+* Notification & DeepLink
+  ---------------
+  - Trigger activity directly from Notification & open specific screen
+
+  - Pending Intent
+
+  addNextIntentWithParentStack()  // to maintain after Deep Link Navigation
+   \
+    Helps to create a BackStack
+    &
+    Which Deep Link to include whenever we open our MainActivity
+
+
+* Progress Bar & Held Notification :
+  -----
+
+
+* Direct Reply :
+  ---
+  RemoteInput.Builder()
+  NotificationCompat.MessagingStyle()  -?
+  Person
+  NotificationCompat.Action
+
+  Broadcast Reciever -> will recieve the direct reply when user send from notification
+
+  Flag -> Mutable for this functionality
+
+  There are different NotificationStyle out of which 1 is MessagingStyle
+
+  MessagingStyle
+  --------
+   USECASE :- Message recieved from specific User/Person
+
+   -> will then be defined for each Person/user
+
+  Overall Flow
+  ____________
+  NotificationManager -> NotificationBuilder -> NotificationStyle -> MessagingStyle -> Person -> Message

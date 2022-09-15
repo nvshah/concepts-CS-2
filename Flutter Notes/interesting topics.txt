@@ -22,12 +22,16 @@ To Learn :
   - ScopedModel
   - Inherited Widget
 
+  - Dynamic Link (Deep-Link) Firebase Flutter
+  - In App Notification
+
  Dart ::
   
   - mixin
   - RxDart 
   - Isolates 
   - Interface | Abstract Class
+  - Type Promotion (Auto Cast)
   
 
 Core Concepts :

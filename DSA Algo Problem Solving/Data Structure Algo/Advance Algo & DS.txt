@@ -1,0 +1,30 @@
+Advance Algo & DS
+-----------------
+
+* Bloom Filters :
+  ---
+  - Space efficient Probabilistic DS
+
+  to check if this elem is present in Set ?
+  -> bloom filter will ans `firm No` or `probable yes`
+
+  False Positive are possible -> (elem is not there but bloom filter says it is there)
+  But
+  False Negative is not possible -> (elem is there but bloom filter says its not is not possible)
+
+  Tradeoff & Probabilistic Yes
+  -> In bloom filter we've tradeoff between False Positives & Less accurate
+  -> But it consumes lot less memory (as compare to hashtable, which provide perfect ans every time)
+
+  Key point
+  => We cannot remove item from Bloom filter (ie Its never forget)
+
+  [Application]
+  - Many OS uses bloom filter for disk lookup
+  - Web Browser (like Chrome) uses Bloom Filter to identify Malicious URL !
+     |
+      -> If bloom filter returns probably Yes ans then more determined check is performed
+
+  Ingredients
+   - HashTable
+   - Bit Bucket

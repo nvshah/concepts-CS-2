@@ -12,3 +12,23 @@
 
 
 * string Resource :- helps to manage the translation of text in diff language easily
+
+* Process Death Solution :
+  1. SavedStateHandle
+  2. Persistent Storage
+
+* Don't use Android Specific dependencies in Domain Layer
+  (Eg `Context`)
+  It will restrict you from using common lang code for diff platform application
+
+
+* Context Based Packaging :
+  -> Put Models for appropriate task in corresponding package instead of one single package
+
+* To get API level  :
+  -> Build.VERSION.SDK_INT
+
+  To get all Version Codes -> Build.VERSION_CODES.S  // Example of Android 12 (ie S)
+
+* Dont Run Complex tasks directly in Service because your service also runs on Main UI Thread
+  Launch Coroutine for the same if needed

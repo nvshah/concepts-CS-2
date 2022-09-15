@@ -3,3 +3,46 @@
    -> When app is killed by android (beware its in background or foreground)
 
    saveStateHandler()   // use to remember val of state 
+
+
+* Deep Link
+  ---
+  ref : https://medium.com/androiddevelopers/the-deep-links-crash-course-part-1-introduction-to-deep-links-2189e509e269
+
+  3 types of Linking
+  1) Deep Link (with any Scheme)
+  2) Web Link (with http/https as scheme)
+  3) Android App Linking (with surity of unique Route/Destination)
+
+* Per-app lang preferences :
+  ----
+  ref : Android Developers (Youtube)
+
+  -> English is a bridge language
+
+  2 ways to change your lang settings
+  1. Device Settings
+  2. In App itself
+
+  NOTE : Both must be in sync
+
+  To declare your app supported languages
+  -> in your app `AndroidManifest.xml` file
+     add <locale-config>
+     |
+      -> This Xml-element will have list of App-Supported elements as its child nodes
+
+  -> Android X & above -> user preferences for language to an app is automatically stored per app
+     \
+      -> For this you need to set "autoStoreLocale" to true in AndroidManifest file
+         (This will delegate the Storage to androidX Pre-T
+
+  -> Migrate to runtime API :- AppCompatDelegate
+     Migrate Storage :- autoStoreLocales
+     In Device Settings :- localeConfig
+
+
+* Secure (Encrypted) Storage :
+  --------
+  Android :- KeyStore
+  IOS :- KeyChain

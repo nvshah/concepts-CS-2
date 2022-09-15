@@ -25,3 +25,18 @@
 
    normal func are better thab pos args &
    pos arg are better than kw-args
+
+
+* Concurrency & Threading :
+  ---------
+  # Cores := amount of (parellel operations) work you can do at same time
+     |
+     Eg 4 Cores :- 4 operations at same time (Parallelism) [at Low Level]
+
+  Clock Speed :- Each Core run at some speed (ie Some Operations per second)
+
+  Thread :-
+  ---
+   - some set of operations
+   - need to be assign to any 1 Core
+   - Threading is all about determining when to run diff threads on Same Core of CPU

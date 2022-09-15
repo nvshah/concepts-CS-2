@@ -24,5 +24,6 @@
              \
               -> context manager
 
+=> The json (encoding & decoding) does not ensure to preserve the order of the keys in an object (ie dictionary)
 
-
+=> Python

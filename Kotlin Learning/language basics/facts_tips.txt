@@ -25,7 +25,10 @@ https://discuss.kotlinlang.org/t/did-you-consider-to-make-inline-the-default-beh
 
    Sealed Class subclasses instances can store property whereas Enum Class Instances can't
 
-   -> Enum can't have generic type parameter while Sealed Class can 
+   -> Enum can't have generic type parameter while Sealed Class can
+
+   -> With Enum classes we deal with constants
+      With Sealed Classes we deal with individual instances
 
 * Inner class :
   ----------

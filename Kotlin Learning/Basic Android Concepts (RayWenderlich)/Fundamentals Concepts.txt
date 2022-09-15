@@ -1,0 +1,10 @@
+Fundamentals Concepts
+---------------------
+
+* Intent :
+  ----
+  - Actions, Data, Extras
+
+    Extras -> Extra Info you need to pass to perform Actions
+
+  - Implicit Intent, Explicit Intent

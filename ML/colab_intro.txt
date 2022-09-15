@@ -1,3 +1,10 @@
+
+[AAIML-Google Colab]
+ref : https://www.youtube.com/watch?v=aChJvgGjKU8
+
+https://www.youtube.com/watch?v=RLYoEyIHL6A  // Colab
+------------------------
+
 To use any file store inside your drive (i.e csv)
   
   -> from google.colab import drive

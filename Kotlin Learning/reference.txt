@@ -2,9 +2,6 @@ xml - xpath - xslt - cdata
 
 ref : https://www.educba.com/xml-cdata/
 
-
-
-
 ViewModel 
   https://medium.com/androiddevelopers/viewmodels-a-simple-example-ed5ac416317e
 
@@ -21,6 +18,7 @@ https://medium.com/@muhamed.riyas/navigation-component-the-complete-guide-c51c99
 * Philip Lackner
 * the Android Factory
 * Master Coding
+* TVac Studio
 
 * Coding With Tea
 * Fox Android

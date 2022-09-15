@@ -5,6 +5,7 @@
 * trotters (Combinatorics)
 
 * dartz (functional Programming)
+  dartx  (utilities)
 
 * freezed (data class)
 
@@ -20,9 +21,17 @@
 
 * ossa  // Multi-Threading (same as Tasks in C#)
 
+* complete_timer  // Wrapper over Timer with useful apis
+
 ------
 
 * chucker flutter (for http package)
 
 * hooked bloc
+
+* neopop
+
+* clock
+
+* freezer   // Genrates Freezed Objects from js files
 

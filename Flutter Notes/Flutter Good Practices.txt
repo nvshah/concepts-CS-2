@@ -16,3 +16,13 @@
        - independent-services   // API 
        - dependent-services    
        - uiConsumableProviders
+
+REMEMBER :-
+-> The more often you widget tree changes from 1 frame to nect frame,
+   the more it needs for Flutter to alter or change the portion of Element Tree !
+
+
+
+* File & Folder Structure :
+  ---
+  - Barrel Files folder to expose (export) all private libraries or dart files

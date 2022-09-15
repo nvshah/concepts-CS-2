@@ -1,0 +1,26 @@
+* DP :
+
+- Max Prod Word Length (https://leetcode.com/problems/maximum-product-of-word-lengths/) 
+  [combinations, starmap, filter, reduce, ord, bit]
+
+- number of matching subsequences (https://leetcode.com/problems/number-of-matching-subsequences/)
+  [bisect, defaultdict]
+
+- reduce array size to half (https://leetcode.com/problems/reduce-array-size-to-the-half/)
+  [heapq, Counter]
+
+- number of pairs of interchangable Rectangles ( # https://leetcode.com/problems/number-of-pairs-of-interchangeable-rectangles/)
+  [Counter, starmap, comb, truediv]
+
+* Logical
+
+- Maximum Area of Piece of Cake after Vertical/Horizontal Cut
+  (# https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts)
+  [sorted, max, starmap, pairwise]
+
+- Wiggle SubSequence
+
+- Task Scheduling
+  (https://leetcode.com/problems/task-scheduler/)
+  [max-heap, queue]
+

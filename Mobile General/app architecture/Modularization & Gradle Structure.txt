@@ -1,0 +1,85 @@
+Modularization & Gradle Structure
+----------------------------
+
+ref :-
+https://www.youtube.com/watch?v=TWLkswxjSr0
+
+
+:login  (Module)
+apply plugin: 'com.android.library'   // defines this module dependency from Google Android Repos
+
+implementation project(':login')   // get sibbling module into our code base
+
+----  
+
+TIPS ->
+
+- Dont create 10 to 20 modules for 1 single project to pull up 1 thing
+
+- Define your dependencies in one place (ie dependencies.gradle)
+- Assure dependency versions are same across all modules
+------------
+
+=> Gradle talks more about Projects rather than Modules (ie It trigger Project build)
+
+* Monolith :
+  ---
+  - Everything Chaotically cluttered together
+  - Messy & hard to change afterwards
+
+* Microservices in Android App (need to be emulated)
+  - clear API & clear Responsibility
+
+  - always try to aim things being independent more & less cross-functional dependencies
+
+-> Libraries dont have to be external
+
+* settings.gradle file
+  ---
+  - All module's gradles are included (ie registered) in settings.gradle file
+
+* New Module :
+  - will have its own plugin & dependencies
+  - Keep it in same repository but move to seperate folder
+  - need its own build defin & gradle file
+
+  Bare Minimum Module files
+    -> build.gradle, src folder
+
+  NOTE
+    this module needs not to be android application, it can be java or kotlin librray
+    Eg
+    apply plugin: 'com.android.application'   // Android Dependency for this modlue if needed
+    apply plugin: 'java-library'  // java library
+    apply plugin: 'kotlin'  // kotlin library
+
+    -> This way unit testing will be easy
+
+* Android Studio -> Refactor -> Modularize
+
+
+* How to utilise the Module in our main app :
+  - implementation project(':moduleName')
+
+* You can define lot of Manifest Scattered around diff module & then merge together to one final
+  application Manifest
+
+* Nice Suggested/Recommended Way :
+----------
+  App module -> Wrapper Module for your Base Code
+  base Module -> All code related to your Android App
+
+
+* dependencies.gradle vs build.gradle :
+  ---
+  - If you want some dependencies being shared by multiple modules
+    then you can define them in `dependencies.gradle` file
+    So
+    that later module can use them via stating library impl in their `build.gradle` file
+
+
+-> Only define dependencies that are special to that module
+   otherwise
+   Get all common dependencies in some `base-library.gradle`
+
+   & use them via apply plugin:

@@ -36,3 +36,19 @@
 * absolute & relative import related package :
   -----
    - always_use_package_imports 
+
+
+* AnimatedListState :
+  -----
+  -> You can use GlobalKey<AnimatedListState> key,
+     to insert or remove item from ListView in animated fashion
+
+  SizeTransiton  // -> kind of animation
+
+* TextOverflow :
+  -> You can fix Text Overflow error by wrapping Text() widget under Flexible() widget
+
+* StatefulBuilder :
+  -----
+  -> If you want to save memory & make your app faster, then you must wrap the portion
+     of code with StatefulBuilder() widget which will rebuild only that portion & not all below it !

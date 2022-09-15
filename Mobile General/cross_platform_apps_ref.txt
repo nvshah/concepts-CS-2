@@ -1,0 +1,11 @@
+cross_platform_apps_ref
+-------------
+
+[Flutter]
+- https://www.filledstacks.com/post/building-a-responsive-ui-architecture-in-flutter/
+
+[Android]
+
+[Multiple Screen Size Support with Jetpack Compose]
+- https://www.youtube.com/watch?v=NVrFiogpyr8
+- https://www.youtube.com/watch?v=4_KVGZmVWjY   (Box with Constraints)

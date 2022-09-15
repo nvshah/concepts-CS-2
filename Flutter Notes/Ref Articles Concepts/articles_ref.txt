@@ -1,0 +1,84 @@
+(Responsive-Getx)  
+   https://iisprey.medium.com/responsive-design-in-flutter-with-getx-3e1de1ae3e6f
+
+( ViewInsets & ViewPadding)
+  https://medium.com/flutter-community/a-flutter-guide-to-visual-overlap-padding-viewpadding-and-viewinsets-a63e214be6e8
+
+( Thread in Flutter Dart)
+ https://medium.com/flutter-community/flutter-threading-5c3a7b0c065f
+
+(Futures, EventLoop & Delay with context)
+  https://medium.com/flutter-community/flutter-threading-5c3a7b0c065f
+
+(Modularization Flutter)
+https://medium.com/flutter-community/mastering-flutter-modularization-in-several-ways-f5bced19101a
+https://flutterx.com/modular-flutter-apps-design-and-considerations-2019-12-01
+
+[Library Package]
+https://medium.com/const-final-and-static-in-dart/libraries-packages-and-import-in-dart-how-they-work-and-should-be-used-part-1-ccde79d5ec02
+https://github.com/dart-lang/language/issues/1073
+
+[Assets & Custom Package]
+https://medium.com/flutter-community/including-assets-in-a-flutter-package-dd4a82a38ca9
+https://www.appsloveworld.com/flutter/200/145/unable-to-load-asset-flutter-package#:~:text=%5BSolved%5D-Unable%20to%20load%20asset%20flutter%20package-Flutter%20score%3A1%20Accepted,the%20asset%20which%20would%20look%20something%20like%20packages%2F%3Cpackage_name%3E%2Fassets%2Fimages%2Flogo.png.
+https://stackoverflow.com/questions/64014317/unable-to-load-asset-flutter-package
+https://github.com/flutter/flutter/issues/111285
+https://stackoverflow.com/questions/63914819/how-to-access-assets-in-package
+
+-------------------------
+Designs & Priciples
+
+
+(Solid principle)
+https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898
+https://www.educative.io/blog/solid-principles-oop-c-sharp
+https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/
+
+https://blog.joshua-greenwood.com/the-solid-principles-and-kotlin/
+https://dev.to/elianmortega/vol-2-solid-rules-in-dart-2e6m
+
+
+OOPS & Dart 
+
+[Dart Constructors] https://medium.com/flutter-community/deconstructing-dart-constructors-e3b553f583ef
+[Factory Constructor]
+Saravanan M :- named constructor vs factory constructo in dart
+
+Dart : https://flutterbyexample.com/
+
+--------------------------
+
+Contributions
+
+https://medium.com/flutter-community/contributing-to-flutter-getting-started-a0db68cbcd5b
+
+--------------------------
+
+Why Flutter ??
+https://lanars.com/blog/what-is-flutter
+
+
+-------------
+
+[ Mobile Dev Blogs ]
+ https://quickbirdstudios.com/blog/flutter-dart-mixins/
+
+[Integrate Flutter on Desktop]
+https://flutterondesktop.dev/how-to-seamlessly-integrate-flutter-apps-in-windows
+
+
+__________
+
+Flutter (general) | Blogs | Websites
+
+- flutterbeads.com
+- raywennderlich flutter articles
+- vandad flutter blogs (vandad.sh)
+- Jilli Boutique -> Introduction to Flutter
+- Fluttergems
+
+* Build an Apk
+  https://www.woolha.com/tutorials/flutter-build-android-apk
+
+
+* Flutter

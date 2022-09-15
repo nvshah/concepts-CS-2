@@ -59,3 +59,11 @@ AMAZING QUE : Why -ve num can't be base ??
 * While using LinkedList | Queue :- use dummmy pointer to get rid off edge cases 
      
 * Cheapest Path in Graph (esp Directed) :- Bellman-Ford
+
+* You can use lograthmic identity & properties alongwith n-dimensional matrix (ie Tensor)
+  to solve the complex parallel problems
+   \
+    -> Where each dimen of Matrix will grow Logarithmically
+
+
+* You can consider `deque` Data Structure instead of 2 Pointers in some cases as replacement/alternative

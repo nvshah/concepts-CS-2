@@ -20,6 +20,9 @@ deffered = Future in flutter
 
    - dont want to run concurrently you can use withContext{}
 
+**
+=> So it's not good practice to put try catch inside the launch block
+   because it will eat up the Cancellation Exception as well (if we catch general Exception & not specific Exception)
 ______________________________________
 
 NOTE :- Suspended Fun when use another suspended fun inside it implicitly await & do synchronous operation 
@@ -106,6 +109,8 @@ NOTE :- Suspended Fun when use another suspended fun inside it implicitly await 
 
    async returns the deffered
 
+   => async will throw the exception from block when it is awaited (ie .await() is called)
+
 
 * withContext :
   -------
@@ -118,8 +123,64 @@ NOTE :- Suspended Fun when use another suspended fun inside it implicitly await 
 
    - dont want to run concurrently you can use withContext{}
 
+* CoroutineExceptionHandler :
+  ----
+  -> helps to caught any uncaught exception from child coroutines or parent at the Root Coroutine
+  -> ( This handler is installed in the root Coroutine closure )
+
+  NOTE :- CancellationException in Coroutines are handled by default as you don't want it to propogate
+          as this is internal & expected behaviour
+
+  REMEMBER :
+  -> For CoroutineScope, asa 1 child coroutine fails, it will cancel all children coroutines &
+     then also cancel the scope itself as well
+
+  -> On single failure whole Scope (including root) is cancelled
+
+* SuperVisor Scope :
+  ----
+   superVisorScope{}
+   -> If 1 coroutine under this scope fails or throws exception, it wont affect other (sibbling)
+      Coroutines execution in that scope
+
+* Cancelling a Coroutine (Amazing Fact) :
+  ----
+  -> Whenever we call .cancel() on job or deferred instance of coroutine
+     What happen ?
+     -> Eventhought we cancel the coroutine (ie the lauch block)
+        The current function that is suspending that particular Coroutine (on which we call .cancel())
+        will throw a Cancellation Exception
+     **
+     => So it's not good practice to put try catch inside the launch block
+        because it will eat up the Cancellation Exception as well (if we catch general Exception & not specific Exception)
+        Otherwise
+        Rethrow the Exception if its Cancellation Exception
+____________
+
+Q1) launch vs async
+->
+   launch is kinda void callback where we do some work asynchronously but did not expect anythin in return
+   so it returns Job
+
+   async is block through which we can expect something in return after Deferred time
+   so it returns Deferred object
+
+   Exceptions:
+   - with launch Program will crash immediately asa Exception is thrown
+   - whereas in case of async program is crash asa await() is called not when exception is thrown
 
 
+Q2) Coroutine Tree
+->
+   Exception are propogated up to Coroutine Tree
+
+Q3) CoroutineScope vs SupervisorScope
+-> CoroutineScope :- If any 1 sub-coroutine fails it will affects all & stops other coroutines in that scope
+   superVisorScope :- the failure of a child coroutine will not affect other coroutines in same scope
+
+   Simply,
+   If 1 fails all other fails // in CoroutineScope
+   If 1 fails not all other fails // in superVisorScope
 ---------------
 GOOD PRactices
 

@@ -1,4 +1,8 @@
 
+* 2 types of Injections are there
+  - Constructor Injections
+  - Field Injections
+
 * annotations :
   ---
    @Module
@@ -17,6 +21,9 @@
 
    @ViewModelInject  // to inject dependencies in VM constructor
 
+   @Qualifier    // To Resolve Same type of Dependency but having multiple sources or impl
+   @Retention
+
 * Dagger Hilt :
   ---------
    Create Modules 
@@ -34,3 +41,10 @@
    by viewModels()   // Dagger will inject appropriate VM 
 
    @ViewModelInjection
+
+
+* Multiple Function with Same type of Dependency Resolver in Module :
+  - In such case create you own annotation to distinguish each dependency & scenario to use it
+    via
+    @Qualifier
+    @Retention

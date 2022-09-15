@@ -1,0 +1,16 @@
+Algorithm Notes New
+------------------
+
+* Exponential Search :
+  ---
+  prereq :- Array must be sorted
+
+  Step 1: We will find first the correct boundaries (ie left & Right End) via Exponential Pointer
+  Step 2: We will then perform the Binary Search in the sub-list (ie l:e)
+
+  T.C :- O(logn)
+  S.C :- O(1)  // Iterative Binary Search
+
+  Application :
+  - Use for Unbounded Array (ie Arr of large size)
+  - Works better than Binary Search

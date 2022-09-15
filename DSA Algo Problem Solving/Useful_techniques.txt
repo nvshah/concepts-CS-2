@@ -48,6 +48,8 @@ TIP -> Always first think for bruteforce approach
 
 20) Tarjan's Algo
 
+21) Djikstras Algo (Graph Greedy Techniqye)
+
 ---
 EXPLORE
 
@@ -61,6 +63,9 @@ Valley Peak Appraoch
   ------
    - Hoare & Lamuto (for sorting)
    - Grow & Shrink (Sliding Window)
+
+NOTE :
+  -> You can also consider `deque` Data Structure instead of 2 Pointers approach in many cases
 
 * Merge Sort :
   ----

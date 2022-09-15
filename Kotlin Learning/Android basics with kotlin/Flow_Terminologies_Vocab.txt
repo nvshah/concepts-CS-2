@@ -20,3 +20,7 @@
 => To deal with exception we can use catch() intermediate exception
    
    catch() needs to be used before collect()
+
+* collectAsStatWithLifeCycle() vs collectAsState()
+  ---
+   ->

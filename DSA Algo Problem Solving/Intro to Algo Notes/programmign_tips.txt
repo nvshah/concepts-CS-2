@@ -5,3 +5,5 @@
 * zip() + enumerate() 
   ---
    - Use enumerate(zip(t)) => to get tuple with respective indexes unfold
+
+*

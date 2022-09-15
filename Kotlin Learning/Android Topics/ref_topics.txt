@@ -6,3 +6,10 @@
 
 
 * Publish your Android Library (Philip, Youtube)
+
+
+
+-----------------
+
+* Deep Link Crash Course
+  https://medium.com/androiddevelopers/the-deep-links-crash-course-part-1-introduction-to-deep-links-2189e509e269

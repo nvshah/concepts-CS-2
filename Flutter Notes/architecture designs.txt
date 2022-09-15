@@ -5,6 +5,8 @@ MVC (Model View Architecture  )
 MVI ()
 MVU (Model View Update)
 
+BLOC
+
 
 VIPER : 
  https://www.raywenderlich.com/8440907-getting-started-with-the-viper-architecture-pattern
@@ -26,6 +28,8 @@ RxDart & Bloc :
 RxDart :
   https://www.burkharts.net/apps/blog/rxdart-magical-transformations-of-streams/
 
+BLOC & MVVM
+  https://medium.com/@aaron.chu/flutter-state-management-bloc-pattern-9cd6011c699
 
 
 
@@ -44,3 +48,6 @@ RxDart :
      https://proandroiddev.com/clean-architecture-data-flow-dependency-rule-615ffdd79e29
 
      https://proandroiddev.com/why-you-need-use-cases-interactors-142e8a6fe576
+
+ Flutter Scalable Folder & Files Structure
+  - https://medium.com/flutter-community/flutter-scalable-folder-files-structure-8f860faafebd

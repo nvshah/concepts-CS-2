@@ -1,0 +1,12 @@
+Jetpack Compose Tips
+-------------------
+
+* Responsive (Mobile | Tablet)
+  -> LocalConfiguration.current  // window size (height, width)
+
+* Adaptive (Mobile | Tablet)
+  -> BoxWithConstraints  // Composable
+       - maxWidth, maxHeight
+
+  => Alongwith BoxWithConstraints we should use some relative values & not the fixed values
+     (Eg WeightModifier (ie Flex) )

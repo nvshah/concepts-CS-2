@@ -30,3 +30,6 @@
    - Tortoise & rabbit (Fast & Slow Pointer)
 
 
+* Djikstras Graph Algo :
+  ----
+  It is a Greedy Algorithm

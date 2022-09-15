@@ -1,0 +1,5 @@
+new concepts
+------------
+
+* Coincidence Similarity vs Cosine Similarity
+  (ref : https://www.researchgate.net/publication/356042155_Multiset_Neurons)

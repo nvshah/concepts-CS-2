@@ -1,0 +1,5 @@
+concepts_ref_videos
+
+[MVVM-Java] https://www.youtube.com/watch?v=afyXRVKiEzM
+
+[Kotlin-Coroutine] https://www.youtube.com/watch?v=ZTDXo0-SKuU

@@ -1,0 +1,9 @@
+essential_concepts
+
+- AARs App Distribution
+
+- Gradle Multi Project
+
+* Gradle Tasks
+
+* Intents

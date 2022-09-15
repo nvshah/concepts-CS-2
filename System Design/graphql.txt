@@ -1,0 +1,16 @@
+graphql
+-------
+
+GraphQL is a query language for APIs developed by Meta.
+It provides a complete description of the data in the API
+and gives clients the power to ask for exactly what they need.
+
+GraphQL servers sit in between the client and the backend services.
+
+GraphQL can aggregate multiple REST requests into one query.
+GraphQL server organizes the resources in a graph.
+
+GraphQL supports queries, mutations (applying data modifications to resources),
+and subscriptions (receiving notifications on schema modifications).
+
+    

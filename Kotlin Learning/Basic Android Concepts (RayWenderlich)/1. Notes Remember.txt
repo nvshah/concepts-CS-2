@@ -1,0 +1,16 @@
+1. Notes Remember
+----------------
+
+* placeholder
+   - to inject any integer into your text values => “%1$d”
+
+* First Activity in app -> AppCompatActivity
+
+* Put layout created on Device Screen -> setContentView()
+
+* In the most general sense, any logic you add must come after calling setContentView()
+
+* your Activity can get destroyed and recreated several times while the user is using the app
+
+* Anything you do in Android Native is in Activity
+  So intent also need some activity to launch itself

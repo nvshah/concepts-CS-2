@@ -1,0 +1,9 @@
+Compose Practices
+---------------
+
+* Backward Writes :
+  - Never write to a state/variable that is already been read (by the Compose)
+    to avoid backward writes
+
+* Baseline Profiles :
+  - Helps to boost the startup, & reduce janks

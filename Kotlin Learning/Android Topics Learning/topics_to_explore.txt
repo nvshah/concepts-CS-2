@@ -1,3 +1,6 @@
 * Onboarding Process (JetPack Compose - StedvZa)
 * Walkthrough ViewPager (jetPack Compose - StedvZa)
 * Datastore Persists 
+
+* App Modularization
+* WorkManager

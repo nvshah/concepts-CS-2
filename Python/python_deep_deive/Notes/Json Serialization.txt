@@ -1,0 +1,16 @@
+Json Serialization
+--------------
+
+-> Json Encoding & Decoding for Dictionary Obj doesnt ensure the preserving of Key Order
+
+-> Json Keys muste string only
+
+-> In python null (in Json) is decoded as None
+
+-> As Json needs its keys manadatory to be "String"
+   You can use dict() function or constructor while creating dictionary object that needs to be serialized
+
+-> We can use vars(), whilst encoding the object to json
+                \
+                As it comprises of dict from object's properties.
+

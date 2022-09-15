@@ -63,3 +63,7 @@
 DI : dependency injection 
  \
   - Inject Repository In View
+
+* Single Activity Architecture Concept (instead of BaseActivity)
+
+* Navigation Architecture Components

@@ -1,0 +1,33 @@
+Material3
+---------
+
+TIPS :
+To check if current system theme is dark -> isSystemInDarkTheme()
+
+darkColorScheme, lightColorScheme
+
+* Color
+------
+- Primary Color, Secondary, Tertiary
+  Surface Color  (Neutral Color)
+
+  On Primary, On Secondary
+
+  Inverse Colors
+
+* Shape :
+-----
+
+* TypoGraphy
+----
+ - TexStyle & many more
+
+
+------------
+
+* There will be 4 decision for Theme finalizing :
+  If user is running above Android 12
+    - dynamicDarkTheme, dynamicLightTheme, darkTheme, lightTheme
+
+  if below android 12
+    - lightTheme, darkTheme

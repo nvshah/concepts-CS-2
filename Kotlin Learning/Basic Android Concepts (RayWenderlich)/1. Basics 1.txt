@@ -1,0 +1,23 @@
+1. Basics 1
+------------
+
+* Activity := Each screen (in android) is known as an Activity and is built around a single task
+
+* In the most general sense, any logic you add must come after calling setContentView()
+
+- CountDownTimer, Toast
+
+* LogCat -> Convention : ClassName + LogMessage
+
+* Orientation| Configuration Changes :-
+  ---------
+  1. save any properties for Activity specified by the developer
+  2. destroys the Activity
+  3. Recreates the Activity for the new orientation by calling onCreate(), which resets any properties specified by the developer.
+
+  Configuration Change :- when device lang change
+
+  onSaveInstanceState() ->
+    - called before configuration change happens, giving you chance to save anything imp.
+
+  Bundle -> hashmap, which Android uses to pass values across different screens

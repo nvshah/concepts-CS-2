@@ -18,4 +18,4 @@
 
 * LinkedList   // Via Array
 
-* queue -> PriorityQueue 
+* queue -> PriorityQueue  // Heap

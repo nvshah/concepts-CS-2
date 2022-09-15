@@ -1,3 +1,7 @@
 [MVVM Basic] :- https://resocoder.com/2018/09/07/mvvm-on-android-crash-course-kotlin-android-architecture-components/ 
 
 [Kotlin KMM] :- https://www.raywenderlich.com/19144111-kotlin-multiplatform-project-for-android-and-ios-getting-started
+
+[Kotlin Symbol Processing] :- Raywenderlich article
+
+[App Modularization] :- https://android-developers.googleblog.com/2022/09/announcing-new-guide-to-android-app-modularization.html

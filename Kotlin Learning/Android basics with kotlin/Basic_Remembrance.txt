@@ -17,3 +17,9 @@
 => If you minimize the app then activities will not get destroys
 
 
+* Suspend Func & Scope :
+  --------
+   -> Dont call suspend func from Activity or Frgament because it will run in LifeCycle Scope of
+      that Activity & asa Device is rottated it will disposed
+
+   -> Call that in ViewModelScope so that it will unaffected

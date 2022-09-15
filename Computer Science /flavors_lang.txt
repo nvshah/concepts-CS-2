@@ -85,6 +85,7 @@ NOTE ->
    -> Finalizers | __del__
 
    -> Python Virtual env
+   -> Object Resurrection (__del__)
 
 
   

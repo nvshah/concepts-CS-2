@@ -1,3 +1,23 @@
 * Duration API :
   ------
    Eg 1.days
+
+
+* Sealed Classes vs Enum vs Sealed Interfaces
+
+* Sealed Class :
+  ---
+  - Abstract class
+  - All the children (ie classes) that inherit from this class are known at compile time
+    ie there are no other modules that can extends this class
+
+  - generally members are singletons objects that inherits from this sealed class
+
+
+  Sealed Interface :
+  ---
+  - If you do not have any specific info attached to base sealed class
+    then you can use sealed interface instead
+
+    As it allows to skip calling constructor when you extend the sealed interface
+    (because interface do not have the constructors)

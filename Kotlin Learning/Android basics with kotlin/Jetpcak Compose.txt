@@ -6,6 +6,8 @@
 
 => View Model can be used as State Holder for State that is governed by the business Logics
 
+=> Prefer Lambda Modifiers when frequenetly Changing States
+
 * Recomposition 
   -----------
     There are 2 things for Compsable i.e 
@@ -113,3 +115,16 @@
 --------
 
 * items() => ListView in Flutter
+
+* Composition has 3 Phases :- { Composition, Layout, Draw }
+
+  Composition :- determines what to show
+  Layout :- takes the composition & identify where on screen to show
+  Draw :- draws on screen
+
+=> Prefer Lambda Modifiers when frequenetly Changing States
+
+   With lambda modifier, composition not change & we can avoid Recomposition
+   You shouldnt have to ReCompose to ReLayout the Screen
+
+=> To defer the read - We can use Lambda instead of direct value

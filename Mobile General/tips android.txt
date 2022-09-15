@@ -1,0 +1,7 @@
+tips android
+
+
+* Take Screenshot of Android Phone/Emulator
+  -> adb exec-out screencap -p > output.png
+
+

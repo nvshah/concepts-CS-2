@@ -11,7 +11,7 @@
 * BloCkStore :- 
  ---------
   -> You can store auth tokens for your app inside Block STore 
-     It can be use ful whilst auto sign in in D2D transfer
+     It can be useful whilst auto sign in in D2D transfer
 
 
 * SavedStateHandler :
@@ -32,3 +32,14 @@
   ---
    1) Via BackStack State 
    2) Via Shared ViewModel
+
+
+* Best Practice with API Keys
+  ------------
+  -> Prevent API Keys ffrom lurking in VCS
+
+  * local.properties
+    - store key in local properties from build.gradle file
+    - buildConfigFiles() -> local.properties
+
+  => Store Token in Jetpack Crupto Preferences instead of normal Shared Preferences

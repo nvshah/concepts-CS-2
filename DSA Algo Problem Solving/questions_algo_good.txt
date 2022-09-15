@@ -11,9 +11,7 @@
 Custom Data structure 
 
   LRU Cache := Doubly Linked List + Hash-Map 
-
   Randomized Set := https://leetcode.com/problems/insert-delete-getrandom-o1/
-
 
 logics :
   
@@ -37,6 +35,7 @@ Binary Search :
    Find in Mountain Array   (https://leetcode.com/problems/find-in-mountain-array/)
    Find peak element in Array (https://iq.opengenus.org/peak-element-in-array/)
    find the square root (https://leetcode.com/problems/sqrtx/)
+   number of matching subsequences (https://leetcode.com/problems/number-of-matching-subsequences/)
 
 
    MIMP -)
@@ -49,7 +48,6 @@ Binary Search :
 
 Data Structures :
  
-
 -** Sliding Window Maximum (Deque) (https://leetcode.com/problems/sliding-window-maximum/)
 -** Sub Array Sum Equals K (HashMap Imp) (https://leetcode.com/problems/subarray-sum-equals-k/)
 -** min size sub array sum (Grow-Shrink Window) # https://leetcode.com/problems/minimum-size-subarray-sum/
@@ -76,6 +74,12 @@ Heap :
 
  - Caar Pooling (min heap) (https://leetcode.com/problems/car-pooling/)
 
+ *[MaxHeap + Queue]
+  https://leetcode.com/problems/task-scheduler/
+
+ *[MinHeap + Sliding Window]
+  https://leetcode.com/problems/minimum-interval-to-include-each-query/
+
     
 Sorting  :
    
@@ -90,6 +94,7 @@ Sorting  :
 
    {sort via compare}
    (Traditional Sorting) [https://leetcode.com/problems/largest-number/]
+   (number of weak characters) [https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/]
 
 
 Recursion : 
@@ -144,17 +149,29 @@ Graphs
 
  - (Longest_Rpeatinng_SubString_Replace) (https://leetcode.com/problems/longest-repeating-character-replacement/)
 
+ ^**^IMP---- (Sliding Window + Heap + Sort )
+ https://leetcode.com/problems/maximum-performance-of-a-team/
+
+
 
 * DP :
   
   longest increasing SubSequence (https://leetcode.com/problems/longest-increasing-subsequence/)
   no. Longest Incre Subseq  (https://leetcode.com/problems/number-of-longest-increasing-subsequence/)
+  [Application of LCS]
+  Delete Operation 2 String ( https://leetcode.com/problems/delete-operation-for-two-strings/ )
 
   longest Increasing Path in Matrix (https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
   House Robber (1D-DP) (https://leetcode.com/problems/house-robber/)
+  Max Prod Word Length (https://leetcode.com/problems/maximum-product-of-word-lengths/)
 
 -MIMP-**
   Russian Dolls (DP (LIS) | Binary Search | Insertion Sort )
+
+  Interleaving Strings (https://leetcode.com/problems/interleaving-string/)  <-**
+
+[State Machine + DP]
+  Best Time to Buy & Sell Stock
 
 
 * Greedy Solution 
@@ -164,6 +181,12 @@ Graphs
   **IMP :- [Greedy + BFS | 1-dimensional array BFS]
   Jump Gamme 2  (https://leetcode.com/problems/jump-game-ii/)
 
+  min operations to reduce x to 0 (https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero)
+
+  --*>
+  Furthest Building [Greedy | Heap]  (https://leetcode.com/problems/furthest-building-you-can-reach/)
+  Candy (https://leetcode.com/problems/candy/)
+
 * String 
   
   Longest Repeating SubSeq (https://leetcode.com/problems/longest-duplicate-substring/)
@@ -172,3 +195,8 @@ Graphs
 * System Design :
    
   Encode & Decode String (https://www.lintcode.com/problem/659/)
+
+
+* Math (Logical)
+
+   Log + nd-matrix ( # https://leetcode.com/problems/poor-pigs/ )

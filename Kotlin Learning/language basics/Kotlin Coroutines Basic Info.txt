@@ -1,0 +1,133 @@
+Kotlin Coroutines Basic Info
+-------------
+ref : https://www.youtube.com/watch?v=ZTDXo0-SKuU  [Kotlin Coroutines 101]
+
+REMEMBER
+
+=> Launch or Async are an entry point for triggering Coroutine !
+
+=> suspend function is required in 2 cases
+   - code body of its include other suspend func
+   - code body of its include withContext() which inherently from lang brings suspension
+
+=> Move comoutation to diff thread :- via Dispatchers & withContext
+
+-----------------------
+
+* Network Request :
+  -> Normally in Kotlin if networkRequest is made then it will block the further code
+
+  - To deal with this, we must use some different thread to do this instead of Delaying the main UI thread
+
+* 1) Async with Callbacks :
+  ---
+  - helps to take some block of codes to execute on different thread until its completed
+    afterwhich it can resume backs to main thread
+
+  DefaultScheduler.execute{}          // hand over the task to seperate thread
+  postToMainThread(callback(result))
+
+  Problem :- Callback Hell/Stack will create lots of nesting
+
+* 2) Coroutine :
+  -> Coroutines calls that Callbacks as `Continuation`
+
+  Continuation forms a State Machine
+  Continuation-Passing Syle (CPS)
+
+  => Thus with Coroutines Computation gets suspended without blocking the thread
+
+  Any Func marked as `suspend` can be eligible to put its content to diff thread
+
+  How to Handle bunch of codes to diff thread from given suspended function
+  -> withContext(Dispatchers.IO)
+
+  Dispatchers.IO -> Network & Disk Operation Task
+             .Default -> CPU
+             .Main -> UI/Non-Blocking
+
+  => With the Coroutine, Asynchronicity can be expressed as a Sequential Code that is easy to read
+
+  [REMEMBER]
+  => suspend function must be called inside a Coroutine
+
+Q) Then what if I just need to call a Coroutine only & not return anything
+   (It will end up in defining indefinite suspend func call stack)
+
+   -> Ans is laucnh{}
+      // launch is suspend func provided by Kotlin to call any suspend func/coroutine from any Non-Suspendabl Function
+
+   Catch :-
+   What if something goes wrong with Corutine (error, lifecycle change, ...)
+   &
+   For this reason laucnh must be called from within some scope !
+
+* Structured Concurrency :
+  ---
+  - Design pattern in Coroutine that trying to solve the memory leaks
+  -> It does this by introducing the new concept called as Coroutine Scope
+  -> Thus launch must be called within some scope
+
+* Coroutine Scope :
+  ----
+  - Keep track of Coroutines
+  - Ability to cancel them
+  - notified whenever failure occurs
+
+  Now whenever you dont want to control the lifecycle of Coroutine, then you can create
+  var scope = CoroutineScope(Dispatchers.Main)
+   |
+   In this way this coroutine will follow lifecycle of particular Scope !
+
+  - Scope will get Exception & It will handle it in some way !
+
+  Scope hierarchy will be created from parent->children
+
+  -> Often Scopes are created in ViewModel
+
+  - We can use default `coroutineScope`
+
+
+* Job :
+  ---
+  - Scope can also take a job
+  - Job can define lifecycle of scope or even coroutine
+  - If you pass Job() to Scope, i.e you gonna handle exception in particular way !
+
+=> When some Coroutine fails, it will propogate to Parent Scope
+   Scope then cancels all its children & propogate failure up
+
+* SupervisorJob :
+  - failure of child gonna not affect other children
+  - So when a failure is notified scope will not do anything
+
+* Async vs Launch :
+  -----
+  - Launch is not only way to call the suspendable function
+
+  - Both of them can create a new Coroutine & starts its computation by calling suspendable func.
+
+  For launch :- Fire Coroutine (ie Computation) & Forget
+
+  Async :- will return a value
+    - Kinda Future/Promise
+    - we can await() on a return value to halt till get the value
+
+  -> They are not a suspend function, but an entry point to Coroutine
+     So they can be called from any normal function
+
+  Both deal differently with Exception
+  - launch rethrows whereas Async wait till await() is called to throw exception !
+
+
+* Cancellation :
+  -------
+  - Cancellation requires Co-operation
+  - You can call yield()  to ensure Coroutine is not cancelled & is active
+
+
+* runBlocking :
+  ----
+  - will block current thread until all computation completes
+
+* TestCoroutineDispatcher :- for testing

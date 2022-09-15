@@ -42,6 +42,12 @@ BEST
    https://www.williamfiset.com/
    https://github.com/williamfiset/Algorithms/tree/master/slides/datastructures
 
+ WingK Wong
+  https://wingkwong.github.io/leetcode-the-hard-way/
+  https://wingk-wong.blogspot.com/
+
+  https://github.com/wingkwong
+
  Kunal 
    https://github.com/kunal-kushwaha/DSA-Bootcamp-Java
 
@@ -91,3 +97,5 @@ Youtube :
 
   NeetCode 
   Reducible
+
+  William Fiset

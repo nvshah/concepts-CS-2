@@ -26,3 +26,6 @@
 
 * Service in Kotlin/Android
 
+* Butter Knife
+* Rx Java
+* GeoFencing

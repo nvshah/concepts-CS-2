@@ -1,3 +1,7 @@
+=> `library` keyword should be used when You are creating the custom library/package
+
+---------
+
 * dynamic vs List<dynamic> :
   -------
    You can assign dynamic to any type in dart  (at runtime there can be err)
@@ -43,3 +47,48 @@
   ------
    - When you define field at that moment its not get initialized but 
      if you refer that same field via this.fieldName then at that momment field gets initialized
+
+  Note :- In latest dart :-
+    You can also initialize the Parent class Fields via `super` keyword in the same way
+    as you do with `this` keyword
+
+
+* Type Promotion & Union Types :
+  -----
+  Union Types :- When we have a Type as a combination of multiple types
+                Eg -> All Nullable Types (combination of Null + Primitive type)
+
+              - For union type You can access those properties only which are common to underlying
+                participating classes in that Union
+
+  Type Promotion :
+  ---
+   -> It happens when Parent Class gets automatically Casted to Child Type
+
+   1. Parent to Child Conversion (Promotion)
+   2. Nullable to Non-Nullable Conversion (can also be considered as a Type Promotion )
+
+   Promotion of General Type -> Specific Sub-Type
+
+   => Type Promotion doesnt work for an object property because for an obj property
+      it may differ on a second call
+
+   => Local Variable Can be Promoted via Type Promotion
+
+* `library` directive name :
+   --------------------
+   ref : https://github.com/dart-lang/language/issues/1073
+
+   When to use this keyword and when to not ?
+   -> If we not use this then flutter itself will provide a library name based on path & filename
+
+   Most library do not use declarations
+
+   Giving library a name of using the `library` directive makes sense in following scenarios :
+   1. For avoiding duplicates imports with different paths
+   2. Adding annotations/metadata to library
+   3. Writing documentation for library
+
+   Whilst modularizing the flutter App, try to create package in same project instead of hosting it on git
+   this way you can ensure that you will get latest changes always
+

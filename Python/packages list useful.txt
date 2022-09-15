@@ -1,0 +1,5 @@
+packages list useful
+
+- moviepy   // useful to convert video into GIF
+
+

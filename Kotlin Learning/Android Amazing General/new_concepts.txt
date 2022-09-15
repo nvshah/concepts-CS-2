@@ -1,0 +1,10 @@
+new_concepts
+
+* BaseLine Profile :-
+  - helps to speedup the app startup time
+
+
+* BuildConfig :
+  ---
+  -> We can add new props to BuildConfig class via adding key-val in local.properties
+     & that can be done via build.gradle file

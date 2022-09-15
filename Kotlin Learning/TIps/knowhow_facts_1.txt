@@ -4,3 +4,11 @@
   ---
    1. maven 
    2. JitPack (ie From Github Repo)
+
+
+* Share Android App/Code to other person :
+  - Dont share entire app-project folder
+    (ie .gradle, .idea, build, etc ... folders must be skipped whilst sharing)
+
+  - Inorder to get the minimal code in zipped format to share
+    Go to android studio > File > Export

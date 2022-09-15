@@ -24,3 +24,15 @@ Que -> What is dispatch reciever ??
 
 * You can use anonymouse object ie with {} for implementing the interface at run time
   also
+
+
+* DeepRecursive Functions :
+  ---
+  - maintain their call stacks on Heap instead on Stack
+  - to deal with recursion depth limitations
+
+
+* cast Map to any key, val type
+  ---
+  -> arguments = Some Mapping
+     arguments as Map<*,*>

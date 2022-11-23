@@ -1,0 +1,5 @@
+flutter_basics_concept_ref
+
+* Navigator | pop | push :
+   https://medium.com/flutter-community/flutter-push-pop-push-1bb718b13c31
+   https://www.flutterclutter.dev/flutter/basics/reload-a-widget-after-navigator-pop/2021/35427/

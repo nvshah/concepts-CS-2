@@ -5,3 +5,6 @@
 [Kotlin Symbol Processing] :- Raywenderlich article
 
 [App Modularization] :- https://android-developers.googleblog.com/2022/09/announcing-new-guide-to-android-app-modularization.html
+
+[Compose Animations] :- https://developer.android.com/jetpack/compose/animation#additional-resources
+

@@ -21,3 +21,9 @@
 
     As it allows to skip calling constructor when you extend the sealed interface
     (because interface do not have the constructors)
+
+
+* Delegation :
+  ----
+  - An alternative to implementation Inheritance of base class
+    - Will let you use the behaviors (that needs to be overrdien) implemented from outside via Delegation

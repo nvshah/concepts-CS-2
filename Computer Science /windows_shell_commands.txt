@@ -1,3 +1,0 @@
-* touch filename.txt   // create file 
-
-* start filename.txt     // open file

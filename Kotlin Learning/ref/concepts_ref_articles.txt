@@ -1,5 +1,7 @@
 * Compose :-
    - https://medium.com/captech-corner/jetpack-compose-concepts-every-developer-should-know-5bcb47914542
+   Compose SideEffects
+   - https://medium.com/mobile-app-development-publication/jetpack-compose-side-effects-made-easy-a4867f876928
 
 * RxAndroid & Kotlin
    - https://www.raywenderlich.com/2071847-reactive-programming-with-rxandroid-in-kotlin-an-introduction
@@ -10,18 +12,44 @@
 * Intent : https://www.raywenderlich.com/4700198-android-intents-tutorial-with-kotlin
   Gradle : https://www.raywenderlich.com/249-gradle-tutorial-for-android-getting-started
 
+  Pending Intent + Broadcast Reciever : https://www.raywenderlich.com/1214490-android-notifications-tutorial-getting-started
+
 * Raywenderlich
   - lifecycles of Composables in Jetpack Compose
   - Bloc8
   - Intents
+  - Triggering Alarams (Android)
 
 * Deep Link Crash Course
   https://medium.com/androiddevelopers/the-deep-links-crash-course-part-1-introduction-to-deep-links-2189e509e269
   https://medium.com/androiddevelopers/the-deep-links-crash-course-part2-deep-links-from-zero-to-hero-37f94cc8fb88
 
+* Compose Camp :- https://developer.android.com/compose-camp
+
+* Compose Animations :- https://developer.android.com/jetpack/compose/animation#additional-resources
+
+* Modern Android Articles : https://developer.android.com/events/dev-summit/technical-talks#modern-android-development
+
+* Fragments
+  https://medium.com/androiddevelopers/fragments-rebuilding-the-internals-61913f8bf48e
 --------------
 
 & Architectures & Patterns
 
 MVVM :- Reso Coder, Raywenderlich
 MVI
+
+Design Patterns for Android :- Raywenderlich
+
+State Management (Derived State)
+https://isamatov.com/react-derived-state/
+
+--------------
+
+CheatSheet
+
+Compose
+https://www.droidcon.com/2021/12/13/cheat-sheet-for-jetpack-compose/
+
+Kotlin
+https://dev.to/zachklipp/remember-mutablestateof-a-cheat-sheet-10ma

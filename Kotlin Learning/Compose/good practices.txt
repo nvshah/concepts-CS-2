@@ -1,0 +1,95 @@
+good practices
+
+=> Composables runs very frequently
+=> Use Macrobenchmark to test the performance benefit
+
+=> Prefer lambda modifiers when using frequently changing state
+   (using Lambda Modifier we can often skip the Composition Phase)
+
+   Lambda Modifiers are almost run not during the composition
+
+=> derivedStateOf{} is used when your state or key is changing more than you want to update your UI
+   = distinctUntilChanged
+
+-> Prefer Immutable Collections for Skippable or Stable Composables
+
+------------------------
+
+- minified &
+- release mode & R8 enabled
+
+1) remember {}
+   -> use to only run expensive operation only once
+
+2) A Key Piece
+   - Define a key on lazyList Item
+
+3) Deriving Change
+   -> derivedStateOf{}
+     -------
+     - only recompose when derived state changes
+     - Any time when your converting your state into a boolean consider using derviedStateOf{]}
+
+
+4) Procrastination | Reading State
+   ---
+   - Defering the read of state until you need it (will allow you to less reexecute the functions)
+
+   Eg drawBehind()  // allow to re-execute only draw phase, skipping composition & layout stage
+
+5) Running Backward
+   -> Writing to the state that you have already read (in same compose frame)
+
+   -> Avoid this via not writing to state that is being currently read in current frame
+
+
+6) Baseline Profiles
+   - speed up startup & hot paths
+
+
+7) State Hoisting :
+
+   - Hoisting state to specific Holder depends on the logic you want for that state to serve a purpose
+     If logic is meant for entire screen -> better to hoist at screen level state holder (like ViewModel)
+     else
+     Hoist it in Composable (preferrably nearest common ancestor)
+
+
+
+
+*---------------------
+
+* Performance Improvements :
+  - Use Benchmarks
+
+* Tools
+  - Benchmarks
+  - Compose-Tracing
+
+
+* Stable & Unstable Params
+  Skippable & Composables
+
+  KotlinX -> Immutable Collections
+
+
+* reportFullyDrawn()
+  ReportDrawnWhen{}
+  ReportDrawnAfter{}
+
+
+* Compose & Navigation Best Practice -----------------
+
+1) Define your Screen as a State Ins & Events Outs
+   - Screen should not care if your data comes from ViewModel or Statically you have defined somewhere for test
+   - It also shouldn't care about who will recieve the events, being send out
+
+   -> Just make sure each of your Screen Composables is testable in isolation & can be previewed
+
+2) Split up your Navigation Graph
+
+   - NavGraphBuilder.conversationScreen()
+
+3) Build only public API surfce you need
+
+4) Module Structure / Graph Structure

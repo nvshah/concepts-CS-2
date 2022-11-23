@@ -1,2 +1,8 @@
 * State Management : (Avalanche Youtube Channel: Flutter State Management Explained)
 
+* MVVM & Provider
+  - https://dev.to/noureldinshobier/intro-to-mvvm-architecture-in-flutter-using-pmvvm-package-420a
+  - Also see FilledStacks Stacked Archi for MVVM via Provider
+
+* Isolates & Bakcground
+  - https://itnext.io/create-an-awesome-background-running-music-player-like-amazon-music-in-flutter-341a59efa936

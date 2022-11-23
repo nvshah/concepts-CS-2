@@ -1,0 +1,16 @@
+compose basics notes
+
+* Scaffold is a specific layout with placeholders for specific component in UI
+   \
+    Eg Navigation Drawer, BottomSheet
+
+
+* Custom Layouts in Compose :
+  ---------
+  -> In compose custom layouts give you full control over manually placing & sizing its layout children
+
+  Layout{}   // Composables
+
+
+* Tips : (Animation)
+  ---

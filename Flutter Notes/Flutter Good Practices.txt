@@ -26,3 +26,24 @@ REMEMBER :-
 * File & Folder Structure :
   ---
   - Barrel Files folder to expose (export) all private libraries or dart files
+
+
+* Packages & Assets :
+  ----
+  - When you develop the custo flutter package then if that package is using the assets
+    then if you declare that assets in that package's pubspec file then it will get bundled along with it
+    Otherwise
+    You need to keep the assets in lib/ folder inorder to expose to Consumer Application
+
+  REMEMBER :
+  - To use the assets inside your Custom Flutter Package, you need to prepend the asset path via
+    `packages/pkgName/assetPath`
+
+  1 Exception :
+  - If your package lies as a sibbling to your consuming application then you can refer that package
+    into your consuming application directly via relative referencing
+
+    ../pkgName
+
+    (So here in this case you dont need `packages/pkgName` to be appended as a prefix inside your package
+    wherever assetPath is used !

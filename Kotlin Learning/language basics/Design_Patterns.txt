@@ -1,0 +1,10 @@
+Design_Patterns
+--------------
+
+* Delegation :
+  ---
+  -> When you want to delegate some tasks to some other object
+  -> In kotlin you can delegate the behavior implementation during inheritance implementation
+     to already defined object which does all the work of overriding
+
+     keyword :- `by`

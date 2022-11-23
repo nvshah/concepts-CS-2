@@ -3,9 +3,11 @@ Modularization & Gradle Structure
 
 ref :-
 https://www.youtube.com/watch?v=TWLkswxjSr0
+https://www.raywenderlich.com/22198417-gradle-plugin-tutorial-for-android-getting-started
 
+Doubt
+https://stackoverflow.com/questions/38910129/what-is-the-difference-between-an-app-dependency-and-a-module-dependency-plugin
 
-:login  (Module)
 apply plugin: 'com.android.library'   // defines this module dependency from Google Android Repos
 
 implementation project(':login')   // get sibbling module into our code base
@@ -41,13 +43,13 @@ TIPS ->
 * New Module :
   - will have its own plugin & dependencies
   - Keep it in same repository but move to seperate folder
-  - need its own build defin & gradle file
+  - need its own build definition & gradle file
 
   Bare Minimum Module files
     -> build.gradle, src folder
 
   NOTE
-    this module needs not to be android application, it can be java or kotlin librray
+    this module needs not to be android application, it can be java or kotlin librray as well
     Eg
     apply plugin: 'com.android.application'   // Android Dependency for this modlue if needed
     apply plugin: 'java-library'  // java library

@@ -77,12 +77,15 @@ For Emails :
 
    Python WTF : https://github.com/satwikkansal/wtfpython#-first-things-first-
 
-   Python Deep Dive : https://github.com/fbaptiste/python-deepdive
+   Python Deep Dive : https://github.com/fbaptiste/python-deepdive   <-*****************
 ----------------
  Youtube
 
    Memory management :- python 101 #3 (https://www.youtube.com/watch?v=OdQSWuG78Sk&t=165s)
    Memory management in Python- the basics - (https://www.youtube.com/watch?v=URNdRl97q_0) 
+   Benjamin Peterson Garbage Collection in Python - PyCon 2014 [https://www.youtube.com/watch?v=iHVs_HkjdmI]
+
+   Intro to Google Colab :_ Practical Introduction to Google Colab for Data Science by (Data Professor)
 
 
 ------------

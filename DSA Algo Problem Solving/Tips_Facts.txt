@@ -75,3 +75,25 @@
 
    - Inorder to make Hashing efficient whilst chaining 
      use inital size as Large Prime Number (ie such as 769)
+
+* BitMask & BruteForce :
+  ----
+  -> You can represent possible attempts of sub-sequences via Bit Manipulation
+     or
+     alternatively you can consider Backtracking !
+
+
+* BFS vs DFS :
+  ----
+
+  BFS is more suitable for searching vertices closer to the given source.
+  BFS is optimal for finding the shortest path.
+
+  DFS is more suitable when there are solutions away from the source.
+  DFS is not optimal for finding the shortest path.
+
+
+* When you have something to group or partition :
+  or When there is something related to Disjoint Set kinda Operation
+  \
+   You can consider Union-Find (Disjoint Set Data Structure)

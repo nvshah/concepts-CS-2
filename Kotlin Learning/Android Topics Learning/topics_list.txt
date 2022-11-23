@@ -9,3 +9,15 @@ topics_list
 
 * WorkManager
 * Dependency Injection Dagger
+  Service Locator (Container)
+
+* Deep Links
+
+* Photo Picker (Newer in Android 13)
+
+* Keystore, Ciphers
+* DataStore
+
+___________________
+
+https://medium.com/mindorks/learning-android-development-in-2019-a-practical-guide-ddc71e008696

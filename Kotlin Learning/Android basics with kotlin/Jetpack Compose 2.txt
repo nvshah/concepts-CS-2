@@ -1,0 +1,126 @@
+Jetpack Compose 2 
+---------------
+ref
+Compose Animtations
+  https://developer.android.com/jetpack/compose/animation#additional-resources
+  https://www.droidcon.com/2021/12/13/cheat-sheet-for-jetpack-compose/
+
+
+* produceState{}
+
+________________________________
+
+* animateDpAsState()
+
+* LazyListState :
+  ---
+  You can use it with LazyColumn, (ie pass as an argument to state property of LazyColumn)
+
+
+* Box()
+  --
+  -> Can be used both as Container & Stack
+
+* LauncherForActivtyResults()
+  - ActivityResultsContract
+
+
+* ComposeView() :
+  ----
+  -> Views in which we can set the Composables content
+     (Often used while using Composables from Native XML side !)
+
+  -> No need of View Binding, instead in onCreateView() -> return the ComposeView()
+     &
+     set the Content of that composeView onViewCreated() !
+
+
+* Layout{} :
+  ----
+  - Custom layout composables
+  - Key core component of compose layout system
+  - All high level layout like Rows, Columns, etc.. are built on top of this Layout Composable
+
+  2 steps in this phase :
+   -> Measurement Step &
+   -> Placement Step
+
+   1) Mesaurement Step : Sizes of Child element are calculated during measurement pass
+
+   2) Placement Step : Their location/place is calculated during the Placement Pass
+       - placement steps starts by calling the layout() function & entering the placement scope
+       - Placement Scope : allow us to place & use all the measurables came during measuring pass
+
+
+   => We measure with incoming parent constraints & it returns placable object then
+
+   -> Generally layout{} is used for manipulating the drawing phase (via Modifier)
+
+
+* ParentDataModifier :   // Api provided by the Compose
+  ----
+  -> Allows child composables to pass information to Parent Layout,
+     which is then actually used to mesaure & place the child appropriately
+
+  -> Modifier that pass certain data to Parent for Current child modification in terms of
+     Measurability & Placability !
+
+[CUSTOM DRAWING]
+* Draw in Compose (Graphics) :
+  -------
+  Modifier.drawbehind          // draws behind the content of Composable
+  Modifier.drawWithContent    // specify the order of drawing content
+  Modifier.drawWithCache     // cache the state or img
+  Modifier.graphicsLayer    // applies the effect, such as rotation, scale etc...
+
+  DrawScope :
+  ------
+  -> Declarative, drawing API to draw Shapes, paths, etc.. without needing to maintain your own states
+
+  TextMeasurer :- to draw text on a canvas !
+
+  DrawScope is available in one of such method (ie drawBehind),
+  where you can access draw method regardless there is no Canvas (So scope is provided to access similar
+  functions to draw as of canvas)
+  Without maintaing your own state <-
+
+  1) DrawRectangle
+  2) DrwPath :
+
+  path.
+
+    moveTo()  // Doesnt draw any but instruct where next draw command should start from
+    addRect()
+    addLine()
+
+  drawPath(path)  // path := path generated from data
+     \
+      With Stroke Style // inorder to make added Line visible
+
+
+* Shaders | Background :
+  -------------------
+  Custom Shader Brush with AGSL (Android Graphic Shading language)
+
+  - Shaders runs on GPU (ie Pixel Perfect can be achieved)
+
+  - You need to tweak AGSL lang spec taken some from online
+
+  Pract
+  -> RuntimeShader(WAVE_BAR_SHADER_AGSL)  // Agsl string as an input
+
+  -> ShaderBrush()
+
+
+
+* Animation (Self Incrementing)
+  ---------
+
+  produceStateOf(){
+  while(true){
+   withInfiniteAnimationFrameMillis{
+   
+   }
+  }
+  }  // updated on every single frame
+  

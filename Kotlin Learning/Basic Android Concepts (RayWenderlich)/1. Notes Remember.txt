@@ -1,6 +1,13 @@
 1. Notes Remember
 ----------------
 
+=> Basic Android Project is identified by ?
+   -> app gradle file (for dependency)
+   -> mainfest file  (hold basic meta info about app)  }-> app/src/main
+
+=> Without AndroidManifest.xml, android refuses to run your App
+
+
 * placeholder
    - to inject any integer into your text values => “%1$d”
 
@@ -14,3 +21,16 @@
 
 * Anything you do in Android Native is in Activity
   So intent also need some activity to launch itself
+
+* From Camera You will get data often in `BitMap`
+
+* In case of View Binding, always build the project first (ie Green Hammer)
+
+* Don't hard code all things You can use strings.xml to store strings & likewise
+
+* Every Activity within app must have corresponding tag in the AndroidManifest file
+
+* If you want ViewModel to be shared between Activity & Fragment
+  requireActivity().get(ClassName::class.java)
+  instead of
+  ViewModelProvider(this).get(ClassName::class.java)

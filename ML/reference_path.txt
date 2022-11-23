@@ -31,7 +31,7 @@ https://www.greatlearning.in/?arz=1  [mygreatlearning.com]
 
 
 Youtube :-
-
+--------
  
  StatQuest
  Serrano
@@ -42,13 +42,15 @@ Youtube :-
  SentDex 
 
  derrick Sherril
+ Data Professor
+
+ Normalized Nerd
+ Data School
 
 
 Udemy :-
 
   Mathematics foundations for Machine learning 
-
-
 
 ----------------- 
  Best book for Data Science (Python)
@@ -78,8 +80,10 @@ Offline Read :-
 
 -------------
 
-   ML CheatSheet 
-     https://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html#:~:text=In%20order%20to%20map%20predicted,to%20map%20predictions%20to%20probabilities.
+ML CheatSheet
+  https://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html#:~:text=In%20order%20to%20map%20predicted,to%20map%20predictions%20to%20probabilities.
+
+  https://www.datacamp.com/cheat-sheet/machine-learning-cheat-sheet
 
 
 * matrix Multiplication : matrixmultiplication.xyz

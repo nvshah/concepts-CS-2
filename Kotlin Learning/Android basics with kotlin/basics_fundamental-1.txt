@@ -1,7 +1,32 @@
+* ref :- Philip Lackener (Playlist Android Fundamentals)
+-----------------------------------------------
+=> context is the super class of Activity & Applicaition
+   So you can pass Activity ref wherever the context is needed !
+
+=> to get app level context you can use :- applicationContext
+    |
+    Eg When you want to observe the Connectivity Status (from Connectivity Service provided by the Android)
+
+=> lifecycleScope is destroyed when the Activity is destroyed & not when activity/app is minimzed
+
+=> Stateful Obj that maintains the backstack :- `NavController`
+
+--------
+
 * ui & controller ;
   --------
    XML & code need something between to communicate with :-
    & that is id of views in xml 
+
+* Toast & Context :
+  -------------
+  context is an abstract class
+   - You can pass Activity or Application class as those are subclass of Context class
+
+   2 types of context :
+   - Activity Context
+   - Application Context
+
 
 * fragments :
   --------
@@ -223,3 +248,14 @@
   ---
    -> Component is required to be provided
    - eg Navigation between pages 
+
+
+* Pending Intent & Broadcast Recievers :
+  -----------------------------
+  Broadcast Reciever are used to recieve the pending Intent (which is completed)
+
+  -> You need to register the Reciever in the Manifest
+
+  -> Pending Intent is Fired asa user perform some actions (ie Clicks)
+
+  -> Pending Intent can fire Broadcast Reciever which You can recieve in your app

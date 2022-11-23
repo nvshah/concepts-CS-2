@@ -26,4 +26,4 @@
 
 => The json (encoding & decoding) does not ensure to preserve the order of the keys in an object (ie dictionary)
 
-=> Python
+=> sys.set_int_max_str_digits(0)   // apply while conversion from int to str (for python 3.10+)

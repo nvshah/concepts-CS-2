@@ -84,3 +84,8 @@ Top Imp Techniques Algo
 5) Recursion
 6) Hash Maps
 6) Queue  (Mine)
+
+7) BitMask Based Solving | Backtracking
+
+8) Disjoint Set Data Structure (Union-Find)
+9) Topological Sort

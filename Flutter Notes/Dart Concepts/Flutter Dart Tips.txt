@@ -5,3 +5,6 @@ Flutter Dart Tips (Vandad Github Repo Dart -> Tips & Tricks)
    - Sent Each Event after certain interval
 
 * Logging Supported :- `dart:devtools`.log()
+
+* expand()  -> will do map() + spread operator for each element
+            = mapstar()

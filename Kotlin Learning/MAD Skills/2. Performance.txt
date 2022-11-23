@@ -1,3 +1,134 @@
 2. Performance
 
 Remember 3I's : Inspect -> Improve -> Monitor
+
+=> Dropped or frozen frames are also called Visual Jank   // JANK
+=> You should run profiler on non-debuggable version of your App
+
+
+* App Startups 3 Phase
+  ------------------
+  1. Cold Start   // Application onCreate is called !
+      - Cold start are the slowest startup phase (memory cache are also empty in this phase)
+      - Eg when phone restart
+
+  2. Warm Start   // Inflate View Hierarchy
+     - Activity was destroyed but App's process is still running
+
+  3. Hot Start
+     - When app switch back forth between background & foreground
+
+
+Tips
+- Keep Cold Start as fast as possible
+
+* Time to Initial Display (TTID)
+  ----
+  - automatically reported when first frame of your app is ready to be drawn
+  - Every app report this by default
+
+* Time to Full Display (TTFD)
+  ---
+  - When everything is drawn & data require to interact is available
+  - API -> reportFullyDrawn()
+              \
+               not tied to activity life cycle
+               - So you call this method once you thing your app is draen completely
+
+* Scrolling Experience :
+  ----
+  - Jank behavior
+     |
+     Jank happens when app is too busy to meet the frame timing window
+
+     Jank happens when your app is too busy doing work on main thread & misses the timing window
+     to draw a frame on screen !
+
+  -> Jank can happen with the Scrolling
+     other scenarios where Jank can happen
+      - animated scenes, transitioning between windows
+
+  Frame Rate :
+  ------
+  - Screen can be drawn many times per second
+    |
+    the amount of redraws per seconds is called as a Frame Rate
+
+  - traditionally android devices came with 60 FPS
+     i.e that will give you 1/60 of a second to work on a main thread before a frame will be delayed
+         or eventually be dropped
+
+  - FPS depends on device power & thermal state
+
+TIP :-
+ => Try to keep as much work as possible off the main thread
+ => Always measure the release builds
+ => Always measure performance on real device !
+ => measure twice, Improve once
+
+* Release builds :
+  ---
+  - release builds are what your user sees when they start using your app
+  - release build has optimization enabled that improves the app performance drastically
+
+  Resource Shrinker :
+  - reduce the time it takes to load images & other resources
+
+  Minification Enabled :
+  - Compiler makes code more performant
+
+
+* Inspecting Performance :
+  ---
+
+  NOTE :
+  If your app freezes for more than 5 seconds you get Dialog from Android (ie App not responding)
+
+  1. Passive :
+     - visually spot (when app drop frames)
+     - check logcat
+
+  2. Automated :
+     - Use Macrobenchmark
+
+* System Tracing :
+  ---
+  - Let you collect timing information about what is happening when ?
+
+* Jetpack Macrobenchmark Library :
+  ---
+  - Inspect entire User flow in app
+  - app startup, frame timing, etc ...
+
+  -> Benchmark are installed as a seperate apk
+  -> You need to define the interactions with your App
+
+  Metric :
+  ---
+  There are different metric to track on
+  startuptiming-metric
+  frametiming-metric
+  tracesection-metric
+
+
+* Baseline Profiles :
+  ----
+  - help improving the app startup
+  - Baseline profiles are list of classes & methods that are ahead of time (AOT) installed on your device
+  - this lets application improve startup, reduce janks & improve performance of an app for end users
+
+  For Critical User Journey
+
+  - Baseline profile can be created for your app as well as library
+    Eg Jetpack Compose UI library did this baseline profiling things inorder to improve performnace wherever it is used !
+
+  - whilst generating baseline-profile your app must not be obfuscated !
+
+  - Baseline Profile will index classes & methods call
+
+  => You need root access for baseline profile generator
+
+
+* Gradle Manage Devices :
+  ---
+  - You can configure Emulator via Gradle Scripts

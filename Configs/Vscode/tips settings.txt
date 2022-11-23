@@ -1,0 +1,10 @@
+tips settings
+------------
+
+{
+    "window.zoomlevel": 5,
+    "edito.codeActionsOnSave": {
+      "quickfix.remove.thisExpression": true,
+      "quickfix.remove.thisExpression.multi": true,
+    }
+}

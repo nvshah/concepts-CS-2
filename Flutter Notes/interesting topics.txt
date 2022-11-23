@@ -23,7 +23,11 @@ To Learn :
   - Inherited Widget
 
   - Dynamic Link (Deep-Link) Firebase Flutter
+    Deep Linking Flutter
+
   - In App Notification
+
+  - State Restoration | Widget Keep Alive State Mixin
 
  Dart ::
   
@@ -32,6 +36,12 @@ To Learn :
   - Isolates 
   - Interface | Abstract Class
   - Type Promotion (Auto Cast)
+
+  - Generated Plugin Registry
+
+  - Stream (transformer)
+
+  - Redirecting Factory Constructors
   
 
 Core Concepts :

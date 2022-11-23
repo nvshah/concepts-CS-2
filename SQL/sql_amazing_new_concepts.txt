@@ -1,0 +1,8 @@
+sql_amazing_new_concepts
+-------------------------
+
+* ROW_NUMBER()
+
+* RANK()
+
+* DENSE_RANK()

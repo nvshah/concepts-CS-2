@@ -90,3 +90,18 @@ REMEMBER :
    - snapShotFlow -> to convert Composed State to Flow
    - distinctUntilChanged()  // kinda BLOC to emit unique States
        
+__________________________________
+
+Q) derivedStateOf vs rememeber With key (ie remember(key)) ?
+----
+ ->
+  remember with key will always re-execute when the key changes
+  &
+  In the case of derivedStateOf, It will also re-excute but only if after
+  re-execution the new value is different from previous one !
+
+
+
+--------
+
+* rememberLauncherForActivityResult  // used when asking for permission in some activity

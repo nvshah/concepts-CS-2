@@ -15,6 +15,7 @@
 * Architecture 
 
 * Navigation (Navigator2.0 & Nnavvigator1.0)
+   go_router
 
 * Key-Val Storage (Hive|ROOM|MOOR)
 
@@ -41,9 +42,13 @@
 
 * MultiModule (Modularization)
 
+* Generated Plugin Registry
+
+* Stub Way Impl | Adapter design Pattern | Conditional Compilation (Conditional Import)
+
 --------
 
 UI :
 
-- CompositedTransformTarget
+- CompositedTransformTarget | Overlay | ModelRoute
 - LayerLink()

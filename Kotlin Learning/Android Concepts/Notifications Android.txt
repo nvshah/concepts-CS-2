@@ -6,6 +6,9 @@ Overall Glimpse
 
 NotificationManager -> NotificationBuilder -> NotificationStyle
 
+// Used when we ask for permission & if granted to store result on activiyt based
+rememberLauncherForActivityResult
+
 ------
 
 * NotificationCompat.Builder()
@@ -105,3 +108,19 @@ NotificationManager -> NotificationBuilder -> NotificationStyle
   Overall Flow
   ____________
   NotificationManager -> NotificationBuilder -> NotificationStyle -> MessagingStyle -> Person -> Message
+
+
+____________________
+
+API 33 + (POST NOTIFICATIONS)
+ |
+ - TIRAMISU (onwards)
+
+ We can use `rememberLauncherForActivityResult`
+ to remember the granted permission for current activity
+
+ => permissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+
+ another variable that is available are
+  -> `shouldShowRequestPermissionRationale`
+  -> ActivityResultContracts

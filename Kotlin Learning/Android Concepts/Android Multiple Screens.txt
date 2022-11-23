@@ -1,5 +1,13 @@
 Android Multiple Screens
 ---------------
+ref :
+Adaptive Layout (SlidingPaneLayout) -> https://www.youtube.com/watch?v=2rtLdF9UFqg
+Adapt to All Screen -> https://www.youtube.com/watch?v=ir3LztqbeRI
+
+Keywords
+- Design App for Large Screens
+- SlidingPaneLayout (Adaptive Layout)
+_____________________________
 
 * Forms & Factors
 
@@ -59,3 +67,15 @@ Gist
 2. Interaction with other apps
 3. Check Camera Layout
 4. Diff Inp mode (keyboard, Mouse)
+
+
+* ----------------------------------
+
+* Jetpack Compose & Multiple Screens :
+
+- ActivityEmbeddings
+
+- calculateWindowSize()
+   // To adapt easily to different sized layouts & manipulate the Compose Breakpoints
+
+  Breakpoints := WindowWidthSizeClass.compact  // likewise

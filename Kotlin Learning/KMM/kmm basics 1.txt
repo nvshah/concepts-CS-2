@@ -1,0 +1,21 @@
+kmm basics structure
+---------------------
+
+NOTE :
+ You can define the dependencies in terms of either `classpath` or kotlin gradle plugin
+
+* Structure :
+
+  Basically KMM project is comprised of 3 modules
+  1. `androidapp` module
+  2. `iosapp` module
+  3. `shared` module
+
+
+  sharedMain /-> all the shared code that will not have any platform specific aspects
+
+=> Shared Section of Code works only with Pure Kotlin libraries
+   i.e ktor will work
+       but retrofit wont
+
+

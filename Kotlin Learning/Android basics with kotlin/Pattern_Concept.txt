@@ -12,4 +12,12 @@
   ------
    -> Sealed Class or Data Class or any other kinda 
 
-   
+
+* Adapter :- Eg RecyclerView
+     Eg :- Conditional Compilation / Conditional Imports / Stub Way (Platform Specific Impl in Cross-platform)
+
+* Builder :- Used to create obj with some parameter
+
+* Creator :- Eg PhotoPicker in Android 13 (ie Via LauncherForActivityResult)
+
+

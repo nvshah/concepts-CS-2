@@ -1,0 +1,7 @@
+Multiple Device Android 
+-----------------------
+ref : https://www.youtube.com/watch?v=H6UxTnghkMw
+
+* Communicate the Multiple Devices (Android)
+  --------
+  - Network of devices using same low-level functionality

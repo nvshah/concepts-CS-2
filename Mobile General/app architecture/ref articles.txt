@@ -1,0 +1,10 @@
+ref articles
+
+
+Gradle Plugin :
+https://www.raywenderlich.com/22198417-gradle-plugin-tutorial-for-android-getting-started
+
+Library
+https://www.raywenderlich.com/52-building-an-android-library-tutorial
+
+https://medium.com/@iamanbansal/manage-your-dependencies-in-multi-module-android-project-eb4fc29066af

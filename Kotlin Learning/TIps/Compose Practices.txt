@@ -7,3 +7,8 @@ Compose Practices
 
 * Baseline Profiles :
   - Helps to boost the startup, & reduce janks
+
+
+* Apps for Large Screens :
+  ---
+  - ActivityEmbedding

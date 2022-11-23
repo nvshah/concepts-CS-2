@@ -24,3 +24,10 @@
 * collectAsStatWithLifeCycle() vs collectAsState()
   ---
    ->
+
+
+* callbackFlow :
+  ----
+  -> Flow that emits whenever callback is triggered !
+
+  -> launch(), send()

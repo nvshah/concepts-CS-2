@@ -49,6 +49,8 @@ Code Ref :
   -----------------------
    - Global State needs to be injected via Depedency Injection / Service Locator 
 
+   Eg Provider, getIt, RiverPod
+
 
 * Depedency Injection | Service Locator :
   -----------------------

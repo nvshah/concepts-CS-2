@@ -12,6 +12,9 @@
 - number of pairs of interchangable Rectangles ( # https://leetcode.com/problems/number-of-pairs-of-interchangeable-rectangles/)
   [Counter, starmap, comb, truediv]
 
+- Perfect Squares (ps://leetcode.com/problems/perfect-squares/)
+  [Column Wise DP]
+
 * Logical
 
 - Maximum Area of Piece of Cake after Vertical/Horizontal Cut
@@ -24,3 +27,5 @@
   (https://leetcode.com/problems/task-scheduler/)
   [max-heap, queue]
 
+* Math
+  bulb_switcher (# https://leetcode.com/problems/bulb-switcher/description/)

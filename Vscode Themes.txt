@@ -4,3 +4,8 @@ Settings Sync :
 
 Intellij Setting Sync :
   - https://stackoverflow.com/questions/70253770/how-to-sync-intellij-settings-to-another-jetbrains-account
+
+
+* VsCode Settings Locally backup
+
+https://superuser.com/questions/1080682/how-do-i-back-up-my-vs-code-settings-and-list-of-installed-extensions

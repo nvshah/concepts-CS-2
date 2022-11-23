@@ -78,9 +78,12 @@ handson :-
   Kimberly Fessel (Seaborn) <--**
   DataSchool
   CampusX
+  Mr P Solver
 
   NeuralNine
   Python Simplified
+
+  Chandoo   // Excel Course
   
 theory :-
   Krish Naik
@@ -108,8 +111,17 @@ theory :-
 Maths & Stats :-
   3 blue 1 brown
   Tibees
-  MartinStatsLecture
+  MarinStatsLecture   <- (** Best for Stats)
   Visually Explained
 
 
   DataLab
+
+
+-----------------------
+
+* Github
+
+Kimberley Fessel (Seaborn + Matplotlib) -> https://github.com/kimfetti/Videos
+
+Normalized Nerd :- https://github.com/Suji04/NormalizedNerd

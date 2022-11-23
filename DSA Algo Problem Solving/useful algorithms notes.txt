@@ -32,6 +32,10 @@
 
 16) Tarjan's Algo
 
+17) Jarvin March's (Convex Hull) Algorithm
+
+18) Union Find (Disjoint Set Data Structure) | Group Partioning
+
 
 list of alog:- https://github.com/xizhengszhang/Leetcode_company_frequency
 
@@ -128,7 +132,6 @@ list of alog:- https://github.com/xizhengszhang/Leetcode_company_frequency
 * Prims Algo (Minimum Spanning Tree) :
   ---------
    - Min cost to join n nodes wwith n-1 edges
-   
    - BFS application
 
    -> 2 data structures are used :- 

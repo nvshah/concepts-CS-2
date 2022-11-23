@@ -1,6 +1,11 @@
 * Onboarding Process (JetPack Compose - StedvZa)
 * Walkthrough ViewPager (jetPack Compose - StedvZa)
 * Datastore Persists 
+  Proto DataStore
 
 * App Modularization
 * WorkManager
+
+* Deep Linking
+
+* Intent Filters

@@ -1,4 +1,0 @@
-Binary Search
-Recurssion
-Dynamic Programming 
-Greedy Approach

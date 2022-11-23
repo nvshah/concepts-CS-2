@@ -1,3 +1,7 @@
 * Material Tap target Prompt  // for tapping effect
 
 * groupie // for recycler view
+
+* view binding delegate   // reduce boiler plate for doing View Binding
+
+* ktlint gradle plugin  // for Linting (Kotlin)

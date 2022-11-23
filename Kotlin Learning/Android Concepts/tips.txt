@@ -43,3 +43,46 @@
     - buildConfigFiles() -> local.properties
 
   => Store Token in Jetpack Crupto Preferences instead of normal Shared Preferences
+
+
+* LiveData vs StateFlow :
+  --------------
+  -> Both are meant for same purpose
+     i.e maintain state & notify the observers when state changes
+
+  -> LiveData is life-cycle aware whereas Stateflow is not
+
+  -> However we can easily make Stateflow Life-Cycle aware by using LifeCycleScope
+
+  => use Stateflow esp when rest your project uses Coroutine & Flows
+     because that will synergizes so well
+
+* CoroutineScope vs SupervisorScope :
+  --------------
+  -> Whenever any 1 child Coroutine fails it will stop all other residing in same CoroutineScope
+     (in case of CoroutineScope)
+
+     Which is not the case with SupervisorScope
+
+
+* Sealed Interface vs boolean :
+  -----
+  -> If your boolean variable doesnt make sense on either of values
+     then used
+     Sealed Interface instead of boolean variable
+
+
+* Connectivity Check (Lifecycle Aware)
+  -----
+  context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+  ConnectivityManager.NetworkCallback(){}
+
+
+* Convert Flow to State :
+  ----
+  val stateVal by flowObj.observe().collectAsState(initial= _)
+
+=> Typically a ViewModel exposes the Stateflow to the UI/Presentation
+
+* To check if app is minimzed or not, you can check LifeCycleOwner & Observer

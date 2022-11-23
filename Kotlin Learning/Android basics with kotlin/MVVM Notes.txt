@@ -73,6 +73,10 @@ NOTE :- We will use Repository as mediator to access dao for room db
 
 IMP :- View Model must survive Orientation Changes i.e lifecycle of activity & fragments
 
+  DI is different from Service Locator
+
+  Service locator is just mapping or container that holds services/instances
+
 
 * ViewModelProvider :
   --------
@@ -98,7 +102,6 @@ ____________  DI  ________
    Eg Repository is dependecy of View Model
 
    DI - framework - kodein
-
 
    singleton :- same instance 
    provider  :- new instance every time (ie fatcory alike)

@@ -1,0 +1,18 @@
+State Management
+
+* Compose State vs StateFlow :
+  --------------------------
+
+  - Compose State is a mutable State Management (ie based on Live Data)
+    whereas
+    Stateflow is a immutable based on Streams (ie Flows)
+
+  -> Compose State you can directly used in your UI as well by lazy init
+     i.e `by mutableStateOf()` syntax
+
+=> flow gives us operator :- map, filter, combine
+
+
+* SavedStateHandle :
+  ----
+  - to restore state on occasion such as process death

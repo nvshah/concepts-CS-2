@@ -2,3 +2,6 @@ Tips
 
 * File Provider
   - File Providers are a special way of providing files to your app to ensure it is done in a safe and secure way
+
+* ViewModelProvider
+  - Store holding reference to ViewModels for a particular Scope.

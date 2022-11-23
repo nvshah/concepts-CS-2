@@ -1,0 +1,12 @@
+1. Http Knowledge
+------------------
+
+* QUIC -> streams as the first class citizens at transport layer
+  TCP protocol ->
+
+  QUIC are newer approach over TCP connection
+
+  QUIC is UDP based protocol & no additional handshakes are required
+   - Thus packet loss on one stream will not affect anotehr in case of QUIC
+
+  QUIC is designed for Mobile heavy Internet Usage

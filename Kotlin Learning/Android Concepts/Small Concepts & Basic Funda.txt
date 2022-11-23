@@ -1,0 +1,13 @@
+Small Concepts & Basic Funda
+-------------
+
+* Presentation Layer :
+  ----
+  - Visual Elements (The things to show)
+  - But it also holds another thing i.e Presentation Logic (ie what to show)
+
+
+* Dependency Injection vs Service Locator :
+  ----
+  Dependency Injection :- Via Parameters, or Property Sets
+  Service Locator :- Container of all services/instances

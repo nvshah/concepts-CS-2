@@ -1,0 +1,15 @@
+Android Media
+-------------
+
+-> File Picker |
+   |
+   -> In Android files types are identified by `MIMETYPE`
+
+      Though files can be identified via extension but its not an correct or safe way always
+      So we have MIME Type for files
+
+      type/subtype
+
+      to identify the Category & type of File Picked/Choosed
+
+-> Files Content is represented as byte-array (ie List of Uint)

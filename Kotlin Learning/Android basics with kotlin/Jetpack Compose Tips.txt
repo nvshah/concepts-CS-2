@@ -10,3 +10,83 @@ Jetpack Compose Tips
 
   => Alongwith BoxWithConstraints we should use some relative values & not the fixed values
      (Eg WeightModifier (ie Flex) )
+
+
+* Avoid Unnecessary Recompositon :
+  ---
+  Eg When you filter List inside LazyColumn's 1 child
+
+  2 Ways to avoid
+
+  1) remember the filtered list initially &
+     update only when original list changes instead of every time recomposition
+
+  NOTE When we pass param to remember(param){}
+       then that remember will observer that `param` changes & execute the block likewise
+
+  2) Use derivedStateOf(){} instead of remember(keyName){}
+
+    : derivedStateOf -> is efficient as it will only recompose if the return from re-execution changes as compare to previous
+
+    : remember wit Key -> will re-execute everytime when key changes.
+                          However it doesnt consider after re-execution the re-computed val is same as previous or not !
+
+    => Use derived state of when the keys changes more often/frequently
+
+
+* mutableStateListOf  :- makes the mutable list observables !
+
+  REMEMBER :- mutableListOf() is not by default observables
+
+
+* composed function :
+  ------
+  -> returns the modifier
+  -> Useful in developing the extensions on Modifier for Stateful Modifier,
+     Where modifier needs to do some work when composed state changes (ie consider animation)
+  -> this way we will get composition context
+      \
+       When the state chages we can then change the Modifier (via this composed function)
+
+
+* graphicsLayer {}
+  -------------
+  -> can be used to apply certain transformation, rotation ,scaling to our composables !
+
+
+* Lifecycle Events For Compose :
+  --------------
+  onUserLeaveHint()  // called when user leaves the screen (ie via minimizes or going to other app)
+
+* onGloballyPositioned :
+  -----
+  -> Callback that is called whenever the compose is rendered & positioned (ie Drawn on the Screen)
+  -> Provides the Layout Coordinates
+
+
+* To get the Rectangle Bounds Surrounding the Current Composable :
+  ---
+  .onGloballyPositioned{
+    print(it.boundsInWindow().toAndroidRect())
+  }
+
+
+* To run some code at start of particular Jetpack Composable :- use `SideEffect{}` block
+
+
+* ProvideTextStyleLocal(){}  // provide the overrident text styke down the composables
+
+* FontFamilyResolver :- // To resolve & cache the fonts (download) at runtime
+  FontVariation Api
+
+
+* Compose & Animation Tips :
+  ---
+
+  AnimatedVisibility()   // For visibility
+  AnimatedContent{}  // For Transition
+  animateFloatAsState{}  // automatically performs animation when state changes
+
+  rememberInfiniteTransition()  // to animate infinitely
+
+  .animateContentSize()  // on Modifier

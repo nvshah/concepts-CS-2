@@ -3,3 +3,9 @@ concepts_ref_videos
 [MVVM-Java] https://www.youtube.com/watch?v=afyXRVKiEzM
 
 [Kotlin-Coroutine] https://www.youtube.com/watch?v=ZTDXo0-SKuU
+
+Adaptive Layout (SlidingPane) -> https://www.youtube.com/watch?v=2rtLdF9UFqg
+
+Fragments (Independent Components) -> https://www.youtube.com/watch?v=OE-tDh3d1F4
+
+* Optimize the App Size with 1 Trick - Android Developers - Youtube Video

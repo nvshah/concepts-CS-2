@@ -43,3 +43,10 @@ Que) What is difference between navigation() & NavHost() ??
  navigation() -> construct nested navigation graph
 
  NavHost() -> 1 navController & holds many navigation()
+
+
+* -------------------
+
+* New back handler (Ahead of Time Back)
+  ----
+  BackHandler()   // Android 13+

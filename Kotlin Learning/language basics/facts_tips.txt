@@ -47,6 +47,18 @@ https://discuss.kotlinlang.org/t/did-you-consider-to-make-inline-the-default-beh
    -> The abstract keyword only ensures that, 
       when instantiated, it's instantiated in the form of a subclass.
 
+* sealed classes :
+  ---------------
+  Though sealed classes are abstract by default as per Kotlin definition
+  So the sealed classes cannot directly instantiated
+  but
+  They can be instantiated indirectly (i.e via super() call in child hierarchy)
+  When some class inherit the sealed class, then during super call that sealed class is indirectly
+  instantiated (ie this phenomenon is called proxy objects/instance)
+  and
+  also when any object is created on the fly without class definition for the same sealed class
+  It is again indirectly instantiated
+
 * Inheritance :
   ----------
    Fields Overriding :-
@@ -88,6 +100,9 @@ MIMP ->>>
   -----
    Kotlin supports “delegation” design pattern by introducing a new keyword “by”.
    
+  -> Delegation can be used instead of Inheritance for BaseActivity
+
+  -> Proved to be good alternative to implementation inheritance !
 
 ===================================
 
@@ -133,3 +148,14 @@ MIMP ->>>
 
 
 * Wrapper Class in Kotlin can be of any kind :- ie Sealed Class or Data Class 
+
+
+* Mixin kinda concept in Kotlin :
+  -------
+  -> How can we inherit multiple classes
+  -> NOTE : In kotlin only Single inheritance is allowed & you can implement multiple interfaces
+  -> You can use Inheritance + Delegation of an Interface to achieve Mixin Kinda Concept
+
+=> Typically a ViewModel exposes the Stateflow to the UI/Presentation
+
+=> State Hoisting :- Keep state as low as possible

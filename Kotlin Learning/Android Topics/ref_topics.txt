@@ -13,3 +13,6 @@
 
 * Deep Link Crash Course
   https://medium.com/androiddevelopers/the-deep-links-crash-course-part-1-introduction-to-deep-links-2189e509e269
+
+* Compose Animtations
+  https://developer.android.com/jetpack/compose/animation#additional-resources

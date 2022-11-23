@@ -6,7 +6,12 @@
 * Compose          // Declarative UI 
 * MVVM             // Aarchitecture
 * Flows            // streaming
-* Junit | Expresso
+* Junit | Expresso  // Busy or Idle
+
+* Baseline Profiles
+
+* Offline-First Apps
+
 
 -- Intermdeiate
 
@@ -29,3 +34,4 @@
 * Butter Knife
 * Rx Java
 * GeoFencing
+

@@ -1,0 +1,14 @@
+Python 3 11 Topics
+-----------------
+
+- ExceptionGroup
+
+- TypeVarTuple
+  LiteralString
+
+- @dataclass_transform
+
+- Task Groups
+  ----
+  asyncio.TaskGroup()
+  -> Instead of manually creating multiple tasks & gathering them, its recommended to use TaskGroups

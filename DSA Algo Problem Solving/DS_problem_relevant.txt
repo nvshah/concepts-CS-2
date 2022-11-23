@@ -31,3 +31,8 @@ DFS :- recursion & backtracking
 
 
 * BellMan Ford | BFS :  Cheap Flights
+
+* Union-Find (Disjoint Set)
+  --------
+  -> used to store non-ovelapping sets
+  -> faster merge

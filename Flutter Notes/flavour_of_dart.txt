@@ -14,4 +14,14 @@ Flavors of Dart :
 
  5) factory constructor redirection using '='
 
+    ref :
+    https://stackoverflow.com/questions/69511105/assigning-subclass-to-a-factory-constructor-in-dart
+    https://github.com/flutter/flutter/issues/35727
+
  6) Type Promotion :- Auto Cast
+
+ 7) Macro Comments
+
+ 8) Stopwatch // flutter core
+
+ 9) Conditional Import

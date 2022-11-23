@@ -43,6 +43,11 @@
   --------
    -> use `intent`
 
+* To get the context :
+  --------
+   -> LocalContext.current
+
+* permission request launcher : ActivityResultContracts.RequestPermission()
 
 * back button in android fragment :
   -----

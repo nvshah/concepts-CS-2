@@ -2,6 +2,8 @@ ref :
  [XML] -> https://www.youtube.com/watch?v=5lSQcJjZPFs
  [Compose] -> https://www.youtube.com/watch?v=HmXgVBys7BU
 
+ Adaptive Layout (SlidingPane)
+ https://www.youtube.com/watch?v=2rtLdF9UFqg
 
 ----
 
@@ -27,3 +29,9 @@ ref :
 >800 dp -> Desktop (Expanded)
 
 To get current dimennsion iof Screen :- LocalConfiguration.current
+
+
+* --------------------
+
+* SlidingPaneLayout (For ListView)
+  ---

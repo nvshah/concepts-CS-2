@@ -8,3 +8,70 @@ new_concepts
   ---
   -> We can add new props to BuildConfig class via adding key-val in local.properties
      & that can be done via build.gradle file
+
+* Cross Device Api :
+  ---
+  -> for multi device experiences
+
+
+* System Back :
+  ----------
+  ref : https://www.youtube.com/watch?v=ir3LztqbeRI  (Google IO)
+
+  TalkBack
+  --------
+
+* Androidx Lifecycle & Fragment :
+  --------
+  - repeatOnLifecycle()
+
+
+-----------
+
+List
+
+- Jetpack :
+  - metrics for Janks
+
+- Compose
+  - lazy list, lazy grids
+
+- Large Screens (Multiple Screens Support)
+  - Canonical layouts
+
+- Privacy Sandbox in Android
+  - Permission more secure
+
+
+-------------
+
+Android 13 New
+--------------
+- Personalization :- Per app language preference
+- Security :- PhotoPicker API
+- Notification Permission
+
+
+* System Back : (Ahead oF time)
+  ----
+  Prior to Android 13, System doesnt know Ahead of time if App handles the Back Button Events/Gestures
+  So System was only aware of 2 Gestures i.e Home & Recency Button (Ahead of Time)
+
+  With Android 13, there is introduction of Ahead-of-Time Model for Better Back for Android
+
+  System will now know ahead of time what to do on certain things (ie Predictable Back)
+
+  New API :- onBackInvokedCallback{}
+     \
+      - If you override the method of this interface, then System (Android) will let you handle the
+        Back press
+
+  Each Activity has OnBackPressedDispatcher.onBackPressed()
+    \
+     Activity is from AndroidX
+
+  => Each Fragment has its own NestedFragmentManager & thus has its own BackStack
+
+  In Compose it is
+
+  BackHandler() Api

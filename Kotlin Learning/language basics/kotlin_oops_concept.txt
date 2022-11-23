@@ -1,0 +1,9 @@
+kotlin_oops_concept
+-------------------
+
+* Inline Classes :
+  -----
+  keyword : `value`
+
+  -> Subset of value based classes
+  -> They dont have identity & can only hold values

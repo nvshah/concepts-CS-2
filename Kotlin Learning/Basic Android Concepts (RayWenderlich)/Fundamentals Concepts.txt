@@ -1,10 +1,66 @@
 Fundamentals Concepts
 ---------------------
 
-* Intent :
+* Intent :  (ref : https://www.raywenderlich.com/4700198-android-intents-tutorial-with-kotlin#toc-anchor-005)
   ----
   - Actions, Data, Extras
 
     Extras -> Extra Info you need to pass to perform Actions
 
   - Implicit Intent, Explicit Intent
+
+  Implicit Intent :
+  -? Android OS takes control to find the ideal candidate (ie other apps) that can serve this intent
+
+  Explicit Intent
+  -> specific component created & used when intent starts !
+  -> This could be another activity or service in your app (Eg Download Service that you can start in Background)
+
+  Broadcast Intent :
+  -> Any Interested Parties can act upon it
+  -> When you dont know which specific Activity needs to be created then you can broadcast the Intent
+
+  -> Its useful when you cant start the activity for the action purpose
+     So if you broadcast then interested parties can act upon it
+
+ Q) Implicit vs Broadcast Intent ??
+ ->
+    In case of Implicit Intent matching candidate will came up with some User Interface to act
+    Whereas
+    In case of Broadcast Intent it may be possible that candidate may not have User interface
+    (thus here we cant start the actvity)
+
+* Intent Filtering :
+  ---
+  Through this your app knows that which intent it should responds to (in case of Implicit Intent)
+
+  `intent-filter` -> enables part of your app to reacts/responds to implicit filters
+
+  => Its like your app is waving banner that (i support this intent)
+     So whenever the android looks for some intent aroused by some other app it can see that this
+     app is rising some banner (ie intent-filter) & if that banner matches the requirements then
+     android will consider this app as ideal candidate
+
+
+* SharedPreferences & ViewModels :
+  ---------
+  SharedPreferences :
+  - To store/cache data in local storage (key-value) form
+  - It supports some primitives types
+
+  ViewModels :
+   - Manage the data that is visible on screen in a way that respects the Lifecycle of your app.
+
+  * ViewModelProvider
+    - Store holding reference to ViewModels for a particular Scope.
+    - Store of ViewModels, scoped to particular UI components !
+
+  Factory => provide the instance of ViewModel (& this ViewModel must be bound to your Activity/Screen)
+
+REMEMBER :
+  --------
+  If you want the ViewModel to be shared between Activity & Fragment
+  - viewModel = ViewModelProvider(requireActivity()).get(ListDetailViewModel::class.java)
+
+  Otherwise
+  - viewModel = ViewModelProvider(this).get(ListDetailViewModel::class.java)

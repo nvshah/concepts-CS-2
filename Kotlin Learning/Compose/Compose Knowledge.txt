@@ -1,0 +1,91 @@
+Compose Knowledge
+
+Q) How Compose works ??
+
+   -> Compose has 3 Phases : Composition, Layout, Draw
+
+   Composition :- What to Show
+   Layout :- Where to Show
+   Draw :- does works of graphics rendering on screen
+
+
+* remember(key){} | remember{}
+  -> State needs to change as much as Keys changes
+
+* derivedStateOf{}
+  -> State is changing more than you want to update your UI
+
+* reportFullyDrawn()
+  -> ReportDrawnWhen{}
+
+
+-------------
+Thinking in Compose
+
+* ReComposition :
+------------
+Composable Function can recompose
+-> the Compose runtime might re-execute the composable function (after thet have benn called the
+   first time) inorder to update the current state of UI
+   This process is called as Recomposition
+
+-> Composables functions have their own memory
+   ie they remember what thet did last time !
+
+   So there is a primitive function `remember` that can helps you to tap into this !
+
+   By Wrapping any Result in remember block you tell Composable to remmeber it after first result
+   acquired from first call
+
+   This way it would be a part of the tree, though its not a part of Render UI
+
+[Key & Cache]
+-> Parameters of the Composable func are keys to local cache
+   (ie local cache means memory bind to Composable that remembers the things)
+
+   We can achieve this via passing parameter to `remember(customKey){}`
+
+
+=> Single Responsibility :
+
+
+* State :
+  --------
+  - MutableState<T>
+  - property delegate via `by` keyword
+
+
+* Architecture :
+  ------------
+  - Single Responsibility
+
+  - Single Source of Truth
+    ______________________
+    (Lift state to lowest common ancestor)
+
+  - Seperation of Concerns
+    ______________________
+    (Via ViewModel Architecture for Business Logic)
+    - Sometimes its define in terms of Coupling & Cohesion
+    - Modules Architecture
+
+    Coupling :
+    - We can think our application as a set of modules &
+      We can think modules as a single unit
+
+    - We can think dependencies between this modules as a Coupling
+    - If I make change somewhere, How many other places I need to make change due to this ?
+      &
+      We want to minimize such amount of coupling
+
+    - Sometimes coupling is implicit
+
+
+    Cohesion :
+     - How units inside modules are related to each other
+     - We want to increase the cohesion
+
+=> View Model is tightly coupled to UI
+   -------
+   - Provide ViewModel as a Scope (or Dependency Injection Mechanism) rather than
+     passing it via Parameter

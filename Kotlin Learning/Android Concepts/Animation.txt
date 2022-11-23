@@ -1,6 +1,24 @@
+ref :
+Animation → https://goo.gle/compose-animation
+Cheatsheet → https://goo.gle/compose-animation-che...
+Blog → https://goo.gle/animated-content-blog
+
 * AnimationSpec :
   ----
    - spring 
    - tween
 
 =. updateTransition() => to update multiple vals at a time via single anim spec
+
+
+* Compose & Animation Tips :
+  ---
+
+  AnimatedVisibility()   // For visibility
+  .animateContentSize()  // on Modifier
+
+  AnimatedContent{}  // For Transition
+
+  animateFloatAsState{}  // automatically performs animation when state changes
+
+  rememberInfiniteTransition()  // to animate infinitely

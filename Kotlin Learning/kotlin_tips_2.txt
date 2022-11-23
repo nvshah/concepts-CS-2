@@ -126,6 +126,8 @@ References :
   ----
    FirebaseInstancIdService
 
+
+* Use GeoCoder -> to extract location information from coordinates
    
 
 //----------- Third Party Package For Android (Kotlin)
@@ -153,3 +155,7 @@ References :
 - Accompanist -> System UI Controller
 
 - compose-destinations   // simple & better Navigator in Jetpack Compose
+
+- fused location provider api  // Location API in google play services
+
+- easy permission // run time permission

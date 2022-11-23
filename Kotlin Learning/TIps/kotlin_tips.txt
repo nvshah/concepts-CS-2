@@ -8,3 +8,7 @@
 * Reciever & Extension Function :
   
    - If you want nullable Reciever on left side than you can opt for Extension Function with Nullable Reciever
+
+* Sealed Classes :
+  - When you use sealed classes & you dont need Constructor then you can define it as
+    Sealed Interface

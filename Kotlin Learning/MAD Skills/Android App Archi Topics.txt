@@ -1,0 +1,8 @@
+Android App Archi Topics
+
+1. State Holders & State Production in the UI layer
+2. Where to hoist that State in Jetpack Compose
+3. Build an offline-first app
+4. Building a Scalable, Modularized, testable app from scratch
+5. Collecting Flows in Lifecycle aware manner
+6. By layer or feature ? Android App Moduarization Guide

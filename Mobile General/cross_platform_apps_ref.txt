@@ -9,3 +9,6 @@ cross_platform_apps_ref
 [Multiple Screen Size Support with Jetpack Compose]
 - https://www.youtube.com/watch?v=NVrFiogpyr8
 - https://www.youtube.com/watch?v=4_KVGZmVWjY   (Box with Constraints)
+
+
+Adaptive Layout (SlidingPane) -> https://www.youtube.com/watch?v=2rtLdF9UFqg

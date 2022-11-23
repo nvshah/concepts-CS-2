@@ -402,8 +402,23 @@ siwtch() stmt :
    Stream Controller :- authority that is adding item to stream 
    Stream Subscription ;- listener that is waiting for an item on stream 
 
+   Stream -> transform()
+                |
+           If we want custom Transformer then we can extends `StreamTransformerBase`
+
+   StreamTranformerBase -> override bind() method
+
 
 * TearOffs :
   ------
    -> When you provide the function as a variable to something 
       without unnecessary addressing of the lambda is known as TearOffs
+
+
+* Isolates & Background Work :
+  ----
+  - Used to perform some heavy or background work
+    \
+     -> Downloading, AudioPlayback
+     -> Updating the App in background
+     -> Fetching the data in background

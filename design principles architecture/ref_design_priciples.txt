@@ -12,6 +12,8 @@ https://dev.to/elianmortega/vol-2-solid-rules-in-dart-2e6m
 
 https://medium.com/tunaiku-tech/s-o-l-i-d-principles-simplified-explanation-example-f7268ca75758
 
+https://www.raywenderlich.com/18409174-common-design-patterns-and-app-architectures-for-android
+
 * SOLID :
   -----
     -> https://www.educative.io/blog/solid-principles-oop-c-sharp

@@ -43,6 +43,10 @@
 
 13) To {move, copy} file to diff folder use `shutil` module
 
+14) To get rid of null terminating characters from byte decoded string we can use rstrip
+     \
+      -> byteObj.decode().rstrip('\x00')
+
 -------reference
 
 [Import Python Tips]  https://realpython.com/python-import/
@@ -105,6 +109,10 @@ Articles :- analytics vidhya
 23) We can use `vars()` to get dict out of object's properties & can use it whilst Json Encoding !
 
 24) use getpass.getpass() instead of input() if you want to hide input while entering
+
+25) To change the limit of digit of int while representing or converting to string
+    -> sys.set_int_max_str_digits(0)   // apply while conversion from int to str
+
 --------------
 
 Python builtin frequently used 

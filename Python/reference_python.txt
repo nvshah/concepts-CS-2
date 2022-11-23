@@ -9,6 +9,9 @@
    - PyCon 2014
    - BugBytes
 
+   - Data Professor
+   - Indently    <- Short Concepts & Basics
+
 
 -----
 Advance (ML)

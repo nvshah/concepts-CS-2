@@ -3,3 +3,8 @@
 
 - onCreate :- init()
 - compositeLoaclOf :- Provider
+
+
+----------------
+
+* State Managing in Flutter via Streams = StateFlows in Kotlin|Android

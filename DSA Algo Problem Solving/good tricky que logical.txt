@@ -10,3 +10,5 @@ good tricky que logical
 --------------
 
 Sliding Window + Heap + CustomSort --> https://leetcode.com/problems/maximum-performance-of-a-team/
+
+Sort + Palindrome + Bubble Search -> https://leetcode.com/problems/palindrome-pairs

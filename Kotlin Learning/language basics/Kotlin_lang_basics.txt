@@ -363,7 +363,9 @@ _______________________
 
 * Lambdas with Recievers :
   -------
-   -> You can pass extension function as an argument for lambda as well to function
+   -> You can pass extension function as an argument alongwith lambda to a parameter
+
+      ClassName.() -> Unit
 
 
 * Qualified Return :
@@ -402,3 +404,32 @@ _______________________
   ------
    - generators | Iterators of python 
    - Lazy Iterable 
+
+
+--------------------------
+
+* Operator Overloading (Conventions) :
+  ----------
+  keyword : `operator`
+
+  => Conventions manage multiple features in Kotlin, such as
+     1. Operator Overloading
+     2. Infix Functions
+     3. Delegated Properties
+
+  -> Convention is the agreement, So that you can use the function in specific way
+  -> Can be defined inside a class or as an extension (reciever)
+
+  get(), set()   =>  []
+  contains()     => in, in!
+
+  compareTo()    =>  >, <, >=, <=
+
+  NOTE: if you override the compareTo() then it will overlap over equals() function
+
+  rangeTo()      => ..
+
+  getValue()     => delegate
+  setValue()
+
+

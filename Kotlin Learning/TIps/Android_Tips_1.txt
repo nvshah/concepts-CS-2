@@ -32,3 +32,61 @@
 
 * Dont Run Complex tasks directly in Service because your service also runs on Main UI Thread
   Launch Coroutine for the same if needed
+
+* Optimize the App Size with 1 Trick : Android App Bundle (Android Developers - Youtube)
+
+* Test the deep links or intents via Android Debug Bridge !
+
+
+* ConstraintsLayout & GuideLines :
+  --------
+  -> If you want to put child in constraints layout based on some percentage sizes
+     You can uses Guidelines inside Constraint Layouts
+
+  -> use Qualifiers to adapt to different screen sizes
+
+
+* To check if There is Feature available for your App ?
+  ->
+    packageManager.hasSystemFeature{}
+
+* To check if the User Leave the Screen ! -> onUserLeaveHint()
+
+
+* We can define when we dont want our activity to be recreated or killed (based on config changes) :
+  via
+  specifying in Manifest File (for corresponding activity)
+  <activity
+    ...
+    android:configChanges = "screenSize|smallestScreenSize|screenLayout|orientation"
+    >
+    ...
+  </activity>
+
+
+* To change the System Bar Color :
+  -> System Bar contains 2 things -> Status Bar (at Top) & Navigation Bar (at Bottom ie with 3 buttons)
+
+  2 ways
+  1. Change the val in Light & Dark Theme.xml accordingly  (ie Compile Time)
+  2. Via Accompanist library/plugin for Compose !   (ie Run Time)
+          \
+           -> SystemUiController
+  => So this Accompnaist library is overriding the value present in Themes xml files (at run time)
+
+
+* To pick photos (Newer API 13)
+  ----
+  LauncherForActivityResult
+
+* To survive the process death :- You need to use `SavedStateHandle`
+
+* Turn your Callback into awaited suspended function // so that you can act when that callback happens
+  -> via `suspendCoroutine{ continuation -> //TODO }
+
+* To make Status & Navigation bar Layout Edge to edge
+  -> WindowCompat.setDecorFitsSystemWindows(window, false)
+
+* Collect the flow in Lifecycle Aware Manner
+
+=> Coroutines & Flows are recommended ways of doing async works in Android

@@ -46,3 +46,44 @@
   --------
   Android :- KeyStore
   IOS :- KeyChain
+
+
+* BaseLine Profiles :
+  ----
+
+
+* Pending Intents &
+
+
+* Android Fragments & androidx Lifecycle :
+  ---------
+  ref : https://www.youtube.com/watch?v=OE-tDh3d1F4
+
+  - Lifecycle is a essential component of an Latest modern Fragment as a part of AndroidX
+
+  - provides api's such as `repeatOnLifeCycle()`
+
+  -> You shouldn't be reaching Fragment for usecase where that component is living longer
+     (ie for eg Configuration change)
+
+  -> Ui elements + State Holders
+     -> State holder provides the UI state to your fragment
+
+  -> When does ViewModel gets shared
+     - For Eg
+       Let say ViewPager2 has 3 pages (ie 3 corresp Fragments)
+       then
+       in this case each fragment can have a shared ViewModel
+
+
+* Insets :
+  ----
+  -> How much content of your needs to be padded to avoid overlap with System UI contents
+  -> There are different types of insets for different type of parts in System UI
+     For eg Status Bar, Navigation Bar
+
+  -> Insets can change based on your device at runtime
+
+  -> WindowInsets, imePadding(), imeNestedScroll()
+
+  // ime... applies automatically animation for insets obstruction by system UI components such as keyboard

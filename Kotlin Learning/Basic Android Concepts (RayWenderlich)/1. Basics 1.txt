@@ -2,6 +2,7 @@
 ------------
 
 * Activity := Each screen (in android) is known as an Activity and is built around a single task
+   - Android Studio hooks up your layout (ie root layout) so you dont need to manually do so
 
 * In the most general sense, any logic you add must come after calling setContentView()
 
@@ -21,3 +22,37 @@
     - called before configuration change happens, giving you chance to save anything imp.
 
   Bundle -> hashmap, which Android uses to pass values across different screens
+  ______
+
+
+* View Binding :
+  - Technique to make layout available in code behind without using `findViewById()`
+    \
+     To reference Views instead of findViewById()
+
+  - binding obj then can be used to bind data to the view
+
+* Layout Inflater :
+  - LayoutInflater is a system utility used to instantiate (or "inflate")
+    a layout XML file into its corresponding View objects.
+
+
+* Activities & Communication :
+  ---------
+  -> Keep an activity for single task (to avoid confusion in your App)
+  -> When you create new Activity (Fragment | ViewModel), another place is also modified
+     i.e manifest file
+
+
+* AndroidManifest :
+  ---
+  3 main tags
+
+  1) manifest tag :- root element
+        -> Your package only must be associated with this tag
+
+  2) application tag :-
+        -> contains app-sepcific information  {icon, name, theme}
+
+  3) activity tag :
+       Every Activity within app must have corresponding tag in the AndroidManifest file

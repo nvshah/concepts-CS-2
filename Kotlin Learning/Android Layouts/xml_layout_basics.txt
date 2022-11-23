@@ -1,7 +1,20 @@
-1) ConstraintsLayout :
-     - For more commplex layout
-
+ref :
+https://www.youtube.com/watch?v=5lSQcJjZPFs  // Constraint Layout and Adaption
 
 ---- TIPS ---
 
 => Sometimes Linear Layout with Weight is a good choice rather than relative layout.
+
+
+
+1) ConstraintsLayout :
+     - For more commplex layout
+     - useful to adapt to different screen sizes
+
+     -> guidelines  : use guideline when you want to align child relative to Constraint Layout
+
+     -> Chains :- Evenly Spread
+
+     -> Qualifiers :- to adapt to different screen sizes or other qualifiers based layouts
+
+

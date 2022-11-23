@@ -55,5 +55,8 @@ __________
 
    StateFLow's collect() is same as LiveData's observe() function
 
+   => Inorder to stop collecting as per LifeCycle then use StateFlow collection in LifecycleScope
+      i.e `repeatOnLifeCycle()`
+
    
 

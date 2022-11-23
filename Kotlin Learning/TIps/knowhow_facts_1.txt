@@ -12,3 +12,7 @@
 
   - Inorder to get the minimal code in zipped format to share
     Go to android studio > File > Export
+
+
+* Asa Size of Window changes there is a configuration change
+

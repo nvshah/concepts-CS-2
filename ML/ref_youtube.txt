@@ -2,3 +2,12 @@
 EDA IPL data :- (https://www.youtube.com/watch?v=LfKFR2aUtio  )
      \
       Channel Name : IvProSchool
+
+
+* Pandas :-
+  - Corey Schaffer
+  - Keith Galli
+  - CodeBasics
+
+
+* Pandas Tricks -> Normalized Nerd

@@ -1,0 +1,39 @@
+AdTech
+--------
+
+* AdTech & Android : To display ads (probably customized) to your customer in privacy safe way
+
+* Privacy Sandbox :
+  ----
+  - Topics
+  - Fledges
+  - Attribution Reporting
+  - SDK Runtime
+
+* AdTech :
+  ---
+  1) Advertiser App :
+     --
+     -> The app that wants to advertise some ads to another app in same device
+
+  2) Publisher App :
+     ---
+     -> The app that will select the ads to be shown based on custom criteria (ie variables) & via auction
+
+  3) Custom Audiences :
+     ---
+     -> Whenever any advertiser app wants to register some ads based on certain variables/actions
+        It can make a request to Ads Netweork Manager inorder to make this device as Custom Audience
+        for that specific actions
+
+  4) Ads Network Manager :
+     ---
+     -> Not sure but this would be a part of Privacy Sandbox
+        that manage the both
+        Advertiser & Publisher App to display the ads based on user behavior/actions
+
+
+  Fledge : holds info about custom ads & help to select ads based on custom audiences
+
+  Attribution Reporting : Get insights about ads clicks & conversions
+

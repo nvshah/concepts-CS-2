@@ -1,0 +1,13 @@
+Android Storage
+--------------
+
+ref : Youtube (Everything about storage on android)
+
+- Shared Preferences
+- DataStore | KeyStore
+- SqlIte
+
+
+=> The shared storage content is automatically indexed by the MediaStore
+
+- Scoped access (related to shared file access)

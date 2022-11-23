@@ -15,6 +15,9 @@ launch() = new coroutine scope => async block in Flutter
 
 deffered = Future in flutter
 
+suspendCoroutine // Use to convert any func to awaitable suspended func
+                   (useful when we want to convert callback to awaitCallback())
+
 => - use async when you want to run multiple calculations concurrently
      when you want to await multiple things at oncne use async 
 
@@ -200,3 +203,6 @@ GOOD PRactices
 [RULE of THUMB]
 4) To utilise the suspended fun inside non-suspended fun we need some scope
    ViewModel Scope outlives the lifecycle of activity
+
+5) Turn your Callback into awaited Callback // so that you can act when that callback happens
+  -> via `suspendCoroutine{ continuation -> //TODO }

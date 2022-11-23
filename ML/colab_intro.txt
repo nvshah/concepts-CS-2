@@ -3,6 +3,8 @@
 ref : https://www.youtube.com/watch?v=aChJvgGjKU8
 
 https://www.youtube.com/watch?v=RLYoEyIHL6A  // Colab
+
+Intro to Google Colab :_ Practical Introduction to Google Colab for Data Science by (Data Professor)
 ------------------------
 
 To use any file store inside your drive (i.e csv)

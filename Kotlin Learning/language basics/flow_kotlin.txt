@@ -1,5 +1,7 @@
 * Flow = Stream in Dart 
 
+NOTE launchIn = launch + collect()  for flows
+
 * Flow Operators :
   -----------
    - filter, map, onEach,
@@ -9,6 +11,10 @@
      flapMapMerge, flatMapConcat, flatMap
 
      buffer, conflate, latest
+
+  Methods
+
+   - awaitClose{},  distinctUntilChanged()
 
 NOTE :- When collect is done with one val then only the flow will send next one
 
@@ -47,3 +53,67 @@ NOTE :- When collect is done with one val then only the flow will send next one
       -> when sequence of event matters
 
       LaunchEffect{}
+
+---------------
+
+stateIn :
+-------
+ -> Allows you to create a Flow for Single Value/Variable (via caching the last val)
+    |
+    Esp Create a Flow from another flow via some manipulation (for Eg via map{})
+
+ => If you want to keep this flow active till subscriber listen then you can pass 2nd argument as
+    `SharingStarted.WhileSubscribed()`
+
+ -> stateIn is simple way to emulate `compute` of MobX in flutter
+    i.e when some other flow changes then we must change some dervied variable also as a Flow
+
+combine :
+-------
+ - whenever any of provided flow changes it will call the code block (ie recaculate)
+
+
+* Flow Operators :
+-----------------
+- combine, zip, merge
+
+
+* callbackFlow{}
+  --------
+  -> Flow that will send/emit events when there is a callback triggered !
+
+  useful methods : launch(), send(), awaitClose{}
+
+  awaitClose{}
+   -> For clean-up purpose !
+
+    // Callback that will be called whenever its surrounding Coroutine scope is cancelled &
+       thus suspends the enclosing Flow !
+
+   -> awaitClose will be called when the scope in which its being called is cancelled or no longer exists !
+
+
+* Convert Flow to State :
+  ----
+  .observe().collectAsState(initial= _)
+
+
+----------------
+
+* TIPS (Collecting Flow)
+  ----
+  ref : Youtube - Android Developers - Collecting flow in Lifecycle Aware Manner
+
+  => Coroutines & Flows are recommended ways of doing async works in Android
+  => Typically a ViewModel exposes the Stateflow to the UI/Presentation
+     So once in a UI, it should be collected in a LifeCycle aware manner !
+
+  androidx lifecycle provide some api's // for observing & managing flow with sync to lifecycle
+
+  1. repeatOnLifecycle
+  2. flowWithLifecycle
+
+  1. collectAsStateWithLifeCycle  // For Compose
+
+  NOTE : make sure to use viewLifeCycleOwner in case of Fragment
+         because Fragment & Its View (ie Activity) has different Life Cycles

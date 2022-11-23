@@ -16,8 +16,8 @@ Custom Data structure
 logics :
   
   group Anagrams  [https://leetcode.com/problems/group-anagrams/]
-
 -** largest number (custom sorting total order)  https://leetcode.com/problems/largest-number/
+-** Palindrome Pairs https://leetcode.com/problems/palindrome-pairs
 
 2 Pointers | Partition 
   
@@ -200,3 +200,4 @@ Graphs
 * Math (Logical)
 
    Log + nd-matrix ( # https://leetcode.com/problems/poor-pigs/ )
+   Bits Shift ( # https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/)

@@ -1,0 +1,79 @@
+3. Deep Links & Navigation
+-------------------------
+* Deep Link Crash Course
+  https://medium.com/androiddevelopers/the-deep-links-crash-course-part-1-introduction-to-deep-links-2189e509e269
+
+
+- Disambigution Dialog
+
+To test the Deep Link via Android Debug Bridge
+=> adb shell am start -W -a android.intent.action.VIEW -d
+_______________________
+
+=> Deep Link allows to jump to middle of your app navigation
+   whether its via Notification or Pending Intent
+
+
+* What is Links ?
+  -> A Uri that your app can act upon to quickly navigate to some part of your app
+
+* URI := Scheme + Authority + Path
+
+* Scheme :
+  - In android you can use various scheme that can helps with several builtin intent
+
+=> Deep Link doesnt have centralised registry of Ownership, So any app can sign up to handle a
+   particular Deep Link
+
+   (If your device has multiple apps that handles the same deep-link authority, then system
+    will show disambiguity dialog)
+
+* Path :
+  - User can be directed to any portion of your app depending on the Path
+
+
+* Web Links & Android App Uri Links
+
+  Web Links :- http/https schemes
+
+  Android App Links :- Web Links that are verified to belong to you app only !
+                     - Handle autoVerify attribute (in Manifest File)
+
+ -> Association between Web Sites & Android App Links
+
+
+* Your App as a Handler :
+  ----
+  1. Add intent filter for incoming links to your manifest file
+
+
+
+* NOTE :
+  Intent-Filter :
+   action.VIEW :- so that app can be reach from google search
+   category.DEFAULT :- so that app can respinds to implicit Intent
+   category.BROWSABLE :- allow to redirect to your app from clicking link in browser
+
+  => Android System can starts your Activity via Intent-Filter Incoming
+
+  -> You can test the intent-deep-link via Android Debug Bridge Debug Command
+  => Package name can be skipped for Implicit Intent
+     but
+     Needed for an explicit Intent
+
+Web Link :- Deep Links with Scheme -> http/https
+
+* Android App Links :
+  ----
+  - To validate yourself as the owner of the Web Link you will setup an Android App Link
+  - Android App Links are validate by the Host Domain of the Link (ie Authority)
+  - Make sure you explicitly set autoVerify = true
+     \
+      to enable android app link verification for your app
+
+
+* Implicit & Explicit Deep Links :
+  -----
+  Implicit -> Go to static place in an app
+
+  Explicit -> dynamic Deep link (which uses Pending Intent to move to specific place in an app)

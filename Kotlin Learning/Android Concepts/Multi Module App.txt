@@ -1,0 +1,18 @@
+Multi Module App
+----------------
+
+Tip :
+- Never start with Multi-Module Setup
+- Dont follow Layered based Modularization
+  (Instead go for Task/Feature based Modularization)
+
+-------------
+
+Advantage :-
+
+- Faster Gradle build
+- Better Work Delegation among Team
+  (2 teams can work on same app without changing each other code)
+
+- seperation of concerns
+- Reusability of Modules

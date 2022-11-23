@@ -1,0 +1,12 @@
+compose topics ref
+
+* Jetpack Compose Stability : https://medium.com/androiddevelopers/jetpack-compose-stability-explained-79c10db270c8
+
+* ReComposition : https://proandroiddev.com/understanding-re-composition-in-jetpack-compose-with-a-case-study-9e7d96d98095
+  Debugging ReComposition : https://medium.com/androiddevelopers/jetpack-compose-debugging-recomposition-bfcf4a6f8d37
+
+
+* animation
+  Animation → https://goo.gle/compose-animation
+  Cheatsheet → https://goo.gle/compose-animation-che...
+  Blog → https://goo.gle/animated-content-blog

@@ -1,0 +1,3 @@
+New Concepts Interesting
+
+* Parsr -> Turn your document into Idea

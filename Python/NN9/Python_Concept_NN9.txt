@@ -129,4 +129,13 @@ Update Operator :-   |=            [ Python 3.9]
         .Formatter()
      
 
-   
+* Structs :
+  -------
+  module -> struct
+
+  => Useful when working with Sockets in network
+  -> Package the data into binary format to send to other
+
+  format -> 'i' : int
+            'h' : short
+            's' : character

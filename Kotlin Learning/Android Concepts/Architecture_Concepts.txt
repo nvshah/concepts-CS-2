@@ -2,6 +2,9 @@
   --------
 ------------------
 
+=> Do put your validation things in ViewModel & not in Presentation or UI side
+
+=> DI (compile time) is diff from Service Locator (Run time)
 
 ------------------  
 
@@ -47,8 +50,6 @@
    - Map results to State
 
 
-
-
 [Good Habbit] :- 
 * Resource Class :
   -----
@@ -65,5 +66,4 @@ DI : dependency injection
   - Inject Repository In View
 
 * Single Activity Architecture Concept (instead of BaseActivity)
-
 * Navigation Architecture Components

@@ -42,6 +42,10 @@
    NOTE :- 
     Factories actually hide the implicit Default generators constructor availabl at hand for each class definition
 
+* Redirecting Factory Constructors :
+  ------
+  - https://stackoverflow.com/questions/69511105/assigning-subclass-to-a-factory-constructor-in-dart
+  - https://github.com/flutter/flutter/issues/35727
 
 * Field Innitialization in Dart is bit different :
   ------
@@ -92,3 +96,17 @@
    Whilst modularizing the flutter App, try to create package in same project instead of hosting it on git
    this way you can ensure that you will get latest changes always
 
+
+* Conditional Compilation|Imports :
+  -----
+  -> You can import packages conditionally in dart language
+
+
+* Stopwatch & Timer :
+  ----
+  2 apis are avaialble as a part of dart core
+
+
+* Stream :
+  ----
+  Q) What happen when we try to listen the closed Stream (Standard) -> Error

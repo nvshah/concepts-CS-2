@@ -1,0 +1,16 @@
+Good Practice High Quality App
+--------------
+ref : Designing a high quality app with the latest Android features (Youtube)
+
+1. Premium End to End Design (Status & Navigation Bar)
+
+   Steps
+   1. In your theme set status & navigation bar to be transparent
+   2. In onCreate()
+      - WindowCompat.setDecorFitsSystemWindows(window, false)
+
+2. Premium Navigation (With Predictive back Button)
+
+   OnBackInvokedCallback()
+
+3. Accessible Color System (Dynamic Color System)

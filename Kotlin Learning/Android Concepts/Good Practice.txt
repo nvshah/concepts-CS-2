@@ -8,3 +8,11 @@ Good Practice
      Dont submit it at remote (ie put in .gitignore)
 
 * Single Activity
+
+* BaseActivity & Delegation :
+  ----
+  -> Dont use BaseActivity (for Inheritance)  // as it may violates the Single Responsibility Principle
+     |
+     Use delegation instead !
+
+  -> Delegation is Design Pattern You can use in any lang & Kotlin supports it natively

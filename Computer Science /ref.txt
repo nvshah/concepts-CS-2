@@ -1,2 +1,0 @@
-* Graph COncepts
-  http://discrete.openmathbooks.org/dmoi2/sec_gt-intro.html

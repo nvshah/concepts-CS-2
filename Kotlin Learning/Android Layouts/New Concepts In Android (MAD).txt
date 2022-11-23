@@ -1,0 +1,18 @@
+New Concepts In Android (MAD)
+--------------------------
+
+* Relay :
+  ---
+  - Convert the Figma to Compose Code
+  - It accounts the Design System Information (ie Theme Color Customizable easily)
+     \
+      -> FIGMA styles to be translated into Compose themes
+
+  - accounts the custom components
+
+
+TOPICS
+* Modern Android Development
+* Wear OS
+* Tablet & Large Screens
+* Platform Updates

@@ -14,6 +14,8 @@ UI :
   Flutter Mapp (Short Concepts | **)
   MTechViral
 
+  Papaya Coders (Ui Designs)
+
 Logic :
   Reso Coder    (Rank1 | *****)
   Filled Stack  (Rank1 | *****)

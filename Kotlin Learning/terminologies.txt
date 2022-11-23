@@ -39,6 +39,8 @@ Topics :
 
 - Statflow & Compose State in ViewModel
 
+- ActivityResultsContracts & LauncherForActivityResults
+
 ------
 
 - Process Death

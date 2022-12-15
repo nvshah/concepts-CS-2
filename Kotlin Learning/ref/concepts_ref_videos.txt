@@ -9,3 +9,9 @@ Adaptive Layout (SlidingPane) -> https://www.youtube.com/watch?v=2rtLdF9UFqg
 Fragments (Independent Components) -> https://www.youtube.com/watch?v=OE-tDh3d1F4
 
 * Optimize the App Size with 1 Trick - Android Developers - Youtube Video
+
+
+[Single Activity Navigation]  -> https://www.youtube.com/watch?v=kmw5dXo3QcQ
+
+[Android Jetpack Firebase]
+https://developers.google.com/learn/pathways/firebase-android-jetpack

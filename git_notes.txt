@@ -51,6 +51,10 @@ git configurations :
   -----
    -> Short Status :-  git status -s
 
+* Untrack the Tracked Files :
+  ----
+  git rm --cached filename.txt   // then it will enable the file entry in .gitignore to be eefective
+
 
 ----------------
 Readme & Markdown

@@ -24,6 +24,8 @@ Best Python Online Interpreter :
    
    FullStackPython - https://www.fullstackpython.com/
 
+   (Amy Hanlon) Mathamy - http://mathamy.com/python-closures-and-free-variables.html
+
 -----
 
 8) Python Tips : 
@@ -56,6 +58,8 @@ CheatSheet | Gist Python
 [pynative] https://pynative.com/python-random-choice/
 
 [Python Engineer] https://www.python-engineer.com/posts/string-methods-python/
+
+[aman.ai] Pandas (http://pandas.aman.ai)
 
 ------------
 

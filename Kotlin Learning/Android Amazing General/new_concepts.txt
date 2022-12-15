@@ -75,3 +75,29 @@ Android 13 New
   In Compose it is
 
   BackHandler() Api
+
+
+* Per App Language Preferences :
+--------------------------
+  (new feature in 13+)
+
+  Centralized Location in Phone settings to configure the language preferences per-app
+
+  locales_confog.xml file  // to specify the lanugage supported by the app
+
+  then you need to register this locales_config in Manifest under <application>
+  tag as an attribute
+
+  android:localeConfig="@xml/locales_config">
+
+  To manually change the language of an app (progamatically)
+  -->
+  context.getSystemService(LocaleManager::class.java).applicationLocales
+  or
+  AppCompatDelegate.setApplicationLocales()  // for < 12 ie older api
+
+  REMEMBER :-
+  [To persist lang change in older device]
+  You need to register `AppLocalesMetaDataHolderService` in android manifest
+  inorder to support this feature in your older android version (ie < 12)
+

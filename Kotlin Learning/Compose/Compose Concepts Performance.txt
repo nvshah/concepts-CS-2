@@ -1,0 +1,24 @@
+Compose Concepts Performance
+---------------
+
+
+* Stability & Compose :
+  ---------------
+  There is a concept of Stable Class & Not a Stable Class
+
+  - Stable class are those one whose public fields are stable (ie All the primitive fields are stable)
+  - You can consider immutable obj also similar to stable obj
+
+  Now when Composable gets any parameter & if that parameter is stable
+  then
+  Compose will compare that stable fields with previous state of composable & if that changes
+  then only it will Recompose otherwise not !
+
+
+* Keys Lambda :
+  ----
+  key(id){
+    Composable()
+  }
+
+  -> this will recompose your Composable only when id changes

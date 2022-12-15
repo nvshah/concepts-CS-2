@@ -90,3 +90,20 @@
 * Collect the flow in Lifecycle Aware Manner
 
 => Coroutines & Flows are recommended ways of doing async works in Android
+
+
+* Dependency Injection (DI)
+  ------------
+  - DI is not about Dagger, Hilt or coroutines or Koin
+    those are helpers to achieve the same
+
+  - In reality DI is all about Passing Object to Objects
+
+  - Constructors are Simplest form of Dependency Injection
+
+* Service & Long Running Task :
+  --------
+  -> Dont run long running task directly inside your service, as Service
+     by default will run on main UI thread
+
+     So create Coroutine & run those task inside it !

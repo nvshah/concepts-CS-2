@@ -4,6 +4,10 @@
 
 [Isolates Eg] (https://www.jpryan.me/dartbyexample/examples/isolates/)
 
+[Isolates Agent] https://medium.com/@gaaclarke/isolate-agents-easy-isolates-for-flutter-6d75bf69a2e7
+
+__________________________________________
+
 Event Loop :
 --------
  -> Isolates vs Threads 

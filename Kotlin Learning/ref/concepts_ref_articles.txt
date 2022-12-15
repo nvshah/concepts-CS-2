@@ -41,8 +41,14 @@ MVI
 
 Design Patterns for Android :- Raywenderlich
 
+[Design Patterns]
+https://www.droidcon.com/2022/09/23/design-patterns-and-architecture-the-android-developer-roadmap-part-4/
+
 State Management (Derived State)
 https://isamatov.com/react-derived-state/
+
+[App Architecture templates]
+https://medium.com/androiddevelopers/introducing-the-architecture-templates-3151323e4e34
 
 --------------
 
@@ -53,3 +59,11 @@ https://www.droidcon.com/2021/12/13/cheat-sheet-for-jetpack-compose/
 
 Kotlin
 https://dev.to/zachklipp/remember-mutablestateof-a-cheat-sheet-10ma
+
+
+
+-------------
+Tips
+
+[Base Activity | Fragment]
+https://proandroiddev.com/baseactivity-and-basefragment-are-monsters-5cda31639938

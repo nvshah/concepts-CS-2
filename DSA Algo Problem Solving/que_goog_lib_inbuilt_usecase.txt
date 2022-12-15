@@ -15,6 +15,11 @@
 - Perfect Squares (ps://leetcode.com/problems/perfect-squares/)
   [Column Wise DP]
 
+* Graphs
+
+  Account Merge (https://leetcode.com/problems/accounts-merge/solutions/)
+  Union & Find | Dict | Counter | InSort
+
 * Logical
 
 - Maximum Area of Piece of Cake after Vertical/Horizontal Cut

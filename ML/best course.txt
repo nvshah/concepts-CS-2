@@ -5,11 +5,29 @@ Written tutorials
           Intermediate Machine Learning
 
 3) Microsoft Machine Learning (Github)
+   https://microsoft.github.io/ML-For-Beginners/#/
 
 4) Deep Learning MIT 
      https://www.deeplearningbook.org/   (html)
 
 5) https://www.dataschool.io/ml-courses/
+
+6) https://krishnaik.in/7-day-live-machine-learning-alogrithms/
+
+* Fundamentals (From Aman.ai):
+- Python (http://python.aman.ai)
+- PyTorch (http://pytorch.aman.ai)
+- TensorFlow (http://tensorflow.aman.ai)
+- NumPy (http://numpy.aman.ai)
+- Pandas (http://pandas.aman.ai)
+- Toolkit (https://lnkd.in/gz3XpHYs)
+
+https://www.ritchieng.com/machine-learning-svms-support-vector-machines/
+
+* DL (Stanford)
+  ---
+  http://cs231n.stanford.edu/schedule.html
+  https://www.youtube.com/playlist?list=PLSVEhWrZWDHQTBmWZufjxpw3s8sveJtnJ
 
 -------------------------
 
@@ -60,9 +78,18 @@ Best Articles ------------------
 
  3) https://www.dataschool.io/ml-courses/
 
+ 4) Ritchie Ng
+
+ 5) https://ml-cheatsheet.readthedocs.io
 
  Statistics Mini Course :-
     https://machinelearningmastery.com/statistics-for-machine-learning-mini-course/
+
+https://peltarion.com/
+dataaspirant.com
+
+Statistical testing :
+https://github.com/raj-shr-git/statistical_testing_python
 
 
 ---------
@@ -125,3 +152,5 @@ Maths & Stats :-
 Kimberley Fessel (Seaborn + Matplotlib) -> https://github.com/kimfetti/Videos
 
 Normalized Nerd :- https://github.com/Suji04/NormalizedNerd
+
+ML Begineers : https://microsoft.github.io/ML-For-Beginners/#/

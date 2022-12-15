@@ -30,3 +30,15 @@
              Etc...
 
 => To see all the modules of your project :- check settings.gradle file
+
+
+*----------------------------
+
+There are 2 variants of Gradle
+1) Gradle Groovy
+2) Gradle Kotlin DSL
+
+Script :
+
+* Repositories :-
+   Eg google(), mavenCentral()  // place from where we will fetch our dependencies from!

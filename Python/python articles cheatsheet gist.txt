@@ -13,3 +13,10 @@
 [Pythonn Morsels - built in functions]
 
 [Python Projects] https://thecleverprogrammer.com/2021/01/14/python-projects-with-source-code/
+
+
+-----------
+
+Concepts
+
+closures & free variables :- http://mathamy.com/python-closures-and-free-variables.html

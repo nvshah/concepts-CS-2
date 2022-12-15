@@ -1,0 +1,6 @@
+notes 2 class 
+
+* Class:
+  -----
+
+  -> When you print object it will have `ClassName@MemoryLoc`

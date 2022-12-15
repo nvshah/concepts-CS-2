@@ -1,0 +1,10 @@
+ref
+
+https://www.veritis.com/blog/top-10-skills-that-make-a-perfect-devops-engineer/
+
+
+https://devopscube.com/python-for-devops/
+
+https://www.quora.com/In-DevOps-what-can-we-develop-by-using-Python
+
+https://www.cuelogic.com/blog/devops-automation-tools

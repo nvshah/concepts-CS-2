@@ -15,3 +15,7 @@ brilliant : (best for Data Science)
 
 Constrained Optimization + Langrange (Khann Academy)
   khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/lagrange-multipliers-and-constrained-optimization/v/lagrange-multiplier-example-part-1
+
+
+Statistics Test
+https://github.com/raj-shr-git/statistical_testing_python

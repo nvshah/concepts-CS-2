@@ -141,6 +141,10 @@ Graphs
  - Smallest String With Swap - Union Find ( https://leetcode.com/problems/smallest-string-with-swaps/ )
  - DjKstra - path with min efforts ( https://leetcode.com/problems/path-with-minimum-effort/ )
 
+Union & Find
+
+ - Accounts Merge
+
 
 * Sliding Window :
 

@@ -14,3 +14,5 @@ compose basics notes
 
 * Tips : (Animation)
   ---
+  |
+  Modifier > graphicsLayer > can help to achieve the translation change offset of our composables

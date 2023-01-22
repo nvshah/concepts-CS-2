@@ -33,3 +33,8 @@
        i.e same tuple object is shared by    
 
       Under hood tuple uses free-list to track pointers to shared tuple
+
+
+* Pattern Unpacking :
+  ------------
+  a, (b, c) = (1, (2, 3))

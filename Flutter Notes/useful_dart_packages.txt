@@ -35,3 +35,4 @@
 
 * freezer   // Genrates Freezed Objects from js files
 
+* inferno  // Json <-> Dart Classes

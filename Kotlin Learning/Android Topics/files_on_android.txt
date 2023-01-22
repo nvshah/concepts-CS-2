@@ -1,0 +1,133 @@
+files_on_android
+----------------
+
+* Internal Storage :
+  ---
+  This storage can be classified as Safe & Secure
+  - Android OS protect it as part of an application sandbox offered by the Android itself
+
+  1) context.getFilesDir() :- default location
+
+  2) context.getCacheDir() :-
+      - Disk space for the same is not counted against your application
+        (ie Android can delete that disk space if needed for somewhere elsewhere)
+
+  3) context.getNoBackupFilesDir()
+      - Left behind during migration between devices
+      - this would be useful when you have some tokens (ie cloud messaging token)
+        that you want to renew when you migrate app between devices
+
+  4) context.getCodeCacheDir()
+      - suited for jitted code or optimized code
+      - cleared by OS
+         \
+          - When your app gets update from playstore
+          - When OS recieves an update (eg Pie to Oreo)
+
+* External Storage :
+  ----
+  - Shared Area & Unprotected
+  - Other application can request that same storage area & they may write it or modify over there
+  - Discourage to store sensitive info
+
+  1) Context.getExternalFilesDirs()
+
+  2) Context.getExternalCacheDirs()
+
+  3) Context.getExternalMediaDirs()
+     - Scanned & included in MediaStore
+     - Good for things such as photos, which can be shown in gallery
+       (photos that you want to be included in gallery as well)
+
+  4) Context.getObbDirs()
+     - counted as an app code size instead of seperate data size
+
+=> Internal & External storage are good for storing data that belongs to your app
+
+* Storage Action Framework :
+  --------------
+  - Ask user where to store
+  - Intent.ACTION_OPEN_DOCUMENT
+           ACTION_CREATE_DOCUMENT
+
+----------------
+
+* Advanced Location :
+  \
+   1) Direct Boot
+   2) Cache Data
+
+   Both are protected & encrypted
+
+ - Direct Boot
+   ----
+   Device Protected Area &
+   Credential Protected Area
+
+   All of your data as an App developer is stored in Credential Protected Area
+
+   Device Protected Area :-
+     - Available after check that device is not tampered with
+       i.e When device boots up, dm-verity verifys & then make this area available (ie unlock the
+       device protected storage)
+
+   Credential Protected Area :-
+     Later when user enters pin/pattern/password, the credential protected area would be made
+     available for App to use
+
+  Now let say if you want to run something before user unlocks the devices
+  then it would be useful to store small bits of info in Device Protected Area
+
+  Device Protected Area :- Can be useful whilest App is Locked
+
+  context.getFilesDir() -> gives access to `Credentials protected Area`
+
+  if user is unclocked then you have access to
+    - Device & Credentials Protected Area
+  otherwise
+    - only to Device Protected Area
+
+  Eg Alaram Clock App :
+     |
+     Move next alaram time data to Device Protected Area
+
+  Eg2
+     Limited Scope Auth Token in Device Protected Area
+       - by limited scope it means it can communicate very basic & less info about user
+
+     Fully rich Auth token in Credentials Protected Area
+       - Rich means it can do lot comparatively to server
+
+
+* Cached Data on OS :
+  ------
+  -> OS doesnt count data in this place as only against your app
+
+  How much cache space should I use for my App (ie Reasonably) ??
+  - Storage Manager guides us
+     \
+      context.getSystemService(StorageManager::class.java)
+
+
+* Intent To Free Space :
+  ----
+  - Many Intent are available to ask user to free up the space if space is limited while doing
+    some task (ie let say downloading a huge file)
+
+
+* Content Sharing :
+  ---
+  - use content uri while sharing the files/data
+    Dont use file uri
+
+  - FileProvider is a support library that can make it easy to transition (File to Content)
+
+
+* Working With Media :
+  ----
+  - use MediaStore
+  - Open media through "ContentResolver"
+
+  - Dont use raw paths from '_data' column
+
+    As a best practice use Content-URI (instead of file-uri)

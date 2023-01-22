@@ -47,6 +47,10 @@
      \
       -> byteObj.decode().rstrip('\x00')
 
+15) You can use Pattern Unpacking to unpack nested sequences
+    Eg
+    a, (b,c) = (1, (2, 3))
+
 -------reference
 
 [Import Python Tips]  https://realpython.com/python-import/

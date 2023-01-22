@@ -1,0 +1,15 @@
+Boot Execution & BroadCastRecievers
+
+* What is BroadCast Recievers ?
+  ---
+  -> Its broadcaster that can works on Events send by Apps
+     If your app sends an event then other apps can catch this event via BroadcastRecievers
+
+* Booting :
+  ---
+  When android boots up It send 1 event in Broadcadt Recievers
+  (ie that this android device boots started & completes so you can perform your work that you need to
+      once android device boots up
+      So this way apps can do some initial stuffs they want when android device boots completes
+
+      App can do some initiation of Service that the wanted !)

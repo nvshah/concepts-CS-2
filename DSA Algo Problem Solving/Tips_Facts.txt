@@ -68,6 +68,12 @@
       or
       You can have hash-set where matrix coordinates corresponds to cell val
 
+* Greedy & Heap :
+  -----
+  -> Whenever you think of Greedy Solution
+     You should first check for Heapq(ie Priority Queue) as a Data Structure in mind
+     As
+     It goes hand in hand with such cause
 
 * For hash-map :
   ----

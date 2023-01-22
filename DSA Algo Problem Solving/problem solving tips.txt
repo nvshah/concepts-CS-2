@@ -17,6 +17,10 @@ AMAZING QUE : Why -ve num can't be base ??
   ----------
    -> 
 
+* Use Generator instead of Func when traversing Trees
+  inorder to avoid temporary variables to hold the sequence values
+
+
 * range [1, n] given : use Cyclic sort
 
 * for rhs set bit :- n & -n 
@@ -67,3 +71,4 @@ AMAZING QUE : Why -ve num can't be base ??
 
 
 * You can consider `deque` Data Structure instead of 2 Pointers in some cases as replacement/alternative
+

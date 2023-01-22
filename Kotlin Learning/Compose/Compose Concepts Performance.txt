@@ -1,6 +1,14 @@
 Compose Concepts Performance
 ---------------
 
+=> Recomposition should not happen just because the position changes of that corresp composables
+   |
+    TIPS to avoid :
+    1) Instead of passing as an Exact type as an argument pass it as a Lambda
+       (because Composables most time Do not Recompose when Lambda is parameter)
+
+_______________
+
 
 * Stability & Compose :
   ---------------
@@ -22,3 +30,48 @@ Compose Concepts Performance
   }
 
   -> this will recompose your Composable only when id changes
+
+[NOTE]
+=> Recomposition should not happen just because the position changes of that corresp composables
+   |
+    TIPS to avoid :
+    1) Instead of passing as an Exact type as an argument pass it as a Lambda
+       (because Composables most time Do not Recompose when Lambda is parameter)
+
+[REMEMBER]
+  -> Most of the time When Lambda is pass as a param to your composables, it will
+     help in less recomposition of that Composables
+     comparatively to exact type
+
+  Eg If your Composables accepts the param as
+     x: Float
+      |
+      You can use instead
+       |
+      {x}  // This Lambda way will have more chances of Less Recomposition than exact type x:Float
+
+
+* Scope (rememberCoroutineScope)
+  --------
+  TIP: Dont expose suspend functions from ViewModel
+       |
+       Hence it wont be utilised from Coroutine Scope available via Compose !
+
+  On the other hand
+  -> you can use CoroutineScope for Animations because
+     Animations often are independent from ViewModel
+
+
+* Effect Handler & Composables : (LaunchedEffect)
+  --------
+  (Side Effect)
+
+  As long as You do smthng in your composable fun context
+  but that code or line of code is not Composable Fn itself & also not contributing to composable UI
+  then you should wrap that Code or Line of Codes in `Effect Handler` :- LaunchedEffect
+
+  Otherwise there can be some discrepancies since
+  You can't control the #times ReComposition of your Composables, So
+  those LOC may also be re-executed which may be not intended
+  |
+  In such case if its under Effect-Handler (LaunchedEffect) then it will ensures of single effective execution

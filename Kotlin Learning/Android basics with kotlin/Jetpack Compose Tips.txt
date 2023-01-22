@@ -1,6 +1,14 @@
 Jetpack Compose Tips
 -------------------
 
+=> Recomposition should not happen just because the position changes of that corresp composables
+    |
+    TIPS to avoid :
+    1) Instead of passing as an Exact type as an argument pass it as a Lambda
+       (becayse Composables most time Do not Recompose when Lambda is parameter)
+
+_______________
+
 * Responsive (Mobile | Tablet)
   -> LocalConfiguration.current  // window size (height, width)
 
@@ -90,3 +98,46 @@ Jetpack Compose Tips
   rememberInfiniteTransition()  // to animate infinitely
 
   .animateContentSize()  // on Modifier
+
+
+* Modifier :
+  ----
+  -> You can control `graphicsLayer`
+
+  graphicsLayer :- can help you achieve the translation of your Composable
+
+
+* rememberCoroutineScope() :
+  ----
+  -> use this scope only for functionalities that are restricted to UI
+     else dont use this scope
+     If there are beyond UI related usecase then you can use other scopes such as
+     ViewModelScope
+
+  TIP: Dont expose suspend functions from ViewModel
+        \
+         Otherwise there may chance that somethings may not survive configuration changes
+         (if this functions are used from Coroutine Scope exposed by Compose
+          which is meant for UI-RELATED-THING only )
+
+  On the other hand
+  -> you can use CoroutineScope for Animations because
+     Animations often are independent from ViewModel
+
+  => So at the end You need to decide based on
+     What is UI-related-thing & What is not
+     |
+     If its only UI-related thing then you can use `rememberCoroutineScope` without another thought
+
+
+* Compose & XML together :
+  --------
+  If you want to use Compose in a XML :-
+    -> Simple include ComposeView Element in an XML File
+  & then you can set composable content by calling setContent()
+
+  If you want to use XML view in your Composable then
+    -> AndroidView() in  your Composable
+  & then
+    factory block :- helps to create a xml view
+    update block :- helps when compose state changes to update view

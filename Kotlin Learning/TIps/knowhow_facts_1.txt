@@ -16,3 +16,9 @@
 
 * Asa Size of Window changes there is a configuration change
 
+
+* Adb & Inputs :
+  ----
+  -> You can input in your app text field (of Virtual Device) via adb
+     \
+     command:- adb shell input text "Your text"

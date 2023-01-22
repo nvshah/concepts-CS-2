@@ -1,5 +1,12 @@
 => `library` keyword should be used when You are creating the custom library/package
 
+
+COMMANDS :
+
+dart analyze             // dart analyzer (finds problem)
+dart fix --dry-run
+dart fix --apply        // dart fixer (fixes the problem which is certain about not to break the code)
+
 ---------
 
 * dynamic vs List<dynamic> :

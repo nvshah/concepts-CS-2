@@ -26,6 +26,9 @@ suspendCoroutine // Use to convert any func to awaitable suspended func
 **
 => So it's not good practice to put try catch inside the launch block
    because it will eat up the Cancellation Exception as well (if we catch general Exception & not specific Exception)
+
+* To get Coroutine result from outside of CoroutineScope without await(),
+  -> invokeOnCompltetion{}
 ______________________________________
 
 NOTE :- Suspended Fun when use another suspended fun inside it implicitly await & do synchronous operation 
@@ -206,3 +209,6 @@ GOOD PRactices
 
 5) Turn your Callback into awaited Callback // so that you can act when that callback happens
   -> via `suspendCoroutine{ continuation -> //TODO }
+
+* To get Coroutine result from outside of CoroutineScope without await(),
+  -> invokeOnCompltetion{}

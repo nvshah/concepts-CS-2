@@ -52,3 +52,12 @@
   -----
   -> If you want to save memory & make your app faster, then you must wrap the portion
      of code with StatefulBuilder() widget which will rebuild only that portion & not all below it !
+
+
+* Why use Stateless Widgets over Functions ??
+  ---
+  -> Recommended by Flutter (ie more efficent)
+  -> In Stateless widget you will get its own context
+     Whereas
+     If we implement via Function() then it will use Parent Context
+

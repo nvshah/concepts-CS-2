@@ -1,0 +1,18 @@
+Anroid OS
+----------
+
+* Every Android Project needs Gradle to build its project
+  |
+  Now Gradle comes with different versions
+  |
+  Every Gradle needs Java So Every Gradle also somehow tightened to Java version
+
+  Eg Inorder to use Lambda Expression You need atleast Java8 (ie source 8) ie 1.8
+     &
+     Corresponding gradle version needs to be 3.0 or higher
+
+     Hence Compiling Options of your Android Project depends on
+      - Gradle version as well
+      - source 7 | source 8 | ...
+
+* Every Android OS version also has its own API-Level associated

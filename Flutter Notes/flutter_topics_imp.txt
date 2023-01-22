@@ -46,6 +46,8 @@
 
 * Stub Way Impl | Adapter design Pattern | Conditional Compilation (Conditional Import)
 
+* Multi-Module App Archi
+
 --------
 
 UI :

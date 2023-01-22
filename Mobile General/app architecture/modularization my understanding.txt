@@ -1,0 +1,70 @@
+modularization my understanding
+
+* Modularization vs Library-Dependency
+  ---------
+
+  [Library-Dependency]
+  When your app in Android project include some library dependencies in build.gradle file
+  then it is called as App's(Module's) Dependency (ie External Library dependency)
+
+  Now this external library dependency may be hosted on Git, or any other such platform...
+
+* General Archi Terms :
+  ----
+
+  Module :-
+   - To its simplest Single App folder in your android project is a module
+     (ie `app` folder in your android project
+          - that has AndroidManifestFile corresponding to its app-module-feature)
+
+   So `app` folder is itself a module in the Android project
+
+   [Now normally smaller project are not multi-modular android project
+    So there will be single module (ie `app`) in your Android Project
+   ]
+
+  Multi Module Archi :
+  ---
+  - this concept crops when you have Enterprise Level App or very heavy loaded feature Application to build
+     |
+     In this appart from `app` you will have sibbling modules (ie sub-modules) for your entire Android project
+
+     Eg Android-Project
+         |
+         - app
+         - sub1
+         - sub2
+
+      Now this sub-module will have their own dependencies & build.gradle
+
+  - So if you want something config to apply for all then define in
+    Project's build.gralde
+
+  - Now let say you have splitted the tasks of this sub-modules development to different team
+    & those team are maintaining this project on their repo/hosting
+    |
+    then how the master/main Android-Project will now about this sub-modules that actually constitutes to that App
+
+    Here
+    there will be role of .idea/gradle.xml
+
+    .idea/gralde.xml  file in your Project will hold the info about the sub-modules src of code
+       |
+       This is part of GraddleSettings
+
+    So this way when Android Project Compile then it will fetch the sub-modules code &
+    put those sub-modules as a sibbling of `app` or whatever way (you have specified in buildscript of your
+    project's build.gradle)
+
+    This way you can combine Multi-Module code into single Android-Project
+
+* NOTE:
+  ----
+  These modules are independent of each other
+  i.e
+  For Eg app module may have source lang set to 8 (ie Java8/1.8)
+         but
+         other module sub1 may have not set lang specific to 8 (it may be using 7 only)
+
+
+

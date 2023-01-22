@@ -1,0 +1,16 @@
+Android Web Traffic
+
+ref :
+https://android-developers.googleblog.com/2016/04/protecting-against-unintentional.html
+
+* Web Traffic (Http | Https)
+  ---
+  ref : https://android-developers.googleblog.com/2016/04/protecting-against-unintentional.html
+
+  Going forward Android 9 or above use HTTPS as default Web traffic
+  Inorder to use HTTP request
+  You need to make android:useClearTextTraffic='true'
+
+  Web Traffic can be of 2 types :-
+  1) ClearText Traffic (HTTP)
+  2) Secure Traffic  (HTTPS)

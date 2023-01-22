@@ -15,3 +15,6 @@ Fragments (Independent Components) -> https://www.youtube.com/watch?v=OE-tDh3d1F
 
 [Android Jetpack Firebase]
 https://developers.google.com/learn/pathways/firebase-android-jetpack
+
+[Build App from Scratch]
+https://www.youtube.com/watch?v=qX6zmKY4KP0

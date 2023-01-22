@@ -47,3 +47,11 @@ REMEMBER :-
 
     (So here in this case you dont need `packages/pkgName` to be appended as a prefix inside your package
     wherever assetPath is used !
+
+
+* Observables & Streams :
+  ---
+  These 2 are techniques to achieve state reflection
+
+  Observalbles :- ValueNotifier (Mutable)
+  Streams :- BLOC (Immutable)

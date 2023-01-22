@@ -2,3 +2,9 @@ flutter project ref
 
 Chat App :-
   https://www.youtube.com/watch?v=Qwk5oIAkgnY
+
+
+Course :
+
+
+https://www.dbestech.com/tutorials/flutter-firebase-chatting-app

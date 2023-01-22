@@ -80,6 +80,9 @@ Heap :
  *[MinHeap + Sliding Window]
   https://leetcode.com/problems/minimum-interval-to-include-each-query/
 
+  [Heap & Greedy]
+  https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks/description/
+
     
 Sorting  :
    

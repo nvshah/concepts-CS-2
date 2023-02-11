@@ -1,0 +1,18 @@
+dotnet ref
+
+[Dotnet Docs]
+https://learn.microsoft.com/en-us/dotnet/
+
+https://learn.microsoft.com/en-us/dotnet/standard/glossary
+
+[We Api]
+https://dotnet.microsoft.com/en-us/apps/aspnet/apis
+https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?WT.mc_id=dotnet-35129-website&view=aspnetcore-7.0&tabs=visual-studio
+
+https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet
+https://dotnet.microsoft.com/en-us/learn/aspnet
+
+[Learning Paths]
+https://learn.microsoft.com/en-us/training/browse/?products=dotnet&skip=60
+
+https://dotnet.microsoft.com/en-us/learn/videos

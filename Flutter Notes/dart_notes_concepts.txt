@@ -422,3 +422,12 @@ siwtch() stmt :
      -> Downloading, AudioPlayback
      -> Updating the App in background
      -> Fetching the data in background
+
+
+* Records & Patterns :
+  -----
+  What is diff between Records & Tuple ??
+  -> Tuple is strictly positionally associated
+     whereas Records can have named association as well
+
+     Thus in sort Records are kinda analogous to namedtuple (of python)

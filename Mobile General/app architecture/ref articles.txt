@@ -8,3 +8,17 @@ Library
 https://www.raywenderlich.com/52-building-an-android-library-tutorial
 
 https://medium.com/@iamanbansal/manage-your-dependencies-in-multi-module-android-project-eb4fc29066af
+
+
+
+---------------
+
+Archi.
+
+https://www.kodeco.com/3595916-clean-architecture-tutorial-for-android-getting-started#toc-anchor-001
+
+https://www.devteam.space/blog/clean-architecture-for-android-apps/
+
+https://www.netsolutions.com/insights/mobile-app-architecture-guide/
+
+https://rubygarage.org/blog/clean-android-architecture

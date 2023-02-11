@@ -53,8 +53,14 @@ Dart :- https://courses.codewithandrea.com/courses/the-complete-dart-guide-for-b
 Eemail :-
   follow.syntacops.com
 
+---------------------
 
 * Course
 
 [Firebase Chatt]
 https://www.dbestech.com/tutorials/flutter-firebase-chatting-app
+
+
+Medium Articles
+
+https://devmuaz.medium.com/

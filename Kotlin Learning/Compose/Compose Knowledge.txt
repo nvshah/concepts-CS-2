@@ -4,9 +4,10 @@ Q) How Compose works ??
 
    -> Compose has 3 Phases : Composition, Layout, Draw
 
-   Composition :- What to Show
-   Layout :- Where to Show
-   Draw :- does works of graphics rendering on screen
+   Composition :- What to Show  // (Info)
+   Layout :- Where to Show  // (Size & Placement)
+   Draw :- does works of graphics rendering on screen  // (Appearance)
+
 
 
 * remember(key){} | remember{}
@@ -89,3 +90,16 @@ Composable Function can recompose
    -------
    - Provide ViewModel as a Scope (or Dependency Injection Mechanism) rather than
      passing it via Parameter
+
+
+* Layouts & Modifiers :
+  ------------
+
+  Layouts concerns with the Arrangement and Alignment of your Composables
+  Layouts are kinda Compose Coordinators
+
+  Modifier allows you to Decorate and Augment the Composables
+
+=> Modifiers are kinda Wrappers on Composable Node in Layout Phase
+
+   Modifiers wrap a single modifier or layout node

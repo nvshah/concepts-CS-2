@@ -1,0 +1,19 @@
+dart notes concept 2
+-------------------
+
+* New Features (Upcoming Dart 3)
+
+* Destructuring Variable Declaration :
+
+  Destructuring Lists, Maps  // according to pattern give more code readability
+
+* Switch Statement & Pattern :
+  - pattern inside switch case is refutable i.e before destructuring pattern can decide
+    if it wants to accept or not the incoming value.
+
+
+* if case statement :
+  - when you have switch with single pattern matching case, you can use if case statement instead
+
+* Object Destructuring & Object Pattern:
+  - Object pattern : works on getter of any object in dart

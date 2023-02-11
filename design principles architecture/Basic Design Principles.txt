@@ -1,0 +1,49 @@
+Basic Design Principles
+
+* 8 Design Patterns Every Developer must have
+  -------------------------------------------
+  ref : NeetCode Youtube
+
+1. Factory : (CREATIONAL)
+   - Useful to create a readymade instance of any particular class
+
+     ready made :- pre-configured flavors. Eg different kind of Burgers
+
+2. Builder :  (CREATIONAL)
+   - useful to create a customize instance of any particular class
+
+     customize :- as per instructions while creating. Eg customize burger
+
+3. Singleton : (CREATIONAL)
+
+   - Single instance of a class
+   - Most commonly used as a static instance/method
+
+     usecase:
+      - maintaining the single instance of an application state
+        Thus
+        helps to achieve Single Source of Truth
+
+4. Observer : (BEHAVIORAL)
+
+   - PubSub  // Publisher-Subscriber
+
+5. Iterator : (BEHAVORIAL)
+
+   - Iterated through
+
+6. Strategy : (BEHAVORIAL)
+
+   - used to implement the "Open-Closed" Principle
+     |
+     open for an extension
+     closed for a moficiations
+
+7. Adapter : (STRUCTURAL)
+
+
+8. Facade : (STRUCTURAL)
+
+   - Outward apperance that is used to conceal a less pleasant or credible reality
+
+   - Simply its a Wrapper class that use to abstracts lower level details

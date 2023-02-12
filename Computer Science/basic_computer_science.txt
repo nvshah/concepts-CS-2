@@ -1,0 +1,128 @@
+* Imperative Programming :- use statement to mutate state
+  
+  Declrative programming :- use function to mutate state
+
+
+* API
+
+  URI : baseUrl -> path -> query Param
+  Header : Authorization, request/response body info
+
+  Header + Body 
+  
+
+  scheme_name:hierarchical_part?query#fragment
+
+* Web-Sockets
+
+
+* Terminologies (OOPS) 
+
+  - Lambdas (Closure)
+
+  - Canonical Form / Canonical Representation
+
+
+* Heap & Stack Importance :  (memory Management)
+  -----------
+   -> When you instantiate any object in OOPS 
+      \
+       memory is allocated on Heap
+        & 
+       reference is stored on stack in a variable (as Stack is tightly bound with CPU) 
+
+* Memory Management :-
+  -------------
+   - diff lang has diff mechanisms for memory management 
+     
+     Most Compiled language (JIT compilers) :- prefer Garbage Collections mechanisms 
+     Python (Interpreter ) :- has concepts of reference-counting primararily for Memory Managemennt
+
+     Python :- is good for Single Threaded (& its give good performance for same)
+
+   - Typically High-Level lang (like) Python provides the Garbage Collector for Memory Mmanagement 
+     & 
+     Low-Level Lang like (C) provides you func for memory management like malloc * calloc 
+
+
+* Dynamic Memeory Allocation (DMA)
+  ------
+   -> At run time
+
+  Continuous Memeory Allocation :
+  -----------
+   In c/c++ - yes 
+   In Java - No (based on JVM) 
+
+   => Heap objects are not continuous
+
+
+* Casting vs Coercing :
+  --------------
+   -> https://stackoverflow.com/questions/8857763/what-is-the-difference-between-casting-and-coercing
+
+      Coercing is same as Implicit-Conversion
+
+* TimeStamps :
+  -------
+   EpoCh - GMT (Universal)
+           Local 
+
+
+* Reference Equality vs Value Equality :
+  -------------
+   comparision at actual Heap or at stack
+
+
+* StringBuilder or ArrayList or any dynamically sized List :
+  --------------------
+  -> dynamically sized string 
+     -> Initial Capacity - then doubles - to max Capacity
+        doubling happens at runtime when required 
+
+        Once maxCapacity reached Exception is thrown
+
+
+* Boxing/UnBoxing, Nullable, Optional
+
+   ref : https://reneferrari.github.io/understand-boxing-in-kotlin
+
+* Total Ordering :
+  -----------
+   1, 0, -1
+   Lexiographical Ordering, Natural Ordering
+
+
+* Object :
+  -----
+   -> hashcode() & equals()
+
+* Float & Computer :
+  ----------
+   -> Computer don't represent floating point number in accurate way
+
+* Sentinel Value :
+  ---------
+   -> a special value used to terminate a loop when reading data
+
+
+* Return Value Optimization | Copy Elusion (c++)
+  ----------
+  -> Instead of creating copy of an obj on the callee stack directly put it on a caller stack
+  -> Thus direct copy in caller's memory is what optimization is all about (avoiding some copy calls)
+
+  NOTE: Without Return Val Optimization & Copy Elusion, C++ would be much much slower
+
+-----------------------------
+
+Algorithms
+
+ 1) Auxilary Space - (Extra Space)
+ 2) Amortize Complexity
+
+
+-----------------------------
+
+* Fragmentation 
+  ------
+   -> memory Allocator - heap

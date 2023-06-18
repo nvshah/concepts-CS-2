@@ -1,0 +1,154 @@
+20_system_design_concepts
+-----------
+ref: NeetCode.io  // https://www.youtube.com/watch?v=i53Gi_K3o7I&t=2s
+
+Topics
+
+- Vertical Scaling
+
+- Horizontal Scaling
+  - Load Balancer (Reverse Proxy)
+    [Algos] -> to evenly split the load
+    - Round Robin 
+    - Hasing
+
+* CDN :
+  ---
+  - 1 techniqye for caching
+  - Hence CDN server wont hold any application logic
+    Infact they holds the copy of content from original server
+
+  - Copy files and content from original server
+    so as to distribute in more area/regions effectively
+    (This can be done on push/pull basis)
+
+  - Its all abt creating copy of data so that it can be re-cached fast in the future
+
+
+* IP address :
+  - the way through which computer communicates with each other
+
+* Low-Level Protocols ----
+
+* TCP/IP :
+  - protocols abt how we send data on internet
+  - File > broken down into packets assigned with some number
+
+  - protocols like http and websocket are built on top of TCP
+
+* App-Level Protocols -----
+
+* HTTP :
+  ---
+  TCP is lower-level protocol
+
+  HTTP is Application-level protocol  // dev like you and I are concerned with HTTP protocol instead
+   |
+   Client - Server Model
+
+   1. Request Header
+   2. Request Body
+
+  Even with HTTP there are multiple API's pattern/paradigms we have available :
+  a) REST api
+  b) GraphQL
+  c) gRPC
+
+  REST :
+  ----
+  - Its a standardization around HTTP apis
+  - Stateless and Consistent (guideliness)
+      |
+      200  // good req
+      400  // bad req
+      500  // server error
+
+  GRAPH-QL :
+  ---
+  - another api pattern introduced by fb 
+  - instead of making multiple req for diff resrc on server
+    With GraphQL, we can make a single req (aka "Query")
+    & choose exactly which resources you want to fetch
+    |
+    -> this means you can fetch multiple resources for the single request
+       & 
+       you also dont end up ending over fetching data that you wont needed
+
+  gRPC :
+  ----
+  - improvement for Rest Api
+  - protocol buffers 
+     |
+     - performance improvement
+     - as data is send in binary format (as compare to json in REST)
+
+
+* WebSocket :
+  ----
+  - Bidirectional Communication
+
+* DNS (Domain name system)
+  ---
+  - when you type some website name, how to know which IP address it belongs to ??
+  - largely decentralized service that works to map domain -> IP address
+
+  [A record mapping]
+  When you buy Domain from DNS registrar you can inp your server's ip address  //  
+
+
+* Storing Data --------------
+
+-> Options : SQL & PostGre
+   Data Strcutrue like : B-Trees
+
+* Relational DB
+  => Relational DB are ACID compliant
+  => Foreign Key (ie Consistency) in relationship is USP of such kinda DB
+
+* NoSql (ie Non-Relational) DB :
+  ---
+  - here consistency is sacrificed
+    (ie Foreign Key and kinda concepts doesnt matter)
+
+  Popular types are
+
+  Key-Val Store
+  Document Store
+  Graphs based
+  
+
+  SHARDING :
+  ---
+  -> If we dont need to enforce any foreign key constraints i.e
+     We can break down the DB 
+     & scale it horizontally on diff machine
+
+     this techniqye is called as sharding
+
+  REPLICATION:
+  ---
+  -> Leader - Follower replication
+  -> Leader - Leader replication
+
+* CAP
+  ---
+  - CAP theorem was created to cater tradeoofs with the replication design 
+    |
+    Consistency, Availability, Partition (Network)
+
+* PAC ELC theorem 
+  ---
+  - theorem based on network partitioning
+
+* Message Queues :
+  ---
+  - Kinda DB
+  - can be replicated for redundancy
+  - or can be sharded for scalability
+
+  If our system recieves more data than it can process then its good to 
+  introduce message Queue
+  hence message can be persisted before it can be processed
+  |
+  This also helps to decoupled diff parts of our app
+

@@ -12,6 +12,8 @@
    - Data Professor
    - Indently    <- Short Concepts & Basics
 
+   - MathByte Academy
+
 
 -----
 Advance (ML)
@@ -19,6 +21,8 @@ Advance (ML)
    - SentDex
    - Keith Galli
    - Kimberly Fessel
+
+   Theory
 
 
 ------

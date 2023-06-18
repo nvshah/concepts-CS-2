@@ -1,0 +1,171 @@
+notes 6 oops
+
+Terms :
+
+Abstract
+Concrete
+
+final, open, protected
+
+----------------------
+
+
+-------------------------
+
+* Interface:
+----------
+- what to do instead of how to do
+- interface cannot hold the state
+
+- Implementing class will make those abstract defined properties from interface, concrete
+
+-> Property initialization is not allowed in the interface
+   but We can specify the implementation for its accessor (ie Get)
+    |
+    Hence property cannot be implemented inside interface but accessor for that property can be specified/implemented
+
+- If you specify accessor for property in interface then it wont be abstract for longer.
+  
+* SAM - Single Abstract Method
+  ---
+  Functional interface :
+  - interface with only 1 abstract method
+  - However you can have non-abstract methods inside func-interface
+  -> Not forced to define another class for instantiating the object of Interface type
+
+* Inheritance :
+-----------
+ Terms
+ - Parent Class <-> Child class
+ - Base Class <-> Derived class
+ - Super Class <-> Sub Class
+
+ - In kotlin each class is not inheritable by default
+   |
+   `open` keyword helps to make it inheritable
+
+ - Each class in kotlin by default inherit `Any` class 
+
+ `final` class :- cannot be inheritable   // by default class are final
+ 
+ => To make class inheritable mark it `open`
+
+ protected : access only in subclasses
+
+ NOTE: 
+ => protected modifier tagged properties cant be accesed in an extension function
+
+ => init{} of parent class is called before initialization of child class happens
+
+ => We cannot override the func which doesnt contains open keyword
+
+
+* Abstract Class
+------------
+ - one or more func/props needs to be without implementation
+ - always open  (ie inheritable by default)
+ - cannot be initialized
+
+ -> Interface cannot hold state whereas abstract class can hold state
+    (ie Interface = 100% abstraction)
+
+    - Interface and Abstract class can contains function with implementation
+    - Interface cannot contains properties with state
+      whereas Abstract class can contain properties with state
+
+  -> We can only inherit 1 abstract class
+      but we can implement multiple interfaces
+
+  Conflicting inherited methods
+  |
+  -> super<ParentClassName>  to specify which parent to refer
+
+* Upcasting & Downcasting :
+  ---
+  Upcasting is safe    // as Parent remains common
+  Downcasting is not safe and may lead to runtime error
+
+* Inheritance & Composition :
+
+* Delegation
+  ---
+  -> `by` keyword
+  -> Delegating classes works well in pair with Inheritance
+  -> You can simulate multiple inheritance using class Delegation
+  
+  => Delegate & Class that perform Delegation should implement the same interface
+  => We cannot delegate to 2 diff classes that implement the same interface
+
+  => Internally Delegation uses Composition to make work done !
+
+  [MY]
+  -> Delegation in kotlin helps to achieve what `factory constructor` in dart does !
+
+
+* Sealed Classes :
+  ---
+  - Sealed class cannot be instantiated  // (similar to abstract class)
+  - We can add both concrete and abstract members in sealed class
+
+  - All direct subclasses of sealed class are known at compile time
+    |
+    (This is helpful for exhaustive-switch statement where if case is not addedd then compile time err will be hinted)
+
+  - when using sealed class inside a when expression, we dont need `else` branch
+
+* Nested Class :
+  ---
+  - class inside class
+
+  Local Class :- class inside function
+
+  - Local Interface is not allowed
+  - You can nested class in an interface as well !
+
+  - nested class dont need object of an outer class inorder to be instantiated
+
+* Enum Class
+  - cannot be nested within functions
+  - cannot inherit from other classes as well !
+
+* Inner class :
+  ---
+  - alike nested classes
+  - an object of inner class maintain reference to outer class
+     \
+      this                 // refer to inner class obj
+      this@OuterClassName  // reference to outer class
+
+  - NOTE : To instantitate inner class, you need to instantiate the Outerclass
+           whereas same may not be true for nested class (as nested class can be accessed just alike static member)
+
+    [inner class needs object of outer class to be instantiated]
+
+  - There can be sub/nested inner class possible as well 
+
+  - Inner class can inherit from other inner class (of other outer class) 
+
+* Object :
+  ---
+  - Singleton (pattern)
+  - dont need initialization (ie It is initializad by default)
+  - you cannot provide parameters list to obj (ie constructor are not allowed)
+
+  - Inheritance can be possible with the Object
+  - Nested Objects are allowed within other objects or other outer class
+  - We cannot define Object inside function
+
+  - require name to be given to Object compulsorily (unlike Companion Object)
+
+* Companion Object :
+  ---
+  - regular class elements can access property of companion object
+    but
+    companion obj cannot access regular class elements
+
+  - If you define companion object inside your class, then all its elements transparently available 
+    to the outer class
+
+  - we can have only 1 companion object per class
+
+  - default name of companion obj inside a class :- `Companion`

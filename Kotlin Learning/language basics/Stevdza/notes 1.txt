@@ -16,6 +16,13 @@ TIPS :
   1. Block Body Func         {}   // curly brackets
   2. Expression Body Func    =    // equal to operator
 
+  NOTE: 
+  You can use backticks while providing a functionname where you can then provide anything as name
+  & it would be a valid func name
+  ref : https://commonsware.com/Kotlin/pages/chap-escapedmethodname-003.html
+
+  Naming conventions of a test functions allow us to use any characters including whitespace (via backticks)
+
 * String Template :
 
 * do while Loop :-
@@ -67,3 +74,9 @@ NOTE
   Eg Function in kotlin has 2 types of body
      1. Block Body
      2. Expression Body
+
+
+
+* Null in Kotlin :
+  ----
+  Elvis operator :- `?:`

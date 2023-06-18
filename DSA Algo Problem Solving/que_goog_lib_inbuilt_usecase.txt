@@ -12,8 +12,12 @@
 - number of pairs of interchangable Rectangles ( # https://leetcode.com/problems/number-of-pairs-of-interchangeable-rectangles/)
   [Counter, starmap, comb, truediv]
 
+- num of enclaves  // DFS
+  [zip, chain, starmap] 
+
 - Perfect Squares (ps://leetcode.com/problems/perfect-squares/)
   [Column Wise DP]
+
 
 * Graphs
 

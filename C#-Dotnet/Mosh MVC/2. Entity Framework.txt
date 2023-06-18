@@ -1,0 +1,73 @@
+2. Entity Framework 
+-------------------
+
+Package Manager Console Commands
+
+- add-migration MigrationModelClassName  // [MigrationModelClassName] is migration model name
+- update-database   // run migration to apply changes in DB
+
+Tips
+
+=> Aim for small migrations
+=> In Entity Framework every entity must have key (which will mapped to primary key in db) 
+   |-> `Id`
+
+-----------------------------
+
+-> Work on abstraction to deal with object <-> Relational Data(from database), conversion
+
+DbContext // Database
+DbSets  // Tables
+
+-> We use LinQ to query DbSets, // internally entity fmwk convert LinQ to Sql queries
+
+* 2 workflows in Entity Framework:
+  ---
+  1. Database First  // Domain Classes Generated from Defined Database Tables
+  2. Code First      // Database Tables generated from defined Domain Classes 
+
+  Prefer Code First
+   \
+   No need to waste time in designing tables & migration scripts
+
+   => Every change in database should go throgh migration
+
+=> ApplicationDbContext is gateway to database
+    |
+    IdentityDbContext // part of Asp.Net Identity framework
+
+   Entity Framework discovers DbSets in IdentityDbContext which reference several Models in Domain
+
+=> For any domain class, if corresp tables needs to be created (ie in next migration)
+   then it needs to be referenced via DbContext
+
+* Asp.Net Identity ->
+  - For Authentiation/Authorization of Project
+  - So Migration will pre-include creation of tables for Identity 
+    {ie AspNetUsers, AspNetRoles, ... }
+
+Navigation Property :- refering once custom class as a prop of other custom class
+
+
+
+* Entity Framework Convention :
+  ---
+  to declare primary key in code first approach :-
+  -> add property namely `Id` to your entity class
+
+  to declare foreign key relation for your property :
+  -> add property namely `PropertyClassNameId` to your entity class
+
+* Data Annotations : // Changing Constraints to Column of Table
+  ---
+  [Required]
+  [StringLength(200)]
+
+* Eager Loading :
+  ----
+  => By default Entity Framework only loads referenced objects & not their related objects
+  |
+  So If we want to include the related objects (ie Navigation Property) as well then we need to state
+  whilst fetching the details
+
+  .Include()  // is the extension on Entity object

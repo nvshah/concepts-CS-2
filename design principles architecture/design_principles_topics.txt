@@ -1,0 +1,6 @@
+design_principles_topics
+
+* SOLID
+* DRY
+* YAGNI
+* KISS

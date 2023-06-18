@@ -1,0 +1,7 @@
+setup
+
+Visual Studio :
+- Extension & Updates :
+  - Productivity Power Tools
+  - Web essentials
+  - Resharper  // Commercial

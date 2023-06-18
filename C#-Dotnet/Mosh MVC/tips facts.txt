@@ -1,0 +1,4 @@
+tips facts
+
+* To navigate to diff Controller-Route :
+  -> Html.ActionLink('ClickMe', "ControllerName", "Action", AnonymousObj);

@@ -1,0 +1,7 @@
+flutter_essential_articles
+
+[Starter App - MitchKoko]
+https://mitchkoko.gumroad.com/l/FlutterAppStarterPack
+
+[Github-MitchKoko]
+https://github.com/mitchkoko

@@ -1,0 +1,4 @@
+java general ref
+
+[Java Versions guide]
+https://www.marcobehler.com/guides/a-guide-to-java-versions-and-features

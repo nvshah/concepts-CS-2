@@ -1,0 +1,5 @@
+udacity-gradle-n1
+
+[Github Repo] : https://github.com/udacity/ud867
+
+-> Android Studio delegates its all build process to gradle

@@ -1,0 +1,16 @@
+notes 3 package imports
+
+=> Its good practice to name your package name as same to your directories are placed
+
+=> By default kotlin file will be located in <root> package, if package statement is not specified on first line 
+
+* There can be only 1 unique classname under 1 package
+
+* Is package & directory same thing  ?
+  -> No
+     package is logical name given to group your kotlin files
+     whereas
+     directory is physically exists in your computer memory
+
+     However, its recommended to keep package name in sync with directory structure so as to avoid confusion
+     & maintain good code readability

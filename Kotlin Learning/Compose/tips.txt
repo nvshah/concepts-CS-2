@@ -1,0 +1,6 @@
+tips
+
+* To make any widget Focusable :- 
+  -> Modifier's 2 methods
+     1. focusRequestor()
+     2. focusable()

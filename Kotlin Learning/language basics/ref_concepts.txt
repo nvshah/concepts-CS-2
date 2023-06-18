@@ -14,3 +14,6 @@ Kotlin Lang :
 
 High order fun - lambda - anonymous fun 
   https://www.journaldev.com/18835/kotlin-lambda-higher-order-functions
+
+BackTicks for Func Name
+https://commonsware.com/Kotlin/pages/chap-escapedmethodname-003.html

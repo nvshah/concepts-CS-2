@@ -1,0 +1,89 @@
+roadmap
+
+ref :
+https://github.com/saifaustcse/dotnet-developer-roadmap
+youtube :- nick chaspas
+
+--------------
+
+ASP.Net Core Basics
+- Web API
+- Minimal APIs
+- Routing
+- Middleware
+- Filters & Attributes
+- Configurations
+- Authentication & Authorization
+- Dependency Injection
+
+RDBMS DB
+- SQL
+- Postgre, SQL-Server, MySQL/MariaDB
+
+APIs
+- REST {WEB API, Minimal API, Fast Endpoints}
+- GraphQL {HotChocloate }
+- gRPC
+
+ORM
+- Dapper
+- EF Core
+
+DI  (builtin)
+- Microsoft.Extension.DependencyInjection
+- Scrutor
+
+NoSQL
+- Cloud Proprietory
+  - AWS DynamoDB
+  - Azure CosmosDB
+- Elastic Search
+- Redis
+- MongoDB
+
+Caching
+- Output Caching
+- Response Caching
+- Redis  (Distributed Caching)
+
+Logging
+- Builtin (Microsoft.Extensions.Logging)
+- SeriLog
+
+Messaging
+- Azure Service Bus
+- AWS SQS/SNS
+- RabbitMQ
+- MassTransit
+
+Streaming
+- Apache Kafka
+- 
+
+Testing
+- Unit
+  - xUnit
+  - nUnit
+- Mocking
+  - NSubstitute
+  - Moq
+- Test Data Generators
+  - Bogus
+
+Real time communication
+- SignalR
+- WebSockets
+
+Task Scheduling
+- BackgrounDservice
+- PeriodicTimer
+- HangFire
+
+DotNet Libraries
+- Polly
+- FluentValidations
+- Humanizer.Core
+- benchmark.Dotnet
+- MediatR
+- Units.Net
+- NodaTime

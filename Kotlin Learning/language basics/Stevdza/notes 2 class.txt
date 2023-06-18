@@ -1,6 +1,170 @@
 notes 2 class 
 
+=> In kotlin we have a Universal type ie `Any`
+
+
+* Extension Function :
+  - only public variable could be accessed by an extension function
+  - can have properties, attributes, member functions, getters, ...
+  
+* Extnesion Propery :
+  - requires custom getter
+
+  When to use extension property ? (suggested)
+  - when logic is simple & code looks redable
+
+
+* Enum :
+  ---
+  Get Enum type by parsing string name of enum type :-
+  `valueOf()`
+
 * Class:
   -----
 
   -> When you print object it will have `ClassName@MemoryLoc`
+
+* Property :
+  ---
+  - property maintain state of its class
+
+* Constructor :
+  ---
+  - special member functions
+
+  NOTE:
+   by default the constructor param is avail to its next enclosing context only & not to 
+   sub-closures or nested function's scope !
+
+  var or val to constructor param :
+  -> If we specify var/val keyword to constructor param then it will be considered as a class property instead
+     & thus available to all the nested scopes 
+
+  init{}
+  ---
+  -> to execute code asa object of class is created
+  -> Primray Constructor can not contain the code that you want to initially execute
+  -> Constructor param (ie param without val/var) are available inside init block 
+     but those are not available inside class methods/functions
+
+  -> hence constructor is combination of 
+      "Constructor Params + init Block " that is executed during obj creation
+
+  -> There can be multiple init block
+
+  Secondary Constructor | 
+  ---
+  -> Overloaded Constrcutor
+  -> Primary constructor anyhow needs to be called !
+  -> We cannot use var/val keyword for params in secondary constructor
+  -> Alternative for Secondary Constructors are Default Arguments
+
+  TIP:
+  - Use init block when you have primary constructor only !
+
+  => Only param of primary constructor can be declared var or val
+
+
+* Visibility Modifier :
+  ---
+  {public, private, protected, internal}
+
+  - private class is available in same kotlin file only !
+
+  - `internal` comes into picture when modules are in consideration
+      - visible within the module where it is defined
+
+
+* Data Class :
+  ---
+  - All the related properties must be defined in the primary constructor
+  - Primary Constructor of Data class needs to have atleast 1 param
+    Primary Constructor param needs to be marked with either var/val  [ie properties]
+  - data class cannot be abstract, open, sealed or inner
+
+  Destructuring Declarations
+  - (p1, p2, ...) = dataClassInstance   
+      // p1, p2 are corresp to component1, component2 prop of instance of data class
+
+  Data class generate below func behind scenes :
+  - toString(), copy(), equals(), hashCode(), componentN()
+
+  To exclude a class property from the generated implementations, we must 
+  - place the property inside the class body
+
+
+* Destructuring Declarations :
+  ----
+  Pair Class in Kotlin allows to hold 2 vals at a time
+  Triple allows to hold 3 vals at a time
+
+  If more than 3 vals needed then go for Data Class
+
+  => Position matters whilst Destructuring, 
+     Hence we need to follow order of properties
+
+
+* Generics :
+  -----
+  => Generic type is bit diff from universal type (ie `Any`)
+      |
+      Generic Placeholder (let say T) represents unknown type
+
+  => While using Generics, you will not get compile time errors which you may face while using
+     the `Any` type
+
+     (Hence when using generics, at compile time while coding you can get fields and methods suggestion,
+      but same wont be possible for `Any` as it would be decided at runtime
+     )
+
+  -> When we are using Generics, Class is retaining the info about the parameter passed to it 
+
+  Syntax :
+
+  Generic Class
+  |
+  -> class ClassName<T>(){}
+
+  Generic Func
+  |
+  -> fun <T> funName(){}
+
+
+* Universal type :
+  ---
+  "Any"
+  - Its similar to dynamic type of other programming language
+
+  -> "Any" types does not retains info about specific type
+
+
+* Member Referencing :
+  -----
+  
+  For Class members :
+
+  => ClassName::memberName
+
+  1) Member Properties:
+
+     -> How does it works ?
+        As Getter doesnt taken any obj as an argument to its call !
+
+     Eg Person::male
+
+
+  2) Member Functions
+
+     Eg Person::calcAge
+ 
+
+
+  For Global Top Level Identifiers
+
+  => ::identiferName
+
+
+  Constructor reference  // syntax similar to global-identifier reference
+
+     Eg ::ClassName
+

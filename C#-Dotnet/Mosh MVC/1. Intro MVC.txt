@@ -1,0 +1,28 @@
+1. Intro MVC
+
+Why MVC ??
+-> Better Seperation of Concerns, hence more maintainable app
+
+* Model : App level representation (independent of UI)  // POCO
+* View  : html render
+* Controller : resp for fetching api
+* router: selects the right controller to handle the request
+
+* Actions : Methods of controllers are referred to as Actions
+   - action in controller is responsible for handling a request
+
+
+[View and Action]
+=> There should be View having same name as Action  // if you want to return ViewResult
+
+* Routes (Custom)
+  ---
+  - Define most specific to most general
+
+  -> You can introduce constraints to your route params via regexp
+
+* Passsing data to View :
+  --- 
+  1. View(param)   // <--- Best approach
+  2. ViewData dictionary // with a MagicString
+  3. ViewBag  // at runtime

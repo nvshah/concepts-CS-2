@@ -1,0 +1,5 @@
+clean-code tips
+
+* Temporal Coupling (ref: Raw Coding)
+  ---
+  -> When order of different function execution matters

@@ -1,0 +1,109 @@
+mobile_archi_notes
+
+Goal :
+- More readable
+- More maintainable
+- More testable
+- Effective work on team
+
+CORE Principles :
+(for any patterns/archi)
+- Modular Design
+- SOLID prinviples
+- Writing proper Abstractions
+- Single Source of Truth
+- Single Responsibility principles
+- Seperations of Concerns
+
+____________________
+
+* MVVM :
+  ----
+  Model View ViewModel -- Micro-Level Archi
+
+  Model := Data Source (maybe Local DB or Remote APIs)
+  View := Presentation
+
+  ViewModel := Business Logic & State Mapping
+  
+
+  ViewModels (VMs)
+  ---
+  -> One state of each single value/component that can change on screen
+
+  Each State is an Independent Value (unless that class contains multiple vals that changes together)
+  - Eg Stateflow, or LiveData or ComposeState for `isLoading` (a boolean)
+
+  Then later you can easily manipulate (ie combine individual states) 
+  - Eg Combine 2 diff stateflow
+
+
+  [CONS]
+  => VMs often contains tons of states
+     private mutable ones
+     public immutable ones (correspondigly)
+
+  [PROS]
+  => MVVM makes easy to deal with process death
+  => Only part of UI, that should update will update 
+     (as we are using seperate state (Flow) for micro-components)
+
+  Flutter Analogy :=
+  - Provider/RiverPod + Stacked archi is eg of MVVM 
+
+
+* MVI :
+  ---
+  Model View Intent  -- Macro-Level (Monolithic) Archi
+
+  Intent := Intention user have
+
+  UI events are sent from the UI -> viewmodel
+
+  (whatever user can do on the screen are transfer in form of an event to ViewModel by UI)
+
+  - It will bring long `when` expressions in your ViewModel
+
+  - Integrates well with Jetpack Compose
+
+  [PROS]
+  -> Here instead of individual state, we have screen state
+     ie Data class that combine all vals per screen that can change !
+
+     You just have 1 stater per screen
+
+     This makes code more readable !
+
+  [CONS] :
+  - Vulnerable to `race conditions`
+    (usually stateflow is not thread safe)
+
+  - Not so easy to handle the process death
+    (as there is 1 single state for entire screen, so we may need to restore entire screen state)
+
+  - State changes trigger re-render of whole UI (ie screen UI)
+    as whole UI depends on single state
+
+
+  Flutter Analogy :=
+  - BLOC archi is eg of MVI
+
+
+* MVP :
+  ---
+  Model View Presenter
+
+  2-way bindings
+  The presenter knows the View & View knows the Presenter
+  Unlike in MVVM, where only Fragment/Activity know about the ViewModel but not reciprocal
+
+
+* MVC :
+  ---
+  Model View Controller
+
+  - similar to MVP where here we have controller
+
+  - Controller is not responsible for updating the view itself
+    |
+    recieve the events, manipulate the data & view will observe on those things

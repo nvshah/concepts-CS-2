@@ -50,6 +50,8 @@ TIP -> Always first think for bruteforce approach
 
 21) Djikstras Algo (Graph Greedy Techniqye)
 
+22) 2 Heaps Problem (Both min & max heap are used to solve the problem)
+
 ---
 EXPLORE
 

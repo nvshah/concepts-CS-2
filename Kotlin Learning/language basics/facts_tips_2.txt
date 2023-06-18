@@ -1,0 +1,24 @@
+facts_tips_2
+
+* Infix Function :
+  -> diff from extensions function
+
+* Destructuring : 
+  ---
+  Inorder for any object to be destructured, it should have certain functions (ie called as components)
+  For Eg
+  Data classess, automatically define component1(), component2() for us ...
+
+* Callable in Kotlin :
+  ---
+  invoke()
+
+* Indexed Access Operator : // lst[1]
+  ---
+  get()
+
+* in check :
+  ---
+  contains()
+    |
+    => `in` and `contains` are inverse of each other

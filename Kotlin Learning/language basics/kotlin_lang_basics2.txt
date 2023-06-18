@@ -72,7 +72,7 @@ NOTE
    Job  :- allows you to create new Coroutine to perform some async tasks
 
 
-* LaunchedEffec :
+* LaunchedEffect :
   ----
    - Same as initState() in Flutter Stateful Widget
      LaunchedEffect is same in Composable Function

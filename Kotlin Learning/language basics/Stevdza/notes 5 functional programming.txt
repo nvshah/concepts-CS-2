@@ -1,0 +1,107 @@
+notes 5 classes
+
+* Enum Class :
+  ---
+
+
+* Lambdas :
+  ----
+  -> also referred as a "function literals"
+
+  => Function Literals are functions that are passed as an expression
+
+  -> Lambda expressions always surrounded by curly braces
+  -> If lambda has return type, then its specified as the last expression inside the lambda body !
+
+  [Trailing Lambda]
+  -> When lambda is last param to func, you can avoid parenthesis whilst func invocation
+     |
+     -> In this case you can avoid specifying the type for lambda params
+        (ie Type annotation for Lambda param is optional)
+
+
+* Collections
+  ---
+
+  List{}
+
+  filter{}
+  filterIndexed{}
+  count()
+  find()
+  all()
+  any()
+  none()
+  partition{}   // split original collection inti pair of lists	
+
+  sumOf()
+  sortedBy()
+
+
+* Higher Order Func :
+  ---
+  repeat()
+
+
+--- Working With---
+
+* Lists & FP:
+  ---
+
+  zip()
+  unzip()
+  flatten()
+
+  fold()          // accumulate alike of python
+  foldRight()     // accumulate from right to left
+  reduce()        // use first val as initial value
+  reduceRight()   // use last val as initial value
+
+  runningFold()  // store all intermediate results
+  runningReduce()
+  
+  --> Produces Map 
+
+  groupBy()          
+  associateWithTo() 
+  associateBy()
+
+* Map :
+  ---
+
+  getOrElse()
+  getOrPut()
+  filterKeys()
+
+  map()  // produce List
+
+
+* Sequences :
+  ---
+  Sequences are known as 
+  - Streams in Java
+  - Iterator in Python, Dart, C#, ...
+
+  => Sequences are Lazily evaluated
+  => List are eagerly evaluated
+
+  Horizontal Evaluation  // Eager Evaluation
+  Vertical Evaluation  // Lazy Evaluation
+
+* Local Functions & Closure :
+  ---
+  Local functions are closures: they capture vars or vals from the surrounding environment that would otherwise have to be passed as additional parameters
+
+  Local functions are functions declared inside other functions
+
+  We can create local extension functions as well
+
+  For declaring custom function label :- customFuncLabel@
+
+  return & closure
+  ---
+  if you want to return something from nested closure or scope then you can use
+  return@Label syntax
+
+  you need to assign the Label to that nested block (starting line) 
+  ie via Label@ before starting the block

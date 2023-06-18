@@ -43,8 +43,11 @@ Binary Search :
    Split Array Largest Sum (https://leetcode.com/problems/split-array-largest-sum/)
    Kth missing element   (https://leetcode.com/problems/kth-missing-positive-number/)
 
-   Max Remove Character (https://leetcode.com/problems/maximum-number-of-removable-characters/
-)
+   Max Remove Character (https://leetcode.com/problems/maximum-number-of-removable-characters)
+
+   Capacity to ship packages within d days 
+      (https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
+
 
 Data Structures :
  
@@ -82,6 +85,11 @@ Heap :
 
   [Heap & Greedy]
   https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks/description/
+
+TRICKY LOGIC (GOOD)***
+
+  https://leetcode.com/problems/minimize-deviation-in-array
+
 
     
 Sorting  :
@@ -193,6 +201,9 @@ Union & Find
   --*>
   Furthest Building [Greedy | Heap]  (https://leetcode.com/problems/furthest-building-you-can-reach/)
   Candy (https://leetcode.com/problems/candy/)
+
+  Max Circular SubArr Sum (https://leetcode.com/problems/maximum-sum-circular-subarray)
+  -> [Kadane Algo + Greedy]
 
 * String 
   

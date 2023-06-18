@@ -1,0 +1,59 @@
+android roadmap
+
+
+
+1) Kotlin (Stevdza Udemy)
+
+2) Android Fundamentals (Philip - Youtube)
+
+3) Jetpack (Philip - Youtube)
+   ref: https://www.youtube.com/playlist?list=PLQkwcJG4YTCSpJ2NLhDTHhi6XBNfk9WiC
+
+4) Coroutines / Async (Philip - Youtube)
+   ref: https://www.youtube.com/playlist?list=PLQkwcJG4YTCQcFEPuYGuv54nYai_lwil_
+
+5) Local DB | ROOM  (Philip - Yt)
+   ref : https://www.youtube.com/watch?v=bOd3wO0uFr8&t=0s
+
+6) Retrofit | API (Philip - Yt)
+   ref: https://www.youtube.com/watch?v=t6Sql3WMAnk
+
+7) MVVM (Philip - yt)
+   ref: https://www.youtube.com/watch?v=A7CGcFjQQtQ  // TODO App
+
+   MVI (Philip - Yt)
+   ref : https://youtu.be/eAbKK7JNxCE  // weather Forecast
+
+8) DI | Dagger-Hilt (Philip - Yt)
+   ref: https://www.youtube.com/watch?v=bbMsuI2p1DQ
+
+--
+(Advance)
+
+9) Testing (Philip- Yt)
+   ref: https://www.youtube.com/playlist?list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq  
+
+------------
+
+* Android Fundamentals Concepts 
+
+  - Activity
+  - Services
+  - Intent
+  - Broadcast Recievers
+  - Content Provider   // ***
+  - UI Components
+  - Controls
+
+
+  ref:
+
+  [Content Providers] :- https://www.youtube.com/watch?v=fNVMqACYPnQ
+
+
+------------
+(Advance Concept)
+
+ref:
+[Building app from scratch] | testable | scalable | modularized
+https://www.youtube.com/watch?v=qX6zmKY4KP0

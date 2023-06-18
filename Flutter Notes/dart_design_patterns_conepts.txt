@@ -2,6 +2,15 @@ ref :
   https://www.geeksforgeeks.org/software-design-patterns/
 
 
+REMEMBER :
+
+=> As a general convention we use 'I' as a prefix to Interface Name
+   For Eg
+   abstract class IHuman{
+
+   }
+
+
 * OOPS :
   ----
    Encapsulation
@@ -22,3 +31,10 @@ ref :
            The child class may introduce new behaviours but should not affect the Parent class behaviour 
 
            Child must perform in same way as parent (when domain is common)
+
+
+* Abstract Class & Interface
+  ----
+  https://santhosh-adiga-u.medium.com/abstract-classes-and-interfaces-flutter-456d95cc78ac
+
+  - Use abstract classes to define a base implementation for a set of related classes.

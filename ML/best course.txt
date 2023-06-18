@@ -111,18 +111,30 @@ handson :-
   Python Simplified
 
   Chandoo   // Excel Course
+
+  Greg Hogg 
+
+  Nicholas Renotte
   
 theory :-
   Krish Naik
   ritvik math
   Code Basics
   StatQuest with Josh
-  Serrano Academy
+  Serrano Academy       <---** IMP
   Khann Academy
   CampusX
   Assembly AI
 
   Jeffrey Chasnov (Vector Calculus)
+  John Krohn (ML-Math Tutorials)
+
+  -- DL ---
+  Alexender Amini  (DL)
+  Shusen Wang (DL)
+  Halfling Wizard (ML-DL concepts interactively)
+  
+  Deep Learning for all at IIT Mandi
 
   Steve Brunton (ML Math Topics)
      \
@@ -135,14 +147,15 @@ theory :-
   Weights & Biases
   Inntutive Machine Learning  (** Imp)
 
+
 Maths & Stats :-
   3 blue 1 brown
   Tibees
   MarinStatsLecture   <- (** Best for Stats)
   Visually Explained
 
-
   DataLab
+  Jon Krohn <- (** Best Math for ML)
 
 
 -----------------------

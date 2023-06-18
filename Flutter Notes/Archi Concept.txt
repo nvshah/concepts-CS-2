@@ -1,0 +1,8 @@
+Archi Concept
+
+* There are multiple ways of Dependency Injection
+  such as
+  - Service Locator (Such as GetIt)
+  - Scoped DI (Provider)
+  - Parameter/Arguments (Constructor)
+  - Mixins (ie Often used for global vars ie Controllers in MVC)

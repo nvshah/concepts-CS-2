@@ -1,4 +1,7 @@
 
+=> You need to register your activity inside Manifest inorder for an app to know
+   inorder to open it via intent
+
 * Bottom Navigation menu :
    -> You need to seetup the bottom navigation from Activity.kt files &
       not in xml file 
@@ -27,6 +30,8 @@
   -----
   In general, classes whose names end in Compat do the same thing:
   - implement the latest API, and either Pass through methods to the platform implementation
+
+  Android Activity inherits AppCompatActivity
 
 
 * Package Manager :

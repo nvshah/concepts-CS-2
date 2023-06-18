@@ -8,3 +8,13 @@ Flutter Dart Tips (Vandad Github Repo Dart -> Tips & Tricks)
 
 * expand()  -> will do map() + spread operator for each element
             = mapstar()
+
+
+* VsCode (Auto Const) Tips
+  ----
+  -> Settings.json
+  
+  "editor.codeActionOnSave": [
+      "source.organizeImports", 
+      "source.fixAll"
+  ]

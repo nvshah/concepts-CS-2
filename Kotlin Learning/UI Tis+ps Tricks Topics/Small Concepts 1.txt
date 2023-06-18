@@ -1,0 +1,21 @@
+Small Concepts 1
+
+=> Run the animation on some click event, otherwise your phone battery life will be badly impacted
+
+----------
+
+* Marquee animations Modifier
+
+* Focusable Widget
+  (-> To make any widget Focusable :- 
+  -> Modifier's 2 methods
+     1. focusRequestor()
+     2. focusable()
+
+
+* To fit content behind status bar and notifications (ie Fill entire screen)
+  |
+  -> window.setFlags(
+      WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+      WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+  )

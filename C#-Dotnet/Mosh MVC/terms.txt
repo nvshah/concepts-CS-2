@@ -1,0 +1,5 @@
+terms
+
+POCO :- Plain Old CLR Objects
+
+Navigation Property :- refering once custom class as a prop of other custom class

@@ -7,3 +7,5 @@
 
 
 -< Outliers (https://www.jessicayung.com/removing-outliers-from-your-data/)
+
+- MLE vs MAP (https://towardsdatascience.com/mle-vs-map-a989f423ae5c)

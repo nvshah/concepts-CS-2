@@ -145,3 +145,12 @@ REMEMBER :
    - The first parameter of an extension method is known as the binding parameter 
      which should be the name of the class to which the method has to be bound and 
      the binding parameter should be prefixed with this keyword.
+
+* Interface :
+  ----
+
+* Explicit Interface Implementation  
+  ----
+  Whenever you implement multiple interfaces, 
+  still you are allowed to access methods from all interface class via implementing class
+  but if you want to restrict the corresponding interface methods called by corresponding type obj specifically, then you need to do explicit interface implementation. 

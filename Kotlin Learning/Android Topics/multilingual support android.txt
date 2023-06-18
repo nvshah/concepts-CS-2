@@ -1,0 +1,42 @@
+multilingual support android
+----------------------------
+
+* Internationalization | Localization :
+
+* Three main things to consider
+  1. Language  // Eg Hindi
+  2. Scripts   // Eg नमस्ते
+  3. Region    // Eg Asia | India 
+
+* Device Preferences for languages
+  App Preferences for languages
+
+  NOTE:
+
+=> Android is pulling string-resources from its app dependencies as well !
+
+  When your app (parent app) supports only few locales, but its dependencies supports other few locales as well then at the end all the locales will be considered to be supported by your app.
+
+  Thus though you think your app is not supportive to Japanese but any of its dependency does then
+  you may see automatic internationalization to some text in your app (ie DateTime for eg)
+  (If you have Japanese lang in your Device preferences)
+
+  |
+  To deal with aobve scenario: "Define resourceConfigurations"
+
+* "Define resourceConfigurations"
+  - to manage consistent layout
+
+  - specifying `resourceConfigurations` in a gradle file !  // 
+    |
+     - Now specified locales will be considered by android for an app
+     - Also it helps to reduce APK size !
+     - Consistent Layout
+
+* MessageFormat
+
+* Per-App Lang Preferences
+  
+  2 way
+  1. delegate to settings app of your device
+  2. In-App Lang Picker (Backward Compatible)  // Run Time API's

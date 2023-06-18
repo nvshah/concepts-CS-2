@@ -1,0 +1,76 @@
+Ultra WideBand Android
+---------------------
+ref : https://www.youtube.com/watch?v=8X_9no-9tCg
+
+
+GIST
+=> UWB lets you interact with devices at very close range, securely & with high accuracy
+=> Jetpack supports for UWB (12+)
+=> You can make your app behaves like either controller or controllee
+
+_____________
+
+Applications
+-> Secure Credential Sharing betn devices in proximity
+-> Unlock car asa you reach near to it
+-> Turn your phone into TV remote
+
+Phone to Phone
+Phone to IOT
+
+Points
+
+-> The app initiating the UWB session must be in the foreground !
+
+1) Out of Band Mechanism
+   -> The way through which UWB devices find each other
+
+   1. Bluetooth
+   2. Wifi
+   3. nearby Connections
+
+2) Roles :
+   
+   1. Controller
+   2. Controlee 
+
+3) UWB configurations
+   
+   1. Type of Ranging session
+   2. Ranging intervals
+   3. Security type
+
+* Ranging :
+  ---
+  -> Ranging session takes place between controllers and 1 or more controllees
+  -> Ranging is just calc of time taken by radio signal to travel between devices and distances bewteen them
+
+* Controller 
+  - defines the communication channel
+  - starts the session
+  - sets the parameters to be used
+
+* Controlee
+  - responds to controller calls
+
+
+* API
+  ---
+  1. dependency
+  2. check if device supports UWB
+  3. Discover capable connections via OOB
+
+  5. Prepare Sessions with ranging params
+
+
+=> For preparing the session you need ranging info !
+
+=> sessionFlow when consumed, initiate the ranging session
+
+* RangingResult Position Object   // <----****************
+  --
+  - obtains via flow
+  - contains detailed info about UWB devices
+    - distanc in meters
+    - elevation angles
+

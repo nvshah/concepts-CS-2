@@ -1,4 +1,11 @@
-* ref :- Philip Lackener (Playlist Android Fundamentals)
+ref :- 
+
+(default ref)
+Philip Lackener (Playlist Android Fundamentals)
+
+
+
+
 -----------------------------------------------
 => context is the super class of Activity & Applicaition
    So you can pass Activity ref wherever the context is needed !
@@ -259,3 +266,9 @@
   -> Pending Intent is Fired asa user perform some actions (ie Clicks)
 
   -> Pending Intent can fire Broadcast Reciever which You can recieve in your app
+
+
+
+* Content Providers :
+  -----
+  ref : https://www.youtube.com/watch?v=fNVMqACYPnQ

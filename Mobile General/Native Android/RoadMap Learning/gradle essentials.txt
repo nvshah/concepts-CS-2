@@ -1,0 +1,19 @@
+gradle essentials
+
+ref
+https://docs.gradle.org/current/samples/sample_building_android_apps.html
+
+Youtube
+- Tom Gregory
+- Philip Lackener
+
+-----
+keywords
+
+- apply, id, compile, implementation, 
+
+-----
+
+* repositories()  // gradle
+  ---
+  - tells gradle where to search the dependencies

@@ -77,6 +77,10 @@ __________
 
 Flutter (general) | Blogs | Websites
 
+- filledstacks
+- resocoder
+- andrea bizzato
+
 - flutterbeads.com
 - raywennderlich flutter articles
 - vandad flutter blogs (vandad.sh)
@@ -85,9 +89,18 @@ Flutter (general) | Blogs | Websites
 - FlutterCluttter
 
 - CodeRancher   // https://coderanch.com/
+- hungrimind.com
 
 * Build an Apk
   https://www.woolha.com/tutorials/flutter-build-android-apk
 
 
-* Flutter
+* Flutter (Medium Articles)
+  
+  https://santhosh-adiga-u.medium.com/
+
+
+__________
+Github
+
+https://github.com/mitchkoko/

@@ -4,3 +4,5 @@ image bak  (to create android asset online...)
 * Flutter Shape Maker
 
 * Airdroid Cast  // For Screen Mirroring
+
+* MidJourney  // For Image Backgroud

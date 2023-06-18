@@ -1,3 +1,12 @@
+ref (articles)
+
+- https://santhosh-adiga-u.medium.com/
+
+
+-----------------------
+
+
+
 1) Dependency Injection & Abstraction :
    -----
     Use DI ie locator to deal with which impl instance to create based on some 
@@ -55,3 +64,10 @@ REMEMBER :-
 
   Observalbles :- ValueNotifier (Mutable)
   Streams :- BLOC (Immutable)
+
+
+* Pragmatic Programming :
+  -----
+  1. Use named constructors // for better code readability
+  2. Use the Builder pattern for complex UIs
+  3. Use the Factory pattern for object creation

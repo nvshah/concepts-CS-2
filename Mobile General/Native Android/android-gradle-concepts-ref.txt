@@ -1,0 +1,23 @@
+android-gradle-concepts-ref
+
+Q1) In App's gradle file, 
+    There are 2 ways through which plugins are applied
+
+    1) plugins {
+         id 'name'
+       }
+
+    2) apply plugin: 'name'
+
+    What's the difference
+
+    => https://stackoverflow.com/questions/32352816/what-the-difference-in-applying-gradle-plugin
+
+   kotlin-android vs org.jetbrains.kotlin.android  plugin
+   - https://stackoverflow.com/questions/69297003/are-kotlin-android-and-org-jetbrains-kotlin-android-the-same
+
+   https://plugins.gradle.org/plugin/org.jetbrains.kotlin.android
+
+Q2) Project gradle file -> Repository
+   
+   -> https://stackoverflow.com/questions/68886940/what-is-the-difference-between-google-and-mavencentral-in-project-level-grad

@@ -3,8 +3,10 @@ https://www.softwaretestinghelp.com/c-sharp/oops-concepts-in-csharp/
 
 Youtube Channels (Dotnet C#)
 
+- Nick Chaspas  // ***
 - Raw Coding 
 - James Montemagno
+
 
 
 * C# vs C++

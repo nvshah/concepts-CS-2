@@ -1,0 +1,31 @@
+notes 4 Data Structure
+
+Prefer
+- val instead of var
+- listOf() instead of mutableListOf()
+
+____
+
+* list :
+  ----
+  List, MutableList
+
+> Immutable list helps to reduce bugs in the code
+
+* Puzzle operator (+=) :
+   -----
+   -> Its creating new list instead of inplace modification
+
+* list vs array :
+  - array is special low-level support
+  - also for compatibility with prog lang such as java
+  - array is used in case of varargs
+
+
+* vararg & spread operator :
+  ------
+  - we cannot add more than 1 vararg parameter
+  - vararg argument are accessed using the parameter name, which becomes Array
+
+  spread operator (*)	
+  - used to pass whole array into another existing array

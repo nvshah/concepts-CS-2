@@ -8,6 +8,33 @@ Ways :
 
 ______________________________________
 
+* DI (Stevdza) 
+----
+  - Dependency Injection is one of the design pattern for improving quality and maintainability of code
+  - Reduce Coupling
+    |
+    -> Instead oc creating obj on your own, 
+       Delegate the responsibility to a seperate component (called as DI container)
+
+    DI container :- 
+    - takes care of creating and managing the objects that you need
+
+  Types
+
+  Manual DI
+
+  1) Constructor Injection
+
+  2) Field Injection 
+
+     -> Certain Android classes (such as Activities and Fragments) are instantiated by Android System only
+        So Constructor Injection in such case wont be possible, hennce we have field injection
+
+
+  Via Package DI
+
+  1) Dagger
+  2) KOIN
 
 * DI 
 -----

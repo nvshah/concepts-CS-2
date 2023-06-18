@@ -26,6 +26,8 @@ Best Python Online Interpreter :
 
    (Amy Hanlon) Mathamy - http://mathamy.com/python-closures-and-free-variables.html
 
+   https://www.pythonpool.com/python-sorteddict/
+
 -----
 
 8) Python Tips : 
@@ -40,6 +42,8 @@ Best Python Online Interpreter :
 
 real python :
   -> Learning Paths : https://realpython.com/learning-paths/
+
+superFastPython
 
 PyMotW : https://pymotw.com/3/index.html#
 

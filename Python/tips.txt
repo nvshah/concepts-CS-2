@@ -51,6 +51,8 @@
     Eg
     a, (b,c) = (1, (2, 3))
 
+16) You can compare tuple with >=, <=, >, < operators as well
+
 -------reference
 
 [Import Python Tips]  https://realpython.com/python-import/
@@ -116,6 +118,9 @@ Articles :- analytics vidhya
 
 25) To change the limit of digit of int while representing or converting to string
     -> sys.set_int_max_str_digits(0)   // apply while conversion from int to str
+
+26) To get current python version being used => sys.version_info
+
 
 --------------
 

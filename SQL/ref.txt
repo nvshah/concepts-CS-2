@@ -1,1 +1,6 @@
 https://hackernoon.com/a-better-way-to-write-sql-queries-for-developers-b645f4fdcff0
+
+
+https://learnsql.com/blog/mysql-cheat-sheet/
+
+https://www.freecodecamp.org/news/learn-sql-in-10-minutes/

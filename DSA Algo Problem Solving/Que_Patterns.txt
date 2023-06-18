@@ -16,3 +16,8 @@
 16. Find Cycle in Graph
 17. Union & Find (Connected Components)
 18. Tarjans Algo (Strongly connected components)
+
+
+----
+
+* 2 Heaps Problem   (where min and max heaps are used to solve the problme)
